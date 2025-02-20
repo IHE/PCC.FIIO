@@ -5,60 +5,27 @@
 
 <a name="actors-and-transactions"> </a>
 
-## 1:X.1 ToDo Actors, Transactions, and Content Modules
+## 1:XX.1 FIIO Actors, Transactions, and Content Modules
+This section defines the actors, transactions, and/or content modules in this implementation guide. General definitions of actors are given in the Technical Frameworks General Introduction Appendix A. IHE Transactions can be found in the Technical Frameworks General Introduction Appendix B. Both appendices are located at https://profiles.ihe.net/GeneralIntro/.
 
-* Actors
-  * [Client](#client)
-  * [Server](#server)
-* Transactions
-  * [do domain-Y](domain-YY.html)
-
-Actors and transactions are used to achieve this use-case...
-
-<figure>
-{%include usecase1-processflow.svg%}
-<figcaption><strong>Figure X.X.X.X-X: Use Case 1 Process Flow</strong></figcaption>
-</figure>
-<br clear="all">
-
-This section defines the actors and transactions in this implementation guide.
-
-Figure below shows the actors directly
-involved in the ToDo 
-Profile and the relevant transactions between them.
-
-<figure>
-{%include ActorsAndTransactions.svg%}
-<figcaption><strong>Figure XX.1-2: ToDo Actor Diagram</strong></figcaption>
-</figure>
-<br clear="all">
-
-<p id ="tXX.1-1" class="tableTitle"><strong>Table XX.1-1: Profile Acronym Profile - Actors and Transactions</strong></p>
-
-| Actors  | Transactions  | Initiator or Responder | Optionality     | Reference                                  |
-|---------|---------------|------------------------|-----------------|--------------------------------------------|
-| Actor A | Transaction 1 |                        | R               | [Domain Acronym TF-2: 3.Y1](./domain-Y1.html) |
-|         | Transaction 2 |                        | R               | [Domain Acronym TF-2: 3.Y2](./domain-Y2.html) |
-| Actor F | Transaction 1 |                        | R               | [Domain Acronym TF-2: 3.Y1](./domain-Y1.html) |
-|         | Transaction 2 |                        | R               | [Domain Acronym TF-2: 3.Y2](./domain-Y2.html) |
-| Actor D | Transaction 1 |                        | R               | [Domain Acronym TF-2: 3.Y1](./domain-Y1.html) |
-| Actor E | Transaction 2 |                        | R               | [Domain Acronym TF-2: 3.Y2](./domain-Y2.html) |
-|         | Transaction 3 |                        | O ( See Note 1) | [Domain Acronym TF-2: 3.Y3](./domain-Y3.html) |
-|         | Transaction 4 |                        | O ( See Note 1) | [Domain Acronym TF-2: 3.Y4](./domain-Y4.html) |
-| Actor B | Transaction 3 |                        | R               | [Domain Acronym TF-2: 3.Y3](./domain-Y3.html) |
-|         | Transaction 4 |                        | O ( See Note 2) | [Domain Acronym TF-2: 3.Y4](./domain-Y4.html) |
-{: .grid}
-
-Note 1: *For example, a note could specify that at least one of the
-transactions shall be supported by an actor or other variations. For
-example: Note: Either Transaction Y3 or Transaction Y4 shall be
-implemented for Actor E.*
-
-Note 2: *For example, could specify that Transaction Y4 is required
-if Actor B supports XYZ Option, see Section XX.3.X.*
-
-### XX.1.1 Actors
+### 1:XX.1.1 Actors
 The actors in this profile are described in more detail in the sections below.
+  - [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1)
+  - [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1)
+
+<a name="Content-Creator"> </a>
+
+#### 1:XX.1.1.1 Content Creator
+
+The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) creates the [IPS content](StructureDefinition-Composition-uv-ips.html.html), [IPS ODH](StructureDefinition-IHE.IPS.ODH.Composition.html), or [IPS Complete](StructureDefinition-IHE.IPS.Complete.Composition.html) in accordance to the Implementation option selected. The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) then shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+<a name="Content-Consumer"> </a>
+
+#### 1:XX.1.1.2 Content Consumer
+
+The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) consumes the [IPS content](StructureDefinition-Composition-uv-ips.html.html), [IPS ODH](StructureDefinition-IHE.IPS.ODH.Composition.html), or [IPS Complete](StructureDefinition-IHE.IPS.Complete.Composition.html) in accordance to the Implementation option selected. The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) obtains the IPS document using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+
 
 <a name="client"> </a>
 

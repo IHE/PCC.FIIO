@@ -1,113 +1,35 @@
-Instance: IHE.ToDo.client
+Instance: IHE.IPS.Content-Creator
 InstanceOf: CapabilityStatement
-Title: "ToDo Actor"
+Title: "IPS Content Creator"
 Usage: #definition
-* description = """
-CapabilityStatement for Client Actor 
-
-Explain
-- blah
-- blah
-"""
-* url = "https://profiles.ihe.net/Domain/Profile/CapabilityStatement/IHE.ToDo.client"
-* name = "IHE_ToDo_client"
-* title = "IHE ToDo client"
+* name = "IHE_IPS_Content_Creator"
+* title = "IPS Content Creator"
 * status = #active
 * experimental = false
-* date = "2022-10-27"
+* date = "2025-02-19"
+* publisher = "Integrating the Healthcare Enterprise (IHE)"
+* description = "The IPS[Content Creator](volume-1.html#Content-Creator)"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[+] = #application/fhir+xml
+* format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* rest
-  * mode = #client
-  * documentation = "ToDo Client provides capability to blah blah."
-  * security
-    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"
-  * resource[+]
-    * type = #Observation
-    * supportedProfile[+] = "https://profiles.ihe.net/Domain/Profile/StructureDefinition/IHE.ToDo.laugh"
-    * documentation = """
-ToDo transaction [ITI-00]
-"""
-    * interaction[+].code = #read
-    * interaction[+].code = #search-type
-    * searchParam[+]
-      * name = "_lastUpdated"
-      * type = #date
-      * documentation = "When the resource version last changed"
-    * searchParam[+]
-      * name = "_id"
-      * type = #token
-      * documentation = "Logical id of this artifact"
-    * searchParam[+]
-      * name = "category"
-      * type = #token
-      * documentation = "The classification of the type of observation"
-    * searchParam[+]
-      * name = "code"
-      * type = #token
-      * documentation = "The code of the observation type"
-    * searchParam[+]
-      * name = "patient"
-      * type = #token
-      * documentation = "The subject that the observation is about (if patient)"
-  * interaction.code = #search-system
+* document[+].mode = #producer 
+* document[=].profile = Canonical(CompositionUvIps)
 
-
-Instance: IHE.ToDo.server
+Instance: IHE.IPS.Content-Consumer
 InstanceOf: CapabilityStatement
-Title: "ToDo Server Actor"
+Title: "IPS Content Consumer"
 Usage: #definition
-* description = """
-CapabilityStatement for Server Actor.
-
-Explain
-- blah
-- blah
-"""
-* url = "https://profiles.ihe.net/Domain/Profile/CapabilityStatement/IHE.ToDo.server"
-* name = "IHE_ToDo_supplier"
-* title = "IHE ToDo Server"
+* name = "IHE_IPS_Content_Consumer"
+* title = "IPS Content Consumer"
 * status = #active
 * experimental = false
-* date = "2022-10-27"
+* date = "2024-07-17"
+* publisher = "Integrating the Healthcare Enterprise (IHE)"
+* description = "The IPS[Content Consumer](volume-1.html#Content-Consumer)"
 * kind = #requirements
 * fhirVersion = #4.0.1
-* format[+] = #application/fhir+xml
+* format[0] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* rest
-  * mode = #server
-  * documentation = "ToDo Client provides capability to blah blah."
-  * security
-    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"
-  * resource[+]
-    * type = #Observation
-    * supportedProfile[+] = "https://profiles.ihe.net/Domain/Profile/StructureDefinition/IHE.ToDo.laugh"
-    * documentation = """
-ToDo transaction [ITI-00]
-"""
-    * interaction[+].code = #read
-    * interaction[+].code = #search-type
-    * searchParam[+]
-      * name = "_lastUpdated"
-      * type = #date
-      * documentation = "When the resource version last changed"
-    * searchParam[+]
-      * name = "_id"
-      * type = #token
-      * documentation = "Logical id of this artifact"
-    * searchParam[+]
-      * name = "category"
-      * type = #token
-      * documentation = "The classification of the type of observation"
-    * searchParam[+]
-      * name = "code"
-      * type = #token
-      * documentation = "The code of the observation type"
-    * searchParam[+]
-      * name = "patient"
-      * type = #token
-      * documentation = "The subject that the observation is about (if patient)"
-  * interaction.code = #search-system
-
+* document[+].mode = #producer 
+* document[=].profile = Canonical(CompositionUvIps)
