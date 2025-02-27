@@ -1,20 +1,15 @@
 
 ## Significant Changes
-
+This is the fir FHIR IF of this profile
 ### Significant Changes from Revision x.x
-
-- change 1
-- change 2
-- etc.
-
+N/A
 ## Issues
 
 ### Submit an Issue
 
 ### Open Issues
 
-- ToDo_001: this is open issue 1
+- FIIO_001: Formalizing the process of iterative updates to HL7 and CEN and associated modifications to the profile (2019/09/30).
 
 ### Closed Issues
-
-- ToDo_002: this is closed issue 2
+N/A
