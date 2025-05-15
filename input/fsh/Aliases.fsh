@@ -14,3 +14,6 @@ Alias: $PH_OccupationalDataForHealth_ODH = http://terminology.hl7.org/CodeSystem
 Alias: $RxNorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
 Alias: $ICD10-CM = http://hl7.org/fhir/sid/icd-10-cm
+Alias: $v3-WorkClassificationODH = http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH
+Alias: $PHOccupationalDataForHealthODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
+Alias: $v3-ObservationValue = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
