@@ -17,13 +17,13 @@ Usage: #definition
 * document[=].profile = Canonical(CompositionUvIps)
 
 
-Combinations 
-* document[+].mode = #producer 
-* document[=].profile = Canonical(CompositionUvIps)
-* document[+].mode = #producer 
-* document[=].profile = Canonical(IHE_IPS_Complete_Composition)
-* document[+].mode = #producer 
-* document[=].profile = Canonical(IHE_IPS_ODH_Composition)
+//Combinations 
+//* document[+].mode = #producer 
+//* document[=].profile = Canonical(CompositionUvIps)
+//* document[+].mode = #producer 
+//* document[=].profile = Canonical(IHE_IPS_Complete_Composition)
+//* document[+].mode = #producer 
+//* document[=].profile = Canonical(IHE_IPS_ODH_Composition)
 
 Instance: IHE.IPS.Content-Consumer
 InstanceOf: CapabilityStatement
