@@ -33,7 +33,7 @@ dependencies:
   hl7.fhir.uv.ips:
     id: hl7ips
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
-    version: 1.1.x
+    version: 1.1.0
   ihe.pcc.odh: 
     id: ihepccodh
     version: 1.0.0
@@ -66,10 +66,10 @@ parameters:
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: ToDo Home
+    title: FHIR International Patient Summary Implementation Options Home
     generation: markdown
   volume-1.md:
-    title: 1:XX ToDo Volume 1
+    title: 1:XX FHIR International Patient Summary Implementation Options Volume 1
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -94,8 +94,6 @@ menu:
     Overview: volume-1.html#overview
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#other-grouping
-  Volume 2:
-    "Transaction one [Domain-YY]": domain-YY.html
   Volume 3:
     "Content one [Domain-ZZ]": domain-ZZ.html
   Artifacts: artifacts.html
