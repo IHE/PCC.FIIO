@@ -6,8 +6,8 @@ Alias: $StructureDefinition-Patient-uv-ips.html = https://hl7.org/fhir/uv/ips/St
 Alias: $referencerange-meaning = http://hl7.org/fhir/ValueSet/referencerange-meaning
 Alias: $2.16.840.1.113883.12.292 = https://phinvads.cdc.gov/vads/ViewCodeSystem.action?id=2.16.840.1.113883.12.292
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $ISCO08 = InternationalClassificationOfOccupations2008
-Alias: $ISICRev4 = InternationalStandardIndustrialClassificationCodesRev4
+Alias: $ISCO08 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08
+Alias: $ISICRev4 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4
 Alias: $ONETSOC = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=3ED71C35-8147-492B-B88F-94953573E55F 
 Alias: $SOC2010 = https://phinvads.cdc.gov/vads/ViewValueSet.action?id=044B66C7-33CF-46D5-B252-BBA8A8819EEF
 Alias: $PH_OccupationalDataForHealth_ODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
