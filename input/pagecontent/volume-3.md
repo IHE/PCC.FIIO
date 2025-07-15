@@ -46,6 +46,20 @@ N/A
 
 
 ## 6.6 HL7 FHIR Content Modules
+### 6.6.1 HL7 FHIR Document Content Modules
+### 6.6.1.X.1 FHIR IPS IO Composition LOINC/Format Code ??
+### 6.6.1.X.2 FHIR IPS IO Bundle/Document Dependencies
+### 6.6.1.X.3 FHIR IPS IO Referenced Standards
+### 6.6.1.X.4 FHIR IPS IO Composition/Bundle Sections/Components 
+
+### 6.6.2 HL7 FHIR Composition/Bundle Content Modules
+#### 6.6.2.X.1 FHIR IPS IO Composition Metadata 
+#### 6.6.2.X.2 FHIR IPS IO Composition Section Requirements  
+#### 6.6.2.X.2 FHIR IPS IO Composition Entry Requirements 
+
+### 6.6.3 HL7 FHIR Resource Content Modules
+### 6.6.3.X.1 HL7 FHIR Resource Content Modules
+
 
 #### 6.6.X.1 FHIR Resource Content Composition 
 The following sections document the optionality of the data elements within the Composition cooresposning to each Implementation option

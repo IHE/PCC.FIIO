@@ -11,9 +11,9 @@ Usage: #example
 * section.title = "Occupational Data for Frederick Olivera DaSilva"
 * section.text.status = #generated
 * section.text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">ODH Complete Work Information for Jannet Guo</div>"
-* section.entry[odh-EmploymentStatus] = Reference(ex-ips-io-socialHistory-employmentStatus-jannet-guo)
-* section.entry[odh-UsualWork] = Reference(ex-ips-io-usualWork-jannet-guo)
-* section.entry[odh-PastOrPresentJob] = Reference(ex-ips-io-pastOrPresentJob-jannet-guo)
+* section.entry[odh-EmploymentStatus] = Reference(ex-ips-io-socialHistory-employmentStatus-frederick-olivera-dasilva)
+* section.entry[odh-UsualWork] = Reference(ex-ips-io-usualWork-frederick-olivera-dasilva)
+* section.entry[odh-PastOrPresentJob] = Reference(ex-ips-io-pastOrPresentJob-frederick-olivera-dasilva)
 
 Instance:   ex-ips-io-socialHistory-employmentStatus-frederick-olivera-dasilva
 InstanceOf: https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus
