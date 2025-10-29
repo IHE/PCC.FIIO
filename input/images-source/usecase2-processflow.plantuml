@@ -1,0 +1,34 @@
+@startuml
+actor Provider as pr
+
+participant POS as p
+participant "Consent\nManager" as c
+participant "ContentCreator" as contentCreator
+participant "ContentConsumer" as contentConsumer
+
+database "EHR-1" as e1
+database "EHR..n" as en
+
+note over pr, en: Provider establishes access to patient's health data​
+note over pr, p: Provider leverages\nPOS (e.g. EMR)​
+
+p -> e1: query for patient's health data​
+
+e1 -> p: query response​
+loop query all other data sources (IF multiple content requests are needed)...
+
+p -> en: query for patient's health data​
+en -> p: query response​
+
+end loop
+note over pr, p: Provider curates\nhealth content\nusing POS​
+
+p -> p: create IPS document​
+note over p: Provider-\nmediated\nIPS document\non POS​
+
+p -> contentCreator: make IPS document available
+note over contentCreator: may be any system that stores or handles the IPS whenever it is requested 
+
+contentCreator -> contentConsumer: Share the IPS document
+note over contentConusmer: The IPS document is shared via Document Sharing [PCC-1] 
+@enduml
