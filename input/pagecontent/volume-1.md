@@ -133,11 +133,7 @@ This Use case describes an Unscheduled, Cross Border care scenario where the hea
 A student is attending University and is taking a semester abroad. He has fallen off his bike on his way to class, breaking his left arm, and was taken to the local hospital. The IPS shows that the patient is severely allergic to NSAIDs and the attending clinician provides an alternative method of pain management for the patient.
 
 ##### XX.4.2.1.2 Emergency Care Abroad Using HL7's FHIR IPS Process Flow
-<figure>
-{%include usecase1-processflow.svg%}
-<figcaption><strong>Figure XX.4.2.2-1: IPS Basic Document Sharing Process Flow</strong></figcaption>
-</figure>
-<br clear="all">
+
 
 **Pre-conditions**:
 - A person is prepared to spend time outside of their home country or Juisdiction
