@@ -134,7 +134,7 @@ A student is attending University and is taking a semester abroad. He has fallen
 
 ##### XX.4.2.1.2 Emergency Care Abroad Using HL7's FHIR IPS Process Flow
 <div>
-<img src="usecase2-processflow.plantuml" caption="Figure XX.4.2.1: IPS Document Sharing" width="70%" >
+<img src="usecase1-processflow.plantuml" caption="Figure XX.4.2.1: IPS Document Sharing" width="70%" >
 </div>
 
 <figure>
@@ -200,7 +200,7 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 
 ##### XX.4.2.1.2 Managing Work-Related Illness While Working Abroad Process Flow
 <div>
-<img src="docSharing.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
+<img src="usecase1-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
 </div>
 
 <figure>
@@ -231,7 +231,7 @@ A patient is preparing their personal Health Summary in case it is needed for th
 
 ##### XX.4.2.1.2 Patient Mediated IPS Utilizing a Portal
 <div>
-<img src="docSharing.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
+<img src="usecase1-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
 </div>
 
 <figure>
@@ -266,7 +266,7 @@ Where all of a Patient’s relevant information cannot be found on a single serv
 
 ##### XX.4.2.1.2 Managing Work-Related Illness While Working Abroad Process Flow
 <div>
-<img src="docSharing.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
+<img src="usecase1-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
 </div>
 
 <figure>
