@@ -1,7 +1,7 @@
 @startuml
 hide footbox
-agent "Content\nCreator" as Creator
-agent "Content\nConsumer" as Consumer
+agent "Content\nCreator" as IPSContentCreator
+agent "Content\nConsumer" as IPSContentConsumer
 cloud "Share Content" as cloud
 Creator -> cloud : IPS
 cloud -> Consumer : IPS
