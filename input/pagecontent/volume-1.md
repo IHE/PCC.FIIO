@@ -82,6 +82,8 @@ This option specifies that the following sections defined as optional in the [HL
 - IPS Plan of Care
 - IPS Social History
 - IPS Vital Signs
+- IPS Patient Story
+- IPS Alerts
 
 
 ### XX.2.3 Occupational Data for Health Option
@@ -132,25 +134,28 @@ A student is attending University and is taking a semester abroad. He has fallen
 
 ##### XX.4.2.1.2 Emergency Care Abroad Using HL7's FHIR IPS Process Flow
 <div>
-<img src="docSharing.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
+<img src="usecase2-processflow.plantuml" caption="Figure XX.4.2.1: IPS Document Sharing" width="70%" >
 </div>
 
 <figure>
 {%include usecase1-processflow.svg%}
-<figcaption><strong>Figure XX.4.2.2-1: Basic Content Creator Content Consumer Process Flow</strong></figcaption>
+<figcaption><strong>Figure XX.4.2.2-1: IPS Basic Document Sharing Process Flow</strong></figcaption>
 </figure>
 <br clear="all">
 
 **Pre-conditions**:
-- A student is attending University in a study abroad program.
-- The student is transported to the hospital. 
+- A person is prepared to spend time outside of their home country or Juisdiction
+- The person has acess to provide a copy of their IPS Summary or a mechanism to provide acess to their IPS Summary
+- The parson is in need of immediate medical care
 
 **Main Flow**:
-- After getting access to the student’s international patient summary it is discovered that he is allergic to NSAIDs.
-- Based on this information the provider is able to make an informed decision when prescribing medication for pain management.
+- The emergency provider gains access to the patient's International Patient Summary
+- Based on this information the provider is able to make informed decisions on their minterventions. 
+- When the patient is transported to a hospital, the Emergency provider is able to pass on the IPS when they transfer their care to this new provider
+- The New provider is able to reference their record and make informed decisions when prescribing medication for pain management.
 
 **Post-conditions:**
-N/A
+- A new IPS may be generated for acess with the new prescribed medicaiton information. 
 
 #### XX.4.2.1 Use Case \#2: Managing Chronic Conditions Accross Borders - Provider Mediated
 In this use case, an IPS document is created by a care Provider.

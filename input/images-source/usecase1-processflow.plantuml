@@ -1,12 +1,15 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-participant "Client" as Client
-participant "Server" as Server
-activate "Client"
-"Client" -> "Server" : 1. Go Query [domain-YY]
-activate "Server"
-"Server" --> "Client" : 2. Go Response [domain-YY]
-deactivate "Client"
-deactivate "Server"
+participant "IPS\nContent\nCreator" as IPSContentCreator
+participant "IPS\nContent\nConsumer" as IPSContentConsumer
+cloud "Share Content" as cloud
+activate "IPS Content Consumer"
+activate "IPS Content Creator"
+
+IPSContentCreator -> cloud : Document Sharing [PCC-1]
+cloud -> IPSContentConsumer : Document Sharing [PCC-1]
+
+deactivate "IPS Content Creator"
+deactivate "IPS Content Consumer"
 @enduml
