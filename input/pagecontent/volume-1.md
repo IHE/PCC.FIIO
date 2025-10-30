@@ -191,15 +191,6 @@ This use case describes a scheduled, cross border care scenario, with the Occupa
 A 43-year-old woman is assigned to train personnel in another country to demonstrate use of a polyurethane foam product in hospitals. After 4 months, she develops respiratory symptoms and is found to have new-onset asthma. The attending clinician reviews her IPS that implements the Occupational Data for Health Option, which includes information about her new job. The clinician infers the causal link between the new work and the asthma and recommends changes in her job activities. In accordance to local policy a new International Patient Summary (IPS) is created. 
 
 ##### XX.4.2.1.2 Managing Work-Related Illness While Working Abroad Process Flow
-<div>
-<img src="usecase1-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
-</div>
-
-<figure>
-{%include usecase1-processflow.svg%}
-<figcaption><strong>Figure XX.4.2.2-1: Basic Content Creator Content Consumer Process Flow</strong></figcaption>
-</figure>
-<br clear="all">
 
 **Pre-conditions**:
 - A patient is sent to another country for work by her company.
@@ -222,15 +213,7 @@ A patient is preparing their personal Health Summary in case it is needed for th
 ***TODO***
 
 ##### XX.4.2.1.2 Patient Mediated IPS Utilizing a Portal
-<div>
-<img src="usecase1-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
-</div>
 
-<figure>
-{%include usecase1-processflow.svg%}
-<figcaption><strong>Figure XX.4.2.2-1: Basic Content Creator Content Consumer Process Flow</strong></figcaption>
-</figure>
-<br clear="all">
 
 **Pre-conditions**:
 - A patient has a patient healthcare portal that contains their current health information 
@@ -257,15 +240,7 @@ In this use case, a digital health solution generates an IPS document on demand 
 Where all of a Patient’s relevant information cannot be found on a single server, a request can be made to an intermediary that will fetch content from one or more reference data sources, will de-duplicate these data, and will create and return a well-formed IPS document that contains this de-duplicated health data. The business logic regarding what content to include and what content to exclude could be operationalized by this intermediary, acting as an “On-demand IPS Builder”. In jurisdictions such as Ontario, Canada, it is common practice to maintain domain-specific shared person-centric health data repositories for (as examples) diagnostic imaging, pharmacy, and lab content. This use case reflects the workflow that such a jurisdiction would need to execute to generate and on-demand IPS.
 
 ##### XX.4.2.1.2 Managing Work-Related Illness While Working Abroad Process Flow
-<div>
-<img src="usecase1-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
-</div>
 
-<figure>
-{%include usecase1-processflow.svg%}
-<figcaption><strong>Figure XX.4.2.2-1: Basic Content Creator Content Consumer Process Flow</strong></figcaption>
-</figure>
-<br clear="all">
 
 **Pre-conditions**:
 - A patient is sent to another country for work by her company.
