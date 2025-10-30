@@ -214,7 +214,7 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 
 **Post-conditions:**
 - The engineering company provides portable ventilation exhaust systems to reduce exposures to other workers. The woman provides training to others without engaging in direct demonstration of foam production.
-- The new diagnosis of asthma related to this occupational hazard is added to the patient’s EMR for the care provider’s EMR. 
+- The new diagnosis of asthma related to this occupational hazard is added to the patient’s EMR for the care provider’s EMR.  
 - A New IPS is created, including the original information imported by the provider plus the new diagnosis of asthma related to this occupational hazard, and made available for the patient to take home at the end of the episode of care.
 
 #### XX.4.2.1 Use Case \#4: Patient Mediated IPS Utilizing a Portal
