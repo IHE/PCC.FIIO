@@ -65,6 +65,9 @@ pages:
   volume-1.md:
     title: 1:XX FHIR International Patient Summary Implementation Options Volume 1
     generation: markdown
+  volume-3.md:
+    title: 3:XX FHIR International Patient Summary Implementation Options Volume 3
+    generation: markdown
   testplan.md:
     title: "Test Plan"
     generation: markdown
