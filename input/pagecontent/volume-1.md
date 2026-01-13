@@ -149,16 +149,16 @@ A student is attending University and is taking a semester abroad. He has fallen
 **Post-conditions:**
 - A new IPS may be generated for acess with the new prescribed medicaiton information. 
 
-#### XX.4.2.1 Use Case \#2: Managing Chronic Conditions Accross Borders - Provider Mediated
+#### XX.4.2.2 Use Case \#2: Managing Chronic Conditions Accross Borders - Provider Mediated
 In this use case, an IPS document is created by a care Provider.
 
 In some jurisdictions (e.g. France, others) there is funding available to care Providers to cover the cost of regularly preparing a patient summary document for their patients. It is typically expected that such a document will be leveraged to support cross-border care delivery as described in other use cases in this chapter. In the development of a Provider-mediated IPS, the patient’s health data content is curated by the Provider, whose judgement is used to answer the question: “what is the health data relevant to supporting the patient’s (likely unplanned) care?”
 
-##### XX.4.2.1.1 Managing Chronic Conditions Accross Borders Use Case Description
+##### XX.4.2.2.1 Managing Chronic Conditions Accross Borders Use Case Description
 
 A patient with cancer has indicated to their provider that they will be spending several months outside of the country and has requested that a summary be available to them in the event that unplanned care takes place. Due to the complexity of their condition the provider generates an IPS document reflecting the current health information and relevant conditions, medications, labs, results, and imaging are available in the record, for informed care of the patient and their condition. The results section is ensured to contain the relevant pathology and imaging results relative to the patient’s cancer. The IPS is stored somewhere until it is needed. While the patient is on their trip, they have an unplanned visit to the local Health clinic with concerns that it is related to their cancer. Their IPS document is made available to the provider that is seeing to their care, and it is able to inform the care of the patient as they investigate any linkages this condition has to their chronic condition. 
 
-##### XX.4.2.1.2 Managing Chronic Conditions Accross Borders Process Flow
+##### XX.4.2.2.2 Managing Chronic Conditions Accross Borders Process Flow
 <div>
 <img src="usecase2-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
 </div>
@@ -184,13 +184,13 @@ A patient with cancer has indicated to their provider that they will be spending
 -  When needed, the IPS document is made available to a receiving provider system
 
 
-#### XX.4.2.1 Use Case \#3: Managing Work-Related Illness While Working Abroad 
+#### XX.4.2.3 Use Case \#3: Managing Work-Related Illness While Working Abroad 
 This use case describes a scheduled, cross border care scenario, with the Occupational Data for Health Option. 
 
-##### XX.4.2.1.1 Managing Work-Related Illness While Working Abroad Use Case Description
+##### XX.4.2.3.1 Managing Work-Related Illness While Working Abroad Use Case Description
 A 43-year-old woman is assigned to train personnel in another country to demonstrate use of a polyurethane foam product in hospitals. After 4 months, she develops respiratory symptoms and is found to have new-onset asthma. The attending clinician reviews her IPS that implements the Occupational Data for Health Option, which includes information about her new job. The clinician infers the causal link between the new work and the asthma and recommends changes in her job activities. In accordance to local policy a new International Patient Summary (IPS) is created. 
 
-##### XX.4.2.1.2 Managing Work-Related Illness While Working Abroad Process Flow
+##### XX.4.2.3.2 Managing Work-Related Illness While Working Abroad Process Flow
 
 **Pre-conditions**:
 - A patient is sent to another country for work by her company.
@@ -205,14 +205,14 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 - The new diagnosis of asthma related to this occupational hazard is added to the patient’s EMR for the care provider’s EMR.  
 - A New IPS is created, including the original information imported by the provider plus the new diagnosis of asthma related to this occupational hazard, and made available for the patient to take home at the end of the episode of care.
 
-#### XX.4.2.1 Use Case \#4: Patient Mediated IPS Utilizing a Portal
+#### XX.4.2.4 Use Case \#4: Patient Mediated IPS Utilizing a Portal
 This use case describes how a patient can request the generation of an IPS and mask a portion of the data for personal privacy reasons and contribute to some of the data dispalyed. 
 
-##### XX.4.2.1.1 Patient Mediated IPS Utilizing a Portal
+##### XX.4.2.4.1 Patient Mediated IPS Utilizing a Portal
 A patient is preparing their personal Health Summary in case it is needed for their care. They first 
 ***TODO***
 
-##### XX.4.2.1.2 Patient Mediated IPS Utilizing a Portal
+##### XX.4.2.4.2 Patient Mediated IPS Utilizing a Portal
 
 
 **Pre-conditions**:
@@ -233,13 +233,13 @@ A patient is preparing their personal Health Summary in case it is needed for th
 - The IPS now contains a patient sotry narrative that other can read where they had stated there was an immunization missing
 - The IPS is now ready fro sharing with another healthcare provider 
 
-#### XX.4.2.1 Use Case \#5: On-demand IPS Using $Summary from Multiple Sources
+#### XX.4.2.5 Use Case \#5: On-demand IPS Using $Summary from Multiple Sources
 In this use case, a digital health solution generates an IPS document on demand from one or more reference data sources. 
 
-##### XX.4.2.1.1 On-demand IPS Using $Summary from Multiple Sources
+##### XX.4.2.5.1 On-demand IPS Using $Summary from Multiple Sources
 Where all of a Patient’s relevant information cannot be found on a single server, a request can be made to an intermediary that will fetch content from one or more reference data sources, will de-duplicate these data, and will create and return a well-formed IPS document that contains this de-duplicated health data. The business logic regarding what content to include and what content to exclude could be operationalized by this intermediary, acting as an “On-demand IPS Builder”. In jurisdictions such as Ontario, Canada, it is common practice to maintain domain-specific shared person-centric health data repositories for (as examples) diagnostic imaging, pharmacy, and lab content. This use case reflects the workflow that such a jurisdiction would need to execute to generate and on-demand IPS.
 
-##### XX.4.2.1.2 Managing Work-Related Illness While Working Abroad Process Flow
+##### XX.4.2.5.2 On-demand IPS Using $Summary from Multiple Sources Process Flow
 
 
 **Pre-conditions**:
@@ -252,7 +252,7 @@ Where all of a Patient’s relevant information cannot be found on a single serv
 
 <a name="security-considerations"> </a>
 
-## XX.5 ToDo Security Considerations
+## XX.5 IPS Security Considerations
 
 See ITI TF-2x: [Appendix Z.8 "Mobile Security Considerations"](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations)
 
@@ -268,7 +268,7 @@ Health Information Exchange: Enabling Document Sharing Health Information Exchan
 
 <a name="other-grouping"> </a>
 
-## XX.6 ToDo Cross-Profile Considerations
+## XX.6 IPS Cross-Profile Considerations
 
 The use of the IHE XD* family of transactions is encouraged to support standards-based interoperability between systems acting as the IPS Content Creator and IPS Content Consumer. However, this profile does not require any groupings with ITI XD* actors to facilitate transport of the content document it defines. 
 
