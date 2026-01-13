@@ -3,7 +3,7 @@ skinparam svgDimensionStyle false
 hide footbox
 participant "Content\nCreator" as IPSContentCreator
 participant "Content\nConsumer" as IPSContentConsumer
-cloud "Share Content" as cloud
+participant "Share Content" as cloud
 
 IPSContentCreator -> cloud : Document Sharing [PCC-1]
 cloud -> IPSContentConsumer : Document Sharing [PCC-1]

@@ -30,5 +30,5 @@ p -> contentCreator: make IPS document available
 note over contentCreator: may be any system that stores or handles the IPS whenever it is requested 
 
 contentCreator -> contentConsumer: Share the IPS document
-note over contentConusmer: The IPS document is shared via Document Sharing [PCC-1] 
+note over contentConsumer: The IPS document is shared via Document Sharing [PCC-1] 
 @enduml

@@ -133,7 +133,8 @@ This Use case describes an Unscheduled, Cross Border care scenario where the hea
 A student is attending University and is taking a semester abroad. He has fallen off his bike on his way to class, breaking his left arm, and was taken to the local hospital. The IPS shows that the patient is severely allergic to NSAIDs and the attending clinician provides an alternative method of pain management for the patient.
 
 ##### XX.4.2.1.2 Emergency Care Abroad Using HL7's FHIR IPS Process Flow
-
+HIE Replated retrival of patient summary, single source/ on demand... 
+TODO 
 
 **Pre-conditions**:
 - A person is prepared to spend time outside of their home country or Juisdiction
@@ -210,6 +211,7 @@ This use case describes how a patient can request the generation of an IPS and m
 
 ##### XX.4.2.4.1 Patient Mediated IPS Utilizing a Portal
 A patient is preparing their personal Health Summary in case it is needed for their care. They first 
+pregnancy use case 
 ***TODO***
 
 ##### XX.4.2.4.2 Patient Mediated IPS Utilizing a Portal
@@ -249,6 +251,20 @@ Where all of a Patient’s relevant information cannot be found on a single serv
 **Main Flow**:
 -  The patient develops asthma symptoms and consults a provider in the country she is working.
 - Using the patient’s international patient summary with occupational health data included, the provider is able to see that exposure from work is causing these symptoms. The provider recommends a change in work practice to avoid further exposure and prescribes inhalers to the patient.
+
+
+#### XX.4.2.5 Use Case \#6: TBD - Respresenting Missing Data 
+Patient proveds portal information when being seen by a provider with a link to their primary provider portal. It generates an IPS for the reviewing provider, for infomred care and treatment. The patient's provider portal is limited and does not have acces to procedure or Lab data. when the IPS is generated, those sections are labled No information available tags. the reciving provider sees this and knows that they may need to utilize a different resource to collect this data on the patient and is infomred that there is a gap in their data. 
+
+pt arrival at a new clinic?
+
+
+
+
+
+
+
+
 
 <a name="security-considerations"> </a>
 
