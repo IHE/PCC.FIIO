@@ -92,8 +92,8 @@ menu:
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#other-grouping
   Volume 3 - Content Modules:
-    "IHE Namespaces, Concept Domains and Vocabularies": volume-3.html
-    "FHIR Content Modules": volume-3.html
+    "IHE Namespaces, Concept Domains and Vocabularies": volume-3.html#concept-domains
+    "FHIR Content Modules": volume-3.html#content-modules
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html

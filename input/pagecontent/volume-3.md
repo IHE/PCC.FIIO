@@ -42,8 +42,11 @@ The LOINC code for this document is 57055-6 Antepartum summary
 ### 6.4 HL7 V2 Content Modules
 N/A
 
+<a name="concept-domains"> </a>
+
 ### 6.5 PCC Value Sets and Concept Domains
 
+<a name="fhir-contentModules"> </a>
 
 ## 6.6 HL7 FHIR Content Modules
 ### 6.6.1 HL7 FHIR Document Content Modules
