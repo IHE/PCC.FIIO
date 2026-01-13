@@ -6,7 +6,7 @@ Description:      """
 An International Patient Summary Document that makes all of the optional sections deffined by HL7 into Must support sections. 
 """
 
-* section[sectionPastProblems] MS 
+* section[sectionPastProblems] MS   
 * section[sectionFunctionalStatus] MS 
 * section[sectionSocialHistory] MS 
 * section[sectionPregnancyHx] MS 
