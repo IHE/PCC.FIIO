@@ -8,7 +8,7 @@ This composition builds off of the origional IPS Composition deffined by HL7 wit
 """
 
 * section[sectionSocialHistory] MS 
-* section[sectionSocialHistory].entry contains 
+* section[sectionSocialHistory].entry contains  
     odh-UsualWork 0..* MS and 
     odh-PastOrPresentJob 0..* MS and 
     odh-EmploymentStatus 0..* and 

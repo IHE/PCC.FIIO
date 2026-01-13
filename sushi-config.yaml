@@ -36,8 +36,8 @@ dependencies:
 
 parameters:  
   path-resource:
-    - input/resources
-    - fsh-generated/resources
+#    - input/resources
+#    - fsh-generated/resources
     - input/examples
 #  path-pages:
 #    - input/pagecontent
