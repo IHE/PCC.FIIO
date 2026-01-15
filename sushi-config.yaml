@@ -33,6 +33,9 @@ dependencies:
   ihe.pcc.odh: 
     id: ihepccodh
     version: 1.0.0
+  hl7.fhir.uv.extensions: 
+    id: FHIRExtensionPack
+    version: 5.2.0
 
 parameters:  
   path-resource:

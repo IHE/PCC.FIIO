@@ -71,6 +71,8 @@ Optional:
 - Social History 
 - Pregnancy History 
 - Advance Directives 
+- Alerts 
+- Patient Story
 
 ### XX.2.2 Complete Option
 This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition).
@@ -136,9 +138,9 @@ HIE Replated retrieval of patient summary, single source/ on demand...
 TODO 
 
 **Pre-conditions**:
-- A person's record and information is available in the HIE network
+- A person's record and information is available in the HIE network that the Emergecny services system is connected to 
 - The emergency services system has access to query the HIE
-- The parson is in need of immediate medical care
+- The person is in need of immediate medical care
 
 **Main Flow**:
 - The emergency provider finds the patient in the HIE 
@@ -202,13 +204,13 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 - The new diagnosis of asthma related to this occupational hazard is added to the patient’s EMR for the care provider’s EMR.  
 - A New IPS is created, including the original information imported by the provider plus the new diagnosis of asthma related to this occupational hazard, and made available for the patient to take home at the end of the episode of care.
 
-#### XX.4.2.4 Use Case \#4: Patient Mediated IPS Utilizing a Portal
+#### XX.4.2.4 Use Case \#4: Patient Mediated and Edited IPS Utilizing a Portal
 This use case describes how a patient can request the generation of an IPS and mask a portion of the data for personal privacy reasons and contribute to some of the data displayed. 
 
-##### XX.4.2.4.1 Patient Mediated IPS Utilizing a Portal
+##### XX.4.2.4.1 Patient Mediated and Edited IPS Utilizing a Portal
 A patient is preparing their personal Health Summary in case it is needed for their care. They are in the third trimester of their pregnancy and has recently been diagnosed with preeclampsia and is preparing for any emergencies ahead. They access their patient portal and generate an IPS. When reviewing the IPS, the patient makes sure that the preeclampsia and birth plan are flagged, lab results, adds some of the over the counter medication that isn't a part of the record, and adds some more information into the Patient Story section to provide more information and personal concerns that providers should be aware about the pregnancy. When these edits are completed, the patient finishes the generation of the IPS, ready to make available when it is needed for future care. 
 
-##### XX.4.2.4.2 Patient Mediated IPS Utilizing a Portal Process Flow
+##### XX.4.2.4.2 Patient Mediated and Endited IPS Utilizing a Portal Process Flow
 
 **Pre-conditions**:
 - A patient has a patient healthcare portal that contains their current health information 
