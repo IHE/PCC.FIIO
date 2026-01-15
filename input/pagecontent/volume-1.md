@@ -1,9 +1,9 @@
 
-**This IPS profile uses the Health Level 7's FHIR International Patient Summary (IPS) that realize the CEN EN 17269 IPS dataset to profile additional implementaiton options that can be incorperated into the IPS document. This is a Content Module profile that deffines these additional Implementation options.**
+**This IPS profile uses the Health Level 7's FHIR International Patient Summary (IPS) that realizes the CEN EN 17269 IPS dataset to profile additional implementation options that can be incorporated into the IPS document. This is a Content Module profile that defines these additional Implementation options.**
 
 <a name="actors-and-transactions"> </a>
 
-## 1:XX.1 FHIR IPS Implementation Options Actors, Transactions, and Content Modules
+## 1:XX.1 FHIR IPS Actors, Transactions, and Content Modules
 This section defines the actors, transactions, and/or content modules in this implementation guide. General definitions of actors are given in the Technical Frameworks General Introduction Appendix A. IHE Transactions can be found in the Technical Frameworks General Introduction Appendix B. Both appendices are located at https://profiles.ihe.net/GeneralIntro/.
 
 ### 1:XX.1.1 Actors
@@ -25,7 +25,7 @@ The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-documen
 
 <a name="actor-options"> </a>
 
-## XX.2 FHIR IPS Implementation Options Actor Options
+## XX.2 FHIR IPS Actor Options
 
 Options that may be selected for each actor in this implementation guide, are listed in Table XX.2-1 below. Dependencies between options when applicable are specified in notes.
 
@@ -47,11 +47,11 @@ Note 2: The Content Consumer must implement at least one of these options.
 
 ### XX.2.1 HL7 FHIR IPS Option
 
-This option defines the processing requirements placed on the Content Creators for producing a FHIR document version of the International Patient Summary defined by HL7's [FHIR IPS Implementation Guide](https://www.hl7.org/fhir/uv/ips/). This Included the requirement to implement and support all Section and entry data elements defined as Must Support. These Details can be found in the [HL7 FHIR IPS Bundle](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips) and [HL7 FHIR IPS Composition](http://www.hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html) structure definintions. 
+This option defines the processing requirements placed on the Content Creators for producing a FHIR document version of the International Patient Summary defined by HL7's [FHIR IPS Implementation Guide](https://www.hl7.org/fhir/uv/ips/). This Included the requirement to implement and support all Section and entry data elements defined as Must Support. These Details can be found in the [HL7 FHIR IPS Bundle](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips) and [HL7 FHIR IPS Composition](http://www.hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html) structure definitions. 
 
 The following sections Must always be present. If the system does not support the collection and storage of this content, the appropriate flavors of null SHALL indicate such. 
 Mandatory:
-- Medicaitons 
+- Medications 
 - Allergies 
 - Problems 
 
@@ -85,9 +85,8 @@ This option specifies that the following sections defined as optional in the [HL
 - IPS Patient Story
 - IPS Alerts
 
-
 ### XX.2.3 Occupational Data for Health Option
-Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The deaitls are deffined in the TBD.  
+Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the (ODH Option](TBD).  
 
 This option stipulates that the Social History Section has the new optionality of Must Support. Minimally, a system claiming the Occupational Data for Health Option SHALL include an entry for [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) of [Past Or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob), or Both. If the system collects any of the following work observations, these shall also be supported as Must Support:
 - Usual Occupation Duration 
@@ -101,20 +100,20 @@ This option stipulates that the Social History Section has the new optionality o
 - Weekly Work Days
 - Daily Work Hours 
 
-Those data elements are deffined in the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html). 
+Those data elements are defined in the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html). 
 
 ### XX.2.4 Complete Discrete Data Import Option
-The Content Consumer implementing this option shall be able to discretely import all relevant content provided by the Content Creator as deffined by the TBD. 
+The Content Consumer implementing this option shall be able to discretely import all relevant content provided by the Content Creator as defined by the (Complete Option)[] TBD. 
 
 <a name="required-groupings"> </a>
 
-## XX.3 FHIR IPS Implementation OptionsRequired Actor Groupings
+## XX.3 FHIR IPS Required Actor Groupings
 
-There are no Actor Groupings fo this profile. 
+There are no Actor Groupings for this profile. 
 
 <a name="overview"> </a>
 
-## XX.4 FHIR IPS Implementation Options Overview
+## XX.4 FHIR IPS Overview
 
 This profile describes how to use the HL7 FHIR IPS to support multiple international use cases, allowing for testing and deployment in commercial products for expanded implementation options. 
 
@@ -124,42 +123,44 @@ Patients that are traveling to other jurisdictions may be seeking care or in nee
 
 ### XX.4.2 Use Cases
 
-#### XX.4.2.1 Use Case \#1: Emergency Care Abroad Using HL7's FHIR IPS
+#### XX.4.2.1 Use Case \#1: On Demand Single Source IPS Document for Emergency Care  
 
-This Use case describes an Unscheduled, Cross Border care scenario where the healthcare provider is able to leverage the HL7 IPS summary FHIR Document of the person to be treated where they otherwise would not have such information available. 
+This Use case describes unscheduled emergency care of a patient where the healthcare provider is able to access an on demand HL7 IPS Document from an HIE. 
 
-##### XX.4.2.1.1 Emergency Care Abroad Using HL7's FHIR IPS Use Case Description
+##### XX.4.2.1.1 On Demand Single Source IPS Document for Emergency Care 
 
-A student is attending University and is taking a semester abroad. He has fallen off his bike on his way to class, breaking his left arm, and was taken to the local hospital. The IPS shows that the patient is severely allergic to NSAIDs and the attending clinician provides an alternative method of pain management for the patient.
+A person has gotten into a motor vehicle accident and Emergency services are called to care for them. When the emergency care team arrives at the patient's side, they are able to use the information available on their identification to query their HIE for an on demand IPS document. With the summary available, information on the patient's sever allergy to NSAIDs and antibiotics are noted for their care. The patient is transported to the local hospital to continue care. 
 
-##### XX.4.2.1.2 Emergency Care Abroad Using HL7's FHIR IPS Process Flow
-HIE Replated retrival of patient summary, single source/ on demand... 
+##### XX.4.2.1.2 On Demand Single Source IPS Document for Emergency Care  Process Flow
+HIE Replated retrieval of patient summary, single source/ on demand... 
 TODO 
 
 **Pre-conditions**:
-- A person is prepared to spend time outside of their home country or Juisdiction
-- The person has acess to provide a copy of their IPS Summary or a mechanism to provide acess to their IPS Summary
+- A person's record and information is available in the HIE network
+- The emergency services system has access to query the HIE
 - The parson is in need of immediate medical care
 
 **Main Flow**:
-- The emergency provider gains access to the patient's International Patient Summary
-- Based on this information the provider is able to make informed decisions on their minterventions. 
+- The emergency provider finds the patient in the HIE 
+- The emergency provider performs the $Summary request in the query
+- The HIE generates an IPS for the patient and the provider to view
+- Based on this information the provider is able to make informed decisions on their interventions. 
 - When the patient is transported to a hospital, the Emergency provider is able to pass on the IPS when they transfer their care to this new provider
 - The New provider is able to reference their record and make informed decisions when prescribing medication for pain management.
 
 **Post-conditions:**
-- A new IPS may be generated for acess with the new prescribed medicaiton information. 
+- A new IPS may be generated for access with the new prescribed medication information. 
 
-#### XX.4.2.2 Use Case \#2: Managing Chronic Conditions Accross Borders - Provider Mediated
+#### XX.4.2.2 Use Case \#2: Managing Chronic Conditions Across Borders - Provider Mediated
 In this use case, an IPS document is created by a care Provider.
 
 In some jurisdictions (e.g. France, others) there is funding available to care Providers to cover the cost of regularly preparing a patient summary document for their patients. It is typically expected that such a document will be leveraged to support cross-border care delivery as described in other use cases in this chapter. In the development of a Provider-mediated IPS, the patient’s health data content is curated by the Provider, whose judgement is used to answer the question: “what is the health data relevant to supporting the patient’s (likely unplanned) care?”
 
-##### XX.4.2.2.1 Managing Chronic Conditions Accross Borders Use Case Description
+##### XX.4.2.2.1 Managing Chronic Conditions Across Borders Use Case Description
 
 A patient with cancer has indicated to their provider that they will be spending several months outside of the country and has requested that a summary be available to them in the event that unplanned care takes place. Due to the complexity of their condition the provider generates an IPS document reflecting the current health information and relevant conditions, medications, labs, results, and imaging are available in the record, for informed care of the patient and their condition. The results section is ensured to contain the relevant pathology and imaging results relative to the patient’s cancer. The IPS is stored somewhere until it is needed. While the patient is on their trip, they have an unplanned visit to the local Health clinic with concerns that it is related to their cancer. Their IPS document is made available to the provider that is seeing to their care, and it is able to inform the care of the patient as they investigate any linkages this condition has to their chronic condition. 
 
-##### XX.4.2.2.2 Managing Chronic Conditions Accross Borders Process Flow
+##### XX.4.2.2.2 Managing Chronic Conditions Across Borders Process Flow
 <div>
 <img src="usecase2-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
 </div>
@@ -184,7 +185,6 @@ A patient with cancer has indicated to their provider that they will be spending
 -  The Provider-mediated IPS document resides on the POS. The IPS document content reflects appropriate attribution (e.g. provenance) regarding the Provider as the curator of the content.
 -  When needed, the IPS document is made available to a receiving provider system
 
-
 #### XX.4.2.3 Use Case \#3: Managing Work-Related Illness While Working Abroad 
 This use case describes a scheduled, cross border care scenario, with the Occupational Data for Health Option. 
 
@@ -207,15 +207,12 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 - A New IPS is created, including the original information imported by the provider plus the new diagnosis of asthma related to this occupational hazard, and made available for the patient to take home at the end of the episode of care.
 
 #### XX.4.2.4 Use Case \#4: Patient Mediated IPS Utilizing a Portal
-This use case describes how a patient can request the generation of an IPS and mask a portion of the data for personal privacy reasons and contribute to some of the data dispalyed. 
+This use case describes how a patient can request the generation of an IPS and mask a portion of the data for personal privacy reasons and contribute to some of the data displayed. 
 
 ##### XX.4.2.4.1 Patient Mediated IPS Utilizing a Portal
-A patient is preparing their personal Health Summary in case it is needed for their care. They first 
-pregnancy use case 
-***TODO***
+A patient is preparing their personal Health Summary in case it is needed for their care. They are in the third trimester of their pregnancy and has recently been diagnosed with preeclampsia and is preparing for any emergencies ahead. They access their patient portal and generate an IPS. When reviewing the IPS, the patient makes sure that the preeclampsia and birth plan are flagged, lab results, adds some of the over the counter medication that isn't a part of the record, and adds some more information into the Patient Story section to provide more information and personal concerns that providers should be aware about the pregnancy. When these edits are completed, the patient finishes the generation of the IPS, ready to make available when it is needed for future care. 
 
-##### XX.4.2.4.2 Patient Mediated IPS Utilizing a Portal
-
+##### XX.4.2.4.2 Patient Mediated IPS Utilizing a Portal Process Flow
 
 **Pre-conditions**:
 - A patient has a patient healthcare portal that contains their current health information 
@@ -225,15 +222,14 @@ pregnancy use case
 **Main Flow**:
 -  The patient requests within their portal that an IPS needs to be generated
 -  the portal collects the information needed to formulate and IPS
--  Without access to the laboratory data, the Results section is populated with an empty reason of unavailable
 -  The Patient reviews the IPS document 
--  They notice that a recent flu shot they gor at a phramacy is missing from the record. They add this information into the patient story section for conisderation on anyone who may view this document. 
+-  They notice that some information is missing from the record and adds it
 -  They review the contents and identify that their Mental Health condition noted in their problems section. They wish to keep this information private and choose to mask that information before the final IPS document version is completed. 
 
 **Post-conditions:**
 - The Problems Section now has an entry that indicates that one of entries in this list is masked
-- The IPS now contains a patient sotry narrative that other can read where they had stated there was an immunization missing
-- The IPS is now ready fro sharing with another healthcare provider 
+- The IPS now contains a patient story narrative that others can read where they had stated there was an immunization missing
+- The IPS is now ready for sharing with another healthcare provider 
 
 #### XX.4.2.5 Use Case \#5: On-demand IPS Using $Summary from Multiple Sources
 In this use case, a digital health solution generates an IPS document on demand from one or more reference data sources. 
@@ -243,7 +239,6 @@ Where all of a Patient’s relevant information cannot be found on a single serv
 
 ##### XX.4.2.5.2 On-demand IPS Using $Summary from Multiple Sources Process Flow
 
-
 **Pre-conditions**:
 - A patient is sent to another country for work by her company.
 - She has a medical exam prior to arriving in the new country where her medical record is updated.
@@ -252,18 +247,30 @@ Where all of a Patient’s relevant information cannot be found on a single serv
 -  The patient develops asthma symptoms and consults a provider in the country she is working.
 - Using the patient’s international patient summary with occupational health data included, the provider is able to see that exposure from work is causing these symptoms. The provider recommends a change in work practice to avoid further exposure and prescribes inhalers to the patient.
 
-
-#### XX.4.2.5 Use Case \#6: TBD - Respresenting Missing Data 
-Patient proveds portal information when being seen by a provider with a link to their primary provider portal. It generates an IPS for the reviewing provider, for infomred care and treatment. The patient's provider portal is limited and does not have acces to procedure or Lab data. when the IPS is generated, those sections are labled No information available tags. the reciving provider sees this and knows that they may need to utilize a different resource to collect this data on the patient and is infomred that there is a gap in their data. 
-
-pt arrival at a new clinic?
+**Post-conditions:**
+- 
 
 
+#### XX.4.2.5 Use Case \#6: TBD - Representing Missing Data 
+Represents how some systems should represent missing data for required if known section in the IPS documents that are generated due to limitations of the system.
+
+##### XX.4.2.6.1 TBD - Representing Missing Data
+A patient arrives at a treatment clinic that is looking for their patient history information. The patient provides portal information when being seen by a provider with a link to their primary provider portal. It generates an IPS for the reviewing provider, for informed care and treatment. The patient's provider portal is limited and does not have access to procedure or Lab data. when the IPS is generated, those sections are labeled No information available tags. The receiving provider sees this and knows that they may need to utilize a different resource to collect this data on the patient and is informed that there is a gap in their data. 
 
 
+##### XX.4.2.6.2 TBD - Representing Missing Data Process Flow
 
+**Pre-conditions**:
+- The provider system is able to generate an IPS
+- The provider system does not have access to Lab or Procedure information
 
+**Main Flow**:
+- There is a request for the provider system to generate an IPS 
+- The IPS document is generated 
+- The Results and Procedures sections are present with the 'No information available' entry available  
 
+**Post-conditions:**
+- The receiving providers are aware that they may need to use an alternative source to identify any relevant Labs and Procedures associated with the patient. 
 
 
 <a name="security-considerations"> </a>
