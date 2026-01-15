@@ -73,7 +73,7 @@ Optional:
 - Advance Directives 
 
 ### XX.2.2 Complete Option
-This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the TBD.
+This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition).
 This option specifies that the following sections defined as optional in the [HL7 FHIR IPS Composition](http://www.hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html) Have a New optionality of Must Support. This applies to the following sections: 
 - IPS Advance Directives 
 - IPS Functional Status 
@@ -86,7 +86,7 @@ This option specifies that the following sections defined as optional in the [HL
 - IPS Alerts
 
 ### XX.2.3 Occupational Data for Health Option
-Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the (ODH Option](TBD).  
+Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the [ODH Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition).  
 
 This option stipulates that the Social History Section has the new optionality of Must Support. Minimally, a system claiming the Occupational Data for Health Option SHALL include an entry for [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) of [Past Or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob), or Both. If the system collects any of the following work observations, these shall also be supported as Must Support:
 - Usual Occupation Duration 
@@ -103,7 +103,7 @@ This option stipulates that the Social History Section has the new optionality o
 Those data elements are defined in the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html). 
 
 ### XX.2.4 Complete Discrete Data Import Option
-The Content Consumer implementing this option shall be able to discretely import all relevant content provided by the Content Creator as defined by the (Complete Option)[] TBD. 
+The Content Consumer implementing this option shall be able to discretely import all relevant content provided by the Content Creator as defined by the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition). 
 
 <a name="required-groupings"> </a>
 

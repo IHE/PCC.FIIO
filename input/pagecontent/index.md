@@ -1,7 +1,5 @@
 
-**This Implementation Guide template includes skeleton pages for each part of an IHE supplement. The instructions for how to fill out these sections can be found in the included [Supplement Template](https://github.com/IHE/supplement-template/blob/master/suppl_template.md). This supplement template should not be included in your github repo or publication. It is included here for easy reference.**
-
-**TODO: Write your executive overview here. Usually a one paragraph explanation of what problem this implementation guide solves.**
+**This IPS profile uses the Health Level 7's FHIR International Patient Summary (IPS) that realizes the CEN EN 17269 IPS dataset to profile additional implementation options that can be incorporated into the IPS document. This is a Content Module profile that defines these additional Implementation options.**
 
 <div markdown="1" class="stu-note">
 
@@ -22,14 +20,8 @@ This guide is organized into the following sections:
    1. [Overview](volume-1.html#overview)
    1. [Security Considerations](volume-1.html#security-considerations)
    1. [Cross Profile Considerations](volume-1.html#other-grouping)
-   1. **TODO: point to the Volume 1 Appendix if there is one**
-2. Volume 2: Transaction Detail
-   1. [ToDo do \[domain-YY\]](domain-YY.html)
-   1. **TODO: point to the Volume 2 Appendix if there is one**
 3. Volume 3: Metadata and Content
    1. [Content One](domain-ZZ.html)
-4. Volume 4: National Extensions
-   1. **TODO: point at the National Extensions if there are any**
 5. Other
    1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)
