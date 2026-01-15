@@ -161,10 +161,6 @@ In some jurisdictions (e.g. France, others) there is funding available to care P
 A patient with cancer has indicated to their provider that they will be spending several months outside of the country and has requested that a summary be available to them in the event that unplanned care takes place. Due to the complexity of their condition the provider generates an IPS document reflecting the current health information and relevant conditions, medications, labs, results, and imaging are available in the record, for informed care of the patient and their condition. The results section is ensured to contain the relevant pathology and imaging results relative to the patient’s cancer. The IPS is stored somewhere until it is needed. While the patient is on their trip, they have an unplanned visit to the local Health clinic with concerns that it is related to their cancer. Their IPS document is made available to the provider that is seeing to their care, and it is able to inform the care of the patient as they investigate any linkages this condition has to their chronic condition. 
 
 ##### XX.4.2.2.2 Managing Chronic Conditions Across Borders Process Flow
-<div>
-<img src="usecase2-processflow.plantuml" caption="Figure XX.4.1: Diagrammed in an image" width="70%" >
-</div>
-
 <figure>
 {%include usecase2-processflow.svg%}
 <figcaption><strong>Figure XX.4.2.2-1: Provider-mediated IPS Process Flow</strong></figcaption>
