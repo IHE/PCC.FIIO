@@ -291,6 +291,7 @@ Usage: #inline
 * code = $loinc#82810-3 "Pregnancy status"
 * valueCodeableConcept = $sct#77386006 "Pregnant"
 * hasMember = Reference(urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a)
+* effectiveDateTime = "2014-02-01"
 
 Instance: b8b80efb-eb42-4eeb-b308-86a465d0ab7a
 InstanceOf: ObservationPregnancyEddUvIps
