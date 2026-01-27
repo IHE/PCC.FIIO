@@ -75,60 +75,60 @@ Usage: #inline
 * event.period.start = "2024-07-01T00:00:00Z"
 * event.period.end = "2024-07-01T00:00:00Z"
 
-* section[+].title = "Medication List"
-* section[=].code = $loinc#10160-0 "History of Medication use Narrative"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication section</div>"
-* section[=].entry[medicationStatement] = Reference(urn:uuid:dffca459-b71b-41ec-a0a2-077310d64d92)
+* section[sectionMedications].title = "Medication List"
+* section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
+* section[sectionMedications].text.status = #generated
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication section</div>"
+* section[sectionMedications].entry[medicationStatement] = Reference(urn:uuid:dffca459-b71b-41ec-a0a2-077310d64d92)
 
-* section[+].title = "Allergies and Intolerances"
-* section[=].code = $loinc#48765-2 "Allergies and adverse reactions Document"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies and intolerances section</div>"
-* section[=].entry[allergyOrIntolerance] = Reference(urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6)
+* section[sectionAllergies].title = "Allergies and Intolerances"
+* section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
+* section[sectionAllergies].text.status = #generated
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies and intolerances section</div>"
+* section[sectionAllergies].entry[allergyOrIntolerance] = Reference(urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6)
 
-* section[+].title = "Problem List"
-* section[=].code = $loinc#11450-4 "Problem list - Reported"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Problem list section</div>"
-* section[=].entry[problem] = Reference(urn:uuid:f2acb378-5c29-4541-b0c0-953b53d61d05)
+* section[sectionProblems].title = "Problem List"
+* section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
+* section[sectionProblems].text.status = #generated
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Problem list section</div>"
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:f2acb378-5c29-4541-b0c0-953b53d61d05)
 
-* section[+].title = "History of Immunizations"
-* section[=].code = $loinc#11369-6 "History of Immunization note"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations section</div>"
-* section[=].entry[immunization] = Reference(urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a)
+* section[sectionImmunizations].title = "History of Immunizations"
+* section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
+* section[sectionImmunizations].text.status = #generated
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations section</div>"
+* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a)
 
-* section[+].title = "History of Procedures"
-* section[=].code = $loinc#47519-4 "History of Procedures Document"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Procedures section</div>"
-* section[=].entry = Reference(urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd)
+* section[sectionProceduresHx].title = "History of Procedures"
+* section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
+* section[sectionProceduresHx].text.status = #generated
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Procedures section</div>"
+* section[sectionProceduresHx].entry = Reference(urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd)
 
-* section[+].title = "Diagnostic Results"
-* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
-* section[=].entry[results-observation] = Reference(urn:uuid:e4040d7c-03f5-4e2e-9cfe-3618899aa777)
+* section[sectionResults].title = "Diagnostic Results"
+* section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
+* section[sectionResults].text.status = #generated
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
+* section[sectionResults].entry[results-observation] = Reference(urn:uuid:e4040d7c-03f5-4e2e-9cfe-3618899aa777)
 
-* section[+].title = "Social History"
-* section[=].code = $loinc#29762-2 "Social history note"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History </div>"
-* section[=].entry[+] = Reference(urn:uuid:35bfbd5e-654f-45d4-886a-6cc8af5c6985)
-* section[=].entry[+] = Reference(urn:uuid:50a342f1-e715-43f9-bf43-30f219e77560)
+* section[sectionSocialHistory].title = "Social History"
+* section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
+* section[sectionSocialHistory].text.status = #generated
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History </div>"
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:35bfbd5e-654f-45d4-886a-6cc8af5c6985)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:50a342f1-e715-43f9-bf43-30f219e77560)
 
-* section[+].title = "Pregnancy History"
-* section[=].code = $loinc#10162-6 "History of Pregnancies Narrative"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy section</div>"
-* section[=].entry[pregnancyStatus] = Reference(urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80)
+* section[sectionPregnancyHx].title = "Pregnancy History"
+* section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
+* section[sectionPregnancyHx].text.status = #generated
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy section</div>"
+* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80)
 
-* section[+].title = "Medical Devices"
-* section[=].code = $loinc#46264-8 "History of Medical Device Use"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
-* section[=].entry[deviceStatement] = Reference(urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6)
+* section[sectionMedicalDevices].title = "Medical Devices"
+* section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
+* section[sectionMedicalDevices].text.status = #generated
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
+* section[sectionMedicalDevices].entry[deviceStatement] = Reference(urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6)
 
 Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
 InstanceOf: Organization
