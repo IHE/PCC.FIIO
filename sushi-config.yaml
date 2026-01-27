@@ -33,9 +33,9 @@ dependencies:
   ihe.pcc.odh: 
     id: ihepccodh
     version: 1.0.0
-  hl7.fhir.uv.extensions: 
+  hl7.fhir.uv.extensions.r4: 
     id: FHIRExtensionPack
-    version: 5.2.0
+    version: 5.3.0-ballot-tc1
 
 parameters:  
   path-resource:
