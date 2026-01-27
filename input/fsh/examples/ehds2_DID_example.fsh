@@ -15,7 +15,8 @@ Alias: $ViewValueSet.action = https://phinvads.cdc.gov/vads/ViewValueSet.action?
 Alias: $ViewValueSet.action_1 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
 Alias: $ViewValueSet.action_2 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7900
 Alias: $ViewValueSet.action_3 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
-Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
+Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips 
+Alias: $ISCO08 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08
 
 Instance: d174bd1a-b368-41e6-83a2-af77f2b3c60f
 InstanceOf: BundleUvIps
@@ -46,8 +47,6 @@ Usage: #example
 * entry[=].resource = e4040d7c-03f5-4e2e-9cfe-3618899aa777
 * entry[+].fullUrl = "urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a"
 * entry[=].resource = 7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a
-* entry[+].fullUrl = "urn:uuid:35bfbd5e-654f-45d4-886a-6cc8af5c6985"
-* entry[=].resource = 35bfbd5e-654f-45d4-886a-6cc8af5c6985
 * entry[+].fullUrl = "urn:uuid:50a342f1-e715-43f9-bf43-30f219e77560"
 * entry[=].resource = 50a342f1-e715-43f9-bf43-30f219e77560
 * entry[+].fullUrl = "urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80"
@@ -115,7 +114,6 @@ Usage: #inline
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History </div>"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:35bfbd5e-654f-45d4-886a-6cc8af5c6985)
 * section[sectionSocialHistory].entry[+] = Reference(urn:uuid:50a342f1-e715-43f9-bf43-30f219e77560)
 
 * section[sectionPregnancyHx].title = "Pregnancy History"
@@ -131,14 +129,14 @@ Usage: #inline
 * section[sectionMedicalDevices].entry[deviceStatement] = Reference(urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6)
 
 Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
-InstanceOf: Organization
+InstanceOf: OrganizationUvIps
 Usage: #inline
 * identifier.system = "urn:oid:1.1.1.1.1.1.1.3"
 * identifier.value = "WHO-CX"
 * name = "World Health Organization"
 
 Instance: Inline-Instance-for-d174bd1a-b368-41e6-83a2-af77f2b3c60f-2
-InstanceOf: Patient
+InstanceOf: PatientUvIps
 Usage: #inline
 * id = "d174bd1a-b368-41e6-83a2-af77f2b3c60f"
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
@@ -156,7 +154,7 @@ Usage: #inline
 * generalPractitioner = Reference(9e57d970-d0ae-4a36-908f-1cad06f94f28) "Yaser, Joseph"
 
 Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
-InstanceOf: Practitioner
+InstanceOf: PractitionerUvIps
 Usage: #inline
 * identifier[+].use = #official
 * identifier[=].system = "urn:oid:2.16.528.1.1007.3.1"
@@ -178,35 +176,35 @@ Usage: #inline
 * birthDate = "1971-11-07"
 
 Instance: 9e57d970-d0ae-4a36-908f-1cad06f94f28
-InstanceOf: Practitioner
+InstanceOf: PractitionerUvIps
 Usage: #inline
 * name.text = "Joseph Yaser"
 * name.family = "Joseph"
 * name.given = "Yaser"
 
 Instance: dffca459-b71b-41ec-a0a2-077310d64d92
-InstanceOf: MedicationStatement
+InstanceOf: MedicationStatementIPS
 Usage: #inline
 * status = #completed
-* medicationCodeableConcept = $sct#395802006 "Mometasone Furoate 0.05mg/Actuat"
+* medicationCodeableConcept = $sct#395802006 "Mometasone furoate (substance)"
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
 * effectiveDateTime = "2014-02-01"
 * dateAsserted = "2014-02-22"
 
 Instance: f2acb378-5c29-4541-b0c0-953b53d61d05
-InstanceOf: Condition
+InstanceOf: ConditionUvIps
 Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * category = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#719865001 " Influenza caused by pandemic influenza virus (disorder)"
+* code = $sct#719865001 "Influenza caused by pandemic influenza virus (disorder)"
 * severity = $sct#24484000 "Severe"
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
 * onsetDateTime = "2016-05-25"
 * verificationStatus = $condition-ver-status#confirmed
-* asserter = Reference(urn:uuid:816cf057-b736-4e08-baed-cc21e081b784)
+* asserter = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
 Instance: 402afc3f-318f-4a48-9d79-0cab913d7efd
-InstanceOf: Procedure
+InstanceOf: ProcedureUvIps
 Usage: #inline
 * status = #completed
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
@@ -217,7 +215,7 @@ Usage: #inline
 * performedDateTime = "2024-06-25"
 
 Instance: b06be658-3d84-4b1b-be48-6fac0e5427c6
-InstanceOf: AllergyIntolerance
+InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed
@@ -225,8 +223,6 @@ Usage: #inline
 * category = #medication
 * patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
 * code = $sct#294647003 "Allergy to component of vaccine product containing Influenza virus antigen (finding)"
-* extension.url = "urn:example:allergy-diagnosis"
-* extension.valueCodeableConcept = $sct#294647003 "Allergy to component of vaccine product containing Influenza virus antigen (finding)"
 * onsetDateTime = "2020-10-01"
 * lastOccurrence = "2020-10-01"
 * criticality = #high
@@ -234,7 +230,7 @@ Usage: #inline
 * reaction.severity = #moderate
 
 Instance: e4040d7c-03f5-4e2e-9cfe-3618899aa777
-InstanceOf: Observation
+InstanceOf: ObservationResultsUvIps
 Usage: #inline
 * status = #final
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
@@ -245,11 +241,9 @@ Usage: #inline
 * interpretation = $v3-ObservationInterpretation#H "High"
 * note.text = "Positive for Influenza A"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-* extension.url = "urn:example:observer"
-* extension.valueReference = Reference(urn:uuid:816cf057-b736-4e08-baed-cc21e081b784)
 
 Instance: 7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a
-InstanceOf: Immunization
+InstanceOf: ImmunizationUvIps
 Usage: #inline
 * status = #completed
 * patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
@@ -263,19 +257,10 @@ Usage: #inline
 * site = $v3-ActSite#LA "left arm"
 * route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
 * performer.function = $v2-0443#OP
-* performer.actor = Reference(Practitioner/example)
-
-Instance: 35bfbd5e-654f-45d4-886a-6cc8af5c6985
-InstanceOf: Observation
-Usage: #inline
-* status = #final
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* code = $loinc#11341-5 "History of Occupation"
-* valueString = "Nurse"
-* effectiveDateTime = "2020-01-15"
+* performer.actor = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
 Instance: 50a342f1-e715-43f9-bf43-30f219e77560
-InstanceOf: Observation
+InstanceOf: PastOrPresentJob
 Usage: #inline
 * status = #final
 * category = $observation-category#social-history "Social History"
@@ -287,13 +272,15 @@ Usage: #inline
 * effectivePeriod.end = "2020-04-14"
 * issued = "2024-06-06T13:28:53+02:00"
 * valueCodeableConcept.coding[+] = $ViewValueSet.action#31-1014.00.007136 "Nursing, psychiatric, and home health aides"
+// * valueCodeableConcept.coding[+] = $ISCO08#5321 "Nursing Assistants"
 * valueCodeableConcept.coding[+] = $ViewValueSet.action_1#3600 "Nursing, psychiatric, and home health aides"
 * component.code = $loinc#86188-0 "History of Occupation Industry"
 * component.valueCodeableConcept.coding[+] = $ViewValueSet.action_2#621610.008495 "Home nursing services"
 * component.valueCodeableConcept.coding[+] = $ViewValueSet.action_3#8270 "Nursing care facilities"
+//* component.valueCodeableConcept.coding[+] = $ILORev4#871 "Residential nursing care facilities"
 
 Instance: 525840ed-762d-44c5-a0bf-bac7a275ad80
-InstanceOf: Observation
+InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #inline
 * status = #final
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
@@ -302,7 +289,7 @@ Usage: #inline
 * hasMember = Reference(urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a)
 
 Instance: b8b80efb-eb42-4eeb-b308-86a465d0ab7a
-InstanceOf: Observation
+InstanceOf: ObservationPregnancyEddUvIps
 Usage: #inline
 * status = #final
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
@@ -310,7 +297,7 @@ Usage: #inline
 * valueDateTime = "2024-12-01"
 
 Instance: 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
-InstanceOf: DeviceUseStatement
+InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * status = #completed
 * device = Reference(urn:uuid:25a63f47-1f87-42f6-ba4c-c6887f4db418)
@@ -318,7 +305,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
 
 Instance: 25a63f47-1f87-42f6-ba4c-c6887f4db418
-InstanceOf: Device
+InstanceOf: DeviceUvIps
 Usage: #inline
 * type = $absent-unknown-uv-ips#no-known-devices "No known devices in use"
 * patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
