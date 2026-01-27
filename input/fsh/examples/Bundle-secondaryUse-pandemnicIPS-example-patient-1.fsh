@@ -81,19 +81,19 @@ Usage: #example
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies and intolerances section</div>"
-* section[sectionAllergies].entry[allergyOrIntolerance] = Reference(urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6)
+* section[sectionAllergies].entry[+] = Reference(urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6)
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Problem list section</div>"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:f2acb378-5c29-4541-b0c0-953b53d61d05)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:f2acb378-5c29-4541-b0c0-953b53d61d05)
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations section</div>"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a)
+* section[sectionImmunizations].entry[+] = Reference(urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a)
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
@@ -117,13 +117,13 @@ Usage: #example
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
 * section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy section</div>"
-* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80)
+* section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80)
 
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
-* section[sectionMedicalDevices].entry[deviceStatement] = Reference(urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6)
+* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6)
 
 Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
 InstanceOf: OrganizationUvIps
