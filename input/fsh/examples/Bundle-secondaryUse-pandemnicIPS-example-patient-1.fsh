@@ -278,7 +278,7 @@ Usage: #inline
 * effectivePeriod.start = "2016-03-10"
 * effectivePeriod.end = "2020-04-14"
 * issued = "2024-06-06T13:28:53+02:00"
-* valueCodeableConcept = $ISCO08#5321 "Nursing Assistants"
+* valueCodeableConcept = $ISCO08#5321 "Health Care Assistants"
 * component.code = $loinc#86188-0 "History of Occupation Industry"
 * component.valueCodeableConcept = $ISICRev4#871 "Residential nursing care facilities"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
@@ -292,6 +292,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#77386006 "Pregnant"
 * hasMember = Reference(urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a)
 * effectiveDateTime = "2014-02-01"
+* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 
 Instance: b8b80efb-eb42-4eeb-b308-86a465d0ab7a
 InstanceOf: ObservationPregnancyEddUvIps
