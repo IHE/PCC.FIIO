@@ -18,7 +18,7 @@ Alias: $ViewValueSet.action_3 = https://phinvads.cdc.gov/vads/ViewValueSet.actio
 Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips 
 Alias: $ISCO08 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08
 
-Instance: ehds2-dId-example-patient-1
+Instance: secondaryUse-pandemnicIPS-example-patient-1
 InstanceOf: BundleUvIps
 Usage: #example
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
@@ -230,7 +230,7 @@ Usage: #inline
 * reaction.severity = #moderate
 
 Instance: e4040d7c-03f5-4e2e-9cfe-3618899aa777
-InstanceOf: DiagnosticReportUvIps
+InstanceOf: Observation
 Usage: #inline
 * status = #final
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
