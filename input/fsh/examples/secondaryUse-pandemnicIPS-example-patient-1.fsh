@@ -23,11 +23,11 @@ Usage: #example
 * type = #document
 * timestamp = "2024-07-01T00:00:00Z"
 
-* entry[composition].fullUrl = "urn:uuid:7e1ad2b6-b399-475f-89ea-996b17700eed"
-* entry[composition].resource = Ex-composition-for-secondaryUse-pandemnicIPS-example-patient-1
+* entry[+].fullUrl = "urn:uuid:7e1ad2b6-b399-475f-89ea-996b17700eed"
+* entry[=].resource = Ex-composition-for-secondaryUse-pandemnicIPS-example-patient-1
 
-* entry[patient].fullUrl = "urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f"
-* entry[patient].resource = Ex-patient-for-secondaryUse-pandemnicIPS-example-patient-1
+* entry[+].fullUrl = "urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f"
+* entry[=].resource = Ex-patient-for-secondaryUse-pandemnicIPS-example-patient-1
 
 * entry[organization].fullUrl = "urn:uuid:5bc0c003-a3cd-44f2-b3be-8cb256d0e83a"
 * entry[organization].resource = 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
