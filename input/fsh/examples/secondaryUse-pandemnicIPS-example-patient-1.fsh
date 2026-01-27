@@ -288,6 +288,7 @@ Usage: #inline
 * valueCodeableConcept.coding[+] = $ISCO08#5321 "Health Care Assistants"
 * component.code = $loinc#86188-0 "History of Occupation Industry"
 * component.valueCodeableConcept.coding[+] = $ILORev4#871 "Residential nursing care facilities"
+* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee) 
 
 Instance: 525840ed-762d-44c5-a0bf-bac7a275ad80
 InstanceOf: ObservationPregnancyStatusUvIps
