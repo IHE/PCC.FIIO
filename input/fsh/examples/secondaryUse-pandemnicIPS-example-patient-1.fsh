@@ -11,12 +11,9 @@ Alias: $v3-ActSite = http://terminology.hl7.org/CodeSystem/v3-ActSite
 Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
 Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $ViewValueSet.action = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7901
-Alias: $ViewValueSet.action_1 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7186
-Alias: $ViewValueSet.action_2 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7900
-Alias: $ViewValueSet.action_3 = https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7187
 Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips 
 Alias: $ISCO08 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08
+Alias: $ILORev4 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4
 
 Instance: secondaryUse-pandemnicIPS-example-patient-1
 InstanceOf: BundleUvIps
@@ -151,7 +148,7 @@ Usage: #inline
 * gender = #female
 * birthDate = "1956-09-30"
 * deceasedDateTime = "2024-06-30"
-* generalPractitioner = Reference(9e57d970-d0ae-4a36-908f-1cad06f94f28) "Yaser, Joseph"
+* generalPractitioner = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28) "Yaser, Joseph"
 
 Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
 InstanceOf: PractitionerUvIps
@@ -271,13 +268,9 @@ Usage: #inline
 * effectivePeriod.start = "2016-03-10"
 * effectivePeriod.end = "2020-04-14"
 * issued = "2024-06-06T13:28:53+02:00"
-* valueCodeableConcept.coding[+] = $ViewValueSet.action#31-1014.00.007136 "Nursing, psychiatric, and home health aides"
-// * valueCodeableConcept.coding[+] = $ISCO08#5321 "Nursing Assistants"
-* valueCodeableConcept.coding[+] = $ViewValueSet.action_1#3600 "Nursing, psychiatric, and home health aides"
+* valueCodeableConcept.coding[+] = $ISCO08#5321 "Nursing Assistants"
 * component.code = $loinc#86188-0 "History of Occupation Industry"
-* component.valueCodeableConcept.coding[+] = $ViewValueSet.action_2#621610.008495 "Home nursing services"
-* component.valueCodeableConcept.coding[+] = $ViewValueSet.action_3#8270 "Nursing care facilities"
-//* component.valueCodeableConcept.coding[+] = $ILORev4#871 "Residential nursing care facilities"
+* component.valueCodeableConcept.coding[+] = $ILORev4#871 "Residential nursing care facilities"
 
 Instance: 525840ed-762d-44c5-a0bf-bac7a275ad80
 InstanceOf: ObservationPregnancyStatusUvIps
@@ -288,6 +281,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#77386006 "Pregnant"
 * hasMember = Reference(urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a)
 * effectiveDateTime = "2014-02-01"
+* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 
 Instance: b8b80efb-eb42-4eeb-b308-86a465d0ab7a
 InstanceOf: ObservationPregnancyEddUvIps
@@ -297,6 +291,8 @@ Usage: #inline
 * code = $loinc#11778-8 "Delivery date Estimated"
 * valueDateTime = "2024-12-01"
 * effectiveDateTime = "2014-02-01"
+* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
+
 
 Instance: 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
 InstanceOf: DeviceUseStatementUvIps
@@ -310,5 +306,5 @@ Usage: #inline
 Instance: 25a63f47-1f87-42f6-ba4c-c6887f4db418
 InstanceOf: DeviceUvIps
 Usage: #inline
-* type = $absent-unknown-uv-ips#no-known-devices "No known devices in use"
+* type = $sct#787483001 "No known device use"
 * patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
