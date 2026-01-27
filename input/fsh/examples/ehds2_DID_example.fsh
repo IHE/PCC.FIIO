@@ -79,7 +79,7 @@ Usage: #inline
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication section</div>"
-* section[sectionMedications].entry[medicationStatement] = Reference(urn:uuid:dffca459-b71b-41ec-a0a2-077310d64d92)
+* section[sectionMedications].entry[+] = Reference(urn:uuid:dffca459-b71b-41ec-a0a2-077310d64d92)
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -109,7 +109,7 @@ Usage: #inline
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.status = #generated
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
-* section[sectionResults].entry[results-observation] = Reference(urn:uuid:e4040d7c-03f5-4e2e-9cfe-3618899aa777)
+* section[sectionResults].entry[+] = Reference(urn:uuid:e4040d7c-03f5-4e2e-9cfe-3618899aa777)
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
