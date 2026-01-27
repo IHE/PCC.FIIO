@@ -18,7 +18,7 @@ Alias: $ViewValueSet.action_3 = https://phinvads.cdc.gov/vads/ViewValueSet.actio
 Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips 
 Alias: $ISCO08 = https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08
 
-Instance: d174bd1a-b368-41e6-83a2-af77f2b3c60f
+Instance: ehds2-dId-example-patient-1
 InstanceOf: BundleUvIps
 Usage: #example
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
@@ -230,7 +230,7 @@ Usage: #inline
 * reaction.severity = #moderate
 
 Instance: e4040d7c-03f5-4e2e-9cfe-3618899aa777
-InstanceOf: ObservationResultsUvIps
+InstanceOf: DiagnosticReportUvIps
 Usage: #inline
 * status = #final
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
@@ -287,6 +287,7 @@ Usage: #inline
 * code = $loinc#82810-3 "Pregnancy status"
 * valueCodeableConcept = $sct#77386006 "Pregnant"
 * hasMember = Reference(urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a)
+* effectiveDateTime = "2014-02-01"
 
 Instance: b8b80efb-eb42-4eeb-b308-86a465d0ab7a
 InstanceOf: ObservationPregnancyEddUvIps
@@ -295,6 +296,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
 * code = $loinc#11778-8 "Delivery date Estimated"
 * valueDateTime = "2024-12-01"
+* effectiveDateTime = "2014-02-01"
 
 Instance: 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
 InstanceOf: DeviceUseStatementUvIps
