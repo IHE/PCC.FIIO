@@ -305,6 +305,7 @@ Usage: #inline
 * device = Reference(urn:uuid:25a63f47-1f87-42f6-ba4c-c6887f4db418)
 * note.text = "Device data required"
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* timingDateTime = "2014-02-01"
 
 Instance: 25a63f47-1f87-42f6-ba4c-c6887f4db418
 InstanceOf: DeviceUvIps
