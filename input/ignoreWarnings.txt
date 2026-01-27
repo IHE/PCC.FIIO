@@ -1,5 +1,10 @@
 == Suppressed Messages ==
-# instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
+# Warnings Generated from Obligation Slicing in Parent Profile. Cannot be resolved in this profile. Suppressed until future solution is found. 
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+
+ 
 # IHE valueset that is not yet a real valueset
 Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be validated
 
