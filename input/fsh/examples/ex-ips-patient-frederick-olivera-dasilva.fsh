@@ -5,8 +5,8 @@ Description: "The patient Frederick Olivera DaSilva used for examples"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-05-15T20:48:16.013+00:00"
-* meta.source = "#vrVwj42V0afRIa07"
-* meta.tag = $tags#synthea-5-2019
+//* meta.source = "#vrVwj42V0afRIa07"
+//* meta.tag = $tags#synthea-5-2019
 
 * extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
 * extension[=].extension[+].url = "ombCategory"
@@ -79,13 +79,13 @@ Description: "The patient Frederick Olivera DaSilva used for examples"
 * address.postalCode = "01013"
 * address.country = "US"
 
-* maritalStatus = $v3-MaritalStatus#M "M"
-* maritalStatus.text = "M"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M "Married"
+* maritalStatus.text = "Married"
 
 * multipleBirthBoolean = false
 
 * contact[+].relationship = http://terminology.hl7.org/CodeSystem/v2-0131#C
-* contact[=].name = "Genevieve Duponte"
+* contact[=].name.text = "Genevieve Duponte"
 * contact[=].name.use = #official
 * contact[=].name.family = "Genevieve"
 * contact[=].name.given = "Duponte"
@@ -109,7 +109,7 @@ Description: "The patient Frederick Olivera DaSilva used for examples"
 * communication[=].language.text = "English"
 * communication[+].language = urn:ietf:bcp:47#pt-BR "Portuguese (Brazil)"
 * communication[=].language.text = "Portuguese (Brazil)"
-* communication[=].language.preferred = true
+* communication[=].preferred = true
 
 * generalPractitioner[+] = Reference(Practitioner/ex-ips-practitioner-pamela-watts)
 * generalPractitioner[+] = Reference(Practitioner/ex-ips-practitioner-kristina-gonzalez)
@@ -124,7 +124,7 @@ Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * meta.security[+] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
 
-* name[+] = "Dr Pamela Watts"
+* name[+].text = "Dr Pamela Watts"
 * name[=].use = http://hl7.org/fhir/name-use#usual
 * name[=].family = "Watts"
 * name[=].given = "Pamela"
@@ -148,7 +148,7 @@ Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * meta.security[+] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
 
-* name[+] = "Dr Kristina Gonzalez"
+* name[+].text = "Dr Kristina Gonzalez"
 * name[=].use = http://hl7.org/fhir/name-use#usual
 * name[=].family = "Gonzalez"
 * name[=].given = "Kristina"
@@ -159,5 +159,5 @@ Usage: #inline
 * telecom[+].system = #email
 * telecom[=].value = "PractitionerG@example.com"
 
-* qualification.identifier = "66234158"
+* qualification.identifier.value = "66234158"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD

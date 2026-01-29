@@ -17,3 +17,4 @@ Alias: $ICD10-CM = http://hl7.org/fhir/sid/icd-10-cm
 Alias: $v3-WorkClassificationODH = http://terminology.hl7.org/CodeSystem/v3-WorkClassificationODH
 Alias: $PHOccupationalDataForHealthODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
 Alias: $v3-ObservationValue = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203

@@ -29,7 +29,7 @@ Description: "The patient Jannet Guo used for an example for IPS"
 
 * birthDate = "1993-07-25"
 
-* maritalStatus = $v3-MaritalStatus#S "Never Married"
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#S "Never Married"
 * maritalStatus.text = "Never Married"
 
 * address[+].use = http://hl7.org/fhir/address-use#home
@@ -50,14 +50,10 @@ Description: "The patient Jannet Guo used for an example for IPS"
 
 
 * contact[+].relationship = http://terminology.hl7.org/CodeSystem/v2-0131#N
-* contact[=].name[+] = "Yijun Guo"
-* contact[=].name[=].use = #official
-* contact[=].name[=].family = "Guo"
-* contact[=].name[=].given = "Yijun"
-* contact[=].name[+] = "Leo Guo"
-* contact[=].name[=].use = #nickname
-* contact[=].name[=].family = "Guo"
-* contact[=].name[=].given = "Leo"
+* contact[=].name.text = "Yijun Guo"
+* contact[=].name.use = #official
+* contact[=].name.family = "Guo"
+* contact[=].name.given = "Yijun"
 * contact[=].telecom.system = #phone
 * contact[=].telecom.value = "(715) 726-1227"
 * contact[=].telecom.use = #mobile
@@ -71,7 +67,7 @@ Description: "The patient Jannet Guo used for an example for IPS"
 
 * communication[+].language = urn:ietf:bcp:47#en-US "English"
 * communication[=].language.text = "English"
-* communication[=].language.preferred = true
+* communication[=].preferred = true
 
 * generalPractitioner[+] = Reference(Practitioner/ex-ips-practitioner-alicia-gould)
 
@@ -85,7 +81,7 @@ Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * meta.security[+] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
 
-* name[+] = "Dr Alicia Gould"
+* name[+].text = "Dr Alicia Gould"
 * name[=].use = http://hl7.org/fhir/name-use#usual
 * name[=].family = "Gould"
 * name[=].given = "Alicia"
@@ -97,5 +93,5 @@ Usage: #inline
 * telecom[=].value = "GouldA@example.com"
 
 
-* qualification.identifier = "22348"
+* qualification.identifier.value = "22348"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
