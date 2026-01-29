@@ -1,0 +1,101 @@
+Instance:   ex-ips-patient-jannet-guo
+InstanceOf: PatientUvIps
+Title: "Example ips Patient Jannet Guo"
+Description: "The patient Jannet Guo used for an example for IPS"
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+
+* name[+] = "Jannet Xiaodongni Guo"
+* name[=].use = #official
+* name[=].family = "Guo"
+* name[=].given = "Xiaodongni"
+* name[=].given = "Jannet"
+
+* identifier[+].type = $v2-0203#MR "Medical Record Number"
+* identifier[=].type.text = "Medical Record Number"
+* identifier[=].system = "http://hospital.smarthealthit.org"
+* identifier[=].value = "fcf76d34-1a29-4d51-a119-991dc5aac192"
+
+* identifier[+].type = $v2-0203#DL "Driver's License"
+* identifier[=].type.text = "Driver's License"
+* identifier[=].system = "urn:oid:2.16.840.1.113883.4.3.25"
+* identifier[=].value = "S99970944"
+
+* identifier[+].type = $v2-0203#PPN "Passport Number"
+* identifier[=].type.text = "Passport Number"
+* identifier[=].system = "http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber"
+* identifier[=].value = "X4940908X"
+
+* gender = #female
+
+* birthDate = "1993-07-25"
+
+* maritalStatus = $v3-MaritalStatus#S "Never Married"
+* maritalStatus.text = "Never Married"
+
+* address[+].use = http://hl7.org/fhir/address-use#home
+* address[=].line = "18 S Walworth Ave"
+* address[=].city = "Williams Bay"
+* address[=].state = "Wisconsin"
+* address[=].postalCode = "53191"
+* address[=].country = "USA"
+
+* telecom[+].system = http://hl7.org/fhir/contact-point-system#phone
+* telecom[=].use = http://hl7.org/fhir/contact-point-use#home
+* telecom[=].value = "(262) 245-9214"
+* telecom[+].system = http://hl7.org/fhir/contact-point-system#phone
+* telecom[=].use = http://hl7.org/fhir/contact-point-use#work
+* telecom[=].value = "(407) 722-4000"
+* telecom[+].system = http://hl7.org/fhir/contact-point-system#email
+* telecom[=].value = "GuoJX@example.com"
+
+
+* contact[+].relationship = http://terminology.hl7.org/CodeSystem/v2-0131#N
+* contact[=].name[+] = "Yijun Guo"
+* contact[=].name[=].use = #official
+* contact[=].name[=].family = "Guo"
+* contact[=].name[=].given = "Yijun"
+* contact[=].name[+] = "Leo Guo"
+* contact[=].name[=].use = #nickname
+* contact[=].name[=].family = "Guo"
+* contact[=].name[=].given = "Leo"
+* contact[=].telecom.system = #phone
+* contact[=].telecom.value = "(715) 726-1227"
+* contact[=].telecom.use = #mobile
+* contact[=].address.line = "306 Carson St"
+* contact[=].address.city = "Chippewa Falls"
+* contact[=].address.state = "Wisconsin"
+* contact[=].address.postalCode = "54729"
+* contact[=].address.country = "US"
+* contact[=].gender = #male
+
+
+* communication[+].language = urn:ietf:bcp:47#en-US "English"
+* communication[=].language.text = "English"
+* communication[=].language.preferred = true
+
+* generalPractitioner[+] = Reference(Practitioner/ex-ips-practitioner-alicia-gould)
+
+
+
+Instance:   ex-ips-practitioner-alicia-gould
+InstanceOf: Practitioner
+Title: "Example Practitioner Alicia Gould"
+Usage: #inline
+* id = "952303fa-892a-4951-a4b3-2a0bbe56b918"
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* meta.security[+] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
+
+* name[+] = "Dr Alicia Gould"
+* name[=].use = http://hl7.org/fhir/name-use#usual
+* name[=].family = "Gould"
+* name[=].given = "Alicia"
+* name[=].prefix = "Dr"
+
+* telecom[+].system = #mobile
+* telecom[=].value = "6823345286"
+* telecom[+].system = #email
+* telecom[=].value = "GouldA@example.com"
+
+
+* qualification.identifier = "22348"
+* qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
