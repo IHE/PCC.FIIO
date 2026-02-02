@@ -8,6 +8,8 @@ Description: "The patient Frederick Olivera DaSilva used for examples"
 //* meta.source = "#vrVwj42V0afRIa07"
 //* meta.tag = $tags#synthea-5-2019
 
+* id = "a367ce93-23bb-4bb8-bc6b-4730073baa93"
+
 * extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
 * extension[=].extension[+].url = "ombCategory"
 * extension[=].extension[=].valueCoding = urn:oid:2.16.840.1.113883.6.238#2106-3 "White"
@@ -135,7 +137,7 @@ Usage: #inline
 * telecom[+].system = #email
 * telecom[=].value = "PractitionerW@example.com"
 
-* qualification.identifier = "22348"
+* qualification.identifier.value = "22348"
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#PN
 
 

@@ -3,8 +3,9 @@ InstanceOf: PatientUvIps
 Title: "Example ips Patient Jannet Guo"
 Description: "The patient Jannet Guo used for an example for IPS"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* id = "02d72bc1-54a1-4751-83a3-658afc3f2bff"
 
-* name[+] = "Jannet Xiaodongni Guo"
+* name[+].text = "Jannet Xiaodongni Guo"
 * name[=].use = #official
 * name[=].family = "Guo"
 * name[=].given = "Xiaodongni"
