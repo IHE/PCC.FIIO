@@ -249,7 +249,7 @@ Where all of a Patient’s relevant information cannot be found on a single serv
 - 
 
 
-#### XX.4.2.5 Use Case \#6: TBD - Representing Missing Data 
+#### XX.4.2.6 Use Case \#6: TBD - Representing Missing Data 
 Represents how some systems should represent missing data for required if known section in the IPS documents that are generated due to limitations of the system.
 
 ##### XX.4.2.6.1 TBD - Representing Missing Data
@@ -270,6 +270,38 @@ A patient arrives at a treatment clinic that is looking for their patient histor
 **Post-conditions:**
 - The receiving providers are aware that they may need to use an alternative source to identify any relevant Labs and Procedures associated with the patient. 
 
+
+
+#### XX.4.2.7 Use Case \#6: Secondary Use of IPS for Standardized Data Exchange 
+The use case describes the use of the standard IPS format for patient summary data to convey de-identified study data content from the primary care environment for secondary use purposes. 
+
+##### XX.4.2.7.1 Secondary Use of IPS for Standardized Data Exchange 
+The permitted purpose for this example is Public Interest research in Public/Occupational Health to study co-morbidities, mortality, occupational risks, and treatment effects. The dataset must be minimized and de-identified to preserve utility (longitudinal trends, outcomes, medication impacts) while controlling re-identification risk per permit conditions.
+In this fictitious use case, the region is under threat of outbreak for a novel virus causing influenza-like-symptoms. An approved public health monitoring program wishes to review primary health information from across multiple jurisdictions for impacts of co-morbidities, mortality rates, and occupational health risks. The study also intends to review the population health impact for medication treatments, including vaccination. The purpose of the research request reflects a permitted purpose of use, Public Interest in the area of Public, Occupational Health. Data for this study represents categories from Healthcare, Medicinal products, Areas of Public Health, Areas of Occupational Health, and possibly Serious cross-border threats. 
+
+
+##### XX.4.2.7.2 Secondary Use of IPS for Standardized Data Exchange Process Flow
+<figure>
+{%include IPS-Secondary-Access-Use-Case.svg%}
+<figcaption><strong>Figure XX.4.2.7.2-1: Secondary Use of IPS for Standardized Data Exchange Process Flow</strong></figcaption>
+</figure>
+<br clear="all">
+
+**Pre-conditions**:
+Before the research data can be de-identified and shared, the Researcher conducts data discovery to identify data that is available for the study, and an application for a data permit is submitted and approved according to the region’s policy for secondary use. The Health Data Access Body (HDAB) determines that the information is available within the HDAB Information Resources, indicating data is available in a standard International Patient Summary (IPS). 
+  - Information on the type and format of the data requested, indicates International Patient Summary format for the data, indicating:
+    •	The researcher also provides a date range of access needed for a 3-year period.
+    •	access justifications are provided indicating the value of the proposed research
+    •	The purpose of use is indicated as Scientific Research
+    •	Data elements requested that are sensitive include de-identification methods to be used that will retain sufficient information for the research study.
+
+**Main Flow**:
+The Patient data for the research cohort is extracted from the primary care use environment using the standard IPS format. At this stage, the data is under the control of the Health Data Access Body, which may be the care provider, a formal data access body, or a trusted third party. 
+  1.	The identifiable primary care data for the study cohort is processed to remove direct identifiers using the approaches specified by the IHE De-Identification Handbook and in accordance with the approved de-identification method for direct identifiers (stage 1), resulting in a pseudonymized IPS with all clinical content still remaining.
+  2.	The pseudonymized primary care data for the study cohort is processed to remove, mask, or obfuscate indirect identifiers using the approaches specified by the IHE De-Identification Handbook and in accordance with the approved de-identification method for indirect identifiers (stage 2) resulting in a de-identified IPS records with sufficient clinical content to conduct the research study. This de-identified cohort is delivered to the researcher using the standard IPS format.
+
+**Post-conditions:**
+The Researcher has retrieved or received the de-identified research study data in the standard IPS format. 
 
 <a name="security-considerations"> </a>
 

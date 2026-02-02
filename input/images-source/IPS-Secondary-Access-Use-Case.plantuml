@@ -1,0 +1,26 @@
+@startuml
+participant "Primary Care Data Source\nContent Creator" as pcds 
+participant "Secondary Use Researcher\nContent Consumer" as sur 
+participant "Pseudonymization Service\nContent Consumer\nContent Creator" as pns
+participant "Anonymization Service\nContent Consumer\nContent Creator" as ans
+
+cloud "Share Content" as cloud
+
+group health data source
+    note over pcds, pns: Provides a Fully Identifed IPS 
+    pcds -> cloud: Share Content\n[PCC-1]
+    cloud -> pns: Share Content\n[PCC-1]
+
+    group de-identification 
+    note over pns, ans: Provides a Pseudonymized IPS\n(Stage 1 De-Identification)
+    pns -> cloud: Share Content\n[PCC-1]
+    cloud -> ans: Share Content\n[PCC-1]
+    end 
+end 
+
+group secondary use
+    note over ans, sur: Provides a Fully De-Identified IPS\n(Stage 2 De-Identification)
+    ans -> cloud: Share Content\n[PCC-1]
+    cloud -> sur: Share Content\n[PCC-1]
+end 
+@enduml
