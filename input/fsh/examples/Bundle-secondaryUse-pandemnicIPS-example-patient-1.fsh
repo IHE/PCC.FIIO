@@ -181,7 +181,7 @@ Usage: #example
 * telecom.value = "07 850 9900"
 * telecom.use = #mobile
 * gender = #female
-* birthDate = "1996-05-01 "
+* birthDate = "1996-05-01"
 * deceasedDateTime = "2024-06-30"
 * generalPractitioner = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28) "Yaser, Joseph"
 
@@ -392,7 +392,7 @@ Usage: #inline
 * status = http://hl7.org/fhir/observation-status#final
 * code = $loinc#85353-1
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "20240615094400-0600"
+* effectiveDateTime = "2024-06-15T09:44:00"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * component[+].code = $loinc#8302-2 "Body height"
 * component[=].valueQuantity = 71 '[in_us]' "in"
@@ -417,16 +417,16 @@ Usage: #inline
 * intent = http://hl7.org/fhir/request-intent#order
 * title = "Plan of Care"
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* period.start = "2024/06/16"
-* created = "2024/06/16"
-* note[+] = "Treat with antiviral medication for 5 days" 
-* note[+] = "Provide Assisted Breathing on Ventilator" 
+* period.start = "2024-06-16"
+* created = "2024-06-16"
+* note[+].text = "Treat with antiviral medication for 5 days" 
+* note[+].text = "Provide Assisted Breathing on Ventilator" 
 
 Instance: f44c6b4b-53f4-49bb-a251-521379991ce0
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
-* extension.flag-priority = http://hl7.org/fhir/flag-priority-code#PM 
+* flag-priority = http://hl7.org/fhir/flag-priority-code#PM 
 * status = http://hl7.org/fhir/flag-status#active
 * category = http://terminology.hl7.org/CodeSystem/flag-category#clinical
 * code = $sct#370221004 "Severe asthma (disorder)"
@@ -438,10 +438,10 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
 * status = http://hl7.org/fhir/event-status#completed
 * code = $sct#409586006 "Complaint"
-* effectiveDateTime = "2024/06/16"
-* date = "2024/06/16"
+* effectiveDateTime = "2024-06-16"
+* date = "2024-06-16"
 * assessor = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* finding = $sct#365112008 "Finding of walking aid use (finding)"
+* finding.itemCodeableConcept = $sct#365112008 "Finding of walking aid use (finding)"
 
 
