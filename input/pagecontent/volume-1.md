@@ -135,16 +135,21 @@ A person has gotten into a motor vehicle accident and Emergency services are cal
 
 ##### XX.4.2.1.2 On Demand Single Source IPS Document for Emergency Care  Process Flow
 HIE Replated retrieval of patient summary, single source/ on demand... 
-TODO 
+ incorperate the iti register ondemand doccument transaction into process flow [ITI-61](https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html)
+ TODO - plantuml diagram development 
 
 **Pre-conditions**:
-- A person's record and information is available in the HIE network that the Emergecny services system is connected to 
-- The emergency services system has access to query the HIE
-- The person is in need of immediate medical care
+- An on demand IPS document has been registerd in the HIE
+- The patient Has an on deman IPS available in the HIE
+- The HIE uses the [IPS $summary Operation](http://hl7.org/fhir/uv/ips/OperationDefinition-summary.html) to respond to IPS document requests
+- The emergrancy system is connected to an HIE that has access to the on demand IPS record 
+- The emergency services system has access to query the HIE for patient summaries 
+- The patient is in need of immediate medical care and the provider system for that patient is able to consume an IPS document 
 
 **Main Flow**:
 - The emergency provider finds the patient in the HIE 
 - The emergency provider performs the $Summary request in the query
+- When the On-Demand entry is requested by the emergency provider system the HIE 
 - The HIE generates an IPS for the patient and the provider to view
 - Based on this information the provider is able to make informed decisions on their interventions. 
 - When the patient is transported to a hospital, the Emergency provider is able to pass on the IPS when they transfer their care to this new provider
@@ -281,11 +286,7 @@ In this fictitious use case, the region is under threat of outbreak for a novel 
 
 
 ##### XX.4.2.7.2 Secondary Use of IPS for Standardized Data Exchange Process Flow
-<figure>
-{%include IPS-Secondary-Access-Use-Case.svg%}
-<figcaption><strong>Figure XX.4.2.7.2-1: Secondary Use of IPS for Standardized Data Exchange Process Flow</strong></figcaption>
-</figure>
-<br clear="all">
+
 
 **Pre-conditions**:
 Before the research data can be de-identified and shared, the Researcher conducts data discovery to identify data that is available for the study, and an application for a data permit is submitted and approved according to the region’s policy for secondary use. The Health Data Access Body (HDAB) determines that the information is available within the HDAB Information Resources, indicating data is available in a standard International Patient Summary (IPS). 

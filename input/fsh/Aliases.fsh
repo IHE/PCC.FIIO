@@ -18,3 +18,16 @@ Alias: $v3-WorkClassificationODH = http://terminology.hl7.org/CodeSystem/v3-Work
 Alias: $PHOccupationalDataForHealthODH = http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
 Alias: $v3-ObservationValue = http://terminology.hl7.org/CodeSystem/v3-ObservationValue
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+
+// Aliases for example files
+Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status
+Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
+Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
+Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+Alias: $v3-ActSite = http://terminology.hl7.org/CodeSystem/v3-ActSite
+Alias: $v3-RouteOfAdministration = http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration
+Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
+Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
