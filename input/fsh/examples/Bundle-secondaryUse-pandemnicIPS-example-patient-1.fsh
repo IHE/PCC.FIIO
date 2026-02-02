@@ -22,6 +22,8 @@ Usage: #example
 * entry[=].resource = f2acb378-5c29-4541-b0c0-953b53d61d05
 * entry[+].fullUrl = "urn:uuid:fab09f14-d6b9-4bd4-a03b-836568f9706a"
 * entry[=].resource = fab09f14-d6b9-4bd4-a03b-836568f9706a
+* entry[+].fullUrl = "urn:uuid:22f96a81-b119-4150-bfd2-ffe8ea48cdbb"
+* entry[=].resource = 22f96a81-b119-4150-bfd2-ffe8ea48cdbb
 * entry[+].fullUrl = "urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd"
 * entry[=].resource = 402afc3f-318f-4a48-9d79-0cab913d7efd
 * entry[+].fullUrl = "urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6"
@@ -48,8 +50,6 @@ Usage: #example
 * entry[=].resource = f44c6b4b-53f4-49bb-a251-521379991ce0
 * entry[+].fullUrl = "urn:uuid:3c297c4b-019a-4284-b667-cfd8666d6aeb"
 * entry[=].resource = 3c297c4b-019a-4284-b667-cfd8666d6aeb
-* entry[+].fullurl = "urn:uuid:22f96a81-b119-4150-bfd2-ffe8ea48cdbb"
-* entry[=].resource = 22f96a81-b119-4150-bfd2-ffe8ea48cdbb 
 
 
 Instance: d174bd1a-b368-41e6-83a2-af77f2b3c60f
@@ -392,7 +392,7 @@ Usage: #inline
 * status = http://hl7.org/fhir/observation-status#final
 * code = $loinc#85353-1
 * subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00"
+* effectiveDateTime = "2024-06-15T09:44:00+06:00"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * component[+].code = $loinc#8302-2 "Body height"
 * component[=].valueQuantity = 71 '[in_us]' "in"
@@ -426,7 +426,7 @@ Instance: f44c6b4b-53f4-49bb-a251-521379991ce0
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
-* flag-priority = http://hl7.org/fhir/flag-priority-code#PM 
+//* flag-priority = http://hl7.org/fhir/flag-priority-code#PM 
 * status = http://hl7.org/fhir/flag-status#active
 * category = http://terminology.hl7.org/CodeSystem/flag-category#clinical
 * code = $sct#370221004 "Severe asthma (disorder)"
