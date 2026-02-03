@@ -1,17 +1,20 @@
-Instance: secondaryUse-pandemnicIPS-example-patient-1
+Alias: $flag-category = http://terminology.hl7.org/CodeSystem/flag-category
+Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
+
+Instance: secondaryUse-pandemnicIPS-example-patient-1-stage-2
 InstanceOf: BundleUvIps
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
 * identifier.value = "IHEEX-33159"
 * type = #document
-* timestamp = "2024-07-01T00:00:00Z"
+* timestamp = "2024-10-16T00:00:00Z"
 * entry[+].fullUrl = "urn:uuid:5392cf13-ccbd-485c-b81d-8b0695233e95"
-* entry[=].resource = d174bd1a-b368-41e6-83a2-af77f2b3c60f
+* entry[=].resource = 6274d469-7a4d-4a66-a261-e5e7b71af267
 * entry[+].fullUrl = "urn:uuid:5bc0c003-a3cd-44f2-b3be-8cb256d0e83a"
 * entry[=].resource = 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
-* entry[+].fullUrl = "urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f"
-* entry[=].resource = Ex-Patient-1-for-secondaryUse-pandemnicIPS
+* entry[+].fullUrl = "urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267"
+* entry[=].resource = Ex-Patient-1-for-secondaryUse-pandemnicIPS-stage-2
 * entry[+].fullUrl = "urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee"
 * entry[=].resource = fd584c2f-5814-425d-9b00-0a5b1a6effee
 * entry[+].fullUrl = "urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28"
@@ -22,8 +25,6 @@ Usage: #example
 * entry[=].resource = f2acb378-5c29-4541-b0c0-953b53d61d05
 * entry[+].fullUrl = "urn:uuid:fab09f14-d6b9-4bd4-a03b-836568f9706a"
 * entry[=].resource = fab09f14-d6b9-4bd4-a03b-836568f9706a
-* entry[+].fullUrl = "urn:uuid:22f96a81-b119-4150-bfd2-ffe8ea48cdbb"
-* entry[=].resource = 22f96a81-b119-4150-bfd2-ffe8ea48cdbb
 * entry[+].fullUrl = "urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd"
 * entry[=].resource = 402afc3f-318f-4a48-9d79-0cab913d7efd
 * entry[+].fullUrl = "urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6"
@@ -42,43 +43,25 @@ Usage: #example
 * entry[=].resource = 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
 * entry[+].fullUrl = "urn:uuid:25a63f47-1f87-42f6-ba4c-c6887f4db418"
 * entry[=].resource = 25a63f47-1f87-42f6-ba4c-c6887f4db418
-* entry[+].fullUrl = "urn:uuid:0ce67e34-6c8f-4a69-9bb1-1c721635bb84"
-* entry[=].resource = 0ce67e34-6c8f-4a69-9bb1-1c721635bb84
-* entry[+].fullUrl = "urn:uuid:049158b0-6710-41b0-a15c-2cc28038abc3"
-* entry[=].resource = 049158b0-6710-41b0-a15c-2cc28038abc3
-* entry[+].fullUrl = "urn:uuid:9f58e228-e3e5-49cb-ba99-e4b82c25b4f5"
-* entry[=].resource = 9f58e228-e3e5-49cb-ba99-e4b82c25b4f5
-* entry[+].fullUrl = "urn:uuid:f14feb6c-a4df-4460-8b4b-a6acbc6242c5"
-* entry[=].resource = f14feb6c-a4df-4460-8b4b-a6acbc6242c5
-* entry[+].fullUrl = "urn:uuid:82a522bc-c5f9-44a8-aa94-cd6c2336cdd1"
-* entry[=].resource = 82a522bc-c5f9-44a8-aa94-cd6c2336cdd1
-* entry[+].fullUrl = "urn:uuid:07d7b510-d13b-4298-9e7c-b0ed736a25b8"
-* entry[=].resource = 07d7b510-d13b-4298-9e7c-b0ed736a25b8
-* entry[+].fullUrl = "urn:uuid:706ba889-679c-425e-b117-060c0ffc01e6"
-* entry[=].resource = 706ba889-679c-425e-b117-060c0ffc01e6
-* entry[+].fullUrl = "urn:uuid:176ae1b5-0e8f-415f-8ea9-a58221f4fbee"
-* entry[=].resource = 176ae1b5-0e8f-415f-8ea9-a58221f4fbee 
 * entry[+].fullUrl = "urn:uuid:f44c6b4b-53f4-49bb-a251-521379991ce0"
 * entry[=].resource = f44c6b4b-53f4-49bb-a251-521379991ce0
-* entry[+].fullUrl = "urn:uuid:3c297c4b-019a-4284-b667-cfd8666d6aeb"
-* entry[=].resource = 3c297c4b-019a-4284-b667-cfd8666d6aeb
 
 
-Instance: d174bd1a-b368-41e6-83a2-af77f2b3c60f
+Instance: 6274d469-7a4d-4a66-a261-e5e7b71af267
 InstanceOf: CompositionUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
 * status = #final
 * type = $loinc#60591-5
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* date = "2024-07-01T00:00:00Z"
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* date = "2024-10-16T00:00:00Z"
 * author = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * title = "International Patient Summary"
 * confidentiality = #N
 * custodian = Reference(urn:uuid:5bc0c003-a3cd-44f2-b3be-8cb256d0e83a)
 * event.code = $v3-ActClass#PCPR
-* event.period.start = "2024-07-01T00:00:00Z"
-* event.period.end = "2024-07-01T00:00:00Z"
+* event.period.start = "2024-10-16T00:00:00Z"
+* event.period.end = "2024-10-16T00:00:00Z"
 
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
@@ -103,7 +86,7 @@ Usage: #inline
 * section[sectionPastProblems].code = $loinc#11348-0 "History of Past illness note"
 * section[sectionPastProblems].text.status = #generated
 * section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Past Problems Section</div>"
-* section[sectionPastProblems].entry[+] = Reference(urn:uuid:22f96a81-b119-4150-bfd2-ffe8ea48cdbb)
+* section[sectionPastProblems].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
@@ -145,18 +128,19 @@ Usage: #inline
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
 * section[sectionVitalSigns].text.status = #generated
 * section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital Signs Section</div>"
-* section[sectionVitalSigns].entry[+] = Reference(urn:uuid:0ce67e34-6c8f-4a69-9bb1-1c721635bb84)
+* section[sectionVitalSigns].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
 * section[sectionPlanOfCare].title = "Plan of Care"
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #generated
 * section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plan of Care Section</div>"
-* section[sectionPlanOfCare].entry[+] = Reference(urn:uuid:176ae1b5-0e8f-415f-8ea9-a58221f4fbee)
+* section[sectionPlanOfCare].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.status = #generated
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No Advanced Directives</div>"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Advance healthcare directives Information Withheld</div>"
+* section[sectionAdvanceDirectives].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
 * section[sectionAlerts].title = "Alerts"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
@@ -168,7 +152,7 @@ Usage: #inline
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
 * section[sectionFunctionalStatus].text.status = #generated
 * section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Functional Status Section</div>"
-* section[sectionFunctionalStatus].entry[+] = Reference(urn:uuid:3c297c4b-019a-4284-b667-cfd8666d6aeb)
+* section[sectionFunctionalStatus].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
 Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
 InstanceOf: OrganizationUvIps
@@ -178,24 +162,24 @@ Usage: #inline
 * identifier.value = "WHO-CX"
 * name = "World Health Organization"
 
-Instance: Ex-Patient-1-for-secondaryUse-pandemnicIPS
+Instance: Ex-Patient-1-for-secondaryUse-pandemnicIPS-stage-2
 InstanceOf: PatientUvIps
-Usage: #example
-* id = "d174bd1a-b368-41e6-83a2-af77f2b3c60f"
+Usage: #inline
+* id = "6274d469-7a4d-4a66-a261-e5e7b71af267"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
 * identifier.value = "IHEEX-33159"
 * active = true
-* name.text = "Patricia JORDANA"
-* name.family = "JORDANA"
-* name.given = "Patricia"
-* telecom.system = #phone
-* telecom.value = "07 850 9900"
-* telecom.use = #mobile
+* name.text = "PseudoFamily"
+* name.family = "PseudoFamily"
+* name.given = "PseudoGiven"
+* telecom.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* telecom.extension.valueCode = #masked
 * gender = #female
-* birthDate = "1996-05-01"
-* deceasedDateTime = "2024-06-30"
-* generalPractitioner = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28) "Yaser, Joseph"
+* birthDate = "1996-08-16"
+* deceasedDateTime = "2024-10-15"
+* address.postalCode = "3210"
+* generalPractitioner = Reference(Practitioner/816cf057-b736-4e08-baed-cc21e081b784)
 
 Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
 InstanceOf: PractitionerUvIps
@@ -234,9 +218,9 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 * status = #completed
 * medicationCodeableConcept = $sct#116113006 "Oseltamivir phosphate (substance)"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-16"
-* dateAsserted = "2024-06-16"
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* effectiveDateTime = "2024-10-01"
+* dateAsserted = "2024-10-01"
 
 Instance: f2acb378-5c29-4541-b0c0-953b53d61d05
 InstanceOf: ConditionUvIps
@@ -247,8 +231,8 @@ Usage: #inline
 * category = $condition-category#problem-list-item "Problem List Item"
 * severity = $sct#24484000 "Severe"
 * code = $sct#719865001 "Influenza caused by pandemic influenza virus (disorder)"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* onsetDateTime = "2024-06-15"
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* onsetDateTime = "2024-10-30"
 * asserter = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
 Instance: fab09f14-d6b9-4bd4-a03b-836568f9706a
@@ -260,22 +244,8 @@ Usage: #inline
 * category = $condition-category#problem-list-item "Problem List Item"
 * severity = $sct#24484000 "Severe"
 * code = $sct#370221004 "Severe asthma (disorder)"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * onsetDateTime = "2006-01-03"
-* asserter = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
-
-Instance: 22f96a81-b119-4150-bfd2-ffe8ea48cdbb
-InstanceOf: ConditionUvIps
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
-* clinicalStatus = $condition-clinical#resolved
-* verificationStatus = $condition-ver-status#confirmed
-* category = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis "Encounter Diagnosis"
-* severity = $sct#24484000 "Severe"
-* code = $sct#71620000 "Fracture of femur (disorder)"
-* bodySite = $sct#61396006 "Structure of left thigh (body structure)"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* onsetDateTime = "2023-11-16"
 * asserter = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
 
@@ -285,9 +255,9 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
 * status = #completed
 * code = $sct#480571000146108 "Artificial ventilation using ventilator (regime/therapy)"
-* code.text = "Laparoscopic appendectomy"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* performedDateTime = "2024-06-25"
+* code.text = "Artificial ventilation using ventilator (regime/therapy)"
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* performedDateTime = "2024-10-10"
 * bodySite = $sct#39607008 "Lung structure"
 * note.text = "Artificial ventilation using ventilaton performed"
 
@@ -301,7 +271,7 @@ Usage: #inline
 * category = #medication
 * criticality = #high
 * code = $sct#294647003 "Allergy to component of vaccine product containing Influenza virus antigen (finding)"
-* patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* patient = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * onsetDateTime = "2020-10-01"
 * lastOccurrence = "2020-10-01"
 * reaction.manifestation = $sct#271807003 "Rash"
@@ -310,10 +280,12 @@ Usage: #inline
 Instance: e4040d7c-03f5-4e2e-9cfe-3618899aa777
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
 * status = #final
+* category = $observation-category#laboratory
 * code = $loinc#109691-6 "Influenza virus A Ag [Measurement] in Nasopharynx"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15"
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* effectiveDateTime = "2024-10-30"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * valueQuantity.value = 13.2
 * valueQuantity.unit = "g/dL"
@@ -327,8 +299,8 @@ Usage: #inline
 * status = #completed
 * vaccineCode = $sct#1181000221105 "Vaccine product containing only Influenza virus antigen (medicinal product)"
 * vaccineCode.text = "Invluenza Vaccination"
-* patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* occurrenceDateTime = "2024-05-01"
+* patient = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* occurrenceDateTime = "2024-08-16"
 * site = $v3-ActSite#LA "left arm"
 * route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
 * doseQuantity.value = 0.5
@@ -347,10 +319,10 @@ Usage: #inline
 * category.text = "Social History"
 * code = $loinc#11341-5 "History of Occupation"
 * code.text = "History of Occupation"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * effectivePeriod.start = "2016-03-10"
 * effectivePeriod.end = "2020-04-14"
-* issued = "2024-06-06T13:28:53+02:00"
+* issued = "2024-10-21T13:28:53+02:00"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * valueCodeableConcept = $ISCO08#5321 "Health Care Assistants"
 * component.code = $loinc#86188-0 "History of Occupation Industry"
@@ -362,7 +334,7 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
 * status = #final
 * code = $loinc#82810-3 "Pregnancy status"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * effectiveDateTime = "2014-02-01"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * valueCodeableConcept = $sct#77386006 "Pregnant"
@@ -374,17 +346,17 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
 * status = #final
 * code = $loinc#11778-8 "Delivery date Estimated"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-02"
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
+* effectiveDateTime = "2024-10-17"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-* valueDateTime = "2024-12-01"
+* valueDateTime = "2025-03-18"
 
 Instance: 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
 InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
 * status = #completed
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * timingDateTime = "2014-02-01"
 * device = Reference(urn:uuid:25a63f47-1f87-42f6-ba4c-c6887f4db418)
 * note.text = "Device data required"
@@ -394,133 +366,16 @@ InstanceOf: DeviceUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
 * type = $sct#787483001 "No known device use"
-* patient = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
+* patient = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 
-Instance: 176ae1b5-0e8f-415f-8ea9-a58221f4fbee
-InstanceOf: CarePlan
-Usage: #inline
-//* meta.profile = "http://hl7.org/fhir/StructureDefinition/carePlan"
-* status = http://hl7.org/fhir/request-status#completed
-* intent = http://hl7.org/fhir/request-intent#order
-* title = "Plan of Care"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* period.start = "2024-06-16"
-* created = "2024-06-16"
-* note[+].text = "Treat with antiviral medication for 5 days" 
-* note[+].text = "Provide Assisted Breathing on Ventilator" 
+
+
 
 Instance: f44c6b4b-53f4-49bb-a251-521379991ce0
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
-//* flag-priority = http://hl7.org/fhir/flag-priority-code#PM 
-* status = http://hl7.org/fhir/flag-status#active
-* category = http://terminology.hl7.org/CodeSystem/flag-category#clinical
+* status = #active
+* category = $flag-category#clinical
 * code = $sct#370221004 "Severe asthma (disorder)"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-
-Instance: 3c297c4b-019a-4284-b667-cfd8666d6aeb
-InstanceOf: ClinicalImpression
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
-* status = http://hl7.org/fhir/event-status#completed
-* code = $sct#105721009 "General problem AND/OR complaint (finding)"
-* effectiveDateTime = "2024-06-16"
-* date = "2024-06-16"
-* assessor = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* finding.itemCodeableConcept = $sct#365112008 "Finding of walking aid use (finding)"
-
-
-
-Instance: 0ce67e34-6c8f-4a69-9bb1-1c721635bb84
-InstanceOf: vitalsigns
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* code = $loinc#85353-1
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-* hasMember[+] = Reference(urn:uuid:049158b0-6710-41b0-a15c-2cc28038abc3)
-* hasMember[+] = Reference(urn:uuid:9f58e228-e3e5-49cb-ba99-e4b82c25b4f5)
-* hasMember[+] = Reference(urn:uuid:f14feb6c-a4df-4460-8b4b-a6acbc6242c5)
-* hasMember[+] = Reference(urn:uuid:82a522bc-c5f9-44a8-aa94-cd6c2336cdd1)
-* hasMember[+] = Reference(urn:uuid:07d7b510-d13b-4298-9e7c-b0ed736a25b8)
-* hasMember[+] = Reference(urn:uuid:706ba889-679c-425e-b117-060c0ffc01e6)
-
-
-
-Instance: 049158b0-6710-41b0-a15c-2cc28038abc3
-InstanceOf: vitalsigns 
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8302-2 "Body height"
-* valueQuantity = 71 '[in_i]' "in_i"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-
-
-Instance: 9f58e228-e3e5-49cb-ba99-e4b82c25b4f5
-InstanceOf: vitalsigns
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* code = $loinc#29463-7 "Body weight"
-* valueQuantity = 230 '[lb_av]' "lbs"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-
-
-Instance: f14feb6c-a4df-4460-8b4b-a6acbc6242c5
-InstanceOf: vitalsigns
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
-* valueQuantity = 32.1 'kg/m2' "kg/m2"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-
-Instance: 82a522bc-c5f9-44a8-aa94-cd6c2336cdd1
-InstanceOf: vitalsigns
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* code = $loinc#85354-9 "Blood pressure panel with all children optional"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-* component[+].valueQuantity = 80 'mm[Hg]' "mm[Hg]"
-* component[=].code = $loinc#8480-6 "Systolic blood pressure"
-* component[+].valueQuantity = 130 'mm[Hg]' "mm[Hg]"
-* component[=].code = $loinc#8462-4 "Diastolic blood pressure"
-
-Instance: 07d7b510-d13b-4298-9e7c-b0ed736a25b8
-InstanceOf: vitalsigns
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* code = $loinc#8867-4 "Heart rate"
-* valueQuantity = 80 '/min' "/min"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-
-
-Instance: 706ba889-679c-425e-b117-060c0ffc01e6
-InstanceOf: vitalsigns
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-* status = http://hl7.org/fhir/observation-status#final
-* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs
-* code = $loinc#2708-6 "Oxygen saturation in Arterial blood"
-* valueQuantity = 85 '%' "%"
-* subject = Reference(urn:uuid:d174bd1a-b368-41e6-83a2-af77f2b3c60f)
-* effectiveDateTime = "2024-06-15T09:44:00+06:00"
-* performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
-
+* subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
