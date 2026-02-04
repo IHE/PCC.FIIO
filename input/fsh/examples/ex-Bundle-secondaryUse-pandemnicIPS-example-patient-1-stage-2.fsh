@@ -152,13 +152,13 @@ Usage: #inline
 * section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Functional Status Section</div>"
 * section[sectionFunctionalStatus].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
-//Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
-//InstanceOf: OrganizationUvIps
-//Usage: #inline
-//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
-//* identifier.system = "urn:oid:1.1.1.1.1.1.1.3"
-//* identifier.value = "WHO-CX"
-//* name = "World Health Organization"
+Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
+InstanceOf: OrganizationUvIps
+Usage: #inline
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* identifier.system = "urn:oid:1.1.1.1.1.1.1.3"
+* identifier.value = "WHO-CX"
+* name = "World Health Organization"
 
 Instance: Ex-Patient-1-for-secondaryUse-pandemnicIPS-stage-2
 InstanceOf: PatientUvIps
@@ -179,36 +179,36 @@ Usage: #example
 * address.postalCode = "3210"
 * generalPractitioner = Reference(Practitioner/9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
-//Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
-//InstanceOf: PractitionerUvIps
-//Usage: #inline
-//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
-//* identifier[+].use = #official
-//* identifier[=].system = "urn:oid:2.16.528.1.1007.3.1"
-//* identifier[=].value = "874635264"
-//* identifier[+].use = #usual
-//* identifier[=].system = "urn:oid:2.16.840.1.113883.2.4.6.3"
-//* identifier[=].value = "567IUI51C154"
-//* name.use = #official
-//* name.text = "Heps Simone MD"
-//* name.family = "Heps"
-//* name.given = "Simone"
-//* name.suffix = "MD"
-//* address.use = #work
-//* address.line = "Galapagosweg 91"
-//* address.city = "Den Burg"
-//* address.postalCode = "9105 PZ"
-//* address.country = "NLD"
-//* gender = #female
-//* birthDate = "1971-11-07"
+Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
+InstanceOf: PractitionerUvIps
+Usage: #inline
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* identifier[+].use = #official
+* identifier[=].system = "urn:oid:2.16.528.1.1007.3.1"
+* identifier[=].value = "874635264"
+* identifier[+].use = #usual
+* identifier[=].system = "urn:oid:2.16.840.1.113883.2.4.6.3"
+* identifier[=].value = "567IUI51C154"
+* name.use = #official
+* name.text = "Heps Simone MD"
+* name.family = "Heps"
+* name.given = "Simone"
+* name.suffix = "MD"
+* address.use = #work
+* address.line = "Galapagosweg 91"
+* address.city = "Den Burg"
+* address.postalCode = "9105 PZ"
+* address.country = "NLD"
+* gender = #female
+* birthDate = "1971-11-07"
 
-//Instance: 9e57d970-d0ae-4a36-908f-1cad06f94f28
-//InstanceOf: PractitionerUvIps
-//Usage: #inline
-//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
-//* name.text = "Joseph Yaser"
-//* name.family = "Joseph"
-//* name.given = "Yaser"
+Instance: 9e57d970-d0ae-4a36-908f-1cad06f94f28
+InstanceOf: PractitionerUvIps
+Usage: #inline
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* name.text = "Joseph Yaser"
+* name.family = "Joseph"
+* name.given = "Yaser"
 
 Instance: 0aeb9ee8-4968-4342-b833-080dc1abe7c3
 InstanceOf: MedicationStatementIPS

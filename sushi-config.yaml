@@ -36,6 +36,13 @@ dependencies:
   hl7.fhir.uv.extensions.r4: 
     id: FHIRExtensionPack
     version: 5.3.0-ballot-tc1
+# Depednedncies for the example patients  
+  hl7.fhir.us.vr-common-library: 
+    id: VitalRecordsCommonLibrary
+    version: 2.0.0 
+  hl7.fhir.us.vrdr: 
+    id: VRDR
+    version: 3.0.0 
 
 parameters:  
   path-resource:
