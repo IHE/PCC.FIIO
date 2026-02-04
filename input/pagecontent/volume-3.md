@@ -4,68 +4,162 @@
 ## 5.1 IHE Patient Care Coordination Namespaces
 The Patient Care Coordination registry of OIDs is located at https://wiki.ihe.net/index.php/PCC_Vocabulary_Registry_and_Data_Dictionary 
 
-## 5.2 IHE Patient Care Coordination Concept Domains
-Concept Domains used in this IG: 
-SNOMED Controlled Terminology (SNOMED-CT)
-**//TODO pull from alias page **
-
-## 5.3 IHE Patient Care Coordination Format Codes and Vocabularies
-### 5.3.1 IHE Format Codes
-N/A?
-
-Referfenced Standards....
-### 5.3.2 IHEActCode Vocabulary
-
-### 5.3.3 IHERoleCode Vocabulary
-
 # 6 PCC CDA Content Modules
 N/A
-
 
 ### X.6.1 Format Code
 urn:ihe:pcc:ips:2020 
 
 ### 6.2 LOINC Code
-The LOINC code for this document is 57055-6 Antepartum summary
+The LOINC code for this document is 60591-5 
 
 ### 6.3 Standards
-* [ASTM/HL7 Continuity of Care Document]()
-* [HL7 CDA Release 2.0](http://www.hl7.org/documentcenter/private/standards/cda/r2/cda_r2_normativewebedition.zip)
-* [American College of Obstetricians and Gynecologists (ACOG) Antepartum Record ](http://www.acog.org/)
+* [International Patient Summary Implementation Guide 2.0.0 STU 2](https://hl7.org/fhir/uv/ips/index.html)
+* [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html)
 * [LOINC](http://www.regenstrief.org/medinformatics/loinc/)
 * [SNOMED](http://www.snomed.org/)
-* [CDA for Common Document Types History and Physical Notes (DSTU) ](http://www.hl7.org/dstucomments/index.cfm)
-
-#### 6.3.1 CDA Document Templates
-#### 6.3.2 CDA Header Templates
-#### 6.3.3 CDA Section Templates
-#### 6.3.4 CDA Entry Content Module Templates
-
-### 6.4 HL7 V2 Content Modules
-N/A
-
-
-
-### 6.5 PCC Value Sets and Concept Domains
-N/A
+* [IHE FHIR Profile: Occupational Data for Health (ODH) - International](https://profiles.ihe.net/PCC/ODH/index.html)
 
 <a name="fhir-contentModules"> </a>
 
 ## 6.6 HL7 FHIR Content Modules
 ### 6.6.1 HL7 FHIR Document Content Modules
-### 6.6.1.X.1 FHIR IPS Composition LOINC/Format Code ??
-### 6.6.1.X.2 FHIR IPS Bundle/Document Dependencies
-### 6.6.1.X.3 FHIR IPS Referenced Standards
-### 6.6.1.X.4 FHIR IPS Composition/Bundle Sections/Components 
+#### 6.6.1.X FHIR IPS Document Content Modules
+- Refernce to HL7/ISO (base IPS) 
+- IPS DOcument ODH 
+  - Description for elements/ header and section requirements link to composition sub section 
+- IPS DOcument COmplete 
+  - Description for elements/ header and section requirements link to composition sub section 
+
+##### 6.6.1.X.1 FHIR IPS Bundle
+##### 6.6.1.X.1.1 HL7 FHIR IPS Bundle Requirements
+The [HL7 FHIR IPS Bundle](https://hl7.org/fhir/uv/ips/StructureDefinition-Bundle-uv-ips.html) deffines the contraints applied to the Bundle resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
+
+For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
+
+##### 6.6.1.X.1.2 FHIR IPS ODH Option Bundle Requirements
+This Bundle Deffines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorperated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to occupation and industry. 
+
+In addition to the Entry requirments of IPS, this Bundle requires the support of the following ODH Data Elements:
+- Past or Present Job
+- Usual Work 
+
+It also allows optional support for the following ODH Data Elements:
+- Employment Status
+- Retirement Date
+- CombatZone Period
+
+The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle) deffines the contraints applied to the Bundle Resource for this bundle. 
+
+**TODO** Replace with Jenny Jobs or Jannet Guo
+For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
+
+##### 6.6.1.X.1.3 FHIR IPS Complete Option Bundle Requirements 
+The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle) Incorperates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
+
+**TODO** Replace with Jenny Jobs or Jannet Guo
+For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html).
+
+##### 6.6.1.X.2 FHIR IPS Composition and Section Requirements 
+###### 6.6.1.X.2.1 HL7 FHIR IPS Composition and Section Requirements
+The [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) deffines the contraints applied to the Composition resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
+
+**TODO** Replace with valid composition example for Jannet Guo or Frank(Missing data)
+For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
+
+###### 6.6.1.X.2.1.1 Immunization Section Requirements
+The Data Absent Reason SHALL be supported for this section and may be documented at the section level in the section.emptyReason Data Element  
+ - According to [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Section 17.2.4 Missing: 
+"These two situations should be explicitly documented in the IPS section:
+— known absence of vaccinations;
+— no information available about vaccinations"
+ - Review TODO Paitent Link and include Fragment for example view of how data absent SHall be represented 
+
+###### 6.6.1.X.2.1.2 Histrory Of Procedures Section Requirements
+The Data Absent Reason SHALL be supported for this section and may be documented at the section level in the section.emptyReason Data Element  
+ - According to [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Section 16.2.4 Missing - "Required if available, if not then a reason shall be given."
+
+Review TODO Paitent Link and include Fragment for example view of how data absent SHall be represented 
+
+
+###### 6.6.1.X.2.1.3 Medical Devices Section Requirements
+The Data Absent Reason SHALL be supported for this section and may be documented at the section level in the section.emptyReason Data Element  
+ - According to [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Section 18.2.4 Missing - "If missing then the reason should be declared"
+
+Review TODO Paitent Link and include Fragment for example view of how data absent SHall be represented 
+
+
+###### 6.6.1.X.2.1.4 Lab Results Section Requirements
+The Data Absent Reason SHALL be supported for this section and may be documented at the section level in the section.emptyReason Data Element  
+ - According to [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Section 2.2.2.4 Missing ISO/FDIS 27269:2025(en)
+"The implication is that no findings or results have been observed that are relevant to the present summary."
+
+Review TODO Paitent Link and include Fragment for example view of how data absent SHall be represented 
+
+###### 6.6.1.X.2.1.5 Social History Section Requirements
+While the Structure definition does ont slice the entry specifically for this, the social Histroy section does allow for a large variety of Social history observations to be documented in this section. 
+
+**TODO** Fregment/reference Amanda Alvarez/jannet Guo social history section for reference view 
+
+###### 6.6.1.X.2.2 FHIR IPS ODH Option Composition and Section Requirements 
+
+The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition) deffines the contraints applied to the Bundle Resource for this bundle. 
+
+**TODO** Replace with Jenny Jobs or Jannet Guo
+For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
+
+###### 6.6.1.X.2.2.1 Social History Section Requirements
+For the FHIR IPS ODH Option, this is now a Must Support section. The Patient's Occupation and Industry Data Elements SHALL Be Documented in the IPS if it is known. 
+
+This Section SHALL support the the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob) and the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) Data Elements to document the patient's Occupationa and Injustry.  
+
+###### 6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements 
+
+
+##### 6.6.1.X.3 FHIR IPS Referenced Standards
+##### 6.6.1.X.4 FHIR IPS Composition/Bundle Sections/Components 
+- Base IPS 
+ - Conformance statments in the Expected entry and value elements for the composition 
+ - including expections for Data absent resons in the Must support, requireed if known sections 
+ - Quote ISO IPS for the implications of missing sections for Immunizations, Labs, Procedures, Devices, 
+  - "The lack of data in this section implies no relivant data" 
+  - If the data is missing due to limited access to patient ifnormation or system limitations for handeling the data, the content Creator SHALL generate the section, with the data Absent Rreason of "No Information Available" 
+ - link to example IPS Bundle/composition for IPS Doc with missing data 
+
+
+ 
+
+
+
+
+
+- IPS Option
+ - Conformance statments in the Expected entry and value elements for the composition 
+ - e.g. SHall Support the Social Hitory Section, Shall use the ODH Data elements deffeined by the IHE ODH FHIR Profile (past or present Job, and Usual work), and conform to their requirements  
+ - Review TODO Paitent Link and include Fragment for example view of how data absent SHall be represented 
+
+ - IPS Complete 
+ - Conformance statments in the Expected entry and value elements for the composition deffining the complete option section requiremetns 
+ - Review TODO Paitent Link and include Fragment for example view of how data absent SHall be represented 
+ - all sections Are now Required if known sections 
 
 ### 6.6.2 HL7 FHIR Composition/Bundle Content Modules
-#### 6.6.2.X.1 FHIR IPS Composition Metadata 
-#### 6.6.2.X.2 FHIR IPS Composition Section Requirements  
-#### 6.6.2.X.2 FHIR IPS Composition Entry Requirements 
+#### 6.6.2.X FHIR IPS HL7 FHIR Composition/Bundle Content Modules
+##### 6.6.2.X.1 FHIR IPS Composition Metadata
+###### 6.6.2.X.1.1 ODH Option 
+###### 6.6.2.X.1.1 Complete Option 
+##### 6.6.2.X.2 FHIR IPS Composition Section Requirements  
+##### 6.6.2.X.2 FHIR IPS Composition Entry Requirements 
 
 ### 6.6.3 HL7 FHIR Resource Content Modules
 ### 6.6.3.X.1 HL7 FHIR Resource Content Modules
 
+COmposition ststeentst for the different options should have a clearer overview here. 
+
+TODO: Write up description of the expected behavior of the the Must support and requireed if known sections for each of the options, including hl7's IPS to ensure that it is dicussed and noted for conformance testing. 
+
+Create open issue about the dicussion on omitting data that is considered relivant JIra ticket - https://jira.hl7.org/browse/FHIR-53720 
+Rob also sending email about it 1/15/2026 1:08pm 
 
 #### 6.6.X.1 FHIR Resource Content Composition 
 The following sections document the optionality of the data elements within the Composition cooresposning to each Implementation option

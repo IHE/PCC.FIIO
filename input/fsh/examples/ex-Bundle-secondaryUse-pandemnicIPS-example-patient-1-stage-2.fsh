@@ -1,9 +1,7 @@
-Alias: $flag-category = http://terminology.hl7.org/CodeSystem/flag-category
-Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
-
-Instance: secondaryUse-pandemnicIPS-example-patient-1-stage-2
+Instance: ex-Bundle-secondaryUse-pandemnicIPS-example-patient-1-stage-2
 InstanceOf: BundleUvIps
 Usage: #example
+* id = "6603561c-2888-4355-9df4-23675f6eb458"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
 * identifier.value = "IHEEX-33159"
@@ -19,32 +17,32 @@ Usage: #example
 * entry[=].resource = fd584c2f-5814-425d-9b00-0a5b1a6effee
 * entry[+].fullUrl = "urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28"
 * entry[=].resource = 9e57d970-d0ae-4a36-908f-1cad06f94f28
-* entry[+].fullUrl = "urn:uuid:dffca459-b71b-41ec-a0a2-077310d64d92"
-* entry[=].resource = dffca459-b71b-41ec-a0a2-077310d64d92
-* entry[+].fullUrl = "urn:uuid:f2acb378-5c29-4541-b0c0-953b53d61d05"
-* entry[=].resource = f2acb378-5c29-4541-b0c0-953b53d61d05
-* entry[+].fullUrl = "urn:uuid:fab09f14-d6b9-4bd4-a03b-836568f9706a"
-* entry[=].resource = fab09f14-d6b9-4bd4-a03b-836568f9706a
-* entry[+].fullUrl = "urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd"
-* entry[=].resource = 402afc3f-318f-4a48-9d79-0cab913d7efd
-* entry[+].fullUrl = "urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6"
-* entry[=].resource = b06be658-3d84-4b1b-be48-6fac0e5427c6
-* entry[+].fullUrl = "urn:uuid:e4040d7c-03f5-4e2e-9cfe-3618899aa777"
-* entry[=].resource = e4040d7c-03f5-4e2e-9cfe-3618899aa777
-* entry[+].fullUrl = "urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a"
-* entry[=].resource = 7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a
-* entry[+].fullUrl = "urn:uuid:50a342f1-e715-43f9-bf43-30f219e77560"
-* entry[=].resource = 50a342f1-e715-43f9-bf43-30f219e77560
-* entry[+].fullUrl = "urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80"
-* entry[=].resource = 525840ed-762d-44c5-a0bf-bac7a275ad80
-* entry[+].fullUrl = "urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a"
-* entry[=].resource = b8b80efb-eb42-4eeb-b308-86a465d0ab7a
-* entry[+].fullUrl = "urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6"
-* entry[=].resource = 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
-* entry[+].fullUrl = "urn:uuid:25a63f47-1f87-42f6-ba4c-c6887f4db418"
-* entry[=].resource = 25a63f47-1f87-42f6-ba4c-c6887f4db418
-* entry[+].fullUrl = "urn:uuid:f44c6b4b-53f4-49bb-a251-521379991ce0"
-* entry[=].resource = f44c6b4b-53f4-49bb-a251-521379991ce0
+* entry[+].fullUrl = "urn:uuid:0aeb9ee8-4968-4342-b833-080dc1abe7c3"
+* entry[=].resource = 0aeb9ee8-4968-4342-b833-080dc1abe7c3
+* entry[+].fullUrl = "urn:uuid:c86543b7-4002-4ba6-9a9b-aaa4ecf01b7c"
+* entry[=].resource = c86543b7-4002-4ba6-9a9b-aaa4ecf01b7c
+* entry[+].fullUrl = "urn:uuid:b25745c5-e5de-446f-8bac-3baff9e75270"
+* entry[=].resource = b25745c5-e5de-446f-8bac-3baff9e75270
+* entry[+].fullUrl = "urn:uuid:b066f5b5-fe10-4f8b-8341-bf3a227e15c1"
+* entry[=].resource = b066f5b5-fe10-4f8b-8341-bf3a227e15c1
+* entry[+].fullUrl = "urn:uuid:057e5b9c-89c7-411d-ad11-92114df5d287"
+* entry[=].resource = 057e5b9c-89c7-411d-ad11-92114df5d287
+* entry[+].fullUrl = "urn:uuid:b2a55f80-c7f9-4d49-8023-226b2e735445"
+* entry[=].resource = b2a55f80-c7f9-4d49-8023-226b2e735445
+* entry[+].fullUrl = "urn:uuid:c76c4f38-de14-4578-8fa6-ec6aad88c4ee"
+* entry[=].resource = c76c4f38-de14-4578-8fa6-ec6aad88c4ee
+* entry[+].fullUrl = "urn:uuid:ff4bccb4-b5d4-4e21-b12a-84bf6d04c710"
+* entry[=].resource = ff4bccb4-b5d4-4e21-b12a-84bf6d04c710
+* entry[+].fullUrl = "urn:uuid:c1f6d2f1-2899-4b68-8f62-f2d18e0766cb"
+* entry[=].resource = c1f6d2f1-2899-4b68-8f62-f2d18e0766cb
+* entry[+].fullUrl = "urn:uuid:892bc1ee-cea1-490a-b0a4-ef2e3fbfd278"
+* entry[=].resource = 892bc1ee-cea1-490a-b0a4-ef2e3fbfd278
+* entry[+].fullUrl = "urn:uuid:1499748c-bc94-4a6d-9d4e-d0e90b902411"
+* entry[=].resource = 1499748c-bc94-4a6d-9d4e-d0e90b902411
+* entry[+].fullUrl = "urn:uuid:c66e2f88-0f51-4e3e-a2fb-94d63930aaa3"
+* entry[=].resource = c66e2f88-0f51-4e3e-a2fb-94d63930aaa3
+* entry[+].fullUrl = "urn:uuid:60d35c97-adc0-4354-b606-2a582e7fa6b6"
+* entry[=].resource = 60d35c97-adc0-4354-b606-2a582e7fa6b6
 
 
 Instance: 6274d469-7a4d-4a66-a261-e5e7b71af267
@@ -67,20 +65,20 @@ Usage: #inline
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication section</div>"
-* section[sectionMedications].entry[+] = Reference(urn:uuid:dffca459-b71b-41ec-a0a2-077310d64d92)
+* section[sectionMedications].entry[+] = Reference(urn:uuid:0aeb9ee8-4968-4342-b833-080dc1abe7c3)
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies and intolerances section</div>"
-* section[sectionAllergies].entry[+] = Reference(urn:uuid:b06be658-3d84-4b1b-be48-6fac0e5427c6)
+* section[sectionAllergies].entry[+] = Reference(urn:uuid:057e5b9c-89c7-411d-ad11-92114df5d287)
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Problem list section</div>"
-* section[sectionProblems].entry[+] = Reference(urn:uuid:f2acb378-5c29-4541-b0c0-953b53d61d05)
-* section[sectionProblems].entry[+] = Reference(urn:uuid:fab09f14-d6b9-4bd4-a03b-836568f9706a)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:c86543b7-4002-4ba6-9a9b-aaa4ecf01b7c)
+* section[sectionProblems].entry[+] = Reference(urn:uuid:b25745c5-e5de-446f-8bac-3baff9e75270)
 
 * section[sectionPastProblems].title = "Past Problems"
 * section[sectionPastProblems].code = $loinc#11348-0 "History of Past illness note"
@@ -92,37 +90,37 @@ Usage: #inline
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations section</div>"
-* section[sectionImmunizations].entry[+] = Reference(urn:uuid:7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a)
+* section[sectionImmunizations].entry[+] = Reference(urn:uuid:c76c4f38-de14-4578-8fa6-ec6aad88c4ee)
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Procedures section</div>"
-* section[sectionProceduresHx].entry = Reference(urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd)
+* section[sectionProceduresHx].entry = Reference(urn:uuid:b066f5b5-fe10-4f8b-8341-bf3a227e15c1)
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.status = #generated
 * section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
-* section[sectionResults].entry[+] = Reference(urn:uuid:e4040d7c-03f5-4e2e-9cfe-3618899aa777)
+* section[sectionResults].entry[+] = Reference(urn:uuid:b2a55f80-c7f9-4d49-8023-226b2e735445)
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History </div>"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:50a342f1-e715-43f9-bf43-30f219e77560)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ff4bccb4-b5d4-4e21-b12a-84bf6d04c710)
 
 * section[sectionPregnancyHx].title = "Pregnancy History"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
 * section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy section</div>"
-* section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:525840ed-762d-44c5-a0bf-bac7a275ad80)
+* section[sectionPregnancyHx].entry[+] = Reference(urn:uuid:c1f6d2f1-2899-4b68-8f62-f2d18e0766cb)
 
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
-* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:8064d9f4-4b5f-4719-9189-00ec8ef59ec6)
+* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:1499748c-bc94-4a6d-9d4e-d0e90b902411)
 
 * section[sectionVitalSigns].title = "Vital Signs"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
@@ -146,7 +144,7 @@ Usage: #inline
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.status = #generated
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alerts Section</div>"
-* section[sectionAlerts].entry[+] = Reference(urn:uuid:f44c6b4b-53f4-49bb-a251-521379991ce0)
+* section[sectionAlerts].entry[+] = Reference(urn:uuid:60d35c97-adc0-4354-b606-2a582e7fa6b6)
 
 * section[sectionFunctionalStatus].title = "Functional Status"
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
@@ -154,17 +152,17 @@ Usage: #inline
 * section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Functional Status Section</div>"
 * section[sectionFunctionalStatus].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#withheld "Information Withheld"
 
-Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
-InstanceOf: OrganizationUvIps
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
-* identifier.system = "urn:oid:1.1.1.1.1.1.1.3"
-* identifier.value = "WHO-CX"
-* name = "World Health Organization"
+//Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
+//InstanceOf: OrganizationUvIps
+//Usage: #inline
+//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+//* identifier.system = "urn:oid:1.1.1.1.1.1.1.3"
+//* identifier.value = "WHO-CX"
+//* name = "World Health Organization"
 
 Instance: Ex-Patient-1-for-secondaryUse-pandemnicIPS-stage-2
 InstanceOf: PatientUvIps
-Usage: #inline
+Usage: #example
 * id = "6274d469-7a4d-4a66-a261-e5e7b71af267"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
@@ -179,40 +177,40 @@ Usage: #inline
 * birthDate = "1996-08-16"
 * deceasedDateTime = "2024-10-15"
 * address.postalCode = "3210"
-* generalPractitioner = Reference(Practitioner/816cf057-b736-4e08-baed-cc21e081b784)
+* generalPractitioner = Reference(Practitioner/9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
-Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
-InstanceOf: PractitionerUvIps
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
-* identifier[+].use = #official
-* identifier[=].system = "urn:oid:2.16.528.1.1007.3.1"
-* identifier[=].value = "874635264"
-* identifier[+].use = #usual
-* identifier[=].system = "urn:oid:2.16.840.1.113883.2.4.6.3"
-* identifier[=].value = "567IUI51C154"
-* name.use = #official
-* name.text = "Heps Simone MD"
-* name.family = "Heps"
-* name.given = "Simone"
-* name.suffix = "MD"
-* address.use = #work
-* address.line = "Galapagosweg 91"
-* address.city = "Den Burg"
-* address.postalCode = "9105 PZ"
-* address.country = "NLD"
-* gender = #female
-* birthDate = "1971-11-07"
+//Instance: fd584c2f-5814-425d-9b00-0a5b1a6effee
+//InstanceOf: PractitionerUvIps
+//Usage: #inline
+//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+//* identifier[+].use = #official
+//* identifier[=].system = "urn:oid:2.16.528.1.1007.3.1"
+//* identifier[=].value = "874635264"
+//* identifier[+].use = #usual
+//* identifier[=].system = "urn:oid:2.16.840.1.113883.2.4.6.3"
+//* identifier[=].value = "567IUI51C154"
+//* name.use = #official
+//* name.text = "Heps Simone MD"
+//* name.family = "Heps"
+//* name.given = "Simone"
+//* name.suffix = "MD"
+//* address.use = #work
+//* address.line = "Galapagosweg 91"
+//* address.city = "Den Burg"
+//* address.postalCode = "9105 PZ"
+//* address.country = "NLD"
+//* gender = #female
+//* birthDate = "1971-11-07"
 
-Instance: 9e57d970-d0ae-4a36-908f-1cad06f94f28
-InstanceOf: PractitionerUvIps
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
-* name.text = "Joseph Yaser"
-* name.family = "Joseph"
-* name.given = "Yaser"
+//Instance: 9e57d970-d0ae-4a36-908f-1cad06f94f28
+//InstanceOf: PractitionerUvIps
+//Usage: #inline
+//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+//* name.text = "Joseph Yaser"
+//* name.family = "Joseph"
+//* name.given = "Yaser"
 
-Instance: dffca459-b71b-41ec-a0a2-077310d64d92
+Instance: 0aeb9ee8-4968-4342-b833-080dc1abe7c3
 InstanceOf: MedicationStatementIPS
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
@@ -222,7 +220,7 @@ Usage: #inline
 * effectiveDateTime = "2024-10-01"
 * dateAsserted = "2024-10-01"
 
-Instance: f2acb378-5c29-4541-b0c0-953b53d61d05
+Instance: c86543b7-4002-4ba6-9a9b-aaa4ecf01b7c
 InstanceOf: ConditionUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
@@ -235,7 +233,7 @@ Usage: #inline
 * onsetDateTime = "2024-10-30"
 * asserter = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
-Instance: fab09f14-d6b9-4bd4-a03b-836568f9706a
+Instance: b25745c5-e5de-446f-8bac-3baff9e75270
 InstanceOf: ConditionUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
@@ -249,7 +247,7 @@ Usage: #inline
 * asserter = Reference(urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28)
 
 
-Instance: 402afc3f-318f-4a48-9d79-0cab913d7efd
+Instance: b066f5b5-fe10-4f8b-8341-bf3a227e15c1
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
@@ -261,7 +259,7 @@ Usage: #inline
 * bodySite = $sct#39607008 "Lung structure"
 * note.text = "Artificial ventilation using ventilaton performed"
 
-Instance: b06be658-3d84-4b1b-be48-6fac0e5427c6
+Instance: 057e5b9c-89c7-411d-ad11-92114df5d287
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
@@ -277,12 +275,12 @@ Usage: #inline
 * reaction.manifestation = $sct#271807003 "Rash"
 * reaction.severity = #moderate
 
-Instance: e4040d7c-03f5-4e2e-9cfe-3618899aa777
+Instance: b2a55f80-c7f9-4d49-8023-226b2e735445
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
 * status = #final
-* category = $observation-category#laboratory
+
 * code = $loinc#109691-6 "Influenza virus A Ag [Measurement] in Nasopharynx"
 * subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * effectiveDateTime = "2024-10-30"
@@ -292,7 +290,7 @@ Usage: #inline
 * interpretation = $v3-ObservationInterpretation#H "High"
 * note.text = "Positive for Influenza A"
 
-Instance: 7925d1b8-f0b2-49d8-b4a0-68f1b9ae238a
+Instance: c76c4f38-de14-4578-8fa6-ec6aad88c4ee
 InstanceOf: ImmunizationUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
@@ -310,7 +308,7 @@ Usage: #inline
 * protocolApplied.targetDisease = $sct#719865001 "Influenza caused by pandemic influenza virus (disorder)"
 * protocolApplied.doseNumberPositiveInt = 2
 
-Instance: 50a342f1-e715-43f9-bf43-30f219e77560
+Instance: ff4bccb4-b5d4-4e21-b12a-84bf6d04c710
 InstanceOf: PastOrPresentJob
 Usage: #inline
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob"
@@ -328,7 +326,7 @@ Usage: #inline
 * component.code = $loinc#86188-0 "History of Occupation Industry"
 * component.valueCodeableConcept = $ISICRev4#871 "Residential nursing care facilities"
 
-Instance: 525840ed-762d-44c5-a0bf-bac7a275ad80
+Instance: c1f6d2f1-2899-4b68-8f62-f2d18e0766cb
 InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
@@ -338,9 +336,9 @@ Usage: #inline
 * effectiveDateTime = "2014-02-01"
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * valueCodeableConcept = $sct#77386006 "Pregnant"
-* hasMember = Reference(urn:uuid:b8b80efb-eb42-4eeb-b308-86a465d0ab7a)
+* hasMember = Reference(urn:uuid:892bc1ee-cea1-490a-b0a4-ef2e3fbfd278)
 
-Instance: b8b80efb-eb42-4eeb-b308-86a465d0ab7a
+Instance: 892bc1ee-cea1-490a-b0a4-ef2e3fbfd278
 InstanceOf: ObservationPregnancyEddUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
@@ -351,31 +349,28 @@ Usage: #inline
 * performer = Reference(urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee)
 * valueDateTime = "2025-03-18"
 
-Instance: 8064d9f4-4b5f-4719-9189-00ec8ef59ec6
+Instance: 1499748c-bc94-4a6d-9d4e-d0e90b902411
 InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
 * status = #completed
 * subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 * timingDateTime = "2014-02-01"
-* device = Reference(urn:uuid:25a63f47-1f87-42f6-ba4c-c6887f4db418)
+* device = Reference(urn:uuid:c66e2f88-0f51-4e3e-a2fb-94d63930aaa3)
 * note.text = "Device data required"
 
-Instance: 25a63f47-1f87-42f6-ba4c-c6887f4db418
+Instance: c66e2f88-0f51-4e3e-a2fb-94d63930aaa3
 InstanceOf: DeviceUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
 * type = $sct#787483001 "No known device use"
 * patient = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
 
-
-
-
-Instance: f44c6b4b-53f4-49bb-a251-521379991ce0
+Instance: 60d35c97-adc0-4354-b606-2a582e7fa6b6
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
 * status = #active
-* category = $flag-category#clinical
+* category = http://terminology.hl7.org/CodeSystem/flag-category#clinical
 * code = $sct#370221004 "Severe asthma (disorder)"
 * subject = Reference(urn:uuid:6274d469-7a4d-4a66-a261-e5e7b71af267)
