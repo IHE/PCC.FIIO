@@ -133,10 +133,16 @@ This Use case describes unscheduled emergency care of a patient where the health
 ##### XX.4.2.1.1 On Demand Single Source IPS Document for Emergency Care 
 A person has gotten into a motor vehicle accident and Emergency services are called to care for them. When the emergency care team arrives at the patient's side, they are able to use the information available on their identification to query their HIE for an on demand IPS document. With the summary available, information on the patient's sever allergy to NSAIDs and antibiotics are noted and their history of Stroke and blood thinners are utilized to make immediate treatment interventions. The patient is transported to the local hospital to continue care. The treatment interventions, assessments, and administered medications can be made available for the next provider. 
 
-##### XX.4.2.1.2 On Demand Single Source IPS Document for Emergency Care  Process Flow
+##### XX.4.2.1.2 On Demand Single Source IPS Document for Emergency Care Process Flow
 HIE Replated retrieval of patient summary, single source/ on demand... 
  incorperate the iti register ondemand doccument transaction into process flow [ITI-61](https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html)
  TODO - plantuml diagram development 
+<figure>
+{%include ips-usecase1-processflow.svg%}
+<figcaption><strong>Figure XX.4.2.1.2-1: On Demand Single Source IPS Document for Emergency Care Process Flow</strong></figcaption>
+</figure>
+<br clear="all">
+
 
 **Pre-conditions**:
 - An on demand IPS document has been registered in the HIE
@@ -165,7 +171,11 @@ Represents how some systems should represent missing data for required if known 
 A patient arrives at a treatment clinic that is looking for their patient history information. The patient provides portal information when being seen by a provider with a link to their primary provider portal. It generates an IPS for the reviewing provider, for informed care and treatment. The patient's provider portal is limited and does not have access to procedure, device, or Lab data. when the IPS is generated, those sections are labeled No information available tags. The receiving provider sees this and knows that they may need to utilize a different resource to collect this data on the patient and is informed that there is a gap in their data. 
 
 ##### XX.4.2.2.2 Patient Portal with Limited Source Data  
-Query to database by portal actor, return Data but not returning information for labs, devices, and procedure due to unavailable data. Content creator generates the IPS document with those sections present and “not available” documented in the section’s Data absent Reason.  
+<figure>
+{%include ips-usecase2-processflow.svg%}
+<figcaption><strong>Figure XX.4.2.1.2-1: On Demand Single Source IPS Document for Emergency Care Process Flow</strong></figcaption>
+</figure>
+<br clear="all">
 
 **Pre-conditions:**
 - The provider system is able to generate an IPS
@@ -214,7 +224,11 @@ This use case describes how a patient can request the generation of an IPS and m
 A patient is preparing their personal Health Summary in case it is needed for their care. They are in the third trimester of their pregnancy and has recently been diagnosed with preeclampsia and is preparing for any emergencies ahead. They access their patient portal and generate an IPS. When reviewing the IPS, the patient makes sure that the preeclampsia and birth plan are flagged, lab results, adds some of the over the counter  medication that isn't a part of the record, and adds some more information into the Patient Story section to provide more information and personal concerns that providers should be aware about the pregnancy. When these edits are completed, the patient finishes the generation of the IPS, ready to make available when it is needed for future care. 
 
 ##### XX.4.2.4.2 Patient Mediated and Edited IPS Utilizing a Portal Process Flow
-Query to the provider database, the content consumer is the patient portal. Patient reviews the record. Adds patient Story narrative, adds pregnancy test result, over the counter medication she is taking, flags birth plan?, and masks conditions related to her mental health diagnosis for privacy. Then triggers the portal system to generate the IPS as a content creator. IPS document generated and cloud share to other provider system.   
+<figure>
+{%include ips-usecase2-processflow.svg%}
+<figcaption><strong>Figure XX.4.2.3.2-1: Managing Work-Related Illness While Working Abroad Process Flow</strong></figcaption>
+</figure>
+<br clear="all">
 
 **Pre-conditions:**
 - A patient has a patient healthcare portal that contains their current health information 
@@ -244,7 +258,7 @@ A patient with cancer has indicated to their provider that they will be spending
 
 ##### XX.4.2.5.2 Managing Chronic Conditions Across Borders Process Flow
 <figure>
-{%include usecase2-processflow.svg%}
+{%include ips-usecase5-processflow.svg%}
 <figcaption><strong>Figure XX.4.2.2-1: Provider-mediated IPS Process Flow</strong></figcaption>
 </figure>
 <br clear="all">
@@ -274,7 +288,7 @@ In this fictitious use case, the region is under threat of outbreak for a novel 
 ##### XX.4.2.6.2 Secondary Use of IPS for Standardized Data Exchange Process Flow
 TODO: connect the plantuml for this use case IPS-Secondary-Access-Use-Case
 <figure>
-{%include usecase2-processflow.svg%}
+{%include ips-usecase6-processflow.svg%}
 <figcaption><strong>Figure XX.4.2.7.2-1: Secondary Use of IPS for Standardized Data Exchange Process Flow</strong></figcaption>
 </figure>
 <br clear="all">
@@ -315,6 +329,8 @@ Health Information Exchange: Enabling Document Sharing Health Information Exchan
 <a name="other-grouping"> </a>
 
 ## XX.6 IPS Cross-Profile Considerations
+
+Consider the IHE [Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index.html) for methods of exchanging the H[L7 International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/), using [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html). 
 
 The use of the IHE XD* family of transactions is encouraged to support standards-based interoperability between systems acting as the IPS Content Creator and IPS Content Consumer. However, this profile does not require any groupings with ITI XD* actors to facilitate transport of the content document it defines. 
 

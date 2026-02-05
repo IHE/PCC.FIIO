@@ -1,0 +1,31 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+
+participant "Primary Care Data Source\nContent Creator" as pcds 
+cloud "Document Sharing\n[PCC-1]" as pcc1a 
+participant "Pseudonymization Service\nContent Consumer\nContent Creator" as pns
+cloud "Document Sharing\n[PCC-1]" as pcc1b 
+participant "Anonymization Service\nContent Consumer\nContent Creator" as ans
+cloud "Document Sharing\n[PCC-1]" as pcc1b 
+participant "Secondary Use Researcher\nContent Consumer" as sur 
+
+
+!pragma teoz true
+box "Health Data Source" #LightSkyBlue
+pcds <-> pcc1a: Share Content
+note over pcc1a: Provides a Fully Identifed IPS
+box "De-Identification" #SteelBlue
+pcc1a <-> pns: Share Content
+pns <-> pcc1b: Share Pseudonymized Content
+note over pcc1b: Provides a Pseudonymized IPS\n(Stage 1 De-Identification)
+pcc1b <-> ans: Share Pseudonymized Content
+end box
+end box
+
+box "Secondary Use" #MediumPurple
+ans <-> pcc1c: Share De-Identified Content
+note over pcc1c: Provides a Fully De-Identified IPS\n(Stage 2 De-Identification)
+pcc1c <-> sur: Share De-Identified Content 
+end box  
+@enduml

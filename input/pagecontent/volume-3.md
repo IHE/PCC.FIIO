@@ -19,8 +19,8 @@ The LOINC code for this document is 60591-5 "Patient summary Document"
 * [LOINC](http://www.regenstrief.org/medinformatics/loinc/)
 * [SNOMED](http://www.snomed.org/)
 * [IHE FHIR Profile: Occupational Data for Health (ODH) - International](https://profiles.ihe.net/PCC/ODH/index.html)
-* [International Labor Organization: International Standard Classification of Occupations (ISCO-08)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08)
-* [International Labor Organization: International Standard Industrial Classification Codes Rev4 (ISIC Rev4)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4)
+* [International Labor Organization: International Standard Classification of Occupations (ISCO-08)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08.html)
+* [International Labor Organization: International Standard Industrial Classification Codes Rev4 (ISIC Rev4)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4.html)
 
 <a name="fhir-contentModules"> </a>
 
@@ -30,56 +30,6 @@ The LOINC code for this document is 60591-5 "Patient summary Document"
 This Conent Module Section deffines the technical requirements FHIR IPS Documents and Bundles 
 
 ##### 6.6.1.X.1 FHIR IPS Bundle
-**Table 6.6.1.X.1: FHIR Bundle Resource Optoinality Requirements**
-This Table shows the differences in the Bundle Requirements for the Different Bundle Options. 
-
-<p id ="tXX.2-1" class="tableTitle"><strong>Table XX.2-1: Table 6.6.1.X.1: FHIR Bundle Resource Optoinality Requirements</strong></p>
-
-| Data Elements                                         | FHIR Resource ID         | HL7 IPS Optionality Carindality | ODH Option Optionality Carindality  |   Complete Option Optionality  Carindality  |    
-|-------------------------------------------------------|--------------------------|-----------|-----------|-----------|
-| Bundle                                                |[BundleUvIps]()           |  R [1..1] | R [1..1]  | R [1..1]  |
-| Bundle.entry:composition                              |                          |           |           |           |
-|                                                       |                          |           |           |           |
-|                                                       |                          |           |           |           |
-| Bundle.entry:patient                                  |                          |           |           |           |
-| Bundle.entry:allergyintolerance                       |                          |           |           |           |
-| Bundle.entry:careplan                                 |                          |           |           |           |
-| Bundle.entry:clinicalimpression                       |                          |           |           |           |
-| Bundle.entry:condition                                |                          |           |           |           |
-| Bundle.entry:consent                                  |                          |           |           |           |
-| Bundle.entry:device                                   |                          |           |           |           |
-| Bundle.entry:deviceusestatement                       |                          |           |           |           |
-| Bundle.entry:diagnosticreport                         |                          |           |           |           |
-| Bundle.entry:documentreference                        |                          |           |           |           |
-| Bundle.entry:flag                                     |                          |           |           |           |
-| Bundle.entry:imagingstudy                             |                          |           |           |           |
-| Bundle.entry:immunization                             |                          |           |           |           |
-| Bundle.entry:immunizationrecommendation               |                          |           |           |           |
-| Bundle.entry:medication                               |                          |           |           |           |
-| Bundle.entry:medicationrequest                        |                          |           |           |           |
-| Bundle.entry:medicationstatement                      |                          |           |           |           |
-| Bundle.entry:practitioner                             |                          |           |           |           |
-| Bundle.entry:practitionerrole                         |                          |           |           |           |
-| Bundle.entry:procedure                                |                          |           |           |           |
-| Bundle.entry:observation-pregnancy-edd                |                          |           |           |           |
-| Bundle.entry:observation-pregnancy-outcome            |                          |           |           |           |
-| Bundle.entry:observation-pregnancy-status             |                          |           |           |           |
-| Bundle.entry:observation-alcohol-use                  |                          |           |           |           |
-| Bundle.entry:observation-tobacco-use                  |                          |           |           |           |
-| Bundle.entry:observation-results-laboratory-pathology |                          |           |           |           |
-| Bundle.entry:observation-results-radiology            |                          |           |           |           |
-| Bundle.entry:observation-vital-signs                  |                          |           |           |           |
-| Bundle.entry:organization                             |                          |           |           |           |
-| Bundle.entry:specimen                                 |                          |           |           |           |
-| Bundle.entry:past-or-present-job                      |                          |           |           |           |
-| Bundle.entry:usual-work                               |                          |           |           |           |
-| Bundle.entry:employment-status                        |                          |           |           |           |
-| Bundle.entry:retirement-date                          |                          |           |           |           |
-| Bundle.entry:combat-zone-period                       |                          |           |           |           |
-{: .grid}
-Note 1: 
-
-
 ##### 6.6.1.X.1.1 HL7 FHIR IPS Bundle Requirements
 The [HL7 FHIR IPS Bundle](https://hl7.org/fhir/uv/ips/StructureDefinition-Bundle-uv-ips.html) deffines the contraints applied to the Bundle resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
 
@@ -88,24 +38,24 @@ IHE does not further contrain the base standard outside of the specified options
 For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). This example patient Has entries for all deffined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
 
 ##### 6.6.1.X.1.2 FHIR IPS ODH Option Bundle Requirements
-This Bundle Deffines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorperated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to [Occupation](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08) and [Industry](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4). 
+This Bundle Deffines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorperated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to [Occupation](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08.html) and [Industry](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4.html). 
 
 In addition to the Entry requirments of IPS, this Bundle requires the support of at least 1 of the following ODH Data Elements:
-- [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob)
-- [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) 
+- [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html)
+- [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork.html) 
 
 It also allows optional support for the following ODH Data Elements:
-- [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus)
-- [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate)
-- [CombatZone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod)
+- [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus.html)
+- [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate.html)
+- [CombatZone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod.html)
 
-The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle) deffines the contraints applied to the Bundle Resource for this option. 
+The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle.html) deffines the contraints applied to the Bundle Resource for this option. 
 
 **TODO** Replace with Genny Jobs or Jannet Guo
 For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
 
 ##### 6.6.1.X.1.3 FHIR IPS Complete Option Bundle Requirements 
-The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle) Incorperates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
+The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle.html) Incorperates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
 
 **TODO** Replace with Genny Jobs or Jannet Guo
 For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html).
@@ -116,38 +66,28 @@ This Table shows the differences in the Composition Requirements for the Differe
 
 <p id ="tXX.2-1" class="tableTitle"><strong>Table XX.2-1: Table 6.6.1.X.2-1: FHIR Composition Resource Optoinality Requirements</strong></p>
 
-| Data Elements                                         | FHIR Resource ID         | HL7 IPS Optionality Carindality | ODH Option Optionality Carindality  |   Complete Option Optionality  Carindality  |    
-|-------------------------------------------------------|--------------------------|-----------|-----------|-----------|
-| Composition                                           |[CompositionUvIps]()      |  R [1..1] | R [1..1]  | R [1..1]  |
-| Composition.section:sectionProblems                   |                          |           |           |           |
-| Composition.section:sectionAllergies                  |                          |           |           |           |
-| Composition.section:sectionMedications                |                          |           |           |           |
-| Composition.section:sectionImmunizations              |                          |           |           |           |
-| Composition.section:sectionResults                    |                          |           |           |           |
-| Composition.section:sectionProceduresHx               |                          |           |           |           |
-| Composition.section:sectionMedicalDevices             |                          |           |           |           |
-| Composition.section:sectionAdvanceDirectives          |                          |           |           |           |
-| Composition.section:sectionAlerts                     |                          |           |           |           |
-| Composition.section:sectionFunctionalStatus           |                          |           |           |           |
-| Composition.section:sectionPastProblems               |                          |           |           |           |
-| Composition.section:sectionPregnancyHx                |                          |           |           |           |
-| Composition.section:sectionPatientStory               |                          |           |           |           |
-| Composition.section:sectionPlanOfCare                 |                          |           |           |           |
-| Composition.section:sectionSocialHistory              |                          |           |           |           |
-| Composition.section:sectionVitalSigns                 |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
-| Composition.section:                                  |                          |           |           |           |
+| Sections                | HL7 IPS Optionality Carindality | ODH Option Optionality Carindality  |   Complete Option Optionality  Carindality  |    
+|----------------------------------------------|----------|-----------|-----------|
+| Composition.section:sectionProblems          | R [1..1] | R [1..1]  | R [1..1]  |
+| Composition.section:sectionAllergies         | R [1..1] | R [1..1]  | R [1..1]  |
+| Composition.section:sectionMedications       | R [1..1] | R [1..1]  | R [1..1]  |
+| Composition.section:sectionImmunizations     | RE [0..1]| RE [0..1] | RE [0..1] |
+| Composition.section:sectionResults           | RE [0..1]| RE [0..1] | RE [0..1] |
+| Composition.section:sectionProceduresHx      | RE [0..1]| RE [0..1] | RE [0..1] |
+| Composition.section:sectionMedicalDevices    | RE [0..1]| RE [0..1] | RE [0..1] |
+| Composition.section:sectionSocialHistory     | O [0..1] | RE [0..1] | RE [0..1] |
+| Composition.section:sectionAdvanceDirectives | O [0..1] | O [0..1]  | RE [0..1] |
+| Composition.section:sectionFunctionalStatus  | O [0..1] | O [0..1]  | RE [0..1] |
+| Composition.section:sectionPastProblems      | O [0..1] | O [0..1]  | RE [0..1] |
+| Composition.section:sectionPregnancyHx       | O [0..1] | O [0..1]  | RE [0..1] |
+| Composition.section:sectionPatientStory      | O [0..1] | O [0..1]  | RE [0..1] |
+| Composition.section:sectionPlanOfCare        | O [0..1] | O [0..1]  | RE [0..1] |
+| Composition.section:sectionVitalSigns        | O [0..1] | O [0..1]  | RE [0..1] |
 {: .grid}
 Note 1: 
 
 ###### 6.6.1.X.2.1 HL7 FHIR IPS Composition and Section Requirements
-The [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) deffines the contraints applied to the Composition resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
+The [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips.html) deffines the contraints applied to the Composition resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
 
 IHE does not further contrain the base HL7 Implementation Guide requirements outside of the specified options defined below. 
 
@@ -198,7 +138,7 @@ In order to support the meanings of Absent Data described by [ISO 27269:2025: He
 
 If the Medical Devices data is not available or supported by the Content Creator system then the IPS Medical Devices Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
-If there is a knowm absence of Device data then this **May** be represented in the IPS Medical Devices Section with an emptyReason of 787480003 "No known procedures" [SNOMED-CT](http://www.snomed.org/), **OR** a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented in the [Procedure Entry](https://hl7.org/fhir/uv/ips/StructureDefinition-Procedure-uv-ips.html) as a [Procedure Code](https://hl7.org/fhir/uv/ips/ValueSet-procedures-uv-ips.html) of 787480003 "No known procedures". A Content Creator **SHALL** support at least one of these approaches
+If there is a knowm absence of Device data then this **May** be represented in the IPS Medical Devices Section with an emptyReason of 787483001 "No known device use" [SNOMED-CT](http://www.snomed.org/), **OR** a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented in the [Procedure Entry](https://hl7.org/fhir/uv/ips/StructureDefinition-Procedure-uv-ips.html) as [Medical Devices Code](https://hl7.org/fhir/uv/ips/ValueSet-medical-devices-uv-ips.html) of 787483001 "No known device use". A Content Creator **SHALL** support at least one of these approaches
 
 
 **TODO** Review patient bundle Jannet Guo for valid History of Procedures section structure, Frank(Missing data) for representation of missing data at the section level, ex patient xyz for no known Procedures at the section level, and xyz patient for no known Procedures at the entry level  
@@ -218,7 +158,7 @@ In order to support the meanings of Absent Data described by [ISO 27269:2025: He
 
 If the Lab Results data is not available or supported by the Content Creator system then the IPS Results Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
-If there is a knowm absence of Results data then this **May** be represented in the IPS Results Section with an emptyReason of 787480003 "No known procedures" [SNOMED-CT](http://www.snomed.org/), **OR** a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented in the [Procedure Entry](https://hl7.org/fhir/uv/ips/StructureDefinition-Procedure-uv-ips.html) as a [Procedure Code](https://hl7.org/fhir/uv/ips/ValueSet-procedures-uv-ips.html) of 787480003 "No known procedures". A Content Creator **SHALL** support at least one of these approaches
+If there is a knowm absence of Results data then this **May** be represented in the IPS Results Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches
 
 
 **TODO** Review patient bundle Jannet Guo for valid Results section structure, Frank(Missing data) for representation of missing data at the section level, ex patient xyz for no known Procedures at the section level, and xyz patient for no known Procedures at the entry level  
@@ -279,7 +219,7 @@ This Section Does not permit the use of the Observation resource to indicate if 
 If the Advanced Directive data is not available or supported by the Content Creator system then the IPS Results Section **SHOULD** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
 
-If there is a knowm absence of Advanced healthcare Directives for the patient, then this **May** be represented in the IPS Advanced Directives with an emptyReason of 787480003 "No known procedures" [SNOMED-CT](http://www.snomed.org/), **OR** the Section may be ommited. 
+If there is a knowm absence of Advanced healthcare Directives for the patient, then this Section **May** be ommited. 
 
 
 **TODO** Review patient bundle Jannet Guo for valid Results section structure, Frank(Missing data) for representation of missing data at the section level, ex patient xyz for no known Procedures at the section level, and xyz patient for no known Procedures at the entry level  
@@ -289,91 +229,30 @@ If there is a knowm absence of Advanced healthcare Directives for the patient, t
 - Advanced Directives section, missing data 
 - maybe omission of the section due to no relevant Results in thier history 
 
+- If the person authorizing the Advanced directive is the patient then the Person Authorizing Directive element should be found in: Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:Patient
 
-**Table 6.6.1.X.2.7.1-1: Data Element and Path Mapping for CEN/ISO Advance Directives Section Attributes**
-The following table shows the mapping of the FHIR Resources supporting the content for International Patient Summary data Elements/Attributes defined by CEN.
+- If the person authorizing the Advanced directive is a patient representative then the Person Authorizing Directive element should be found in: Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:RelatedPerson
 
-<p id ="tXX.2-1" class="tableTitle"><strong>Table XX.2-1: Table 6.6.1.X.2-1: Data Element and Path Mapping for CEN/ISO Advance Directives Section Attributes</strong></p>
+###### 6.6.1.X.2.1.8  IPS History of Past Problems Section Requirements
+- Probelm Type ConditionUvIps.category:
+In addition to the HL7 [Probelm Type](https://hl7.org/fhir/uv/ips/ValueSet-problem-type-uv-ips.html) extensible value set the following additional problem types may also be documented:
+  - 148006 Preliminary diagnosis (SNOMED-CT)
+  - 5558000 Working diagnosis (SNOMED-CT)
+  - 30207005 Risk of (SNOMED-CT)
+[Open issue FIPS_011](issues.html)
 
-| Cen/ISO Data Elements         | CEN/ISO Cardinality |HL7 IPS Cardinality | FHIR Resource Reference| FHIR Mapping Path | 
-|-------------------------------|---------------------|--------------------|------------------------|-------------------|
-| Advance Directives Section    |                     |                    |                        |Composition.section:sectionAdvanceDirectives|
-| Advance Directives            |                     |                    |   |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent|
-| Person Authorizing Directive  |                     |                    |   |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:Patient|
-|                               |                     |                    |   |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:RelatedPerson|
-| Person Authorizing Name       |                     |                    |                        |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer.name|
-| Person Authorizing Role       |                     |                    |                        |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:RelatedPerson.relationship|
-| Person Authorizing Telecoms   |                     |                    |                        |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer.telecom|
-| Directive Category            |                     |                    |                        |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.category|
-| Directive Description         |                     |                    |                        |Composition.section:sectionAdvanceDirectives.text|
-|                               |                     |                    |                        |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.text|
-| Reference to Legal Document   |                     |                    |                        |Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.sourceReference:DocumentReference|
-{: .grid}
-Note 1: 
-
-If the person authorizing the Advanced directive is the patient then the Person Authorizing Directive element should be found in:
-Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:Patient
-
-If the person authorizing the Advanced directive is a patient representative then the Person Authorizing Directive element should be found in:
-Composition.section:sectionAdvanceDirectives.entry:advanceDirectivesConsent.performer:RelatedPerson
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-**Table 6.6.1.X.2.1.1-1: Data Element and Path Mapping for CEN/ISO Immunization Attributes**
-The following table shows the mapping of the FHIR Resources supporting the content for International Patient Summary data Elements/Attributes defined by CEN.
-
-<p id ="tXX.2-1" class="tableTitle"><strong>Table XX.2-1: Table 6.6.1.X.2-1: Data Element and Path Mapping for CEN/ISO Immunization Attributes</strong></p>
-
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
-
-###### 6.6.1.X.2.1.... .... Section Requirements
 
 ###### 6.6.1.X.2.2 FHIR IPS ODH Option Composition and Section Requirements 
 
-The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition) deffines the contraints applied to the Bundle Resource for this bundle. 
+The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition.html) deffines the contraints applied to the Bundle Resource for this bundle. 
 
-**TODO** Replace with Jenny Jobs or Jannet Guo
+**TODO** Replace with Genny Jobs or Jannet Guo
 For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
 
 ###### 6.6.1.X.2.2.1 Social History Section Requirements
 For the FHIR IPS ODH Option, this is now a Must Support section. The Patient's Occupation and Industry Data Elements SHALL Be Documented in the IPS if it is known. 
 
-This Section SHALL support the the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob) and the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) Data Elements to document the patient's Occupationa and Injustry.  
+This Section SHALL support the the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html) and the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork.html) Data Elements to document the patient's Occupationa and Injustry.  
 
 ###### 6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements 
 

@@ -1,0 +1,17 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+
+participant "On-Demand\nDocument\nSource" as ds
+cloud "HIE\nContent Creator" as hie
+cloud "Document Sharing\n[PCC-1]" as pcc1
+participant "Content Consumer" as cc2
+
+ds -> hie : Register On-Demand Document Entry [ITI-61]
+hie <-> pcc1 : Document Sharing [PCC-1]
+hie -> hie : IPS $summary Operation
+
+note over cc2, pcc1: Content Consumer establishes access to patient and The IPS document is shared via Document Sharing [PCC-1]
+pcc1 <-> pcc1 : Document Sharing [PCC-1]
+
+@enduml

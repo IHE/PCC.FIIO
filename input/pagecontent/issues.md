@@ -64,9 +64,9 @@ Major revision from a previous version of this profile that was a combination of
 
 - FIPS_009: IPS Results is O in HL7 and RK in ISO/CEN. ISO/CEN’s optionality used for this profile.
 
-- FIPS_0010: Review the FHIR modeling for the specialist contact located in the table in Section 6.6.X.1.2.4.
+- FIPS_010: Review the FHIR modeling for the specialist contact located in the table in Section 6.6.X.1.2.4.
 
-- FIPS_0011: The value set for Problem type in History of Past Problems (sectionPastIllnessHx.entry.pastProblem.Condition-uv-ips.category) is not really what CEN/ISO was looking for: A means of categorizing the different types of problem. This can be represented by a value set, for example it could be findings, preliminary diagnosis, diagnosis, clinical risks and medical alerts. Note, ‘Medical Alerts’, i.e., one type of alert, are represented here in this first iteration of this standard.
+- FIPS_011: The value set for Problem type in History of Past Problems (sectionPastIllnessHx.entry.pastProblem.Condition-uv-ips.category) is not really what CEN/ISO was looking for: A means of categorizing the different types of problem. This can be represented by a value set, for example it could be findings, preliminary diagnosis, diagnosis, clinical risks and medical alerts. Note, ‘Medical Alerts’, i.e., one type of alert, are represented here in this first iteration of this standard.
  - [Jira Ticket](https://jira.hl7.org/browse/FHIR-55611)
  - Partially Resolved due to Medical Alters having their own section in the 2.0.0 Release (02/01/2026)
 

@@ -1,0 +1,33 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+
+database "Available Patient Data" as apd  
+participant "Patient Portal\nContent Creator" as pptp 
+cloud "Document Sharing\n[PCC-1]" as pcc1
+participant "Content Consumer" cc2
+
+box "Primary Data Holder" #White
+database apd
+database nap 
+end box 
+
+apd -> pptp ++ : Conditions
+apd -> pptp ++ : Allergies
+apd -> pptp ++ : Medications
+apd -> pptp ++ : Immunizations
+apd -> pptp ++ : Care Plans
+apd -> pptp ++ : Alerts
+apd -> pptp ++ : Clinical Impressions
+apd -> pptp ++ : Procedure Data
+apd -> pptp ++ : Lab Data
+apd -> pptp ++ : Device Data
+
+pptp -> pptp ++ : Adds Patient Story
+pptp --> pptp ++ : Masks Sensative Information
+return saved 
+
+pptp <-> pcc1 : Sharing IPS Document
+pcc1 <-> cc2 : Sharing IPS Document
+
+@enduml

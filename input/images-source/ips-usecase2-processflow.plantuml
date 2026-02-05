@@ -1,0 +1,32 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+
+database "Available Patient Data" as apd  
+database "Data Not Available to Portal" as nap 
+participant "Portal\nContent Creator" as ptp 
+cloud "Document Sharing\n[PCC-1]" as pcc1
+participant "Content Consumer" cc2
+
+box "Primary Data Holder" #White
+database apd
+database nap 
+end box 
+
+apd -> ptp: Conditions
+apd -> ptp: Allergies
+apd -> ptp: Medications
+apd -> ptp: Immunizations
+apd -> ptp: Care Plans
+apd -> ptp: Alerts
+apd -> ptp: Clinical Impressions
+
+nap -->x ptp: Procedure Data
+nap -->x ptp: Lab Data
+nap -->x ptp: Device Data
+
+note over ptp, pcc1: When the IPS is generated the sections where the unavilable data would be are still generated with appropriate empty reason codes 
+ptp <-> pcc1: Sharing IPS Document 
+pcc1 <-> cc2: Sharing IPS Document
+
+@enduml
