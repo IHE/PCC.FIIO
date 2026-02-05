@@ -360,7 +360,7 @@ Usage: #inline
 * note.text = "Device data required"
 
 Instance: c66e2f88-0f51-4e3e-a2fb-94d63930aaa3
-InstanceOf: DeviceUvIps
+InstanceOf: DeviceUvIps 
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
 * type = $sct#787483001 "No known device use"

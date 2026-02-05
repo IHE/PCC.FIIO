@@ -208,7 +208,7 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 
 
 #### XX.4.2.4 Use Case \#4: Patient Mediated and Edited IPS Utilizing a Portal
-This use case describes how a patient can request the generation of an IPS and mask a portion of the data for personal privacy reasons and contribute to some of the data displayed. 
+This use case describes how a patient can request the generation of an IPS and mask a portion of the data for personal privacy reasons and contribute to some of the data displayed. [Open issue FIPS_012](issues.html)
 
 ##### XX.4.2.4.1 Patient Mediated and Edited IPS Utilizing a Portal
 A patient is preparing their personal Health Summary in case it is needed for their care. They are in the third trimester of their pregnancy and has recently been diagnosed with preeclampsia and is preparing for any emergencies ahead. They access their patient portal and generate an IPS. When reviewing the IPS, the patient makes sure that the preeclampsia and birth plan are flagged, lab results, adds some of the over the counter  medication that isn't a part of the record, and adds some more information into the Patient Story section to provide more information and personal concerns that providers should be aware about the pregnancy. When these edits are completed, the patient finishes the generation of the IPS, ready to make available when it is needed for future care. 
