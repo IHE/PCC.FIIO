@@ -9,79 +9,79 @@ Usage: #example
 * type = #document
 * timestamp = "2026-02-05T12:13:00+02:00"
 
-* entry[+].fullUrl = "urn:uuid:ex-Composition-IPS-ODH-Genny-Works"
+* entry[+].fullUrl = "urn:uuid:ex-composition-ips-odh-genny-works"
 * entry[=].resource = ex-Composition-IPS-ODH-Genny-Works
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-Patient-Genny-Works"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-patient-genny-works"
 * entry[=].resource = IHE-INT-PCC-Patient-Genny-Works
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-Employer-ORG-01"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-employer-org-01"
 * entry[=].resource = IHE-INT-PCC-Employer-ORG-01
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-ORG-02"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-org-02"
 * entry[=].resource = IHE-INT-PCC-ORG-02
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-Practitioner-01"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-practitioner-01"
 * entry[=].resource = IHE-INT-PCC-Practitioner-01
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-Practitioner-02"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-practitioner-02"
 * entry[=].resource = IHE-INT-PCC-Practitioner-02
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-AllergyIntolerance-NoKnown"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-allergyintolerance-noknown"
 * entry[=].resource = IHE-INT-PCC-AllergyIntolerance-NoKnown
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-1"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-condition-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Condition-1
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-2"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-condition-2"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Condition-2
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-3"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-condition-3"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Condition-3
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-4"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-condition-4"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Condition-4
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Immunization-1"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-immunization-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Immunization-1
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Immunization-2"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-immunization-2"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Immunization-2
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Immunization-3"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-immunization-3"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Immunization-3
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-MedicationStatement-1"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-medicationstatement-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-MedicationStatement-1
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-MedicationStatement-2"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-medicationstatement-2"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-MedicationStatement-2
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Medication-1"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-medication-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Medication-1
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-EmploymentStatus"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-employmentstatus"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-EmploymentStatus
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-PastOrPresentJob-1"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-pastorpresentjob-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-PastOrPresentJob-1
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-PastOrPresentJob-2"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-pastorpresentjob-2"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-PastOrPresentJob-2
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-CombatZonePeriod"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-combatzoneperiod"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-CombatZonePeriod
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-RetirementDate"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-retirementdate"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-RetirementDate
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-UsualWork"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-usualwork"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-UsualWork
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-PregnancyStatus"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-pregnancystatus"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-PregnancyStatus
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Procedure"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-procedure"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Procedure
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-SDOH-DrugUse"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-sdoh-druguse"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-SDOH-DrugUse
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-ClinicalImpression"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-clinicalimpression"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-ClinicalImpression
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-FlagAlertUvIps-1"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-flagalertuvips-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-FlagAlertUvIps-1
-* entry[+].fullUrl = "urn:uuid:IHE-INT-PCC-IPS-ODH-Devices-NoKnown"
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-devices-noknown"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Devices-NoKnown
 
 Instance: ex-Composition-IPS-ODH-Genny-Works
 InstanceOf: IHE_FIPS_IO_ODH_Option_Composition
 Usage: #example
-* id = "ex-Composition-IPS-ODH-Genny-Works"
+* id = "ex-composition-ips-odh-genny-works"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * date = "2026-02-05T12:13:00+02:00"
-* author = Reference(urn:uuid:IHE-INT-PCC-ORG-02) 
+* author = Reference(urn:uuid:ihe-int-pcc-org-02) 
 * title = "Patient Summary of Genny Works"
 * confidentiality = #N
-* custodian = Reference(urn:uuid:IHE-INT-PCC-ORG-02)
+* custodian = Reference(urn:uuid:ihe-int-pcc-org-02)
 
 
 
@@ -89,68 +89,68 @@ Usage: #example
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day</li><li>[2018] - Diazepam product</li></ul></div>"
-* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-MedicationStatement-1) "[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day"
-* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-MedicationStatement-2) "[2018] - Diazepam product"
+* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:ihe-int-pcc-ips-odh-medicationstatement-1) "[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day"
+* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:ihe-int-pcc-ips-odh-medicationstatement-2) "[2018] - Diazepam product"
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known allergies</div>"
-* section[sectionAllergies].entry[+] = Reference(urn:uuid:IHE-INT-PCC-AllergyIntolerance-NoKnown) "No known allergies"
+* section[sectionAllergies].entry[+] = Reference(urn:uuid:ihe-int-pcc-allergyintolerance-noknown) "No known allergies"
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2007-04-27] - Attention deficit hyperactivity disorder</li><li>[2012-07-16] - Substance abuse</li><li>[2017-04-26] - Tonsillitis</li><li>[2007-01-26] - Decreased hearing</li></ul></div>"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-1) "[2007-04-27] - Attention deficit hyperactivity disorder"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-2) "[2012-07-16] - Substance abuse"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-3) "[2017-04-26] - Tonsillitis"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-4) "[2007-01-26] - Decreased hearing"
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-1) "[2007-04-27] - Attention deficit hyperactivity disorder"
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-2) "[2012-07-16] - Substance abuse"
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-3) "[2017-04-26] - Tonsillitis"
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-4) "[2007-01-26] - Decreased hearing"
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><ul><li>[2013-02-09] - Diphtheria + tetanus + poliomyelitis vaccine</li><li>[2013-07-08] - Hepatitis B virus vaccine</li><li>[2025-10-17] - COVID-19 antigen vaccine</li></ul></div></div>"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Immunization-1) "Diphtheria + tetanus + poliomyelitis vaccine"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Immunization-2) "Hepatitis B virus vaccine"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Immunization-3) "COVID-19 antigen vaccine"
+* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:ihe-int-pcc-ips-odh-immunization-1) "Diphtheria + tetanus + poliomyelitis vaccine"
+* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:ihe-int-pcc-ips-odh-immunization-2) "Hepatitis B virus vaccine"
+* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:ihe-int-pcc-ips-odh-immunization-3) "COVID-19 antigen vaccine"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">substance use therapy</div>"
-* section[sectionProceduresHx].entry[procedure] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Procedure) "substance use therapy"
+* section[sectionProceduresHx].entry[procedure] = Reference(urn:uuid:ihe-int-pcc-ips-odh-procedure) "substance use therapy"
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
 * section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History </div>"
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-SDOH-DrugUse)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-EmploymentStatus)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-PastOrPresentJob-1)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-PastOrPresentJob-2)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-UsualWork)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-CombatZonePeriod)
-* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-RetirementDate)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-sdoh-druguse)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-employmentstatus)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-pastorpresentjob-1)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-pastorpresentjob-2)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-usualwork)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-combatzoneperiod)
+* section[sectionSocialHistory].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-retirementdate)
 
 * section[sectionPregnancyHx].title = "Pregnancy History"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
 * section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Not Pregnant</div>"
-* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-PregnancyStatus) "Not Pregnant"
+* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:ihe-int-pcc-ips-odh-pregnancystatus) "Not Pregnant"
 
 * section[sectionFunctionalStatus].title = "Functional Status"
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
 * section[sectionFunctionalStatus].text.status = #generated
 * section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">[2007-01-26] - Decreased hearing</div>"
-* section[sectionFunctionalStatus].entry[disability] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-4) "[2007-01-26] - Decreased hearing"
-* section[sectionFunctionalStatus].entry[functionalAssessment] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-ClinicalImpression)
+* section[sectionFunctionalStatus].entry[disability] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-4) "[2007-01-26] - Decreased hearing"
+* section[sectionFunctionalStatus].entry[functionalAssessment] = Reference(urn:uuid:ihe-int-pcc-ips-odh-clinicalimpression)
 
 * section[sectionAlerts].title = "Alerts"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.status = #generated
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Misuse of medication</div>"
-* section[sectionAlerts].entry[alertsFlag] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-FlagAlertUvIps-1) "Misuse of medication"
+* section[sectionAlerts].entry[alertsFlag] = Reference(urn:uuid:ihe-int-pcc-ips-odh-flagalertuvips-1) "Misuse of medication"
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
@@ -162,7 +162,7 @@ Usage: #example
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known device use</div>"
-* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Devices-NoKnown) "No known device use"
+* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-devices-noknown) "No known device use"
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
@@ -174,7 +174,7 @@ Usage: #example
 Instance: IHE-INT-PCC-Patient-Genny-Works
 InstanceOf: PatientUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-Patient-Genny-Works"
+* id = "ihe-int-pcc-patient-genny-works"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
@@ -268,16 +268,16 @@ Usage: #inline
 * contact[=].address.country = "Netherlands"
 * contact[=].gender = #female
 * contact[+].relationship = http://terminology.hl7.org/CodeSystem/v2-0131#E "Employer"
-* contact[=].organization = Reference(urn:uuid:IHE-INT-PCC-Employer-Org-01)
+* contact[=].organization = Reference(urn:uuid:ihe-int-pcc-employer-org-01)
 * communication[+].language = http://tools.ietf.org/html/bcp47#en "English"
 * communication[+].language = http://tools.ietf.org/html/bcp47#fr "French"
 * communication[=].preferred = true
-* generalPractitioner = Reference(urn:uuid:IHE-INT-PCC-Practitioner-01)
+* generalPractitioner = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
 
 Instance: IHE-INT-PCC-Employer-ORG-01
 InstanceOf: OrganizationUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-Employer-ORG-01"
+* id = "ihe-int-pcc-employer-org-01"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * active = true 
@@ -303,7 +303,7 @@ Usage: #inline
 Instance: IHE-INT-PCC-ORG-02
 InstanceOf: OrganizationUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-ORG-02"
+* id = "ihe-int-pcc-org-02"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * active = true 
@@ -327,7 +327,7 @@ Usage: #inline
 Instance: IHE-INT-PCC-Practitioner-01
 InstanceOf: PractitionerUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-Practitioner-01"
+* id = "ihe-int-pcc-practitioner-01"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * active = true 
@@ -404,7 +404,7 @@ Usage: #inline
 Instance: IHE-INT-PCC-Practitioner-02
 InstanceOf: PractitionerUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-Practitioner-02"
+* id = "ihe-int-pcc-practitioner-02"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * active = true 
@@ -473,15 +473,15 @@ Usage: #inline
 Instance: IHE-INT-PCC-AllergyIntolerance-NoKnown
 InstanceOf: AllergyIntolerance 
 Usage: #inline
-* id = "IHE-INT-PCC-AllergyIntolerance-NoKnown"
+* id = "ihe-int-pcc-allergyintolerance-noknown"
 * clinicalStatus = $allergyintolerance-clinical#active
 * code = $sct#716186003  "No known allergy"
-* patient = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* patient = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 
 Instance: IHE-INT-PCC-IPS-ODH-Condition-1
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Condition-1"
+* id = "ihe-int-pcc-ips-odh-condition-1"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
@@ -489,83 +489,83 @@ Usage: #inline
 * severity = $sct#6736007 "Moderate"
 * code = $sct#406506008 "Attention deficit hyperactivity disorder"
 * code.text = "Attention deficit hyperactivity disorder"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * onsetDateTime = "2007-04-27"
-* asserter = Reference(urn:uuid:IHE-INT-PCC-Practitioner-01)
+* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
 
 Instance: IHE-INT-PCC-IPS-ODH-Condition-2
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Condition-2"
+* id = "ihe-int-pcc-ips-odh-condition-2"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * severity = $sct#6736007 "Moderate" 
 * code = $sct#66214007 "Substance abuse"
 * code.text = "Substance abuse"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * onsetDateTime = "2012-07-16"
-* asserter = Reference(urn:uuid:IHE-INT-PCC-Practitioner-01)
+* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
 
 Instance: IHE-INT-PCC-IPS-ODH-Condition-3
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Condition-3"
+* id = "ihe-int-pcc-ips-odh-condition-3"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * severity = $sct#255604002 "Mild" 
 * code = $ICD10-CM#J35.0 "Chronic tonsillitis and adenoiditis"
 * code.text = "Tonsillitis"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * onsetDateTime = "2017-04-26"
-* asserter = Reference(urn:uuid:IHE-INT-PCC-Practitioner-02)
+* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 // functional status element 
 Instance: IHE-INT-PCC-IPS-ODH-Condition-4
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Condition-4"
+* id = "ihe-int-pcc-ips-odh-condition-4"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * code = $sct#103276001 "Decreased hearing"
 * code.text = "Decreased hearing"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * onsetDateTime = "2007-01-26"
-* asserter = Reference(urn:uuid:IHE-INT-PCC-Practitioner-02)
+* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-Immunization-1
 InstanceOf: ImmunizationUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Immunization-1"
+* id = "ihe-int-pcc-ips-odh-immunization-1"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * status = #completed
 * vaccineCode = $sct#414006007 "Diphtheria + tetanus + poliomyelitis vaccine"
 * vaccineCode.text = "Diphtheria + tetanus + poliomyelitis vaccine"
-* patient = Reference(urn:uuid:urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* patient = Reference(urn:uuid:urn:uuid:ihe-int-pcc-patient-genny-works)
 * occurrenceDateTime = "1995"
 
 Instance: IHE-INT-PCC-IPS-ODH-Immunization-2
 InstanceOf: ImmunizationUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Immunization-2"
+* id = "ihe-int-pcc-ips-odh-immunization-2"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * status = #completed
 * vaccineCode = $sct#34689006 "Hepatitis B virus vaccine"
 * vaccineCode.text = "Hepatitis B virus vaccine"
-* patient = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* patient = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * occurrenceDateTime = "2005"
 
 Instance: IHE-INT-PCC-IPS-ODH-Immunization-3
 InstanceOf: ImmunizationUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Immunization-3"
+* id = "ihe-int-pcc-ips-odh-immunization-3"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * status = #completed
 * vaccineCode = $sct#1119305005 "COVID-19 antigen vaccine"
 * vaccineCode.text = "COVID-19 antigen vaccine"
-* patient = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* patient = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * occurrenceDateTime = "2025-10-17"
 * lotNumber = "G10180720"
 * expirationDate = "2026-02-08"
@@ -575,23 +575,23 @@ Usage: #inline
 * protocolApplied.targetDisease = $sct#186747009 "Coronavirus infection"
 * protocolApplied.doseNumberPositiveInt = 5
 * performer.function = http://terminology.hl7.org/CodeSystem/v2-0443#AP "Administering Provider"
-* performer.actor = Reference(urn:uuid:IHE-INT-PCC-Practitioner-02)
+* performer.actor = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 * reasonCode = $sct#429060002 "Procedure to meet occupational requirement"
 
 
 Instance: IHE-INT-PCC-IPS-ODH-MedicationStatement-1
 InstanceOf: MedicationStatementIPS
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-MedicationStatement-1"
+* id = "ihe-int-pcc-ips-odh-medicationStatement-1"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 * status = http://hl7.org/fhir/CodeSystem/medication-statement-status#active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
 * medicationCodeableConcept = $sct#429693005 "Methylphenidate 5mg chewable tablet"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2018-10-01T10:15:22+02:00"
 * dateAsserted = "2018-10-01T10:15:22+02:00"
-* informationSource = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
-* reasonReference = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-1)
+* informationSource = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
+* reasonReference = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-1)
 * dosage.text = "Take 1 tablet by mouth every day as needed for ADHD"
 * dosage.timing.repeat.frequency = 2
 * dosage.timing.repeat.period = 1
@@ -606,15 +606,15 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-ODH-MedicationStatement-2
 InstanceOf: MedicationStatementIPS
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-MedicationStatement-2"
+* id = "ihe-int-pcc-ips-odh-medicationStatement-2"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
-* medicationReference = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Medication-1) "Diazepam product"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* medicationReference = Reference(urn:uuid:ihe-int-pcc-ips-odh-medication-1) "Diazepam product"
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2018-10-01T10:15:22+02:00"
 * dateAsserted = "2018-10-01T10:15:22+02:00"
-* informationSource = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* informationSource = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * dosage.text = "as required"
 * dosage.asNeededBoolean = true
 * dosage.route = $sct#26643006 "Oral use"
@@ -623,7 +623,7 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-ODH-Medication-1
 InstanceOf: MedicationIPS
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Medication-1"
+* id = "ihe-int-pcc-ips-odh-medication-1"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
 * code = $sct#48546005 "Diazepam-containing product"
 * status = http://hl7.org/fhir/CodeSystem/medication-status#active
@@ -636,26 +636,26 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-ODH-EmploymentStatus
 InstanceOf: EmploymentStatus
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-EmploymentStatus"
+* id = "ihe-int-pcc-ips-odh-employmentstatus"
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus"
 * status = #final
 * code = $loinc#74165-2 "History of employment status NIOSH"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2021-09-07"
 * valueCodeableConcept = $v3-ObservationValue#Employed "Employed"
 
 Instance: IHE-INT-PCC-IPS-ODH-PastOrPresentJob-1
 InstanceOf: PastOrPresentJob
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-PastOrPresentJob-1"
+* id = "ihe-int-pcc-ips-odh-pastorpresentjob-1"
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob"
 * extension[employer].url = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-Employer-extension"
-* extension[employer].valueReference = Reference(urn:uuid:IHE-INT-PCC-Employer-ORG-01)
+* extension[employer].valueReference = Reference(urn:uuid:ihe-int-pcc-employer-org-01)
 * extension[ODHIsCurrentJobExtension].url = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-isCurrentJob-extension"
 * extension[ODHIsCurrentJobExtension].valueBoolean = false
 * status = #final
 * code = $loinc#11341-5 "History of Occupation"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2021-09-07"
 * valueCodeableConcept.coding = $ISCO08#2131 "Biologists, botanists, zoologists and related professionals"
 * component[odh-PastOrPresentIndustry].code = $loinc#86188-0 "History of Occupation Industry"
@@ -664,15 +664,15 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-ODH-PastOrPresentJob-2
 InstanceOf: PastOrPresentJob
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-PastOrPresentJob-2"
+* id = "ihe-int-pcc-ips-odh-pastorpresentjob-2"
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob"
 * extension[employer].url = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-Employer-extension"
-* extension[employer].valueReference = Reference(urn:uuid:IHE-INT-PCC-Employer-ORG-01)
+* extension[employer].valueReference = Reference(urn:uuid:ihe-int-pcc-employer-org-01)
 * extension[ODHIsCurrentJobExtension].url = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-isCurrentJob-extension"
 * extension[ODHIsCurrentJobExtension].valueBoolean = true
 * status = #final
 * code = $loinc#11341-5 "History of Occupation"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2016-03-10"
 * effectivePeriod.end = "2020-04-14"
 * valueCodeableConcept.coding = $ISCO08#5321 "Health care assistants"
@@ -682,32 +682,32 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-ODH-CombatZonePeriod
 InstanceOf: CombatZonePeriod
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-CombatZonePeriod"
+* id = "ihe-int-pcc-ips-odh-combatzoneperiod"
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod"
 * status = #final
 * code = $loinc#87511-2 "Combat zone AndOr hazardous duty work dates"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * valuePeriod.start = "2017-12-07"
 * valuePeriod.end = "2018-02-04"
 
 Instance: IHE-INT-PCC-IPS-ODH-RetirementDate
 InstanceOf: RetirementDate
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-RetirementDate"
+* id = "ihe-int-pcc-ips-odh-retirementdate"
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate"
 * status = #final
 * code = $loinc#87510-4 "Date of Retirement"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * valueDateTime = "2025-12-20"
 
 Instance: IHE-INT-PCC-IPS-ODH-UsualWork
 InstanceOf: UsualWork
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-UsualWork"
+* id = "ihe-int-pcc-ips-odh-usualwork"
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork"
 * status = #final
 * code = $loinc#21843-8 "History of Usual occupation"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * valueCodeableConcept = $ISCO08#2221 "Nursing professionals"
 * effectivePeriod.start = "2016-03-10"
 * component[odh-UsualIndustry].valueCodeableConcept.coding = $ISICRev4#871 "Residential nursing care facilities"
@@ -715,58 +715,58 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-ODH-PregnancyStatus 
 InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-PregnancyStatus"
+* id = "ihe-int-pcc-ips-odh-pregnancystatus"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
 * status = #final
 * code = $loinc#82810-3 "Pregnancy status"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectiveDateTime = "2026-02-05T12:13:00+02:00"
-* performer = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* performer = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * valueCodeableConcept = $sct#60001007 "Not pregnant"
 
 
 Instance: IHE-INT-PCC-IPS-ODH-Procedure 
 InstanceOf: ProcedureUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Procedure"
+* id = "ihe-int-pcc-ips-odh-procedure"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
 * status = #completed
 * category = $sct#409063005 "Counselling"
 * code = $sct#385989002 "Substance use therapy"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * performedPeriod.start = "2018-07-02"
 * performedPeriod.end = "2018-09-15"
 
 Instance: IHE-INT-PCC-IPS-ODH-SDOH-DrugUse 
 InstanceOf: Observation
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-SDOH-DrugUse"
+* id = "ihe-int-pcc-ips-odh-sdoh-druguse"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/observation-category#social-history "Social History"
 * code = $sct#363908000 "Details of drug misuse behavior"
 * effectiveDateTime = "2018-07-02"
 * valueCodeableConcept = $sct#428659002 "Amphetamine misuse"
 * note.text = "Patient Indicates misuse of her perscribed Amphetamine medication, used to treat ADHD"
-* performer = Reference(urn:uuid:IHE-INT-PCC-Practitioner-02)
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-ClinicalImpression 
 InstanceOf: ClinicalImpression
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-ClinicalImpression"
+* id = "ihe-int-pcc-ips-odh-clinicalimpression"
 * status = #completed
 * code = $sct#250887008 "Audiological test finding"
 * effectiveDateTime = "2007-01-26T10:55:00+02:00"
 * date = "2007-01-26T10:55:00+02:00"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
-* assessor = Reference(urn:uuid:IHE-INT-PCC-Practitioner-01)
-* problem = Reference(urn:uuid:IHE-INT-PCC-IPS-ODH-Condition-4)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
+* assessor = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
+* problem = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-4)
 * finding.itemCodeableConcept = $sct#15188001 "Hearing loss"
 
 
 Instance: IHE-INT-PCC-IPS-ODH-FlagAlertUvIps-1
 InstanceOf: FlagAlertUvIps
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-FlagAlertUvIps-1"
+* id = "ihe-int-pcc-ips-odh-flagalertuvips-1"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PM "Medium priority"
@@ -774,11 +774,11 @@ Usage: #inline
 * category[+] = http://terminology.hl7.org/CodeSystem/flag-category#behavioral "Behavioral"
 * category[+] = http://terminology.hl7.org/CodeSystem/flag-category#clinical "Clinical"
 * code = $sct#788165003 "Misuse of medication"
-* subject = Reference(urn:uuid:IHE-INT-PCC-Patient-Genny-Works)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * period.start = "2018-07-02"
 
 Instance: IHE-INT-PCC-IPS-ODH-Devices-NoKnown
 InstanceOf: Device
 Usage: #inline
-* id = "IHE-INT-PCC-IPS-ODH-Devices-NoKnown"
+* id = "ihe-int-pcc-ips-odh-devices-noknown"
 * type = $sct#787483001 "No known device use"

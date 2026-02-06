@@ -57,7 +57,7 @@ For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example 
 **##### 6.6.1.X.1.3 FHIR IPS Complete Option Bundle Requirements** 
 The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle.html) Incorperates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
 
-**TODO** Replace with Genny Jobs or Jannet Guo
+**TODO** Replace with Jannet Guo
 For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html).
 
 **##### 6.6.1.X.2 FHIR IPS Composition and Section Requirements** 
@@ -93,8 +93,7 @@ IHE does not further contrain the base HL7 Implementation Guide requirements out
 
 IHE has added further clarification on the expected behavior for implementaion with regaurds to missing data and provides guidence on incorperating additional standard content within the IPS Section Requirements below. 
 
-**TODO** Replace with valid composition example for Jannet Guo or Frank(Missing data)
-For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
+For a valid example of the FHIR IPS OHH Composition, review the [Genny Works ODH IPS Example Bundle](input/fsh/examples/ex-Bundle-ODH-Genny-Works.fsh.html). 
 
 **###### 6.6.1.X.2.1.1 Immunization Section Requirements**
 In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Immunization Section 17.2.4 Missing: "These two situations should be explicitly documented in the IPS section: — known absence of vaccinations; — no information available about vaccinations", the emptyReason data elemnt **SHOULD** Be supported for this section. [Open issue FIPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
@@ -103,14 +102,14 @@ If the Immunization data is not available or supported by the Content Creator sy
 
 If there is a knowm absence of Immunization data then this **SHOULD** be represented in the IPS Immunizations Section with an [Immunization Entry](https://hl7.org/fhir/StructureDefinition-Immunization.html) as a [vaccineCode](https://hl7.org/fhir/uv/ips/ValueSet-vaccines-uv-ips.html) of 787482006 "No known immunizations".
 
+**Example IPS Immunization Section - With Data**
+{% fragment Composition/ex-Composition-IPS-ODH-Genny-Works JSON BASE:section[sectionImmunizations].where(entry[immunization]=Reference(ImmunizationUvIps))%} 
 
-**TODO** Review patient bundle Jannet Guo for valid Immunization section structure, Frank(Missing data) for representation of missing data at the section level, ex patient xyz for no known immunizaiton at the section level, and xyz patient for no known immunizations at the entry level  
+**Example IPS Immunization Section - With Missing Data**
+TODO pt Frank Missing Data 
 
-**TODO** insert fragment view of each of the valid data representations
-- immunization section, filled
-- Immunization section, missing data 
-- Immunization section, no known Immunizations 
-- Immunization entry, no known immunizations
+**Example IPS Immunization Section - With Entry No Known**
+
 
 
 
@@ -207,35 +206,19 @@ Additional COncepts Include:
 Note 1: 
 
 
-**TODO** Fregment/reference Amanda Alvarez/jannet Guo social history section for reference view 
+For a valid example of the FHIR IPS ODH Section, review the [Genny Works ODH IPS Example Bundle](input/fsh/examples/ex-Bundle-ODH-Genny-Works.fsh.html). 
 
 **###### 6.6.1.X.2.1.6 Pregnancy History Section Requirements**
 While the Structure definition does not slice the entry specifically for this, the IPS Pregnancy Histroy Section does allow for a large variety of Pregnancy Observations to be documented in this section. 
-
-These Observations include:
-- [Date of Last Live Birth]()
-- [Delivery Risk]()
-- [Gestational Age]()
-- [Multiple Pregnancy]()
-- [Date of Last Menstral Period]()
-- [Date of Last Prenatal Visit]()
-- [Date of Next Clinic Visit]()
-- [Fetal Observations]()?
-- [Number Of Previous Cesarean Deliveries]()
-
-**TODO** Proper References for structure defintions, should use the IPS Observation Strucutre definition as parent. 
-
-**TODO** Fregment/reference Amanda Alvarez/jannet Guo social history section for reference view 
-
 
 
 **###### 6.6.1.X.2.1.7 FHIR IPS Advanced Directives Section Requirements**
 This Section Does not permit the use of the Observation resource to indicate if a patient does or does ont have an Advance directive available to them. 
 
-If the Advanced Directive data is not available or supported by the Content Creator system then the IPS Results Section **SHOULD** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+If the Advanced Directive data is not available or supported by the Content Creator system then the IPS Advanced Directives Section **SHOULD** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
 
-If there is a knowm absence of Advanced Directives then this **May** be represented in the IPS Results Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
+If there is a knowm absence of Advanced Directives then this **May** be represented in the IPS Advanced Directives Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 
 **TODO** Review patient bundle Jannet Guo for valid Results section structure, Frank(Missing data) for representation of missing data at the section level, ex patient xyz for no known Procedures at the section level, and xyz patient for no known Procedures at the entry level  
@@ -261,39 +244,65 @@ In addition to the HL7 [Probelm Type](https://hl7.org/fhir/uv/ips/ValueSet-probl
 
 The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition.html) deffines the contraints applied to the Bundle Resource for this bundle. 
 
-**TODO** Replace with Genny Jobs or Jannet Guo
-For a valid example of the HL7 FHIR IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](secondaryUse-pandemnicIPS-example-patient-1.html). 
+For a valid example of the HL7 FHIR IPS Bundle with all Required and Must support sections documented review the [Genny Works ODH IPS Example Bundle](ex-Composition-IPS-ODH-Genny-Works.html). 
 
 **###### 6.6.1.X.2.2.1 FHIR IPS ODH Social History Section Requirements**
 For the FHIR IPS ODH Option, this is now a Must Support section. The Patient's Occupation and Industry Data Elements SHALL Be Documented in the IPS if it is known. 
 
-This Section SHALL support the the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html) and the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork.html) Data Elements to document the patient's Occupationa and Injustry.  
+This Section SHALL support either the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html) or the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork.html) Data Elements to document the patient's Occupationa and Injustry.  
 
 
 **###### 6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements** 
 This option defines a testing option for the [HL7 FHIR International Patient Summary](https://hl7.org/fhir/uv/ips/index.html), where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections.
 
 **###### 6.6.1.X.2.3.1 FHIR IPS Complete IPS Advance Directives Section Requirements**
+If the Advanced Directive data is not available or unsupported by the Content Creator system then the IPS Advance Directives **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of Advanced Directives then this **SHOULD** be represented in the IPS Advanced Directives Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.2 FHIR IPS Complete IPS Functional Status Section Requirements**
+If the Functional Status information is not available or unsupported by the Content Creator system then the IPS Functional Status Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of Functional Status information then this **SHOULD** be represented in the IPS Functional Status Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.3 FHIR IPS Complete IPS History of Past Illness Section Requirements**
+If the past problems are not available or unsupported by the Content Creator system then the IPS History of Past Illness Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of relievant past problems then this **SHOULD** be represented in the IPS History of Past Illness Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.4 FHIR IPS Complete IPS History of Pregnancy Section Requirements**
+If the pregnancy data is not available or unsupported by the Content Creator system then the IPS History of Pregnancy Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of pregnancy information then this **SHOULD** be represented in the IPS History of Pregnancy Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.5 FHIR IPS Complete IPS Plan of Care Section Requirements**
+If the Care plan and Goals information is not available or unsupported by the Content Creator system then the IPS Plan of Care Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of Advanced Directives then this **SHOULD** be represented in the IPS Advanced Directives Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.6 FHIR IPS Complete IPS Social History Section Requirements**
+If the Social History information is not available or unsupported by the Content Creator system then the IPS Functional Status Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of Social History then this **SHOULD** be represented in the IPS Social History Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.7 FHIR IPS Complete IPS Vital Signs Section Requirements**
+If the Vital Signs information is not available or unsupported by the Content Creator system then the IPS Vital Signs Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of Vital Signs then this **SHOULD** be represented in the IPS Vital Signs Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
+
+**###### 6.6.1.X.2.3.8 FHIR IPS Complete IPS Alerts Section Requirements**
+If the Alert data is not available or unsupported by the Content Creator system then the IPS Alerts Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
+
+If there is a knowm absence of Alerts then this **SHOULD** be represented in the IPS Alertss Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 **###### 6.6.1.X.2.3.8 FHIR IPS Complete IPS Patient Story Section Requirements**
+If the Patient Story information is not available or unsupported by the Content Creator system then the IPS Patient Story Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
-**###### 6.6.1.X.2.3.8 FHIR IPS Complete IPS Patient Story Section Requirements**
+If there is a knowm absence of Patient Story informations then this **SHOULD** be represented in the IPS Patient Story Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented by the ommisoin of the section. A Content Creator **SHALL** support at least one of these approaches.
 
 
-**##### 6.6.1.X.3 FHIR IPS Resource Requirements** 
-N/A
+**##### 6.6.1.X.3 FHIR IPS Entry Resource Requirements** 
+There are No Additonal Entry Resource requirements at this time. 
 
 **##### 6.6.1.X.4 FHIR IPS Value Sets** 
-N/A - Reference HL7 for Value Set Bindings. No additional bindlings have been added outside of the ODH option. 
+There are No Additonal value set requirements at this time. 
