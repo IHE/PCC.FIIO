@@ -16,3 +16,6 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # This is a dummy OID system made only for examples, we expect there is no proper defitition for it, inless we progress with a official example oid registry
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.19376.1.5.4'
+
+# we understnad that this is a draft code system 
+Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0

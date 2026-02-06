@@ -486,7 +486,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Midgrade"
 * code = $sct#406506008 "Attention deficit hyperactivity disorder"
 * code.text = "Attention deficit hyperactivity disorder"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
@@ -500,7 +500,7 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
-* severity = $sct#6736007 "Moderate" 
+* severity = $sct#6736007 "Midgrade" 
 * code = $sct#66214007 "Substance abuse"
 * code.text = "Substance abuse"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
@@ -552,7 +552,7 @@ Usage: #inline
 * id = "f46eae07-753e-4fa9-9f1f-2df3ccf82a31"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * status = #completed
-* vaccineCode = $sct#871822003 "Vaccine product containing only Hepatitis B virus antigen "
+* vaccineCode = $sct#871822003 "Vaccine product containing only Hepatitis B virus antigen"
 * vaccineCode.text = "Hepatitis B virus vaccine"
 * patient = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
 * occurrenceDateTime = "2005"
@@ -690,6 +690,7 @@ Usage: #inline
 * status = #final
 * code = $loinc#87511-2 "Combat zone AndOr hazardous duty work dates"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
+* effectiveDateTime = "2025-06-03"
 * valuePeriod.start = "2017-12-07"
 * valuePeriod.end = "2018-02-04"
 * performer = Reference(urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e)
