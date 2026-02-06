@@ -586,7 +586,7 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 * status = http://hl7.org/fhir/CodeSystem/medication-statement-status#active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
-* medicationCodeableConcept = $sct#429693005 "Methylphenidate 5mg chewable tablet"
+* medicationCodeableConcept = $sct#785126002 "Product containing precisely methylphenidate hydrochloride 5 milligram/1 each conventional release chewable tablet"
 * subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2018-10-01T10:15:22+02:00"
 * dateAsserted = "2018-10-01T10:15:22+02:00"
@@ -643,6 +643,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * effectivePeriod.start = "2021-09-07"
 * valueCodeableConcept = $v3-ObservationValue#Employed "Employed"
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-PastOrPresentJob-1
 InstanceOf: PastOrPresentJob
@@ -660,6 +661,7 @@ Usage: #inline
 * valueCodeableConcept.coding = $ISCO08#2131 "Biologists, botanists, zoologists and related professionals"
 * component[odh-PastOrPresentIndustry].code = $loinc#86188-0 "History of Occupation Industry"
 * component[odh-PastOrPresentIndustry].valueCodeableConcept.coding = $ISICRev4#72 "Scientific research and development"
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-PastOrPresentJob-2
 InstanceOf: PastOrPresentJob
@@ -678,6 +680,7 @@ Usage: #inline
 * valueCodeableConcept.coding = $ISCO08#5321 "Health care assistants"
 * component[odh-PastOrPresentIndustry].code = $loinc#86188-0 "History of Occupation Industry"
 * component[odh-PastOrPresentIndustry].valueCodeableConcept.coding = $ISICRev4#871 "Residential nursing care facilities"
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-CombatZonePeriod
 InstanceOf: CombatZonePeriod
@@ -689,6 +692,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * valuePeriod.start = "2017-12-07"
 * valuePeriod.end = "2018-02-04"
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-RetirementDate
 InstanceOf: RetirementDate
@@ -698,7 +702,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#87510-4 "Date of Retirement"
 * subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
+* effectiveDateTime = "2025-06-03"
 * valueDateTime = "2025-12-20"
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-UsualWork
 InstanceOf: UsualWork
@@ -711,6 +717,7 @@ Usage: #inline
 * valueCodeableConcept = $ISCO08#2221 "Nursing professionals"
 * effectivePeriod.start = "2016-03-10"
 * component[odh-UsualIndustry].valueCodeableConcept.coding = $ISICRev4#871 "Residential nursing care facilities"
+* performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
 
 Instance: IHE-INT-PCC-IPS-ODH-PregnancyStatus 
 InstanceOf: ObservationPregnancyStatusUvIps
@@ -748,6 +755,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#428659002 "Amphetamine misuse"
 * note.text = "Patient Indicates misuse of her perscribed Amphetamine medication, used to treat ADHD"
 * performer = Reference(urn:uuid:ihe-int-pcc-practitioner-02)
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 
 Instance: IHE-INT-PCC-IPS-ODH-ClinicalImpression 
 InstanceOf: ClinicalImpression

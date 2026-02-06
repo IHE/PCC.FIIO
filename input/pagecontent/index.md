@@ -21,7 +21,7 @@ This guide is organized into the following sections:
    1. [Security Considerations](volume-1.html#security-considerations)
    1. [Cross Profile Considerations](volume-1.html#other-grouping)
 3. Volume 3: Metadata and Content
-   1. [Content One](domain-ZZ.html)
+   1. [FHIR Content Modules](volume-3.html.html)
 5. Other
    1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)

@@ -13,3 +13,6 @@ There are multiple different potential matches for the url 'http://terminology.h
 
 # We are still using FHIR R4. This will not be relivant until this profile becomes a FHIR R5 profile, then it soulw be an issue that the HL7 FHIR IPS IG would need to suppress 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
+
+# This is a dummy OID system made only for examples, we expect there is no proper defitition for it, inless we progress with a official example oid registry
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.19376.1.5.4'

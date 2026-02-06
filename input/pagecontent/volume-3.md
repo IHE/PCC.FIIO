@@ -24,7 +24,7 @@ The LOINC code for this document is 60591-5 "Patient summary Document"
 
 <a name="fhir-contentModules"> </a>
 
-## **6.6 HL7 FHIR Content Modules**
+## **6.6 FHIR Content Modules**
 ### **6.6.1 HL7 FHIR Document Content Modules**
 #### **6.6.1.X FHIR IPS Document Content Modules**
 This Conent Module Section deffines the technical requirements FHIR IPS Documents and Bundles 

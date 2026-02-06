@@ -70,13 +70,13 @@ parameters:
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: FHIR International Patient Summary Implementation Options Home
+    title: FHIR International Patient Summary Profile Home
     generation: markdown
   volume-1.md:
-    title: 1:XX FHIR International Patient Summary Implementation Options Volume 1
+    title: 1:XX FHIR International Patient Summary Profile Volume 1
     generation: markdown
   volume-3.md:
-    title: 3:XX FHIR International Patient Summary Implementation Options Volume 3
+    title: 3:XX FHIR International Patient Summary Profile Volume 3
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -104,7 +104,7 @@ menu:
     Cross-Profile Considerations: volume-1.html#other-grouping
   Volume 3 - Content Modules:
     "IHE Namespaces, Concept Domains and Vocabularies": volume-3.html#concept-domains
-    "FHIR Content Modules": volume-3.html#content-modules
+    "FHIR Content Modules": volume-3.html#fhir-contentModules
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html
