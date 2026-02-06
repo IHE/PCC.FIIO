@@ -177,7 +177,7 @@ Instance: 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
-* identifier.system = "urn:oid:1.1.1.1.1.1.1.3"
+* identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "WHO-CX"
 * name = "World Health Organization"
 

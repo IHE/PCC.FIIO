@@ -65,6 +65,8 @@ Usage: #example
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-ClinicalImpression
 * entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-flagalertuvips-1"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-FlagAlertUvIps-1
+* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-devicestatement"
+* entry[=].resource = IHE-INT-PCC-IPS-ODH-DeviceStatement
 * entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-odh-devices-noknown"
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Devices-NoKnown
 
@@ -82,8 +84,6 @@ Usage: #example
 * title = "Patient Summary of Genny Works"
 * confidentiality = #N
 * custodian = Reference(urn:uuid:ihe-int-pcc-org-02)
-
-
 
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
@@ -162,7 +162,7 @@ Usage: #example
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known device use</div>"
-* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-devices-noknown) "No known device use"
+* section[sectionMedicalDevices].entry[deviceStatement] = Reference(urn:uuid:ihe-int-pcc-ips-odh-devicestatement) "No known device use"
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
@@ -189,22 +189,22 @@ Usage: #inline
 * active = true
 * identifier[+].use = #official 
 * identifier[=].type = $id-type#PPN "Passport number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "D935074D"
 * identifier[=].period.start = "2012-10-16"
 * identifier[+].use = #official 
 * identifier[=].type = $id-type#MR "Medical record number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEPCC-260205"
 * identifier[=].period.start = "2015-08-06"
 * identifier[+].use = #official 
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#SN "Subscriber Number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEPCCPayer-260206"
 * identifier[=].period.start = "2025-10-01"
 * identifier[+].use = #official 
 * identifier[=].type = $id-type#DL "Driver's license number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "781886151"
 * identifier[=].period.start = "2014-11-09"
 * name[+].use = #official
@@ -232,7 +232,7 @@ Usage: #inline
 * address[=].country = "Netherlands"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M "Married"
 * contact[+].relationship[+] = http://terminology.hl7.org/CodeSystem/v2-0131#C "Emergency Contact"
-* contact[+].relationship[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SPS "spouse"
+* contact[=].relationship[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SPS "spouse"
 * contact[=].name.use = #usual
 * contact[=].name.text = "Gábriel Works"
 * contact[=].name.family = "Works"
@@ -250,7 +250,7 @@ Usage: #inline
 * contact[=].address.country = "Netherlands"
 * contact[=].gender = #male 
 * contact[+].relationship[+] = http://terminology.hl7.org/CodeSystem/v2-0131#N "Next-of-Kin"
-* contact[+].relationship[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SIS "sister"
+* contact[=].relationship[+] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SIS "sister"
 * contact[=].name.use = #usual
 * contact[=].name.text = "Judy Jobs"
 * contact[=].name.family = "Jobs"
@@ -269,8 +269,8 @@ Usage: #inline
 * contact[=].gender = #female
 * contact[+].relationship = http://terminology.hl7.org/CodeSystem/v2-0131#E "Employer"
 * contact[=].organization = Reference(urn:uuid:ihe-int-pcc-employer-org-01)
-* communication[+].language = http://tools.ietf.org/html/bcp47#en "English"
-* communication[+].language = http://tools.ietf.org/html/bcp47#fr "French"
+* communication[+].language = urn:ietf:bcp:47#en "English"
+* communication[+].language = urn:ietf:bcp:47#fr "French"
 * communication[=].preferred = true
 * generalPractitioner = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
 
@@ -283,7 +283,7 @@ Usage: #inline
 * active = true 
 * identifier[+].use = #official 
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#U "Unspecified identifier"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEEMPLOYER56789012"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * name = "Employer Company Name"
@@ -309,7 +309,7 @@ Usage: #inline
 * active = true 
 * identifier[+].use = #official 
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#U "Unspecified identifier"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEPCC260207"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#cg "Community Group"
 * name = "IHE International PCC"
@@ -317,7 +317,7 @@ Usage: #inline
 * telecom[+].system = #phone
 * telecom[=].value = "+1 6305712670"
 * address.type = #both
-* address.text = "820 Jorie Blvd, Oakbrook, IL IL 60523, United States"
+* address.text = "820 Jorie Blvd, Oakbrook, IL 60523, United States"
 * address.line = "820 Jorie Blvd"
 * address.city = "Oakbrook"
 * address.state = "IL"
@@ -333,22 +333,22 @@ Usage: #inline
 * active = true 
 * identifier[+].use = #official
 * identifier[=].type = $id-type#PRN "Provider number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "56789012"
 * identifier[=].period.start = "2020-01-10"
-* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* identifier[=].assigner = Reference(urn:uuid:ihe-int-pcc-org-02)
 * identifier[+].use = #official
 * identifier[=].type = $id-type#MD "Medical License number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "87654321"
 * identifier[=].period.start = "2020-01-03"
-* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* identifier[=].assigner = Reference(urn:uuid:ihe-int-pcc-org-02)
 * identifier[+].use = #secondary 
 * identifier[=].type = $id-type#PPN "Passport number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "608-469-957"
 * identifier[=].period.start = "2012-01-22"
-* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* identifier[=].assigner = Reference(urn:uuid:ihe-int-pcc-org-02)
 * name[+].use = #usual
 * name[=].text = "Dr. Mary PCC Deonne"
 * name[=].family = "Deonne"
@@ -386,20 +386,20 @@ Usage: #inline
 * qualification[=].identifier.value = "IHEPCCPR01Degree01"
 * qualification[=].code = http://terminology.hl7.org/CodeSystem/v2-0360#BN "Bachelor of Nursing"
 * qualification[=].period.start = "2012-06-08"
-* qualification[=].issuer = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* qualification[=].issuer = Reference(urn:uuid:ihe-int-pcc-org-02)
 * qualification[+].id = "IHEPCCPR01Degree02" 
 * qualification[=].identifier.value = "IHEPCCPR01Degree02"
 * qualification[=].code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
 * qualification[=].period.start = "2019-12-17"
-* qualification[=].issuer = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* qualification[=].issuer = Reference(urn:uuid:ihe-int-pcc-org-02)
 * qualification[+].id = "IHEPCCPR01License01" 
 * qualification[=].identifier.value = "IHEPCCPR01License01"
 * qualification[=].code = http://terminology.hl7.org/CodeSystem/v2-0360#EMTP "Emergency Medical Technician - Paramedic"
 * qualification[=].period.start = "2015-04-25"
-* qualification[=].issuer = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
-* communication[+] = http://tools.ietf.org/html/bcp47#fr "French"
-* communication[+] = http://tools.ietf.org/html/bcp47#en "English"
-* communication[+] = http://tools.ietf.org/html/bcp47#es "Spanish"
+* qualification[=].issuer = Reference(urn:uuid:ihe-int-pcc-org-02)
+* communication[+] = urn:ietf:bcp:47#en "English"
+* communication[+] = urn:ietf:bcp:47#fr "French"
+* communication[+] = urn:ietf:bcp:47#es "Spanish"
 
 Instance: IHE-INT-PCC-Practitioner-02
 InstanceOf: PractitionerUvIps
@@ -410,22 +410,22 @@ Usage: #inline
 * active = true 
 * identifier[+].use = #official
 * identifier[=].type = $id-type#PRN "Provider number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "5678901336"
 * identifier[=].period.start = "2014-09-06"
-* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* identifier[=].assigner = Reference(urn:uuid:ihe-int-pcc-org-02)
 * identifier[+].use = #official
 * identifier[=].type = $id-type#MD "Medical License number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "25786544421"
 * identifier[=].period.start = "2014-04-21"
-* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* identifier[=].assigner = Reference(urn:uuid:ihe-int-pcc-org-02)
 * identifier[+].use = #secondary 
 * identifier[=].type = $id-type#PPN "Passport number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "635-442-867"
 * identifier[=].period.start = "2008-08-15"
-* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* identifier[=].assigner = Reference(urn:uuid:ihe-int-pcc-org-02)
 * name[+].use = #usual
 * name[=].text = "Jakob Leitner"
 * name[=].family = "Leitner"
@@ -461,14 +461,14 @@ Usage: #inline
 * qualification[=].identifier.value = "IHEPCCPR01Degree01"
 * qualification[=].code = http://terminology.hl7.org/CodeSystem/v2-0360#CNP "Certified Nurse Practitioner"
 * qualification[=].period.start = "2012-06-08"
-* qualification[=].issuer = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
+* qualification[=].issuer = Reference(urn:uuid:ihe-int-pcc-org-02)
 * qualification[+].id = "IHEPCCPR02License01" 
 * qualification[=].identifier.value = "IHEPCCPR02License01"
 * qualification[=].code = http://terminology.hl7.org/CodeSystem/v2-0360#RN "Registered Nurse"
 * qualification[=].period.start = "2015-04-25"
-* qualification[=].issuer = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
-* communication[+] = http://tools.ietf.org/html/bcp47#nl "Dutch"
-* communication[+] = http://tools.ietf.org/html/bcp47#en "English"
+* qualification[=].issuer = Reference(urn:uuid:ihe-int-pcc-org-02)
+* communication[+] = urn:ietf:bcp:47#en "English"
+* communication[+] = urn:ietf:bcp:47#nl "Dutch"
 
 Instance: IHE-INT-PCC-AllergyIntolerance-NoKnown
 InstanceOf: AllergyIntolerance 
@@ -543,7 +543,7 @@ Usage: #inline
 * status = #completed
 * vaccineCode = $sct#414006007 "Diphtheria + tetanus + poliomyelitis vaccine"
 * vaccineCode.text = "Diphtheria + tetanus + poliomyelitis vaccine"
-* patient = Reference(urn:uuid:urn:uuid:ihe-int-pcc-patient-genny-works)
+* patient = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * occurrenceDateTime = "1995"
 
 Instance: IHE-INT-PCC-IPS-ODH-Immunization-2
@@ -552,7 +552,7 @@ Usage: #inline
 * id = "ihe-int-pcc-ips-odh-immunization-2"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * status = #completed
-* vaccineCode = $sct#34689006 "Hepatitis B virus vaccine"
+* vaccineCode = $sct#871822003 "Vaccine product containing only Hepatitis B virus antigen "
 * vaccineCode.text = "Hepatitis B virus vaccine"
 * patient = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * occurrenceDateTime = "2005"
@@ -777,8 +777,19 @@ Usage: #inline
 * subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
 * period.start = "2018-07-02"
 
+Instance: IHE-INT-PCC-IPS-ODH-DeviceStatement
+InstanceOf: DeviceUseStatementUvIps
+Usage: #inline
+* id = "ihe-int-pcc-ips-odh-devicestatement"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+* status = #completed
+* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
+* timingDateTime = "2026-05-26T13:30:00+02:00"
+* device = Reference(urn:uuid:ihe-int-pcc-ips-odh-devices-noknown)
+
 Instance: IHE-INT-PCC-IPS-ODH-Devices-NoKnown
-InstanceOf: Device
+InstanceOf: DeviceUvIps
 Usage: #inline
 * id = "ihe-int-pcc-ips-odh-devices-noknown"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
 * type = $sct#787483001 "No known device use"
