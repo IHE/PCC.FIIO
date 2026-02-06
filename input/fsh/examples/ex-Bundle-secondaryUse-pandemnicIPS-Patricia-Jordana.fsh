@@ -14,7 +14,7 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:5bc0c003-a3cd-44f2-b3be-8cb256d0e83a"
 * entry[=].resource = 5bc0c003-a3cd-44f2-b3be-8cb256d0e83a
 * entry[+].fullUrl = "urn:uuid:ex-patient-pandemnicips-patricia-jordana"
-* entry[=].resource = Ex-Patient-1-for-secondaryUse-pandemnicIPS-stage-0
+* entry[=].resource = Ex-Patient-pandemnicIPS-Patricia-Jordana
 * entry[+].fullUrl = "urn:uuid:fd584c2f-5814-425d-9b00-0a5b1a6effee"
 * entry[=].resource = fd584c2f-5814-425d-9b00-0a5b1a6effee
 * entry[+].fullUrl = "urn:uuid:9e57d970-d0ae-4a36-908f-1cad06f94f28"
