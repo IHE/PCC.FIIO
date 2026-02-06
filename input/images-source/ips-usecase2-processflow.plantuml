@@ -1,32 +1,31 @@
 @startuml
 skinparam svgDimensionStyle false
-hide footbox
+hide footbox 
 
-database "Available Patient Data" as apd  
-database "Data Not Available to Portal" as nap 
-participant "Portal\nContent Creator" as ptp 
-cloud "Document Sharing\n[PCC-1]" as pcc1
-participant "Content Consumer" cc2
+group Primary Data Holder
+participant "Data Not\nAvailable to Portal" as nap 
+participant "Available\nPatient Data" as apd 
+participant "Provider Portal\nContent Creator" as ptp 
 
-box "Primary Data Holder" #White
-database apd
-database nap 
-end box 
 
-apd -> ptp: Conditions
-apd -> ptp: Allergies
-apd -> ptp: Medications
-apd -> ptp: Immunizations
-apd -> ptp: Care Plans
-apd -> ptp: Alerts
-apd -> ptp: Clinical Impressions
+
+
+apd -> ptp : Conditions
+apd -> ptp : Allergies
+apd -> ptp : Medications
+apd -> ptp : Immunizations
+apd -> ptp : Care Plans
+apd -> ptp : Alerts
+apd -> ptp : Clinical Impressions
 
 nap -->x ptp: Procedure Data
 nap -->x ptp: Lab Data
 nap -->x ptp: Device Data
+end  
 
-note over ptp, pcc1: When the IPS is generated the sections where the unavilable data would be are still generated with appropriate empty reason codes 
-ptp <-> pcc1: Sharing IPS Document 
-pcc1 <-> cc2: Sharing IPS Document
+participant "Content\nConsumer" as cc2 
+note over ptp, cc2: When the IPS is generated\nthe sections where the\nunavilable data would be\nare still generated with\nthe appropriate\nemptyReason codes 
+
+ptp <-> cc2 : Document Sharing\n[PCC-1]
 
 @enduml

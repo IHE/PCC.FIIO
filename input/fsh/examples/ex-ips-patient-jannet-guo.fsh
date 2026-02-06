@@ -1,3 +1,5 @@
+// Note Pregnency Patient, should have allergies to nsaids, penicillin, and bee stings
+
 Instance:   ex-ips-patient-jannet-guo
 InstanceOf: PatientUvIps
 Title: "Example ips Patient Jannet Guo"

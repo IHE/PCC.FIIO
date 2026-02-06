@@ -75,7 +75,7 @@ Optional:
 - Patient Story
 
 ### XX.2.2 Complete Option
-This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition).
+This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition.html).
 This option specifies that the following sections defined as optional in the [HL7 FHIR IPS Composition](http://www.hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html) Have a New optionality of Must Support. This applies to the following sections: 
 - IPS Advance Directives 
 - IPS Functional Status 

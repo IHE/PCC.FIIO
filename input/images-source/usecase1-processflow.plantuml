@@ -1,10 +1,11 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-participant "Content\nCreator" as IPSContentCreator
-participant "Content\nConsumer" as IPSContentConsumer
-participant "Share Content" as cloud
 
-IPSContentCreator -> cloud : Document Sharing [PCC-1]
-cloud -> IPSContentConsumer : Document Sharing [PCC-1]
+agent "Content\nCreator" as IPSContentCreator
+agent "Content\nConsumer" as IPSContentConsumer
+cloud "Document\nSharing\n[PCC-1]" as cloud
+
+IPSContentCreator <-> cloud : IPS
+cloud <-> IPSContentConsumer : IPS
 @enduml

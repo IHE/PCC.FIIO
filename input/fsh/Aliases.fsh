@@ -20,6 +20,7 @@ Alias: $v3-ObservationValue = http://terminology.hl7.org/CodeSystem/v3-Observati
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // Aliases for example files
+Alias: $id-type = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-ActClass = http://terminology.hl7.org/CodeSystem/v3-ActClass
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status = http://terminology.hl7.org/CodeSystem/condition-ver-status

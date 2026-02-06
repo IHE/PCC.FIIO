@@ -2,30 +2,27 @@
 skinparam svgDimensionStyle false
 hide footbox
 
-participant "Primary Care Data Source\nContent Creator" as pcds 
-cloud "Document Sharing\n[PCC-1]" as pcc1a 
-participant "Pseudonymization Service\nContent Consumer\nContent Creator" as pns
-cloud "Document Sharing\n[PCC-1]" as pcc1b 
-participant "Anonymization Service\nContent Consumer\nContent Creator" as ans
-cloud "Document Sharing\n[PCC-1]" as pcc1b 
-participant "Secondary Use Researcher\nContent Consumer" as sur 
-
-
-!pragma teoz true
+!pragma teoz true 
 box "Health Data Source" #LightSkyBlue
-pcds <-> pcc1a: Share Content
-note over pcc1a: Provides a Fully Identifed IPS
+participant "Primary Care Data Source\nContent Creator" as pcds 
+participant "Pseudonymization Service\nContent Consumer\nContent Creator" as pns
+
 box "De-Identification" #SteelBlue
-pcc1a <-> pns: Share Content
-pns <-> pcc1b: Share Pseudonymized Content
-note over pcc1b: Provides a Pseudonymized IPS\n(Stage 1 De-Identification)
-pcc1b <-> ans: Share Pseudonymized Content
+note over pcds, pns: Primary Data Source\nProvides a Fully Identifed\nPatient Summary Document 
+pcds <-> pns: Document Sharing\n[PCC-1]
+pns -> pns : Stage 1\nDe-Identification
+
+participant "Anonymization Service\nContent Consumer\nContent Creator" as ans
+note over pns, ans: Provides a\nPseudonymized IPS\n(Stage 1 De-Identification)
+pns <-> ans: Document Sharing\n[PCC-1]
+ans -> ans : Stage 2\nDe-Identification
 end box
-end box
+end box 
 
 box "Secondary Use" #MediumPurple
-ans <-> pcc1c: Share De-Identified Content
-note over pcc1c: Provides a Fully De-Identified IPS\n(Stage 2 De-Identification)
-pcc1c <-> sur: Share De-Identified Content 
-end box  
+participant "Secondary Use Researcher\nContent Consumer" as sur 
+
+note over ans, sur: Provides a\nFully De-Identified IPS\n(Stage 2 De-Identification)
+ans <-> sur: Document Sharing\n[PCC-1]
+end box
 @enduml
