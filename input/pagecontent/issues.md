@@ -2,29 +2,29 @@
 ## Significant Changes
 ### Significant Structure and Content Changes
 1: This Profile is now just a FHIR profile for IPS and is now Rev 1.0 for its stand alone version
-  - This profile was origionally a segment the IHE [International Patient Summary (IPS) Rev 1.2 Trial Implementation Profile](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf), which combined the profiling of both the [HL7 FHIR International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/index.html) and the [HL7 CDA International Patient Summary Implementation Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=483) for conformance testing at the IHE Connectathons. 
+  - This profile was originally a segment the IHE [International Patient Summary (IPS) Rev 1.2 Trial Implementation Profile](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf), which combined the profiling of both the [HL7 FHIR International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/index.html) and the [HL7 CDA International Patient Summary Implementation Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=483) for conformance testing at the IHE Connectathons. 
 
-2: This Profile now points to the [HL7 FHIR International Patient Summary Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/index.html) for all its dependedncies
-  - Origional version of the IHE IPS Profile pointed only to HL7 IPS version 1.0.0, later updated to HL7 IPS version 1.1.0  
+2: This Profile now points to the [HL7 FHIR International Patient Summary Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/index.html) for all its dependencies
+  - Original version of the IHE IPS Profile pointed only to HL7 IPS version 1.0.0, later updated to HL7 IPS version 1.1.0  
 
 3: Assigned a new IHE Format Code - urn:ihe:pcc:fips:2025 
-  - Origional was not differentiated from the CDA version - urn:ihe:pcc:ips:2020
+  - Original was not differentiated from the CDA version - urn:ihe:pcc:ips:2020
 
-4: New guidence and calarification of the Must Support conformance expectations have been added to the Immunizations, Procedures, Results, and Devices Section Requirements in the Volume 3. These statements are not meant to further constrain HL7's IPS, but provide additional guidence so implementors can be more prepared to demonstrate this expected behavior in a conformance testing setting.  
+4: New guidance and clarification of the Must Support conformance expectations have been added to the Immunizations, Procedures, Results, and Devices Section Requirements in the Volume 3. These statements are not meant to further constrain HL7's IPS, but provide additional guidance so implementors can be more prepared to demonstrate this expected behavior in a conformance testing setting.  
   - Connectathon feedback showed a large misunderstanding of the HL7 and ISO Standard Requirements when it came to representing missing data. 
 
 5: Appropriate Structure definitions for the ODH and Complete Options have been generated using the IG Publisher tool. 
   - IHE PCC did not have proper access to the IG Publisher tool during the last update of the profile, and were hand only modeling the requirements of the testing options in the narrative text of the profile. 
 
 6: New Example Instances have been added to the profile to better represent the expected behavior in the document structure for the ODH and Complete testing options, and representing missing data. 
-  - Examples are requireed for making new Structure Defintions in the IG builder tool, and are helpful to reference for implementers. lack of tooling in the previous generation of this profile prevented example inclusions for the FHIR profiling. 
+  - Examples are required for making new Structure Definitions in the IG builder tool, and are helpful to reference for implementers. lack of tooling in the previous generation of this profile prevented example inclusions for the FHIR profiling. 
 
-7: Gherkin Script removed from the Appendix A - IPS Gherkin Test Scripts. Replaced with the Test Plan Tab on the build page. A differnt approach to the documentation of the test plans has been takenon this page, as well as additional description around testing expectations were added. 
+7: Gherkin Script removed from the Appendix A - IPS Gherkin Test Scripts. Replaced with the Test Plan Tab on the build page. A different approach to the documentation of the test plans has been taken on this page, as well as additional description around testing expectations were added. 
   - Connectathon take aways identified the gaps in the test plans and testing expectations that were a part of this document.
 
 ### Significant Text Changes
 1: New Option added to reflect testing for just HL7's [HL7 FHIR International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/index.html) 
-  - Confusion around how this profile was different from HL7's and how to test "just" the HL7 IPS version at Connectathons inidcated a need for different naming conventions. No structural changes 
+  - Confusion around how this profile was different from HL7's and how to test "just" the HL7 IPS version at Connectathons indicated a need for different naming conventions. No structural changes 
 
 2: The New profile name is FHIR International Patient Summary (FIPS)
   - New name needed to differentiate between the FHIR IPS Profile and the CDA IPS Profile now that they are separate. 
@@ -33,13 +33,12 @@
   - The previous IHE IPS Profile Vol 3 section names and numbering are different from how they are represented in this update due to new understandings of how we profile FHIR profiles and the use of the IG publisher to create new structure definitions and templates.  
 
 4: New Use Cases Added to better reflect the different instances of IPS information sources and different types of systems that are implementing IPS as content Creators
-  - Origional Use Cases seemed to be repeating the same technical pattern with little variation in how an IPS can be used. New Implementors at the connectathons showed new elements of its use and implementation and challenges the new content creators faced with infromation acess that we felt needed to be included in the use cases of thos profile. 
+  - Original Use Cases seemed to be repeating the same technical pattern with little variation in how an IPS can be used. New Implementors at the Connectathons showed new elements of its use and implementation and challenges the new content creators faced with information access that we felt needed to be included in the use cases of those profile. 
 
 
 ### Significant Changes from Revision x.x
-N/A
+N/A - Major revision from a previous version of this profile that was a combination of the FHIR and CDA IPS elements. This profile isolates the FHIR IPS documentation.
 
-Major revision from a previous version of this profile that was a combination of the FHIR anf CDA IPS elements. This profile isolates the FHIR IPS documentation. 
 ## Issues
 
 ### Submit an Issue
@@ -97,8 +96,10 @@ Occupational Data for Health resources are profiled as international resources b
 • Supervisory Level or Pay Grade
 Occupation, Industry, and Work Classification value sets may vary by jurisdiction. The US CDC census value sets are provided as an ‘example binding’. There is no apparent specification for an expression of ‘concept domain’, which is leveraged by multiple IHE QRPH and PCC profiles as a method to allow for jurisdictions to specify other value sets
 
-- FIPS_023: There is an identified gap in the HL7 FHIR IPS Implementation Guide. To properly allign with the [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) standard, HL7 needs to require the support of the emptyReason data element in the following sections: Immunizations, History of Procedures, Medical Devices, and Results. IHE has opened a jira ticket to HL7 to resolve this issue. 
+- FIPS_023: There is an identified gap in the HL7 FHIR IPS Implementation Guide. To properly align with the [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) standard, HL7 needs to require the support of the emptyReason data element in the following sections: Immunizations, History of Procedures, Medical Devices, and Results. IHE has opened a Jira ticket to HL7 to resolve this issue. 
   - [Jira Ticket](https://jira.hl7.org/browse/FHIR-55602)
+
+- FIPS_024: The Informative Path mapping tables that were perviously published in the IPS Profile Volume 3 Section 6.6.X.1.2 FHIR Resource Data Specifications, has been moved to the PCC Implemention Materials folder. 
 
 ### Closed Issues
 - FIPS_001: For the trigger events – is this triggered only in anticipation of international travel or might this be a routine patient summary (2019/09/30)? Resolution - The IPS is for both planned and planned care (2019/11/12).
@@ -115,6 +116,8 @@ Occupation, Industry, and Work Classification value sets may vary by jurisdictio
 
 - FIPS_007: Why is the Patient-uv-ips Structure definition Resource (http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips) a 0..* cardinality? You should not have more than one patient for a patient summary. Resolution - Mis Interpretation of the Cardinality on the resource (2026/1/15).
 
-- FIPS_008: Problem type in History of Past Problems (sectionPastIllnessHx.entry.pastProblem.Condition-uv-ips.category) has no SNOMED-CT qualifier value for Medical Alert. Resolution - No need for SNOMED to create a new Qualifyer Value code. A new Alerts Section has been made to cover this need in the HL7 FHIR IG 2.0.0 Release (02/04/2026). 
+- FIPS_008: Problem type in History of Past Problems (sectionPastIllnessHx.entry.pastProblem.Condition-uv-ips.category) has no SNOMED-CT qualifier value for Medical Alert. Resolution - No need for SNOMED to create a new Qualifyer Value code. A new Alerts Section has been made to cover this need in the HL7 FHIR IG 2.0.0 Release (02/04/2026).
+
+ 
 
 
