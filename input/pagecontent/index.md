@@ -12,26 +12,26 @@
 
 This guide is organized into the following sections:
 
-1. Volume 1:
-   1. [Introduction](volume-1.html)
-   1. [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
-   1. [Actor Options](volume-1.html#actor-options)
-   1. [Actor Required Groupings](volume-1.html#required-groupings)
-   1. [Overview](volume-1.html#overview)
-   1. [Security Considerations](volume-1.html#security-considerations)
-   1. [Cross Profile Considerations](volume-1.html#other-grouping)
-3. Volume 3: Metadata and Content
-   1. [FHIR Content Modules](volume-3.html.html)
-5. Other
-   1. [Test Plan](testplan.html)
-   1. [Changes to Other IHE Specifications](other.html)
-   1. [Download and Analysis](download.html)
+- Volume 1:
+   - [Introduction](volume-1.html)
+   - [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
+   - [Actor Options](volume-1.html#actor-options)
+   - [Actor Required Groupings](volume-1.html#required-groupings)
+   - [Overview](volume-1.html#overview)
+   - [Security Considerations](volume-1.html#security-considerations)
+   - [Cross Profile Considerations](volume-1.html#other-grouping)
+- Volume 3: Metadata and Content
+   - [FHIR Content Modules](volume-3.html.html)
+- Other  
+   - [Changes to Other IHE Specifications](other.html)
+   - [Download and Analysis](download.html)
+   - [Test Plan](testplan.html)
 
-See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
+Click on any of the links above, see the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
 
 ### Conformance Expectations
 
-IHE uses the normative words: Shall, Should, and May according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
+IHE uses the normative words: "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
 #### Must Support
 
