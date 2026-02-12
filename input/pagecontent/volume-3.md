@@ -150,7 +150,6 @@ The following concepts have not been profiled in FHIR, but are defined in the [I
 | 228272008      | Other Social History | Any                       | N/A                                |
 {: .grid}
  
-
 Additional Concepts Include:
 
 | Observation Code      | Description                      | Data Type                 |
