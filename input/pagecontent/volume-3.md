@@ -3,7 +3,7 @@
 # 3:5 IHE Namespaces, Concept Domains and Vocabularies
 
 ## 3:5.1 IHE Patient Care Coordination Namespaces
-The Patient Care Coordination registry of OIDs is located [here] (https://wiki.ihe.net/index.php/PCC_Vocabulary_Registry_and_Data_Dictionary) 
+The Patient Care Coordination registry of OIDs is located [here](https://wiki.ihe.net/index.php/PCC_Vocabulary_Registry_and_Data_Dictionary) 
 
 # 3:6 PCC CDA Content Modules
 This is not a CDA Profile 
