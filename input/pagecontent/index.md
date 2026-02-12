@@ -21,7 +21,7 @@ This guide is organized into the following sections:
    - [Security Considerations](volume-1.html#security-considerations)
    - [Cross Profile Considerations](volume-1.html#other-grouping)
 - Volume 3: Metadata and Content
-   - [FHIR Content Modules](volume-3.html.html)
+   - [FHIR Content Modules](volume-3.html#fhir-contentModules)
 - Other  
    - [Changes to Other IHE Specifications](other.html)
    - [Download and Analysis](download.html)
