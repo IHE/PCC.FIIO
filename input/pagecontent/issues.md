@@ -1,10 +1,10 @@
 
 ## Significant Changes
 ### Significant Structure and Content Changes
-1: This Profile is now just a FHIR profile for IPS and is now Rev 1.0 for its stand alone version
-  - This profile was originally a segment the IHE [International Patient Summary (IPS) Rev 1.2 Trial Implementation Profile](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf), which combined the profiling of both the [HL7 FHIR International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/index.html) and the [HL7 CDA International Patient Summary Implementation Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=483) for conformance testing at the IHE Connectathons. 
+1: This profile is now just a FHIR profile for IPS and is now Rev 1.0 for its stand alone version
+  - This profile was originally a segment of the IHE [International Patient Summary (IPS) Rev 1.2 Trial Implementation Profile](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_Suppl_IPS.pdf), which combined the profiling of both the [HL7 FHIR International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/index.html) and the [HL7 CDA International Patient Summary Implementation Guide](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=483) for conformance testing at the IHE Connectathons. 
 
-2: This Profile now points to the [HL7 FHIR International Patient Summary Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/index.html) for all its dependencies
+2: This profile now points to the [HL7 FHIR International Patient Summary Implementation Guide 2.0.0](https://hl7.org/fhir/uv/ips/index.html) for all its dependencies
   - Original version of the IHE IPS Profile pointed only to HL7 IPS version 1.0.0, later updated to HL7 IPS version 1.1.0  
 
 3: Assigned a new IHE Format Code - urn:ihe:pcc:fips:2025 
@@ -26,7 +26,7 @@
 1: New Option added to reflect testing for just HL7's [HL7 FHIR International Patient Summary Implementation Guide](https://hl7.org/fhir/uv/ips/index.html) 
   - Confusion around how this profile was different from HL7's and how to test "just" the HL7 IPS version at Connectathons indicated a need for different naming conventions. No structural changes 
 
-2: The New profile name is FHIR International Patient Summary (FIPS)
+2: The new profile name is FHIR International Patient Summary (FIPS)
   - New name needed to differentiate between the FHIR IPS Profile and the CDA IPS Profile now that they are separate. 
 
 3: New Volume 3 section names and numbering to reflect new understanding of how to represent FHIR Content Modules and Conformance requirements. 
@@ -42,6 +42,11 @@ N/A - Major revision from a previous version of this profile that was a combinat
 ## Issues
 
 ### Submit an Issue
+IHE welcomes [New Issues](https://github.com/IHE/PCC.FIIO/issues/new/choose) from the GitHub community. 
+For those without GitHub access, issues may be submitted to the [Patient Care Coordination Public Comment form](https://www.ihe.net/PCC_Public_Comments/).
+
+As issues are submitted they will be managed at [FHIR International Patient Summary GitHub Issues](https://github.com/IHE/PCC.FIIO/issues), where discussion and workarounds may be found. These issues, when critical, will be processed using the normal [IHE Change Proposal](https://wiki.ihe.net/index.php/Category:CPs) management and balloting. 
+It is important to note that as soon as a Change Proposal is approved, it carries the same weight as a published Implementation Guide (i.e., it is testable at an [IHE Connectathon](https://www.ihe.net/participate/connectathon/) from the time it is approved, even if it will not be integrated until several months later).
 
 ### Open Issues
 - FIPS_001: Review of the synergy between the HL7 Implementation Guide requirements and the [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) are inconsistent in their requirements and implications for expressing the following sections: Immunizations, Results, Devices, and procedures. Primarily there are written implications in the ISO IPs that indicate the absence of these sections imply that there are no relevant entries to report. In this case systems that do not support the data in or generation of that section MUST be able to indicate that the section or information in the section is Not Supported in a Data absent reason. This profile further constrains the Data Absent Reason requirements to explicitly reflect when data is not available for inclusion, as distinguished from mediated relevant information. IHE has put forward comments to HL7 for alignment in future updates. IHE has also put in requests to ISO to further clarify data absent expectations and meaning. IHE has submitted a comment to ISO TC215 to provide more clarity surrounding missing data. Should updates be made, we will re-visit the volume 3 6.1.x.4 FHIR IPS Composition/Bundle Section Components of this document. (10/08/2025)
