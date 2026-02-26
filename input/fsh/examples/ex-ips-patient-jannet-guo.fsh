@@ -18,8 +18,8 @@ Description: "The patient Jannet Guo used for an example for IPS, to represent p
 * identifier[=].system = "http://hospital.smarthealthit.org"
 * identifier[=].value = "fcf76d34-1a29-4d51-a119-991dc5aac192"
 
-* identifier[+].type = $v2-0203#DL "Driver's License"
-* identifier[=].type.text = "Driver's License"
+* identifier[+].type = $v2-0203#DL "Driver's license number"
+* identifier[=].type.text = "Driver's license number"
 * identifier[=].system = "urn:oid:2.16.840.1.113883.4.3.25"
 * identifier[=].value = "S99970944"
 
@@ -68,11 +68,11 @@ Description: "The patient Jannet Guo used for an example for IPS, to represent p
 * contact[=].gender = #male
 
 
-* communication[+].language = urn:ietf:bcp:47#en-US "English"
+* communication[+].language = urn:ietf:bcp:47#en-US "English (United States)"
 * communication[=].language.text = "English"
 * communication[=].preferred = true
 
-* generalPractitioner[+] = Reference(Practitioner/ex-ips-practitioner-alicia-gould)
+* generalPractitioner[+] = Reference(urn:uuid:952303fa-892a-4951-a4b3-2a0bbe56b918)
 
 
 

@@ -12,28 +12,32 @@ Usage: #example
 * type = #document
 * timestamp = "2026-02-05T12:13:00-05:00"
 
-* entry[+].fullUrl = "urn:uuid:ihe-int-ips-patient-frank-missingdata"
+* entry[+].fullUrl = "urn:uuid:567f7a70-6f0d-49c5-a6ca-20eff88e7c8e"
 * entry[=].resource = ex-Composition-IPS-Frank-MissingData
-* entry[+].fullUrl = "urn:uuid:ihe-int-ips-patient-frank-missingdata"
+* entry[+].fullUrl = "urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4"
 * entry[=].resource = IHE-INT-IPS-Patient-Frank-MissingData
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-org-02"
+* entry[+].fullUrl = "urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e"
 * entry[=].resource = IHE-INT-PCC-ORG-02
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-practitioner-01"
+* entry[+].fullUrl = "urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31"
 * entry[=].resource = IHE-INT-PCC-Practitioner-01
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-practitioner-02"
+* entry[+].fullUrl = "urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e"
 * entry[=].resource = IHE-INT-PCC-Practitioner-02
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-allergyintolerance-1"
+* entry[+].fullUrl = "urn:uuid:bd89d6c4-f82c-42f7-ae22-f97caa69fc1e"
 * entry[=].resource = IHE-INT-PCC-IPS-AllergyIntolerance-1
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-Condition-5"
+* entry[+].fullUrl = "urn:uuid:7eddf451-857a-41cc-bce8-5147ebf99961"
 * entry[=].resource = IHE-INT-PCC-IPS-Condition-5
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-Condition-6"
+* entry[+].fullUrl = "urn:uuid:24ed68db-6665-4272-8157-d1e71fb5a1f1"
 * entry[=].resource = IHE-INT-PCC-IPS-Condition-6
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-Condition-7"
+* entry[+].fullUrl = "urn:uuid:de5ad976-ddc8-4293-b676-d84d17fa8f9d"
 * entry[=].resource = IHE-INT-PCC-IPS-Condition-7
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-immunization-noknown"
+* entry[+].fullUrl = "urn:uuid:ccf288c9-6557-48b8-a18d-df9b84b856b5"
 * entry[=].resource = IHE-INT-PCC-IPS-Immunization-NoKnown
-* entry[+].fullUrl = "urn:uuid:ihe-int-pcc-ips-medicationStatement-3"
+* entry[+].fullUrl = "urn:uuid:9c494b70-41b2-46f4-955b-b9e8114dfb41"
 * entry[=].resource = IHE-INT-PCC-IPS-MedicationStatement-3
+* entry[+].fullUrl = "urn:uuid:22f72d34-723c-485d-aa49-6cfaf55e0d22"
+* entry[=].resource = IHE-INT-PCC-IPS-DeviceStatement-NoKnown
+* entry[+].fullUrl = "urn:uuid:89558156-be8e-45e2-92e1-c206e445db6c"
+* entry[=].resource = IHE-INT-PCC-IPS-Devices-NoKnown
 
 Instance: ex-Composition-IPS-Frank-MissingData
 InstanceOf: CompositionUvIps
@@ -41,43 +45,43 @@ Description: """
 This Example Composition is used to represent the Representation of Missing Data in a patient's IPS Composition. 
 """
 Usage: #example
-* id = "ex-composition-ips-frank-missingdata"
+* id = "567f7a70-6f0d-49c5-a6ca-20eff88e7c8e"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition"
 //* meta.lastUpdated = "2026-02-05T13:51:24"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
-* subject = Reference(urn:uuid:ihe-int-pcc-patient-genny-works)
+* subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * date = "2026-02-06"
-* author = Reference(urn:uuid:ihe-int-pcc-org-02) 
+* author = Reference(urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e) 
 * title = "Patient Summary of Frank MissingData"
 * confidentiality = #N
-* custodian = Reference(urn:uuid:ihe-int-pcc-org-02)
+* custodian = Reference(urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e)
 
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day</li><li>[2018] - Diazepam product</li></ul></div>"
-* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:ihe-int-pcc-ips-medicationStatement-3) "No known medications"
+* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:9c494b70-41b2-46f4-955b-b9e8114dfb41) "No known medications"
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
 * section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Severe Peanut Allergy</div>"
-* section[sectionAllergies].entry[+] = Reference(urn:uuid:ihe-int-pcc-allergyintolerance-1) "Severe Peanut Allergy"
+* section[sectionAllergies].entry[+] = Reference(urn:uuid:bd89d6c4-f82c-42f7-ae22-f97caa69fc1e) "Severe Peanut Allergy"
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2007-04-27] - Attention deficit hyperactivity disorder</li><li>[2012-07-16] - Substance abuse</li><li>[2017-04-26] - Tonsillitis</li><li>[2007-01-26] - Decreased hearing</li></ul></div>"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-5)
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-6)
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:ihe-int-pcc-ips-odh-condition-7)
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:7eddf451-857a-41cc-bce8-5147ebf99961)
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:24ed68db-6665-4272-8157-d1e71fb5a1f1)
+* section[sectionProblems].entry[problem] = Reference(urn:uuid:de5ad976-ddc8-4293-b676-d84d17fa8f9d)
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><ul><li>[2013-02-09] - Diphtheria + tetanus + poliomyelitis vaccine</li><li>[2013-07-08] - Hepatitis B virus vaccine</li><li>[2025-10-17] - COVID-19 antigen vaccine</li></ul></div></div>"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:ihe-int-pcc-ips-immunization-noknown) "No Known Immunization"
+* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:ccf288c9-6557-48b8-a18d-df9b84b856b5) "No Known Immunization"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
@@ -95,7 +99,7 @@ Usage: #example
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known device use</div>"
-* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:ihe-int-pcc-ips-odh-devices-noknown) "No known device use"
+* section[sectionMedicalDevices].entry[+] = Reference(urn:uuid:22f72d34-723c-485d-aa49-6cfaf55e0d22) "No known device use"
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
@@ -107,7 +111,7 @@ Usage: #example
 Instance: IHE-INT-IPS-Patient-Frank-MissingData
 InstanceOf: PatientUvIps
 Usage: #inline
-* id = "ihe-int-ips-patient-frank-missingdata"
+* id = "4aaab9e4-44e1-4a35-98ac-093fa22c87d4"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
@@ -153,7 +157,7 @@ Usage: #inline
 * address[=].country = "Italy"
 * communication[+].language = http://tools.ietf.org/html/bcp47#it "Italian"
 * communication[=].preferred = true
-* generalPractitioner = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
+* generalPractitioner = Reference(urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31)
 
 //Instance: IHE-INT-PCC-Employer-ORG-01
 //InstanceOf: OrganizationUvIps
@@ -209,7 +213,7 @@ Usage: #inline
 //Instance: IHE-INT-PCC-Practitioner-01
 //InstanceOf: PractitionerUvIps
 //Usage: #inline
-//* id = "ihe-int-pcc-practitioner-01"
+//* id = "a9075331-0512-4bf9-aefc-ef188d58be31"
 //* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
 //* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 //* active = true 
@@ -355,14 +359,14 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-AllergyIntolerance-1
 InstanceOf: AllergyIntoleranceUvIps 
 Usage: #inline
-* id = "ihe-int-pcc-allergyintolerance-1"
+* id = "bd89d6c4-f82c-42f7-ae22-f97caa69fc1e"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = #confirmed
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = #food 
 * code = $sct#91935009  "Allergy to peanut"
-* patient = Reference(urn:uuid:ihe-int-ips-patient-frank-missingdata)
+* patient = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * onsetDateTime = "2010-07-09"
 * lastOccurrence = "2017-04-15"
 * reaction.manifestation[+] = $sct#80257001 "Acute bronchitis with bronchospasm"  
@@ -374,7 +378,7 @@ Usage: #inline
 Instance: IHE-INT-PCC-IPS-Condition-5
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "ihe-int-pcc-ips-Condition-5"
+* id = "7eddf451-857a-41cc-bce8-5147ebf99961"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
@@ -382,14 +386,14 @@ Usage: #inline
 * severity = $sct#6736007 "Moderate"
 * code = $sct#31996006 "Vasculitis"
 * code.text = "Vasculitis"
-* subject = Reference(urn:uuid:ihe-int-ips-patient-frank-missingdata)
+* subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * onsetDateTime = "2021-12-09"
-* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
+* asserter = Reference(urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31)
 
 Instance: IHE-INT-PCC-IPS-Condition-6
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "ihe-int-pcc-ips-Condition-6"
+* id = "24ed68db-6665-4272-8157-d1e71fb5a1f1"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
@@ -397,14 +401,14 @@ Usage: #inline
 * severity = $sct#6736007 "Moderate"
 * code = $sct#31996006 "Vasculitis"
 * code.text = "Vasculitis"
-* subject = Reference(urn:uuid:ihe-int-ips-patient-frank-missingdata)
+* subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * onsetDateTime = "2024-12-09"
-* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
+* asserter = Reference(urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31)
 
 Instance: IHE-INT-PCC-IPS-Condition-7
 InstanceOf: ConditionUvIps
 Usage: #inline
-* id = "ihe-int-pcc-ips-Condition-7"
+* id = "de5ad976-ddc8-4293-b676-d84d17fa8f9d"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
@@ -412,28 +416,46 @@ Usage: #inline
 * severity = $sct#24484000 "Severe"
 * code = $sct#43116000 "Eczema"
 * code.text = "Severe Eczema"
-* subject = Reference(urn:uuid:ihe-int-ips-patient-frank-missingdata)
+* subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * onsetDateTime = "2023-07-19"
-* asserter = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
+* asserter = Reference(urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31)
 
 Instance: IHE-INT-PCC-IPS-Immunization-NoKnown
 InstanceOf: Immunization
 Usage: #inline
-* id = "ihe-int-pcc-ips-immunization-noknown"
+* id = "ccf288c9-6557-48b8-a18d-df9b84b856b5"
 * status = #completed
 * vaccineCode = $sct#787482006 "No known immunizations"
-* patient = Reference(urn:uuid:ihe-int-ips-patient-frank-missingdata)
+* patient = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * occurrenceDateTime = "2026-02-06"
 
 Instance: IHE-INT-PCC-IPS-MedicationStatement-3
 InstanceOf: MedicationStatementIPS
 Usage: #inline
-* id = "ihe-int-pcc-ips-medicationStatement-3"
+* id = "9c494b70-41b2-46f4-955b-b9e8114dfb41"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 * status = http://hl7.org/fhir/CodeSystem/medication-statement-status#active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
 * medicationCodeableConcept = $sct#787481004 "No known medications"
-* subject = Reference(urn:uuid:ihe-int-ips-patient-frank-missingdata)
+* subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
 * effectivePeriod.start = "2023-07-19"
 * dateAsserted = "2023-07-19"
-* informationSource = Reference(urn:uuid:ihe-int-pcc-practitioner-01)
+* informationSource = Reference(urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31)
+
+
+Instance: IHE-INT-PCC-IPS-DeviceStatement-NoKnown
+InstanceOf: DeviceUseStatementUvIps
+Usage: #inline
+* id = "22f72d34-723c-485d-aa49-6cfaf55e0d22"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+* status = #completed
+* subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
+* timingDateTime = "2026-05-26T13:30:00+02:00"
+* device = Reference(urn:uuid:89558156-be8e-45e2-92e1-c206e445db6c)
+
+Instance: IHE-INT-PCC-IPS-Devices-NoKnown
+InstanceOf: DeviceUvIps
+Usage: #inline
+* id = "89558156-be8e-45e2-92e1-c206e445db6c"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* type = $sct#787483001 "No known device use"
