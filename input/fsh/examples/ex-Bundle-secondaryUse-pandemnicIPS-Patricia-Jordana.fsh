@@ -1,5 +1,8 @@
 Instance: ex-Bundle-secondaryUse-pandemnicIPS-Patricia-Jordana
 InstanceOf: IHE_FIPS_Complete_Option_Bundle
+Description: """
+This Example Bundle Represents the IPS Bundle Structure that expresses data inin every section in the patient's IPS Document, conformant to the Complete Data Implementaion Option.
+"""
 Usage: #example
 * id = "ex-bundle-secondaryUse-pandemnicips-patricia-jordana"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle"

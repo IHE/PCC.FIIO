@@ -11,11 +11,11 @@ Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be valid
 # This needs to be fixed by the parent HL7 IPS Profile
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#3.1.0), 3.0.0 (from hl7.terminology.r4#7.0.1). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActCode' to 'http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0'
 
-# We are still using FHIR R4. This will not be relivant until this profile becomes a FHIR R5 profile, then it soulw be an issue that the HL7 FHIR IPS IG would need to suppress 
+# We are still using FHIR R4. This will not be relevant until this profile becomes a FHIR R5 profile, then it sould be an issue that the HL7 FHIR IPS IG would need to suppress 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
-# This is a dummy OID system made only for examples, we expect there is no proper defitition for it, inless we progress with a official example oid registry
+# This is a dummy OID system made only for examples, we expect there is no proper definition for it, unless we progress with a official example oid registry
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.19376.1.5.4'
 
-# we understnad that this is a draft code system 
+# we understand that this is a draft code system 
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0

@@ -1,9 +1,12 @@
 Instance: ex-Bundle-IPS-ODH-Genny-Works
 InstanceOf: IHE_FIPS_ODH_Option_Bundle
+Description: """
+This Example Bundle Represents the IPS Bundle Structure that expresses Occupation Data in the patient's record, conformant to the ODH Implementaion Option 
+"""
 Usage: #example
 * id = "e0e8252a-4aab-4fab-ac8f-5734abbd1ec7"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle"
-* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
+//* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPODH-EX20260206"
 * type = #document
@@ -72,10 +75,13 @@ Usage: #example
 
 Instance: ex-Composition-IPS-ODH-Genny-Works
 InstanceOf: IHE_FIPS_IO_ODH_Option_Composition
+Description: """
+This Example Composition Represents the IPS Composition Structure that expresses Occupation Data in the patient's record, conformant to the ODH Implementaion Option. 
+"""
 Usage: #example
 * id = "2a7a5f03-9581-4677-ba18-fbd3b221f601"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition"
-* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
+//* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
