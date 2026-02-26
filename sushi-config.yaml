@@ -1,6 +1,6 @@
 id: ihe.pcc.fiio
 canonical: https://profiles.ihe.net/PCC/FIIO
-version: 0.0.1-current
+version: 1.0.0-comment
 name: IHE_PCC_FIIO
 title: "FHIR International Patient Summary"
 description: Additional options for implementing the HL7 International Patient Summary FHIR document and associated testing requirements. 

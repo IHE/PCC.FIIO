@@ -10,7 +10,7 @@ Usage: #example
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPODH-EX20260206"
 * type = #document
-* timestamp = "2026-02-05T12:13:00+02:00"
+* timestamp = "2026-02-05T12:13:00-05:00"
 
 * entry[+].fullUrl = "urn:uuid:2a7a5f03-9581-4677-ba18-fbd3b221f601"
 * entry[=].resource = ex-Composition-IPS-ODH-Genny-Works
@@ -85,7 +85,7 @@ Usage: #example
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
-* date = "2026-02-05T12:13:00+02:00"
+* date = "2026-02-05T12:13:00-05:00"
 * author = Reference(urn:uuid:8353925b-4e3e-4885-8330-01600699e428) 
 * title = "Patient Summary of Genny Works"
 * confidentiality = #N

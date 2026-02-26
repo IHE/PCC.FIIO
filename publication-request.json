@@ -1,15 +1,14 @@
 {
-    "package-id" : "{pid} -- ihe.domain.profile",
-    "version" : "{version to release}",
-    "path" : "{path} -- https://profiles.ihe.net/Domain/Profile/1.0.0",
+    "package-id" : "ihe.pcc.fiio",
+    "version" : "1.0.0-comment",
+    "path" : "https://profiles.ihe.net/PCC/FIIO/1.0.0-comment",
     "mode" : "milestone",
-    "status" : "release",
-    "sequence" : "Releases",
-    "desc" : "{desc of release} (optional)",
-    "descmd" : "{markdown desc of release} (optional)",
-    "changes" : "{relative link to description of changes} (optional)",
-    "title" : "{title} (only for first release)",
-    "ci-build" : "{link to ci-build location} (only for first release) -- http://build.fhir.org/ig/IHE/Profile",
-    "category" : "{category} (only for first release)",
-    "introduction" : "{intro} (only for first release)"
+    "status" : "comment",
+    "sequence" : "Public-Comment",
+    "desc" : "Public-Comment",
+    "changes" : "https://profiles.ihe.net/PCC.FIIO/branches/master/issues.html",
+    "title" : "FHIR International Patient Summary (FIPS)",
+    "ci-build" : "https://build.fhir.org/ig/IHE/PCC.FIIO/branches/master/index.html",
+    "category" : "Content Profile",
+    "introduction" : "This IPS profile uses the Health Level 7's FHIR International Patient Summary (IPS) that realizes the CEN EN 17269 IPS dataset to profile additional implementation options that can be incorporated into the IPS document. This is a Content Module profile that defines these additional Implementation options."
   }

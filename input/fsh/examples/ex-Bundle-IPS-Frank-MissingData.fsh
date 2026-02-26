@@ -6,11 +6,11 @@ This Example Bundle is used to represent the Representation of Missing Data in a
 Usage: #example
 * id = "ex-bundle-ips-frank-missingdata"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
-//* meta.lastUpdated = "2026-02-06T9:51:24+02:00"
+//* meta.lastUpdated = "2026-02-06T9:51:24-05:00"
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPSMISSINGDATA-EX20260205"
 * type = #document
-* timestamp = "2026-02-05T12:13:00+02:00"
+* timestamp = "2026-02-05T12:13:00-05:00"
 
 * entry[+].fullUrl = "urn:uuid:ihe-int-ips-patient-frank-missingdata"
 * entry[=].resource = ex-Composition-IPS-Frank-MissingData
@@ -109,7 +109,7 @@ InstanceOf: PatientUvIps
 Usage: #inline
 * id = "ihe-int-ips-patient-frank-missingdata"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
-* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
+* meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
 * extension[=].extension.url = "code"
 * extension[=].extension.valueCodeableConcept = urn:iso:std:iso:3166#IT "Italy"

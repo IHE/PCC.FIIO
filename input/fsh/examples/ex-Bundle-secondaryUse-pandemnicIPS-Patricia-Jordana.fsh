@@ -6,11 +6,11 @@ This Example Bundle Represents the IPS Bundle Structure that expresses data inin
 Usage: #example
 * id = "ex-bundle-secondaryUse-pandemnicips-patricia-jordana"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle"
-* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
+* meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPSVRDR-EX2026020611"
 * type = #document
-* timestamp = "2026-02-05T10:30:00+02:00"
+* timestamp = "2026-02-05T10:30:00-05:00"
 
 * entry[+].fullUrl = "urn:uuid:313df1ad-9094-4a93-a0cc-64ee25d3d327"
 * entry[=].resource = ex-Composition-Complete-IPS-PandemnicIPS-Patricia-Jordana
