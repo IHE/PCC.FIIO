@@ -123,7 +123,7 @@ Usage: #inline
 * identifier[=].type = $id-type#MR "Medical record number"
 * identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEPCC-26020610"
-* identifier[=].period.start = "2025-09-31"
+* identifier[=].period.start = "2025-09-21"
 * identifier[+].use = #official 
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#SN "Subscriber Number"
 * identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
