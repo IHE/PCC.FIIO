@@ -73,15 +73,15 @@ Usage: #example
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2007-04-27] - Attention deficit hyperactivity disorder</li><li>[2012-07-16] - Substance abuse</li><li>[2017-04-26] - Tonsillitis</li><li>[2007-01-26] - Decreased hearing</li></ul></div>"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:7eddf451-857a-41cc-bce8-5147ebf99961)
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:24ed68db-6665-4272-8157-d1e71fb5a1f1)
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:de5ad976-ddc8-4293-b676-d84d17fa8f9d)
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:7eddf451-857a-41cc-bce8-5147ebf99961)
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:24ed68db-6665-4272-8157-d1e71fb5a1f1)
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:de5ad976-ddc8-4293-b676-d84d17fa8f9d)
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><ul><li>[2013-02-09] - Diphtheria + tetanus + poliomyelitis vaccine</li><li>[2013-07-08] - Hepatitis B virus vaccine</li><li>[2025-10-17] - COVID-19 antigen vaccine</li></ul></div></div>"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:ccf288c9-6557-48b8-a18d-df9b84b856b5) "No Known Immunization"
+* section[sectionImmunizations].entry[immunization][+] = Reference(urn:uuid:ccf288c9-6557-48b8-a18d-df9b84b856b5) "No Known Immunization"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"

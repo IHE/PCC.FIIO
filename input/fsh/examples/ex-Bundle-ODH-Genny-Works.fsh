@@ -95,8 +95,8 @@ Usage: #example
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
 * section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day</li><li>[2018] - Diazepam product</li></ul></div>"
-* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:510549bd-1e92-4567-aab2-48126cc7addb) "[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day"
-* section[sectionMedications].entry[medicationStatementOrRequest] = Reference(urn:uuid:66feac59-356f-410b-9344-d3a9b4fed5d7) "[2018] - Diazepam product"
+* section[sectionMedications].entry[medicationStatementOrRequest][+] = Reference(urn:uuid:510549bd-1e92-4567-aab2-48126cc7addb) "[2018] - Methylphenidate 5mg chewable tablet - 2 tablets per day"
+* section[sectionMedications].entry[medicationStatementOrRequest][+] = Reference(urn:uuid:66feac59-356f-410b-9344-d3a9b4fed5d7) "[2018] - Diazepam product"
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
@@ -108,24 +108,24 @@ Usage: #example
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
 * section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>[2007-04-27] - Attention deficit hyperactivity disorder</li><li>[2012-07-16] - Substance abuse</li><li>[2017-04-26] - Tonsillitis</li><li>[2007-01-26] - Decreased hearing</li></ul></div>"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:7ab590c8-7aa8-4561-830d-dbf73cd5d14d) "[2007-04-27] - Attention deficit hyperactivity disorder"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:c586d7a8-ea50-457b-9904-b3327c56a886) "[2012-07-16] - Substance abuse"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:1273d49f-f8de-4e5c-9442-eb6fa3895569) "[2017-04-26] - Tonsillitis"
-* section[sectionProblems].entry[problem] = Reference(urn:uuid:dbd46d98-d6fd-42a1-ba51-7394325f15cf) "[2007-01-26] - Decreased hearing"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:7ab590c8-7aa8-4561-830d-dbf73cd5d14d) "[2007-04-27] - Attention deficit hyperactivity disorder"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:c586d7a8-ea50-457b-9904-b3327c56a886) "[2012-07-16] - Substance abuse"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:1273d49f-f8de-4e5c-9442-eb6fa3895569) "[2017-04-26] - Tonsillitis"
+* section[sectionProblems].entry[problem][+] = Reference(urn:uuid:dbd46d98-d6fd-42a1-ba51-7394325f15cf) "[2007-01-26] - Decreased hearing"
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
 * section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><ul><li>[2013-02-09] - Diphtheria + tetanus + poliomyelitis vaccine</li><li>[2013-07-08] - Hepatitis B virus vaccine</li><li>[2025-10-17] - COVID-19 antigen vaccine</li></ul></div></div>"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:98cd77bd-4ef1-4d05-95d4-d7d301ec5199) "Diphtheria + tetanus + poliomyelitis vaccine"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:f46eae07-753e-4fa9-9f1f-2df3ccf82a31) "Hepatitis B virus vaccine"
-* section[sectionImmunizations].entry[immunization] = Reference(urn:uuid:3ec71eb2-ec74-4f91-993b-4c50453ee86d) "COVID-19 antigen vaccine"
+* section[sectionImmunizations].entry[immunization][+] = Reference(urn:uuid:98cd77bd-4ef1-4d05-95d4-d7d301ec5199) "Diphtheria + tetanus + poliomyelitis vaccine"
+* section[sectionImmunizations].entry[immunization][+] = Reference(urn:uuid:f46eae07-753e-4fa9-9f1f-2df3ccf82a31) "Hepatitis B virus vaccine"
+* section[sectionImmunizations].entry[immunization][+] = Reference(urn:uuid:3ec71eb2-ec74-4f91-993b-4c50453ee86d) "COVID-19 antigen vaccine"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">substance use therapy</div>"
-* section[sectionProceduresHx].entry[procedure] = Reference(urn:uuid:e72697f5-2323-4ea3-8d70-af2363800ae4) "substance use therapy"
+* section[sectionProceduresHx].entry[procedure][+] = Reference(urn:uuid:e72697f5-2323-4ea3-8d70-af2363800ae4) "substance use therapy"
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
@@ -143,20 +143,20 @@ Usage: #example
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
 * section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Not Pregnant</div>"
-* section[sectionPregnancyHx].entry[pregnancyStatus] = Reference(urn:uuid:af46b53c-6a51-4ec0-a1e5-e0eb4587b0f9) "Not Pregnant"
+* section[sectionPregnancyHx].entry[pregnancyStatus][+] = Reference(urn:uuid:af46b53c-6a51-4ec0-a1e5-e0eb4587b0f9) "Not Pregnant"
 
 * section[sectionFunctionalStatus].title = "Functional Status"
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
 * section[sectionFunctionalStatus].text.status = #generated
 * section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">[2007-01-26] - Decreased hearing</div>"
-* section[sectionFunctionalStatus].entry[disability] = Reference(urn:uuid:dbd46d98-d6fd-42a1-ba51-7394325f15cf) "[2007-01-26] - Decreased hearing"
-* section[sectionFunctionalStatus].entry[functionalAssessment] = Reference(urn:uuid:b2d1d43f-cc18-42ff-9129-42c4d99bae8f)
+* section[sectionFunctionalStatus].entry[disability][+] = Reference(urn:uuid:dbd46d98-d6fd-42a1-ba51-7394325f15cf) "[2007-01-26] - Decreased hearing"
+* section[sectionFunctionalStatus].entry[functionalAssessment][+] = Reference(urn:uuid:b2d1d43f-cc18-42ff-9129-42c4d99bae8f)
 
 * section[sectionAlerts].title = "Alerts"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.status = #generated
 * section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Misuse of medication</div>"
-* section[sectionAlerts].entry[alertsFlag] = Reference(urn:uuid:99c6a7f2-0661-4d22-955f-431314ecf2ce) "Misuse of medication"
+* section[sectionAlerts].entry[alertsFlag][+] = Reference(urn:uuid:99c6a7f2-0661-4d22-955f-431314ecf2ce) "Misuse of medication"
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
@@ -168,7 +168,7 @@ Usage: #example
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
 * section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No known device use</div>"
-* section[sectionMedicalDevices].entry[deviceStatement] = Reference(urn:uuid:2ba7ec69-c597-41ec-837c-5295b95452fd) "No known device use"
+* section[sectionMedicalDevices].entry[deviceStatement][+] = Reference(urn:uuid:2ba7ec69-c597-41ec-837c-5295b95452fd) "No known device use"
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"

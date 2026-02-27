@@ -122,7 +122,7 @@ Usage: #inline
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
 * section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Procedures section</div>"
-* section[sectionProceduresHx].entry = Reference(urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd)
+* section[sectionProceduresHx].entry[+] = Reference(urn:uuid:402afc3f-318f-4a48-9d79-0cab913d7efd)
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
