@@ -72,7 +72,7 @@ Description: "The patient Jannet Guo used for an example for IPS, to represent p
 * communication[=].language.text = "English"
 * communication[=].preferred = true
 
-* generalPractitioner[+] = Reference(PractitionerUvIps/ex-ips-practitioner-alicia-gould)
+* generalPractitioner[+] = Reference(Practitioner/ex-ips-practitioner-alicia-gould)
 
 
 

@@ -86,7 +86,7 @@ Usage: #example
 * type = $loinc#60591-5 "Patient summary Document"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
 * date = "2026-02-05T12:13:00-05:00"
-* author = Reference(urn:uuid:8353925b-4e3e-4885-8330-01600699e428) 
+* author = Reference(urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e) 
 * title = "Patient Summary of Genny Works"
 * confidentiality = #N
 * custodian = Reference(urn:uuid:8353925b-4e3e-4885-8330-01600699e428)
