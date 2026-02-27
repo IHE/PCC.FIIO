@@ -42,4 +42,12 @@ The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.
 The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition' for "FHIR IPS Complete" is a canonical link and is therefore unsafe with regard to versions
 The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle' for "FHIR IPS ODH Option Bundle" is a canonical link and is therefore unsafe with regard to versions
 The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle' for "FHiR IPS Complete Option Bundle" is a canonical link and is therefore unsafe with regard to versions
+The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition' for "IPS Complete Option" is a canonical link and is therefore unsafe with regard to versions
+The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition' for "ODH Option" is a canonical link and is therefore unsafe with regard to versions
+The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition' for "IPS Complete Option" is a canonical link and is therefore unsafe with regard to versions
+The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition' for "FHIR IPS ODH Option Composition" is a canonical link and is therefore unsafe with regard to versions
+The html source has duplicate anchor Ids: Patient_fb45133f-447a-49e8-ba3d-71fbcc7fdcc1,fb45133f-447a-49e8-ba3d-71fbcc7fdcc1,hcfb45133f-447a-49e8-ba3d-71fbcc7fdcc1
+The html source has duplicate anchor Ids: 4aaab9e4-44e1-4a35-98ac-093fa22c87d4,Patient_4aaab9e4-44e1-4a35-98ac-093fa22c87d4,hc4aaab9e4-44e1-4a35-98ac-093fa22c87d4
+The html source has duplicate anchor Ids: 0963fc69-9112-440e-b69d-c96fad05861a,Patient_0963fc69-9112-440e-b69d-c96fad05861a,hc0963fc69-9112-440e-b69d-c96fad05861a
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+

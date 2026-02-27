@@ -130,7 +130,7 @@ While the Structure definition does not slice the entry specifically for this, t
 
 **These Observations include:**
 - Occupational Data for Health (ODH) Entries:
-  - [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition-odh-UsualWork)
+  - [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork)
   - [Past or present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob)
   - [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus) 
   - [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate)
@@ -196,7 +196,7 @@ This Section SHALL support either the ODH [Past or Present Job](https://profiles
 ###### 3:6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements 
 This option defines a testing option for the [HL7 FHIR International Patient Summary](https://hl7.org/fhir/uv/ips/index.html), where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections.
 
-For a valid example of the FHIR IPS Option Composition, review the [Patricia Jordana Pandemic IPS Example Composition](ex-Composition-Complete-IPS-PandemnicIPS-Patricia-Jordana.html).   
+For a valid example of the FHIR IPS Option Composition, review the [Patricia Jordana Pandemic IPS Example Composition](Composition-313df1ad-9094-4a93-a0cc-64ee25d3d327.html).   
 ###### 3:6.6.1.X.2.3.1 FHIR IPS Complete IPS Advance Directives Section Requirements
 If the Advanced Directive data is not available or unsupported by the Content Creator system, then the IPS Advance Directives **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
