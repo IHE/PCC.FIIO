@@ -72,7 +72,10 @@ Usage: #example
 
 Instance: ex-Composition-Complete-IPS-PandemnicIPS-Patricia-Jordana
 InstanceOf: IHE_FIPS_IO_Complete_Option_Composition
-Usage: #inline
+Description: """
+This Example Composition Represents the IPS Compsition Structure that expresses data in every section in the patient's IPS Document, conformant to the Complete Data Implementaion Option.
+"""
+Usage: #example
 * id = "313df1ad-9094-4a93-a0cc-64ee25d3d327"
 * meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition"
 * status = #final

@@ -186,7 +186,7 @@ In addition to the HL7 [Problem Type](https://hl7.org/fhir/uv/ips/ValueSet-probl
 
 The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition) defines the constraints applied to the Bundle Resource for this bundle. 
 
-For a valid example of the HL7 FHIR IPS Bundle with all Required and Must support sections documented review the [Genny Works ODH IPS Example Bundle](ex-Composition-IPS-ODH-Genny-Works.html). 
+For a valid example of the HL7 FHIR IPS Bundle with all Required and Must support sections documented review the [Genny Works ODH IPS Example Bundle](Composition-2a7a5f03-9581-4677-ba18-fbd3b221f601.html). 
 
 ###### 3:6.6.1.X.2.2.1 FHIR IPS ODH Social History Section Requirements
 For the FHIR IPS ODH Option, this is now a Must Support section. The Patient's Occupation and Industry Data Elements SHALL Be Documented in the IPS if it is known. 
@@ -196,7 +196,7 @@ This Section SHALL support either the ODH [Past or Present Job](https://profiles
 ###### 3:6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements 
 This option defines a testing option for the [HL7 FHIR International Patient Summary](https://hl7.org/fhir/uv/ips/index.html), where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections.
 
-For a valid example of the FHIR IPS Option Composition, review the [Patricia Jordana Pandemic IPS Example Composition](ex-Composition-Complete-IPS-PandemnicIPS-Patricia-Jordana.html). 
+For a valid example of the FHIR IPS Option Composition, review the [Patricia Jordana Pandemic IPS Example Composition](ex-Composition-Complete-IPS-PandemnicIPS-Patricia-Jordana.html).   
 ###### 3:6.6.1.X.2.3.1 FHIR IPS Complete IPS Advance Directives Section Requirements
 If the Advanced Directive data is not available or unsupported by the Content Creator system, then the IPS Advance Directives **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
