@@ -120,22 +120,22 @@ Usage: #inline
 * active = true
 * identifier[+].use = #official 
 * identifier[=].type = $id-type#PPN "Passport number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "M98143662M"
 * identifier[=].period.start = "2020-10-16"
 * identifier[+].use = #official 
 * identifier[=].type = $id-type#MR "Medical record number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEPCC-26020610"
 * identifier[=].period.start = "2025-09-21"
 * identifier[+].use = #official 
 * identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#SN "Subscriber Number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "IHEPCCPayer-26020510"
 * identifier[=].period.start = "2020-02-23"
 * identifier[+].use = #official 
 * identifier[=].type = $id-type#DL "Driver's license number"
-* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier[=].value = "781886151"
 * identifier[=].period.start = "2014-11-09"
 * name[+].use = #official
@@ -168,7 +168,7 @@ Usage: #inline
 //* active = true 
 //* identifier[+].use = #official 
 //* identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#U "Unspecified identifier"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "IHEEMPLOYER56789012"
 //* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 //* name = "Employer Company Name"
@@ -195,7 +195,7 @@ Usage: #inline
 //* active = true 
 //* identifier[+].use = #official 
 //* identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#U "Unspecified identifier"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "IHEPCC260207"
 //* type = http://terminology.hl7.org/CodeSystem/organization-type#cg "Community Group"
 //* name = "IHE International PCC"
@@ -219,19 +219,19 @@ Usage: #inline
 //* active = true 
 //* identifier[+].use = #official
 //* identifier[=].type = $id-type#PRN "Provider number"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "56789012"
 //* identifier[=].period.start = "2020-01-10"
 //* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
 //* identifier[+].use = #official
 //* identifier[=].type = $id-type#MD "Medical License number"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "87654321"
 //* identifier[=].period.start = "2020-01-03"
 //* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
 //* identifier[+].use = #secondary 
 //* identifier[=].type = $id-type#PPN "Passport number"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "608-469-957"
 //* identifier[=].period.start = "2012-01-22"
 //* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
@@ -296,19 +296,19 @@ Usage: #inline
 //* active = true 
 //* identifier[+].use = #official
 //* identifier[=].type = $id-type#PRN "Provider number"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "5678901336"
 //* identifier[=].period.start = "2014-09-06"
 //* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
 //* identifier[+].use = #official
 //* identifier[=].type = $id-type#MD "Medical License number"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "25786544421"
 //* identifier[=].period.start = "2014-04-21"
 //* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)
 //* identifier[+].use = #secondary 
 //* identifier[=].type = $id-type#PPN "Passport number"
-//* identifier[=].system = "urn:uuid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 //* identifier[=].value = "635-442-867"
 //* identifier[=].period.start = "2008-08-15"
 //* identifier[=].assigner = Reference(urn:uuid:INT-IHE-PCC-ORG-02)

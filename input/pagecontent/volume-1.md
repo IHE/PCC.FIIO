@@ -16,13 +16,13 @@ The actors in this profile are described in more detail in the sections below.
 
 #### 1:XX.1.1.1 Content Creator
 
-The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) creates the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips.html), [FHIR IPS ODH](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition.html), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition.html) in accordance to the Implementation option selected. The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) then shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) creates the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), [FHIR IPS ODH](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition) in accordance to the Implementation option selected. The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) then shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 <a name="Content-Consumer"> </a>
 
 #### 1:XX.1.1.2 Content Consumer
 
-The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) consumes the [FHIR IPS content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips.html), [FHIR IPS ODH](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition.html), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition.html) in accordance to the Implementation option selected. The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) obtains the IPS document using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) consumes the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), [FHIR IPS ODH](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition) in accordance to the Implementation option selected. The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) obtains the IPS document using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
 
 <a name="actor-options"> </a>
 
@@ -48,7 +48,7 @@ Note 2: The Content Consumer must implement at least one of these options.
 
 ### 1:XX.2.1 HL7 FHIR IPS Option
 
-This option defines the processing requirements placed on the Content Creators for producing a FHIR document version of the International Patient Summary defined by HL7's [FHIR IPS Implementation Guide](https://www.hl7.org/fhir/uv/ips/). This Included the requirement to implement and support all Section and entry data elements defined as Must Support. These Details can be found in the [HL7 FHIR IPS Bundle](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips) and [HL7 FHIR IPS Composition](http://www.hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html) structure definitions. 
+This option defines the processing requirements placed on the Content Creators for producing a FHIR document version of the International Patient Summary defined by HL7's [FHIR IPS Implementation Guide](https://www.hl7.org/fhir/uv/ips/). This Included the requirement to implement and support all Section and entry data elements defined as Must Support. These Details can be found in the [HL7 FHIR IPS Bundle](http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips) and [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) structure definitions. 
 
 The following sections MUST always be present. If the system does not support the collection and storage of this content, the appropriate flavors of null SHALL indicate such. 
 Mandatory:
@@ -76,8 +76,8 @@ Optional:
 - Patient Story
 
 ### 1:XX.2.2 Complete Option
-This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition.html).
-This option specifies that the following sections defined as optional in the [HL7 FHIR IPS Composition](http://www.hl7.org/fhir/uv/ips/StructureDefinition-Composition-uv-ips.html) Have a New optionality of Must Support. This applies to the following sections: 
+This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition).
+This option specifies that the following sections defined as optional in the [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) Have a New optionality of Must Support. This applies to the following sections: 
 - IPS Advance Directives 
 - IPS Functional Status 
 - IPS History of Past Illness
@@ -89,7 +89,7 @@ This option specifies that the following sections defined as optional in the [HL
 - IPS Alerts
 
 ### 1:XX.2.3 Occupational Data for Health Option
-Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the [ODH Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition.html).  
+Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the [ODH Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition).  
 
 This option stipulates that the Social History Section has the new optionality of Must Support. Minimally, a system claiming the Occupational Data for Health Option SHALL include an entry for [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) of [Past Or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob), or Both. If the system collects any of the following work observations, these shall also be supported as Must Support:
 - Usual Occupation Duration 

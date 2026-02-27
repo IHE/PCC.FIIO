@@ -72,7 +72,7 @@ Description: "The patient Jannet Guo used for an example for IPS, to represent p
 * communication[=].language.text = "English"
 * communication[=].preferred = true
 
-* generalPractitioner[+] = Reference(urn:uuid:952303fa-892a-4951-a4b3-2a0bbe56b918)
+* generalPractitioner[+] = Reference(PractitionerUvIps/ex-ips-practitioner-alicia-gould)
 
 
 
@@ -81,6 +81,8 @@ InstanceOf: PractitionerUvIps
 Title: "Example Practitioner Alicia Gould"
 Usage: #inline
 * id = "952303fa-892a-4951-a4b3-2a0bbe56b918"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * meta.security[+] = http://terminology.hl7.org/CodeSystem/v3-Confidentiality#N
 

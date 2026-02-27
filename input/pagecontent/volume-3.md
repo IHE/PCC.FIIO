@@ -20,8 +20,8 @@ The LOINC code for this document is 60591-5 "Patient summary Document"
 - [LOINC](http://www.regenstrief.org/medinformatics/loinc/)
 - [SNOMED](http://www.snomed.org/)
 - [IHE FHIR Profile: Occupational Data for Health (ODH) - International](https://profiles.ihe.net/PCC/ODH/index.html)
-- [International Labor Organization: International Standard Classification of Occupations (ISCO-08)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08.html)
-- [International Labor Organization: International Standard Industrial Classification Codes Rev4 (ISIC Rev4)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4.html)
+- [International Labor Organization: International Standard Classification of Occupations (ISCO-08)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08)
+- [International Labor Organization: International Standard Industrial Classification Codes Rev4 (ISIC Rev4)](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4)
 
 <a name="fhir-contentModules"> </a>
 
@@ -39,28 +39,28 @@ The [HL7 FHIR IPS Bundle](https://hl7.org/fhir/uv/ips/StructureDefinition-Bundle
 
 IHE does not further constrain the base standard outside of the specified options defined below. 
 
-For a valid example of the HL7 FHIR IPS Bundle, review the [Pandemic IPS Example Patient Patricia Jordana Bundle](input/fsh/examples/ex-Bundle-secondaryUse-pandemnicIPS-Patricia-Jordana.fsh.html). This example patient has entries for all defined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
+For a valid example of the HL7 FHIR IPS Bundle, review the [Pandemic IPS Example Patient Patricia Jordana Bundle](Bundle-ex-bundle-secondaryUse-pandemnicips-patricia-jordana.html). This example patient has entries for all defined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
 
 ###### 3:6.6.1.X.1.2 FHIR IPS ODH Option Bundle Requirements
-This Bundle defines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorporated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to [Occupation](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08.html) and [Industry](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4.html). 
+This Bundle defines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorporated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to [Occupation](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08) and [Industry](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4). 
 
 In addition to the Entry requirements of IPS, this Bundle requires the support of at least 1 of the following ODH Data Elements:
-- [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html)
-- [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork.html) 
+- [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob)
+- [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) 
 
 It also allows optional support for the following ODH Data Elements:
-- [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus.html)
-- [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate.html)
-- [CombatZone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod.html)
+- [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus)
+- [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate)
+- [CombatZone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod)
 
-The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle.html) defines the constraints applied to the Bundle Resource for this option. 
+The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle) defines the constraints applied to the Bundle Resource for this option. 
 
-For a valid example of the FHIR IPS ODH Bundle review the [ODH Patient Genny Works Example Bundle](ex-Bundle-IPS-ODH-Genny-Works.html).
+For a valid example of the FHIR IPS ODH Bundle review the [ODH Patient Genny Works Example Bundle](Bundle-e0e8252a-4aab-4fab-ac8f-5734abbd1ec7.html).
 
 ###### 3:6.6.1.X.1.3 FHIR IPS Complete Option Bundle Requirements 
-The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle.html) Incorporates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
+The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle) Incorporates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
 
-For a valid example of the FHIR Complete IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](ex-Bundle-secondaryUse-pandemnicIPS-Patricia-Jordana.html).
+For a valid example of the FHIR Complete IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](Bundle-ex-bundle-secondaryUse-pandemnicips-patricia-jordana.html).
 
 ##### 3:6.6.1.X.2 FHIR IPS Composition and Section Requirements 
 The following table shows the differences in the Composition Requirements for the Different Implementation Options. 
@@ -89,13 +89,13 @@ The following table shows the differences in the Composition Requirements for th
 {: .grid}
 
 ###### 3:6.6.1.X.2.1 HL7 FHIR IPS Composition and Section Requirements
-The [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips.html) defines the constraints applied to the Composition resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
+The [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) defines the constraints applied to the Composition resource by the HL7 International Patient Summary (IPS) FHIR Implementation Guide. 
 
 IHE does not further constrain the base HL7 Implementation Guide requirements outside of the specified options defined below. 
 
 IHE has added further clarification on the expected behavior for implementation with regards to missing data and provides guidance on incorporating additional standard content within the IPS Section Requirements below. 
 
-For a valid example of the FHIR IPS OHH Composition, review the [Genny Works ODH IPS Example Bundle](input/fsh/examples/ex-Bundle-ODH-Genny-Works.fsh.html). 
+For a valid example of the FHIR IPS OHH Composition, review the [Genny Works ODH IPS Example Bundle](Bundle-e0e8252a-4aab-4fab-ac8f-5734abbd1ec7.html). 
 
 ###### 3:6.6.1.X.2.1.1 Immunization Section Requirements
 In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Immunization Section 17.2.4 Missing: "These two situations should be explicitly documented in the IPS section: — known absence of vaccinations; — no information available about vaccinations", the emptyReason data element **SHOULD** Be supported for this section. [Open issue FIPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
@@ -130,11 +130,11 @@ While the Structure definition does not slice the entry specifically for this, t
 
 **These Observations include:**
 - Occupational Data for Health (ODH) Entries:
-  - [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition-odh-UsualWork.html)
-  - [Past or present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html)
-  - [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus.html) 
-  - [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate.html)
-  - [Combat Zone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod.html)
+  - [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition-odh-UsualWork)
+  - [Past or present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob)
+  - [Employment Status](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus) 
+  - [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate)
+  - [Combat Zone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod)
 
 The following concepts have not been profiled in FHIR, but are defined in the [IHE Patient Care Coordination Technical Framework, Volume 2](https://www.ihe.net/uploadedFiles/Documents/PCC/IHE_PCC_TF_Vol2.pdf) Section 6.3.4.24 Social History Observation 1.3.6.1.4.1.19376.1.5.3.1.4.13.4. These can be modeled using the FHIR Observation Resource.
 
@@ -159,7 +159,7 @@ Additional Concepts Include:
 | 707087005 (SNOMED-CT) | Domestic Violence Risk           | CD (valueCodeableConcept) |
 {: .grid}
  
-For a valid example of the FHIR IPS ODH Section, review the [Genny Works ODH IPS Example Bundle](input/fsh/examples/ex-Bundle-ODH-Genny-Works.fsh.html). 
+For a valid example of the FHIR IPS ODH Section, review the [Genny Works ODH IPS Example Bundle](Bundle-e0e8252a-4aab-4fab-ac8f-5734abbd1ec7.html). 
 
 ###### 3:6.6.1.X.2.1.6 Pregnancy History Section Requirements
 While the Structure definition does not slice the entry specifically for this, the IPS Pregnancy History Section does allow for a large variety of Pregnancy Observations to be documented in this section. 
@@ -184,14 +184,14 @@ In addition to the HL7 [Problem Type](https://hl7.org/fhir/uv/ips/ValueSet-probl
 
 ###### 3:6.6.1.X.2.2 FHIR IPS ODH Option Composition and Section Requirements 
 
-The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition.html) defines the constraints applied to the Bundle Resource for this bundle. 
+The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition) defines the constraints applied to the Bundle Resource for this bundle. 
 
 For a valid example of the HL7 FHIR IPS Bundle with all Required and Must support sections documented review the [Genny Works ODH IPS Example Bundle](ex-Composition-IPS-ODH-Genny-Works.html). 
 
 ###### 3:6.6.1.X.2.2.1 FHIR IPS ODH Social History Section Requirements
 For the FHIR IPS ODH Option, this is now a Must Support section. The Patient's Occupation and Industry Data Elements SHALL Be Documented in the IPS if it is known. 
 
-This Section SHALL support either the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob.html) or the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork.html) Data Elements to document the patient's Occupation and Industry.  
+This Section SHALL support either the ODH [Past or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob) or the [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) Data Elements to document the patient's Occupation and Industry.  
 
 ###### 3:6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements 
 This option defines a testing option for the [HL7 FHIR International Patient Summary](https://hl7.org/fhir/uv/ips/index.html), where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections.
