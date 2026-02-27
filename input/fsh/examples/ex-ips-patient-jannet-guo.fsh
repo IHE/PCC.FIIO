@@ -4,6 +4,7 @@ Instance:   ex-ips-patient-jannet-guo
 InstanceOf: PatientUvIps
 Title: "Example ips Patient Jannet Guo"
 Description: "The patient Jannet Guo used for an example for IPS, to represent pregnancy information"
+Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * id = "02d72bc1-54a1-4751-83a3-658afc3f2bff"
 
