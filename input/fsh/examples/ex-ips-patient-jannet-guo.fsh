@@ -77,7 +77,7 @@ Description: "The patient Jannet Guo used for an example for IPS, to represent p
 
 
 Instance:   ex-ips-practitioner-alicia-gould
-InstanceOf: Practitioner
+InstanceOf: PractitionerUvIps
 Title: "Example Practitioner Alicia Gould"
 Usage: #inline
 * id = "952303fa-892a-4951-a4b3-2a0bbe56b918"

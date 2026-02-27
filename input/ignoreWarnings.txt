@@ -3,11 +3,6 @@
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0-ballot-tc1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
-
- 
-# IHE valueset that is not yet a real valueset
-Code System URI 'urn:ihe:event-type-code' is unknown so the code cannot be validated
-
 # This needs to be fixed by the parent HL7 IPS Profile
 There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#3.1.0), 3.0.0 (from hl7.terminology.r4#7.0.1). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActCode' to 'http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0'
 
@@ -24,7 +19,19 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-ty
 
 # Additional Observations that do not match current slices are known to be a part of the examples
 This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # This version is the one with the extension referenced in this profile
 The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 released on 2025-08-03, but the most recent appropriate version is 5.2.0. This reference is getting old and the more recent version should be considered
 
+# This is only for an example purposes and does not need to be active for this purpose 
+The concept '66214007' has a status of inactive and its use should be reviewed
+The concept '414006007' has a status of inactive and its use should be reviewed
+
+# This is an external code system and cannot be properly validated, confirmed the use of proper codes 
+A definition for CodeSystem 'http://tools.ietf.org/html/bcp47' could not be found, so the code cannot be validated 

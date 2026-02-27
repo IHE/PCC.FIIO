@@ -16,7 +16,7 @@ Usage: #example
 * entry[=].resource = ex-Composition-IPS-Frank-MissingData
 * entry[+].fullUrl = "urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4"
 * entry[=].resource = IHE-INT-IPS-Patient-Frank-MissingData
-* entry[+].fullUrl = "urn:uuid:1b953334-140c-4b02-b162-cb9f337e6e5e"
+* entry[+].fullUrl = "urn:uuid:8353925b-4e3e-4885-8330-01600699e428"
 * entry[=].resource = IHE-INT-PCC-ORG-02
 * entry[+].fullUrl = "urn:uuid:a9075331-0512-4bf9-aefc-ef188d58be31"
 * entry[=].resource = IHE-INT-PCC-Practitioner-01
@@ -109,7 +109,7 @@ Usage: #example
 
 
 Instance: IHE-INT-IPS-Patient-Frank-MissingData
-InstanceOf: PatientUvIps
+InstanceOf: PatientUvIps 
 Usage: #inline
 * id = "4aaab9e4-44e1-4a35-98ac-093fa22c87d4"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
@@ -356,13 +356,37 @@ Usage: #inline
 //* communication[+] = http://tools.ietf.org/html/bcp47#nl "Dutch"
 //* communication[+] = http://tools.ietf.org/html/bcp47#en "English"
 
+//Instance: IHE-INT-PCC-ORG-02
+//InstanceOf: OrganizationUvIps
+//Usage: #inline
+//* id = "8353925b-4e3e-4885-8330-01600699e428"
+//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+//* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
+//* active = true 
+//* identifier[+].use = #official 
+//* identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#U "Unspecified identifier"
+//* identifier[=].system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
+//* identifier[=].value = "IHEPCC260207"
+//* type = http://terminology.hl7.org/CodeSystem/organization-type#cg "Community Group"
+//* name = "IHE International PCC"
+//* alias = "IHE PCC Domain"
+//* telecom[+].system = #phone
+//* telecom[=].value = "+1 6305712670"
+//* address.type = #both
+//* address.text = "820 Jorie Blvd, Oakbrook, IL 60523, United States"
+//* address.line = "820 Jorie Blvd"
+//* address.city = "Oakbrook"
+//* address.state = "IL"
+//* address.postalCode = "60523"
+//* address.country = "United States"
+
 Instance: IHE-INT-PCC-IPS-AllergyIntolerance-1
 InstanceOf: AllergyIntoleranceUvIps 
 Usage: #inline
 * id = "bd89d6c4-f82c-42f7-ae22-f97caa69fc1e"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
 * clinicalStatus = $allergyintolerance-clinical#active
-* verificationStatus = #confirmed
+* verificationStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification#confirmed
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
 * category = #food 
 * code = $sct#91935009  "Allergy to peanut"
@@ -383,7 +407,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate severity"
 * code = $sct#31996006 "Vasculitis"
 * code.text = "Vasculitis"
 * subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)
@@ -398,7 +422,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate severity"
 * code = $sct#31996006 "Vasculitis"
 * code.text = "Vasculitis"
 * subject = Reference(urn:uuid:4aaab9e4-44e1-4a35-98ac-093fa22c87d4)

@@ -558,7 +558,7 @@ Usage: #inline
 * id = "f46eae07-753e-4fa9-9f1f-2df3ccf82a31"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * status = #completed
-* vaccineCode = $sct#871822003 "Vaccine product containing only Hepatitis B virus antigen"
+* vaccineCode = $sct#871822003 "Hepatitis B virus antigen only vaccine product"
 * vaccineCode.text = "Hepatitis B virus vaccine"
 * patient = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
 * occurrenceDateTime = "2005"
@@ -592,7 +592,7 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
 * status = http://hl7.org/fhir/CodeSystem/medication-statement-status#active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
-* medicationCodeableConcept = $sct#785126002 "Product containing precisely methylphenidate hydrochloride 5 milligram/1 each conventional release chewable tablet"
+* medicationCodeableConcept = $sct#785126002 "Methylphenidate hydrochloride 5 mg chewable tablet"
 * subject = Reference(urn:uuid:fb45133f-447a-49e8-ba3d-71fbcc7fdcc1)
 * effectivePeriod.start = "2018-10-01T10:15:22+02:00"
 * dateAsserted = "2018-10-01T10:15:22+02:00"
