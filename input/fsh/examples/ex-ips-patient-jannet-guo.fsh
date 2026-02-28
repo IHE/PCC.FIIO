@@ -79,8 +79,9 @@ Usage: #example
 
 Instance:   ex-ips-practitioner-alicia-gould
 InstanceOf: PractitionerUvIps
-//Title: "Example Practitioner Alicia Gould"
-Usage: #inline
+Title: "Example Practitioner Alicia Gould"
+Description: "Example IPS practitioner Resource"
+Usage: #example
 * id = "adca328f-64e7-4c2a-8bc7-5fa888bd9e12"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
