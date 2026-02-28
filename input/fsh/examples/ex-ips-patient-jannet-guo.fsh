@@ -94,7 +94,7 @@ Usage: #inline
 * name[=].given = "Alicia"
 * name[=].prefix = "Dr"
 
-* telecom[+].system = http://hl7.org/fhir/contact-point-use#mobile
+* telecom[+].system = http://hl7.org/fhir/contact-point-use#work
 * telecom[=].value = "6823345286"
 * telecom[+].system = #email
 * telecom[=].value = "GouldA@example.com"
