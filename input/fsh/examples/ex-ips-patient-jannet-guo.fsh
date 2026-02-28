@@ -4,7 +4,7 @@ Instance:   ex-ips-patient-jannet-guo
 InstanceOf: PatientUvIps
 Title: "Example ips Patient Jannet Guo"
 Description: "The patient Jannet Guo used for an example for IPS, to represent pregnancy information"
-Usage: #example
+Usage: #inline
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * id = "02d72bc1-54a1-4751-83a3-658afc3f2bff"
 
@@ -78,10 +78,10 @@ Usage: #example
 
 
 Instance:   ex-ips-practitioner-alicia-gould
-InstanceOf: PractitionerUvIps
+InstanceOf: Practitioner
 Title: "Example Practitioner Alicia Gould"
 Description: "Example IPS practitioner Resource"
-Usage: #example
+Usage: #inline
 * id = "adca328f-64e7-4c2a-8bc7-5fa888bd9e12"
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
 * meta.lastUpdated = "2026-02-05T13:51:24+02:00"
@@ -94,7 +94,7 @@ Usage: #example
 * name[=].given = "Alicia"
 * name[=].prefix = "Dr"
 
-* telecom[+].system = #mobile
+* telecom[+].system = http://hl7.org/fhir/contact-point-use#mobile
 * telecom[=].value = "6823345286"
 * telecom[+].system = #email
 * telecom[=].value = "GouldA@example.com"
