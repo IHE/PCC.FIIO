@@ -4,12 +4,12 @@ version: 1.0.0-comment
 name: IHE_PCC_FIIO
 title: "FHIR International Patient Summary"
 description: Additional options for implementing the HL7 International Patient Summary FHIR document and associated testing requirements. 
-releaseLabel: ci-build
-#releaseLabel: ballot
+#releaseLabel: ci-build
+releaseLabel: ballot
 #releaseLabel: trial-use
 #releaseLabel: release
-#date: 2022-01-02
-status: draft
+date: 2026-03-03
+status: active
 publisher:
   - name: IHE Patient Care Coordination Committee
   - url: https://www.ihe.net/ihe_domains/patient_care_coordination/
