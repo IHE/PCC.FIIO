@@ -9,7 +9,7 @@ The Patient Care Coordination registry of OIDs is located [here](https://wiki.ih
 This is not a CDA Profile 
 
 ##### 3:6.3.1.X.1 Format Code
-urn:ihe:pcc:fips:2025 
+urn:ihe:pcc:ips:2025 
 
 ## 3:6.2 LOINC Code
 The LOINC code for this document is 60591-5 "Patient summary Document"
@@ -39,7 +39,7 @@ The [HL7 FHIR IPS Bundle](https://hl7.org/fhir/uv/ips/StructureDefinition-Bundle
 
 IHE does not further constrain the base standard outside of the specified options defined below. 
 
-For a valid example of the HL7 FHIR IPS Bundle, review the [Pandemic IPS Example Patient Patricia Jordana Bundle](Bundle-ex-Bundle-secondaryUse-pandemicIPS-example-patient-1-stage-0.html). This example patient has entries for all defined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
+For a valid example of the HL7 FHIR IPS Bundle, review the [Pandemic IPS Example Patient Patricia Jordana Bundle](Bundle-80c516fd-9c84-4924-875b-bf0048979ae1.html). This example patient has entries for all defined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
 
 ###### 3:6.6.1.X.1.2 FHIR IPS ODH Option Bundle Requirements
 This Bundle defines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorporated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to [Occupation](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08) and [Industry](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4). 
@@ -60,7 +60,7 @@ For a valid example of the FHIR IPS ODH Bundle review the [ODH Patient Genny Wor
 ###### 3:6.6.1.X.1.3 FHIR IPS Complete Option Bundle Requirements 
 The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Bundle) Incorporates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
 
-For a valid example of the FHIR Complete IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](Bundle-ex-bundle-secondaryUse-pandemnicips-patricia-jordana.html).
+For a valid example of the FHIR Complete IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](Bundle-80c516fd-9c84-4924-875b-bf0048979ae1.html).
 
 ##### 3:6.6.1.X.2 FHIR IPS Composition and Section Requirements 
 The following table shows the differences in the Composition Requirements for the Different Implementation Options. 
@@ -98,28 +98,28 @@ IHE has added further clarification on the expected behavior for implementation 
 For a valid example of the FHIR IPS OHH Composition, review the [Genny Works ODH IPS Example Bundle](Bundle-e0e8252a-4aab-4fab-ac8f-5734abbd1ec7.html). 
 
 ###### 3:6.6.1.X.2.1.1 Immunization Section Requirements
-In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Immunization Section 17.2.4 Missing: "These two situations should be explicitly documented in the IPS section: — known absence of vaccinations; — no information available about vaccinations", the emptyReason data element **SHOULD** Be supported for this section. [Open issue FIPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
+In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Immunization Section 17.2.4 Missing: "These two situations should be explicitly documented in the IPS section: — known absence of vaccinations; — no information available about vaccinations", the emptyReason data element **SHOULD** Be supported for this section. [Open issue IPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
 
 If the Immunization data is not available or supported by the Content Creator system, then the IPS Immunizations Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html). 
 
 If there is a known absence of Immunization data, then this **SHOULD** be represented in the IPS Immunizations Section with an [Immunization Entry](https://hl7.org/fhir/StructureDefinition-Immunization.html) as a [vaccineCode](https://hl7.org/fhir/uv/ips/ValueSet-vaccines-uv-ips.html) of 787482006 "No known immunizations".
 
 ###### 3:6.6.1.X.2.1.2 History Of Procedures Section Requirements
-In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard History of Procedures Section 16.2.4 Missing - "Required if available, if not, then a reason shall be given.", the emptyReason data element **SHOULD** Be supported for this section. [Open issue FIPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
+In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard History of Procedures Section 16.2.4 Missing - "Required if available, if not, then a reason shall be given.", the emptyReason data element **SHOULD** Be supported for this section. [Open issue IPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
 
 If the History of Procedures data is not available or supported by the Content Creator system, then the IPS History of Procedures Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
 If there is a known absence of Procedure data, then this **MAY** be represented in the IPS History of Procedures Section with an emptyReason of [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented in the [Procedure Entry](https://hl7.org/fhir/StructureDefinition-Procedure.html) as a [Procedure Code](https://hl7.org/fhir/uv/ips/ValueSet-procedures-uv-ips.html) of 787480003 "No known procedures". A Content Creator **SHALL** support at least one of these approaches.
 
 ###### 3:6.6.1.X.2.1.3 Medical Devices Section Requirements
-In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Medical Devices Section 18.2.4 Missing - "If missing, then the reason should be declared", the emptyReason data element **SHOULD** Be supported for this section. [Open issue FIPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
+In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Medical Devices Section 18.2.4 Missing - "If missing, then the reason should be declared", the emptyReason data element **SHOULD** Be supported for this section. [Open issue IPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
 
 If the Medical Devices data is not available or supported by the Content Creator system, then the IPS Medical Devices Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
 If there is a known absence of Device data, then this **MAY** be represented in the IPS Medical Devices Section with a [data-absent-reason](https://r4.fhir.space/valueset-data-absent-reason.html) of not-applicable, **OR** Represented in the [Procedure Entry](https://hl7.org/fhir/uv/ips/StructureDefinition-Procedure-uv-ips.html) as [Medical Devices Code](https://hl7.org/fhir/uv/ips/ValueSet-medical-devices-uv-ips.html) of 787483001 "No known device use". A Content Creator **SHALL** support at least one of these approaches.
 
 ###### 3:6.6.1.X.2.1.4 Lab Results Section Requirements
-In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Lab Results Section 2.2.2.4 Missing "The implication is that no findings or results have been observed that are relevant to the present summary.", the emptyReason data element **SHOULD** Be supported for this section. [Open issue FIPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
+In order to support the meanings of Absent Data described by [ISO 27269:2025: Health informatics — International Patient Summary](https://www.iso.org/standard/79491.html) Standard Lab Results Section 2.2.2.4 Missing "The implication is that no findings or results have been observed that are relevant to the present summary.", the emptyReason data element **SHOULD** Be supported for this section. [Open issue IPS_023](issues.html) documents the misalignment between the HL7 and ISO Standard. 
 
 If the Lab Results data is not available or supported by the Content Creator system, then the IPS Results Section **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 
@@ -180,11 +180,11 @@ In addition to the HL7 [Problem Type](https://hl7.org/fhir/uv/ips/ValueSet-probl
   - 148006 Preliminary diagnosis (SNOMED-CT)
   - 5558000 Working diagnosis (SNOMED-CT)
   - 30207005 Risk of (SNOMED-CT)
-[Open issue FIPS_011](issues.html)
+[Open issue IPS_011](issues.html)
 
 ###### 3:6.6.1.X.2.2 FHIR IPS ODH Option Composition and Section Requirements 
 
-The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition) defines the constraints applied to the Bundle Resource for this bundle. 
+The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition|2.0.0) defines the constraints applied to the Bundle Resource for this bundle. 
 
 For a valid example of the HL7 FHIR IPS Bundle with all Required and Must support sections documented review the [Genny Works ODH IPS Example Bundle](Composition-2a7a5f03-9581-4677-ba18-fbd3b221f601.html). 
 
@@ -196,7 +196,7 @@ This Section SHALL support either the ODH [Past or Present Job](https://profiles
 ###### 3:6.6.1.X.2.3 FHIR IPS Complete Option Composition and Section Requirements 
 This option defines a testing option for the [HL7 FHIR International Patient Summary](https://hl7.org/fhir/uv/ips/index.html), where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections.
 
-For a valid example of the FHIR IPS Option Composition, review the [Patricia Jordana Pandemic IPS Example Composition](Composition-313df1ad-9094-4a93-a0cc-64ee25d3d327.html).   
+For a valid example of the FHIR IPS Complete Option Composition, review the [Patricia Jordana Pandemic IPS Example Composition](Composition-313df1ad-9094-4a93-a0cc-64ee25d3d327.html).   
 ###### 3:6.6.1.X.2.3.1 FHIR IPS Complete IPS Advance Directives Section Requirements
 If the Advanced Directive data is not available or unsupported by the Content Creator system, then the IPS Advance Directives **SHALL** have an appropriate [emptyReason](http://hl7.org/fhir/R4/valueset-list-empty-reason.html).
 

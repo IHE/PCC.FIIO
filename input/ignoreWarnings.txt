@@ -3,30 +3,18 @@
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0-ballot-tc1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
-# This needs to be fixed by the parent HL7 IPS Profile
-There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.0.0', found versions: 2.0.0 (from hl7.terminology.r4#3.1.0), 3.0.0 (from hl7.terminology.r4#7.0.1). Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-ActCode' to 'http://terminology.hl7.org/ValueSet/v3-ActCode|3.0.0'
-
 # We are still using FHIR R4. This will not be relevant until this profile becomes a FHIR R5 profile, then it sould be an issue that the HL7 FHIR IPS IG would need to suppress 
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
 # This is a dummy OID system made only for examples, we expect there is no proper definition for it, unless we progress with a official example oid registry
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.19376.1.5.4'
 No definition could be found for URL value 'urn:oid:2.16.528.1.1007.3.1'
-No definition could be found for URL value 'http://hospital.smarthealthit.org'
-No definition could be found for URL value 'http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber'
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639'
 
-# we understand that this is a draft code system 
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
-
 # Additional Observations that do not match current slices are known to be a part of the examples
-This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle|1.0.0-comment (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # This version is the one with the extension referenced in this profile
@@ -40,16 +28,7 @@ The concept '414006007' has a status of inactive and its use should be reviewed
 A definition for CodeSystem 'http://tools.ietf.org/html/bcp47' could not be found, so the code cannot be validated 
 
 # Versioning of the references will be completed after public comment 
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition' for "FHIR IPS ODH" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition' for "FHIR IPS Complete" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle' for "FHIR IPS ODH Option Bundle" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle' for "FHiR IPS Complete Option Bundle" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition' for "IPS Complete Option" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition' for "ODH Option" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition' for "IPS Complete Option" is a canonical link and is therefore unsafe with regard to versions
-The link 'https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition' for "FHIR IPS ODH Option Composition" is a canonical link and is therefore unsafe with regard to versions
 The html source has duplicate anchor Ids: Patient_fb45133f-447a-49e8-ba3d-71fbcc7fdcc1,fb45133f-447a-49e8-ba3d-71fbcc7fdcc1,hcfb45133f-447a-49e8-ba3d-71fbcc7fdcc1
 The html source has duplicate anchor Ids: 4aaab9e4-44e1-4a35-98ac-093fa22c87d4,Patient_4aaab9e4-44e1-4a35-98ac-093fa22c87d4,hc4aaab9e4-44e1-4a35-98ac-093fa22c87d4
-The html source has duplicate anchor Ids: 0963fc69-9112-440e-b69d-c96fad05861a,Patient_0963fc69-9112-440e-b69d-c96fad05861a,hc0963fc69-9112-440e-b69d-c96fad05861a
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
