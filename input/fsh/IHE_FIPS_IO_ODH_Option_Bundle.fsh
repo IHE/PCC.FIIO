@@ -1,7 +1,7 @@
-Profile: IHE_FIPS_ODH_Option_Bundle
+Profile: IHE_IPS_ODH_Option_Bundle
 Parent: BundleUvIps
-Id: IHE.FIPS.ODH.Option.Bundle
-Title: "IHE FHIR IPS ODH Option Bundle"
+Id: IHE.IPS.ODH.Option.Bundle
+Title: "IHE IPS FHIR ODH Option Bundle"
 Description: """
 This Bundle Deffines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorperated into a patient's IPS Bundle. 
 
@@ -36,5 +36,5 @@ It also allows optional support for the following ODH Data Elements:
 
 * entry[combat-zone-period].resource only CombatZonePeriod
 
-* entry[composition].resource only IHE_FIPS_IO_ODH_Option_Composition
+* entry[composition].resource only IHE_IPS_ODH_Option_Composition
 

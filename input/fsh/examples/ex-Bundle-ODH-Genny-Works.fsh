@@ -1,5 +1,5 @@
 Instance: ex-Bundle-IPS-ODH-Genny-Works
-InstanceOf: IHE_FIPS_ODH_Option_Bundle
+InstanceOf: IHE_IPS_ODH_Option_Bundle
 Description: """
 This Example Bundle Represents the IPS Bundle Structure that expresses Occupation Data in the patient's record, conformant to the ODH Implementaion Option 
 """
@@ -74,13 +74,13 @@ Usage: #example
 * entry[=].resource = IHE-INT-PCC-IPS-ODH-Devices-NoKnown
 
 Instance: ex-Composition-IPS-ODH-Genny-Works
-InstanceOf: IHE_FIPS_IO_ODH_Option_Composition
+InstanceOf: IHE_IPS_ODH_Option_Composition
 Description: """
 This Example Composition Represents the IPS Composition Structure that expresses Occupation Data in the patient's record, conformant to the ODH Implementaion Option. 
 """
 Usage: #example
 * id = "2a7a5f03-9581-4677-ba18-fbd3b221f601"
-* meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition"
+* meta.profile = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition"
 //* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"

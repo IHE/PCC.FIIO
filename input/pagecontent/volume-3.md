@@ -39,7 +39,7 @@ The [HL7 FHIR IPS Bundle](https://hl7.org/fhir/uv/ips/StructureDefinition-Bundle
 
 IHE does not further constrain the base standard outside of the specified options defined below. 
 
-For a valid example of the HL7 FHIR IPS Bundle, review the [Pandemic IPS Example Patient Patricia Jordana Bundle](Bundle-ex-bundle-secondaryUse-pandemnicips-patricia-jordana.html). This example patient has entries for all defined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
+For a valid example of the HL7 FHIR IPS Bundle, review the [Pandemic IPS Example Patient Patricia Jordana Bundle](Bundle-ex-Bundle-secondaryUse-pandemicIPS-example-patient-1-stage-0.html). This example patient has entries for all defined entries in the FHIR IPS bundle, including additional content that supports the ODH Option. 
 
 ###### 3:6.6.1.X.1.2 FHIR IPS ODH Option Bundle Requirements
 This Bundle defines the additional requirements of the Occupational Data For Health (ODH) Data Elements that may be incorporated into a patient's IPS Bundle. These data Elements utilize the International Labor Organization Codes for to [Occupation](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISCO08) and [Industry](https://profiles.ihe.net/PCC/ODH/CodeSystem/ISICRev4). 
@@ -53,12 +53,12 @@ It also allows optional support for the following ODH Data Elements:
 - [Retirement Date](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate)
 - [CombatZone Period](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod)
 
-The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.ODH.Option.Bundle) defines the constraints applied to the Bundle Resource for this option. 
+The [FHIR IPS ODH Option Bundle](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Bundle) defines the constraints applied to the Bundle Resource for this option. 
 
 For a valid example of the FHIR IPS ODH Bundle review the [ODH Patient Genny Works Example Bundle](Bundle-e0e8252a-4aab-4fab-ac8f-5734abbd1ec7.html).
 
 ###### 3:6.6.1.X.1.3 FHIR IPS Complete Option Bundle Requirements 
-The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.Complete.Option.Bundle) Incorporates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
+The [FHiR IPS Complete Option Bundle](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Bundle) Incorporates the Complete Testing option for IPS. This Structure definition binds the Complete Option Composition to the bundle, where all optional sections (e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) are now Must Support sections.
 
 For a valid example of the FHIR Complete IPS Bundle review the [Pandemic IPS Example Patient Patricia Jordana Example Bundle](Bundle-ex-bundle-secondaryUse-pandemnicips-patricia-jordana.html).
 

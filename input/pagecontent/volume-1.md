@@ -16,13 +16,17 @@ The actors in this profile are described in more detail in the sections below.
 
 #### 1:XX.1.1.1 Content Creator
 
-The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) creates the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), [FHIR IPS ODH](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition) in accordance to the Implementation option selected. The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) then shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) creates the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), [FHIR IPS ODH](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition) in accordance to the Implementation option selected. The [IPS Content Creator](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) then shares it using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+The Content Creator SHALL Conform to all Obligations deffined by the underlying profile or profile option. 
 
 <a name="Content-Consumer"> </a>
 
 #### 1:XX.1.1.2 Content Consumer
 
-The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) consumes the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), [FHIR IPS ODH](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition) in accordance to the Implementation option selected. The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) obtains the IPS document using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) consumes the [FHIR IPS Content](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips), [FHIR IPS ODH](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition), or [FHIR IPS Complete](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition) in accordance to the Implementation option selected. The [IPS Content Consumer](https://profiles.ihe.net/ITI/sIPS/pcc.html#31-document-sharing-pcc-1) obtains the IPS document using one of the methods defined in the [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+The Content Consumer SHALL Conform to all Obligations for displaying and handeling data provided by the Content Creator, deffined by the underlying profile or profile option. 
 
 <a name="actor-options"> </a>
 
@@ -39,7 +43,6 @@ Options that may be selected for each actor in this implementation guide, are li
 |                  | Occupational Data for Health Option  |
 | Content Consumer | View Option                          |
 |                  | Document Import Option               |
-|                  | Section Import Option                |
 |                  | Discrete Data Import Option          |
 |                  | Complete Discrete Data Import Option |
 {: .grid}
@@ -76,7 +79,7 @@ Optional:
 - Patient Story
 
 ### 1:XX.2.2 Complete Option
-This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition).
+This option defines the International Patient Summary modeled by HL7, where all of the optional sections(e.g., Advanced Directives, Functional Status, History of Past Illnesses, History of Pregnancy, Plan of Care, Social History, and Vital Signs) will become Must Support sections. The processing requirements placed on the Content Creators for producing a Complete FHIR IPS Document is detailed in the [IPS Complete Option](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition).
 This option specifies that the following sections defined as optional in the [HL7 FHIR IPS Composition](http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips) Have a New optionality of Must Support. This applies to the following sections: 
 - IPS Advance Directives 
 - IPS Functional Status 
@@ -89,7 +92,7 @@ This option specifies that the following sections defined as optional in the [HL
 - IPS Alerts
 
 ### 1:XX.2.3 Occupational Data for Health Option
-Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the [ODH Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.ODH.Option.Composition).  
+Content Creators implementing this option shall create Occupational Data for Health information that complies with the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html) as entries to the Social History Section. The details are defined in the [ODH Option](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition).  
 
 This option stipulates that the Social History Section has the new optionality of Must Support. Minimally, a system claiming the Occupational Data for Health Option SHALL include an entry for [Usual Work](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork) of [Past Or Present Job](https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob), or Both. If the system collects any of the following work observations, these shall also be supported as Must Support:
 - Usual Occupation Duration 
@@ -106,7 +109,7 @@ This option stipulates that the Social History Section has the new optionality o
 Those data elements are defined in the [Occupational Data for Health IG](https://profiles.ihe.net/PCC/ODH/index.html). 
 
 ### 1:XX.2.4 Complete Discrete Data Import Option
-The Content Consumer implementing this option shall be able to discretely import all relevant content provided by the Content Creator as defined by the [IPS Complete Option](https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition). 
+The Content Consumer implementing this option shall be able to discretely import all relevant content provided by the Content Creator as defined by the [IPS Complete Option](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition). 
 
 <a name="required-groupings"> </a>
 
@@ -193,7 +196,9 @@ A patient arrives at a treatment clinic that is looking for their patient histor
 This use case describes a scheduled, cross border care scenario, with the Occupational Data for Health Option. 
 
 ##### 1:XX.4.2.3.1 Managing Work-Related Illness While Working Abroad Use Case Description
-A 43-year-old woman is assigned to train personnel in another country to demonstrate use of a polyurethane foam product in hospitals. After 4 months, she develops respiratory symptoms and is found to have new-onset asthma. The attending clinician reviews her IPS that implements the Occupational Data for Health Option, which includes information about her new job. The clinician infers the causal link between the new work and the asthma and recommends changes in her job activities. 
+A 22-year-old male was mobilized and deployed through the National Interagency Fire Center (NIFC) to assist with ongoing wildfires in Australia. During his assignment he experienced tightness in his chest, shortness of breath, and wheezing after simple exertion and seeks medical care. He is diagnosed with new-onset asthma. 
+
+The attending clinician reviews his International Patient Summary (IPS) that implements the Occupational Data for Health Option, which includes information about his new job as wildland firefighter. The clinician infers the causal link between the new work and the asthma and refers the patient to a specialist for further evaluation and appropriate treatment.
 
 ##### 1:XX.4.2.3.2 Managing Work-Related Illness While Working Abroad Process Flow
 <figure>
@@ -203,16 +208,15 @@ A 43-year-old woman is assigned to train personnel in another country to demonst
 <br clear="all">
 
 **Pre-conditions**:
-- A patient is sent to another country for work by her company
-- She has a medical exam prior to arriving in the new country where her medical record is updated
+- A patient is sent to another country for work by his company
+- The patient has a medical exam prior to arriving in the new country where his medical record is updated
 
 **Main Flow**:
-- The patient develops asthma symptoms and consults a provider in the country she is working.
-- Using the patient’s international patient summary with occupational health data included, the provider is able to see that exposure from work is causing these symptoms. The provider recommends a change in work practice to avoid further exposure and prescribes inhalers to the patient. 
+- The patient experiences tightness in his chest, shortness of breath, and wheezing after simple exertion and seeks medical care.
+- Using the patient’s international patient summary with occupational health data included, the provider is able to see that exposure from work is causing these symptoms. The provider recommends a change in work role to avoid further exposure and prescribes relevant medications to the patient for symptom relief. 
 
 **Post-conditions:**
-- The engineering company provides portable ventilation exhaust systems to reduce exposures to other workers. The woman provides training to others without engaging in direct demonstration of foam production.
-- The new diagnosis of asthma related to this occupational hazard is added to the patient’s EMR for the care provider’s EMR.  
+- The new symptoms of tightness in his chest, shortness of breath, and wheezing related to this occupational hazard is added to the patient’s EMR for further monitoring and care.  
 
 
 #### 1:XX.4.2.4 Use Case \#4: Patient Mediated and Edited IPS Utilizing a Portal
@@ -318,9 +322,11 @@ EMR systems should be thoughtfully designed so that providers are able to review
 
 Imported information should be traceable both to the source [the sharing EMR], and the receiver that accepted it into the EMR system. XDS Affinity domain policies should support policies and procedures for tracing information flows between EMR systems. 
 
-Because the information being transferred is in XML, it will be common that different EMR systems utilize different transformations to render the contents into human readable form. A Content Creator should make available the transforms used by the sending provider to review the documents, and a Content Consumer must support rendering the information as seen by the sending provider, allowing both providers to see what was sent in its original rendered form.
+It will be common that different EMR systems utilize different transformations to render the contents into human readable form. A Content Creator should make available the transforms used by the sending provider to review the documents, and a Content Consumer must support rendering the information as seen by the sending provider, allowing both providers to see what was sent in its original rendered form.
 
 Health Information Exchange: Enabling Document Sharing Health Information Exchange Using IHE Profiles White Paper [IHE Document Sharing Health Information Exchange](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html).
+
+Information may be shared for secondary use using the standard IPS format subject to de-identification as described in the IHE ITI De-Identification Handbook. This handbook includes a complete de-identification example for IPS under the Implementation Examples “IPS EHDS2”. 
 
 <a name="other-grouping"> </a>
 
@@ -331,6 +337,8 @@ Consider the IHE [Sharing of IPS (sIPS)](https://profiles.ihe.net/ITI/sIPS/index
 The use of the IHE XD* family of transactions is encouraged to support standards-based interoperability between systems acting as the IPS Content Creator and IPS Content Consumer. However, this profile does not require any groupings with ITI XD* actors to facilitate transport of the content document it defines. 
 
 A Document Source in XDS.b, a Portable Media Creator in XDM, or a Document Source in XDR might be grouped with the IPS Content Creator. A Document Consumer in XDS.b, a Portable Media Importer in XDM, or a Document Recipient in XDR might be grouped with the PCS Content Consumer. A registry/repository-based infrastructure is defined by the IHE Cross Enterprise Document Sharing (XDS.b).
+
+QEDm includes support for querying for the IPS using the $summary function.
 
 The On-Demand Documents Option of the XDS.b Profile may be considered or required by local implementations to assure summary documents include a composite summary of information for the patient. 
 

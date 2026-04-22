@@ -1,11 +1,12 @@
-id: ihe.pcc.fiio
-canonical: https://profiles.ihe.net/PCC/FIIO
-version: 1.0.0-comment
-name: IHE_PCC_FIIO
+id: ihe.pcc.ips
+canonical: https://profiles.ihe.net/PCC/IPS
+version: 2.0.0
+# making version 2.0.0 to align with the version of the HL7 IPS IG that is being used as the base for this implementation guide.
+name: IHE_PCC_IPS
 title: "FHIR International Patient Summary"
 description: Additional options for implementing the HL7 International Patient Summary FHIR document and associated testing requirements. 
 #releaseLabel: ci-build
-releaseLabel: ballot
+releaseLabel: trial-use
 #releaseLabel: trial-use
 #releaseLabel: release
 date: 2026-03-03
@@ -29,24 +30,15 @@ dependencies:
   hl7.fhir.uv.ips:
     id: hl7ips
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
-    version: 2.0.0
+    version: 2.0.x
   ihe.pcc.odh: 
     id: ihepccodh
     uri: https://profiles.ihe.net/PCC/ODH/ImplementationGuide/ihe.pcc.odh
-    version: 1.0.0
+    version: 1.0.x
   hl7.fhir.uv.extensions.r4: 
     id: FHIRExtensionPack
     uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
     version: 5.3.0-ballot-tc1
-# Depednedncies for the example patients  
-  hl7.fhir.us.vr-common-library: 
-    id: VitalRecordsCommonLibrary
-    uri: http://hl7.org/fhir/us/vr-common-library/ImplementationGuide/hl7.fhir.us.vr-common-library
-    version: 2.0.0 
-  hl7.fhir.us.vrdr: 
-    id: VRDR
-    uri: http://hl7.org/fhir/us/vrdr/ImplementationGuide/hl7.fhir.us.vrdr
-    version: 3.0.0 
 
 parameters:  
   path-resource:
@@ -74,13 +66,13 @@ parameters:
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: FHIR International Patient Summary (FIPS) Home
+    title: International Patient Summary (IPS) FHIR Home
     generation: markdown
   volume-1.md:
-    title: 1:XX FHIR International Patient Summary
+    title: 1:XX International Patient Summary FHIR
     generation: markdown
   volume-3.md:
-    title: 3:XX FHIR International Patient Summary
+    title: 3:XX International Patient Summary FHIR
     generation: markdown
   testplan.md:
     title: "Test Plan"

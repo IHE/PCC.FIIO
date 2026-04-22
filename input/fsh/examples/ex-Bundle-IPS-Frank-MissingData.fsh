@@ -46,7 +46,7 @@ This Example Composition is used to represent the Representation of Missing Data
 """
 Usage: #example
 * id = "567f7a70-6f0d-49c5-a6ca-20eff88e7c8e"
-* meta.profile = "https://profiles.ihe.net/PCC/FIIO/StructureDefinition/IHE.FIPS.IO.Complete.Option.Composition"
+* meta.profile = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition"
 //* meta.lastUpdated = "2026-02-05T13:51:24"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"

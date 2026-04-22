@@ -1,6 +1,6 @@
 # Status 
 Draft Ready for Public Comment
-**Note: The Repo has a differnt accronym than the profile due to Renaming after the repo was build. we are in the process of alligning this with the agreed official title FHIR IPS (fIPS)**
+**Note: The Repo has a differnt accronym than the profile due to Renaming after the repo was build. we are in the process of alligning this with the agreed official title IPS FHIR (IPS)**
 current build Link - https://build.fhir.org/ig/IHE/PCC.FIIO/branches/master/index.html
 Current QA Report - https://build.fhir.org/ig/IHE/PCC.FIIO/branches/master/qa.html 
 

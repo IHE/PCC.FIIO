@@ -11,8 +11,10 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # This is a dummy OID system made only for examples, we expect there is no proper definition for it, unless we progress with a official example oid registry
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.19376.1.5.4'
+No definition could be found for URL value 'urn:oid:2.16.528.1.1007.3.1'
 No definition could be found for URL value 'http://hospital.smarthealthit.org'
 No definition could be found for URL value 'http://standardhealthrecord.org/fhir/StructureDefinition/passportNumber'
+No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639'
 
 # we understand that this is a draft code system 
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/dose-rate-type|1.0.0
