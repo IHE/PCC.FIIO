@@ -184,7 +184,7 @@ In addition to the HL7 [Problem Type](https://hl7.org/fhir/uv/ips/ValueSet-probl
 
 ###### 3:6.6.1.X.2.2 FHIR IPS ODH Option Composition and Section Requirements 
 
-The [FHIR IPS ODH Option Composition](https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition|2.0.0) defines the constraints applied to the Bundle Resource for this bundle. 
+The [FHIR IPS ODH Option Composition](StructureDefinition-IHE.IPS.ODH.Option.Composition.html) defines the constraints applied to the Bundle Resource for this bundle. 
 
 For a valid example of the HL7 FHIR IPS Bundle with all Required and Must support sections documented review the [Genny Works ODH IPS Example Bundle](Composition-2a7a5f03-9581-4677-ba18-fbd3b221f601.html). 
 
