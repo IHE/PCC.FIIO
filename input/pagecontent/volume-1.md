@@ -113,7 +113,7 @@ A Content Consumer that supports the FHIR View Option SHALL render the document 
 
 This rendering shall provide patient information and context critical information rendered in a human readable manner. A Content Consumer that supports the FHIR View Option shall support the ability to render a human readable rendering of the text content of the bundle or composition, and entries, including dates, and all text and coded content descriptions.
 
-The Content Consumer SHALL display any attribute deffined by the profile's obligations as SHOULD display.  
+The Content Consumer SHALL display any attribute deffined by the profile's obligations as SHOULD display.    
 
 ### 1:XX.2.5 Document Import Option
 The Content Consumer that supports the Document Import Option shall also support the View Option. In addition, the Content Consumer that supports the Document Import Option shall be able to support the storage of the entire document (as provided by the sharing framework, along with sufficient metadata to ensure its later viewing). This Option requires the proper tracking of the document origin. Once a document has been imported, the Content Consumer shall offer a means to view the document without the need to retrieve it again. When viewed after it was imported, a Content Consumer may choose to access the sharing framework to find out if the related Document viewed has been deprecated, replaced or addended.
