@@ -2161,7 +2161,6 @@ Usage: #inline
 * category = $observation-category#social-history "Social History"
 * code = $loinc#87510-4 "Date of Retirement"
 * subject = Reference(http://example.org/Patient/ex-Patient-USPCS-Aaron-Morales)
-* effectiveDateTime = "2026-02-20"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-USPCS-Aaron-Morales-DonnaMiller)
 * valueDateTime = "2018-06-03"
 * note.text = "Retirement from the U.S. Army (active duty) after 11 years of service."
@@ -2176,7 +2175,6 @@ Usage: #inline
 * category = $observation-category#social-history "Social History"
 * code = $loinc#87511-2 "Combat zone AndOr hazardous duty work dates"
 * subject = Reference(http://example.org/Patient/ex-Patient-USPCS-Aaron-Morales)
-* effectiveDateTime = "2026-02-20"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-USPCS-Aaron-Morales-DonnaMiller)
 * valuePeriod.start = "2008-01-10"
 * valuePeriod.end = "2009-01-15"
@@ -2192,7 +2190,6 @@ Usage: #inline
 * category = $observation-category#social-history "Social History"
 * code = $loinc#87511-2 "Combat zone AndOr hazardous duty work dates"
 * subject = Reference(http://example.org/Patient/ex-Patient-USPCS-Aaron-Morales)
-* effectiveDateTime = "2026-02-20"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-USPCS-Aaron-Morales-DonnaMiller)
 * valuePeriod.start = "2010-05-01"
 * valuePeriod.end = "2011-04-30"
@@ -2208,7 +2205,6 @@ Usage: #inline
 * category = $observation-category#social-history "Social History"
 * code = $loinc#87511-2 "Combat zone AndOr hazardous duty work dates"
 * subject = Reference(http://example.org/Patient/ex-Patient-USPCS-Aaron-Morales)
-* effectiveDateTime = "2026-02-20"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-USPCS-Aaron-Morales-DonnaMiller)
 * valuePeriod.start = "2013-03-01"
 * valuePeriod.end = "2013-12-15"

@@ -3,7 +3,7 @@ canonical: https://profiles.ihe.net/PCC/IPS
 version: 2.0.0
 # making version 2.0.0 to align with the version of the HL7 IPS IG that is being used as the base for this implementation guide.
 name: IHE_PCC_IPS
-title: "FHIR International Patient Summary"
+title: "International Patient Summary (FHIR)"
 description: Additional options for implementing the HL7 International Patient Summary FHIR document and associated testing requirements. 
 #releaseLabel: ci-build
 releaseLabel: trial-use

@@ -231,3 +231,10 @@ None of the codings provided are in the value set 'Practice Setting Code Value S
 # These are clinically correct codes, used for example purposes for these elements. The value set is preferred, which allows for the use of these codes and does not contradict the Profile requirements.
 None of the codings provided are in the value set 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes|4.0.1), and a coding is recommended to come from this value set (codes = http://loinc.org#75320-2%
 None of the codings provided are in the value set 'Document Type Value Set' (http://hl7.org/fhir/ValueSet/c80-doc-typecodes|4.0.1), and a coding is recommended to come from this value set (codes = http://loinc.org#86533-7%
+
+# [WARNING] Aaron Morales US ODH Retirement Date and Combat Zone Period observations: the HL7 US ODH profiles (odh-RetirementDate, odh-CombatZonePeriod)
+# prohibit effective[x] (0..0); the dates are carried in valueDateTime and valuePeriod. The best practice recommendation cannot be met without breaking the US ODH profiles.
+%Observation/ex-ODH-USPCS-Aaron-Morales-RetirementDate*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
+%Observation/ex-ODH-USPCS-Aaron-Morales-CombatZone-1*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
+%Observation/ex-ODH-USPCS-Aaron-Morales-CombatZone-2*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
+%Observation/ex-ODH-USPCS-Aaron-Morales-CombatZone-3*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
