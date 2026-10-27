@@ -685,7 +685,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#6736007 "Moderate"
+* severity = $sct#6736007 "Moderate severity"
 * code = $sct#11687002 "Gestational diabetes mellitus"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * onsetDateTime = "2026-09-14"

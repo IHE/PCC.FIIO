@@ -238,3 +238,13 @@ None of the codings provided are in the value set 'Document Type Value Set' (htt
 %Observation/ex-ODH-USPCS-Aaron-Morales-CombatZone-1*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
 %Observation/ex-ODH-USPCS-Aaron-Morales-CombatZone-2*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
 %Observation/ex-ODH-USPCS-Aaron-Morales-CombatZone-3*/: Best Practice Recommendation: In general, all observations should have an effective[x] ()
+
+# [WARNING] [INFORMATION] Aaron Morales Encounter.hospitalization.dischargeDisposition: NUBC Patient Discharge Status 01 (Discharged to home or self care), the code system preferred by
+# US Core 6.1.0 (US Core Discharge Disposition value set). The NUBC code system is licensed by the American Hospital Association and is not available to the validator,
+# so the code cannot be validated or shown to be a member of the US Core value set. This is a clinically correct code, used for example purposes for this element.
+A definition for CodeSystem 'https://www.nubc.org/CodeSystem/PatDischargeStatus' could not be found, so the code cannot be validated
+None of the codings provided are in the value set 'US Core Discharge Disposition' (http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0), and a coding is recommended to come from this value set (codes = https://www.nubc.org/CodeSystem/PatDischargeStatus#01)
+
+# [INFORMATION] Pinned HL7 IPS versions: both hl7.fhir.uv.ips 2.0.0-ballot and 2.0.1 are in the dependency tree, so the pin-canonicals parameter pins the IHE option profiles'
+# references to the HL7 IPS profiles to 2.0.1. These messages confirm the intended pinning.
+Pinned the version of http://hl7.org/fhir/uv/ips/StructureDefinition/%
