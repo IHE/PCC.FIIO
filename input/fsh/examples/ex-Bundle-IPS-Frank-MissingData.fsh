@@ -5,7 +5,7 @@ This example Bundle represents missing data in a patient's IPS Bundle.
 """
 Usage: #example
 * id = "ex-Bundle-IPS-Frank-MissingData"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.1"
 //* meta.lastUpdated = "2026-02-06T9:51:24-05:00"
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPSMISSINGDATA-EX20260205"
@@ -46,7 +46,7 @@ This example Composition represents missing data in a patient's IPS Composition.
 """
 Usage: #example
 * id = "ex-Composition-IPS-Frank-MissingData"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.1"
 //* meta.lastUpdated = "2026-02-05T13:51:24"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
@@ -60,19 +60,19 @@ Usage: #example
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medication Summary</h5><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>No known medications</td><td>Active</td><td/><td/><td/><td>2023-07-19 -</td></tr></tbody></table></div>"
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>No known medications</td><td>Active</td><td/><td/><td/><td>2023-07-19 -</td></tr></tbody></table></div>"
 * section[sectionMedications].entry[medicationStatementOrRequest] = Reference(http://example.org/MedicationStatement/ex-MedStatement-IPS-Frank-MissingData-NoKnown) "No known medications"
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Allergies and Intolerances</h5><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Allergy to peanut</td><td>Active</td><td>Food</td><td>Acute bronchitis with bronchospasm; Cough; Itching of skin; Airway hyperreactivity</td><td>Severe</td><td/><td>2010-07-09</td></tr></tbody></table></div>"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Allergy to peanut</td><td>Active</td><td>Food</td><td>Acute bronchitis with bronchospasm; Cough; Itching of skin; Airway hyperreactivity</td><td>Severe</td><td/><td>2010-07-09</td></tr></tbody></table></div>"
 * section[sectionAllergies].entry[+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-IPS-Frank-MissingData-Peanut) "Severe Peanut Allergy"
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
-* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Problem List</h5><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Vasculitis</td><td>Active</td><td>Moderate severity</td><td>2021-12-09</td></tr><tr><td>Vasculitis</td><td>Active</td><td>Moderate severity</td><td>2024-12-09</td></tr><tr><td>Severe Eczema</td><td>Active</td><td>Severe</td><td>2023-07-19</td></tr></tbody></table></div>"
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Vasculitis</td><td>Active</td><td>Moderate severity</td><td>2021-12-09</td></tr><tr><td>Vasculitis</td><td>Active</td><td>Moderate severity</td><td>2024-12-09</td></tr><tr><td>Severe Eczema</td><td>Active</td><td>Severe</td><td>2023-07-19</td></tr></tbody></table></div>"
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Frank-MissingData-Vasculitis-1)
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Frank-MissingData-Vasculitis-2)
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Frank-MissingData-Eczema)
@@ -80,31 +80,31 @@ Usage: #example
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Immunizations</h5><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>No known immunizations</td><td>Completed</td><td/><td/><td/><td/><td>2026-02-06</td></tr></tbody></table></div>"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>No known immunizations</td><td>Completed</td><td/><td/><td/><td/><td>2026-02-06</td></tr></tbody></table></div>"
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-IPS-Frank-MissingData-NoKnown) "No Known Immunization"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
-* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Procedures</h5><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"3\">Nil Known</td></tr></tbody></table></div>"
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"3\">Nil Known</td></tr></tbody></table></div>"
 * section[sectionProceduresHx].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.status = #generated
-* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Diagnostic Results</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"7\">Nil Known</td></tr></tbody></table></div>"
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"7\">Nil Known</td></tr></tbody></table></div>"
 * section[sectionResults].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
 
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medical Devices</h5><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>No known device use</td><td>Completed</td><td/><td>2026-05-26</td></tr></tbody></table></div>"
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>No known device use</td><td>Completed</td><td/><td>2026-05-26</td></tr></tbody></table></div>"
 * section[sectionMedicalDevices].entry[+] = Reference(http://example.org/DeviceUseStatement/ex-DeviceStatement-IPS-Frank-MissingData-NoKnown) "No known device use"
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.status = #generated
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Advance Directives</h5><table class=\"grid\"><thead><tr><th>Scope</th><th>Status</th><th>Action Controlled</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"4\">Nil Known</td></tr></tbody></table></div>"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Scope</th><th>Status</th><th>Action Controlled</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"4\">Nil Known</td></tr></tbody></table></div>"
 * section[sectionAdvanceDirectives].emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
 
 
@@ -112,7 +112,7 @@ Instance: ex-Patient-IPS-Frank-MissingData
 InstanceOf: PatientUvIps 
 Usage: #inline
 * id = "ex-Patient-IPS-Frank-MissingData"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
 * extension[=].extension.url = "code"
@@ -155,7 +155,7 @@ Usage: #inline
 * address[=].state = "Campania"
 * address[=].postalCode = "80121"
 * address[=].country = "Italy"
-* communication[+].language = http://tools.ietf.org/html/bcp47#it "Italian"
+* communication[+].language = urn:ietf:bcp:47#it "Italian"
 * communication[=].preferred = true
 * generalPractitioner = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Frank-MissingData-01)
 
@@ -163,7 +163,7 @@ Instance: ex-Org-IPS-Frank-MissingData-IHE-PCC
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Frank-MissingData-IHE-PCC"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * active = true 
 * identifier[+].use = #official 
@@ -187,7 +187,7 @@ Instance: ex-Practitioner-IPS-Frank-MissingData-01
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Frank-MissingData-01"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * active = true 
 * identifier[+].use = #official
@@ -264,7 +264,7 @@ Instance: ex-Practitioner-IPS-Frank-MissingData-02
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Frank-MissingData-02"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-02-05T13:51:24-05:00"
 * active = true 
 * identifier[+].use = #official
@@ -333,7 +333,7 @@ Usage: #inline
 //InstanceOf: OrganizationUvIps
 //Usage: #inline
 //* id = "ihe-int-pcc-employer-org-01"
-//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+//* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 //* meta.lastUpdated = "2026-02-05T13:51:24+02:00"
 //* active = true 
 //* identifier[+].use = #official 
@@ -361,7 +361,7 @@ Instance: ex-Allergy-IPS-Frank-MissingData-Peanut
 InstanceOf: AllergyIntoleranceUvIps 
 Usage: #inline
 * id = "ex-Allergy-IPS-Frank-MissingData-Peanut"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification#confirmed
 * type = http://hl7.org/fhir/allergy-intolerance-type#allergy
@@ -380,7 +380,7 @@ Instance: ex-Condition-IPS-Frank-MissingData-Vasculitis-1
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Frank-MissingData-Vasculitis-1"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
@@ -395,7 +395,7 @@ Instance: ex-Condition-IPS-Frank-MissingData-Vasculitis-2
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Frank-MissingData-Vasculitis-2"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
@@ -410,7 +410,7 @@ Instance: ex-Condition-IPS-Frank-MissingData-Eczema
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Frank-MissingData-Eczema"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed 
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
@@ -434,7 +434,7 @@ Instance: ex-MedStatement-IPS-Frank-MissingData-NoKnown
 InstanceOf: MedicationStatementIPS
 Usage: #inline
 * id = "ex-MedStatement-IPS-Frank-MissingData-NoKnown"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.1"
 * status = http://hl7.org/fhir/CodeSystem/medication-statement-status#active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
 * medicationCodeableConcept = $sct#787481004 "No known medications"
@@ -448,7 +448,7 @@ Instance: ex-DeviceStatement-IPS-Frank-MissingData-NoKnown
 InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * id = "ex-DeviceStatement-IPS-Frank-MissingData-NoKnown"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.1"
 * status = #completed
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Frank-MissingData)
 * timingDateTime = "2026-05-26T13:30:00+02:00"
@@ -458,5 +458,5 @@ Instance: ex-Device-IPS-Frank-MissingData-NoKnown
 InstanceOf: DeviceUvIps
 Usage: #inline
 * id = "ex-Device-IPS-Frank-MissingData-NoKnown"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips|2.0.1"
 * type = $sct#787483001 "No known device use"

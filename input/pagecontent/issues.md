@@ -112,6 +112,27 @@ Occupational Data for Health resources are profiled as international resources b
 
   "The US-PCS Bundle profile (Bundle-us-pcs) slices Bundle.entry by resource type only and places every Observation in the observation-results slice, which allows Observation, US Core Observation Clinical Result and US Core Laboratory Result Observation. A patient summary also carries Observations that are not results, such as smoking status, alcohol use, sexual orientation, vital signs, pregnancy status and Occupational Data for Health observations. These fall into the observation-results slice and conform only through the base Observation choice, and validators report that their category does not match the US Core Observation Clinical Result category slice. This also differs from the HL7 IPS Bundle, which slices entries by resource type and profile, and makes it harder for a US-PCS document to also conform to IPS-based profiles. We request that US-PCS either (a) slice Bundle.entry by resource type and profile, with separate Observation slices for results, vital signs and social history, or (b) add the applicable US Core profiles (Smoking Status, Simple Observation, Sexual Orientation, Pregnancy Status, Pregnancy Intent, Occupation, Screening and Assessment and the vital sign profiles) to the allowed profiles of the Observation entries, and rename the slice to reflect that it is not limited to results."
 
+- <a id="IPS_035"></a>IPS_035: The HL7 FHIR IPS Allergy Reaction value set (allergy-reaction-uv-ips, preferred binding on AllergyIntolerance.reaction.manifestation) includes 31 SNOMED CT reaction concepts and their descendants. It does not include several clinically appropriate codes that are commonly used to document allergic reactions. Because the binding is preferred, these codes are allowed, but each one produces an informational validation message. The IHE IPS examples document these reactions with the clinically correct code and, where one fits, a second manifestation from the IPS value set (2026/10/27). Codes used in the IHE IPS examples that are not in the value set:
+
+    - SNOMED CT 722192005 "Localized swelling" (Jannet Guo, bee venom allergy): not a descendant of 41291007 "Angioedema" or any other included concept. A local reaction to an insect sting is the usual presentation, and angioedema would overstate it.
+    - SNOMED CT 40275004 "Contact dermatitis" (Jannet Guo, latex allergy): not a descendant of 43116000 "Eczema" or 24079001 "Atopic dermatitis". Contact dermatitis is the typical reaction to skin contact with latex.
+    - SNOMED CT 56018004 "Wheezing" (Aaron Morales, cat allergy): a respiratory sign that is not a descendant of 4386001 "Bronchospasm" or 267036007 "Dyspnea". Wheezing is one of the most commonly recorded reactions to inhaled allergens.
+
+    Other commonly documented allergic reactions that also appear to be outside the value set (to be confirmed against a terminology server expansion before submission):
+
+    - SNOMED CT 65124004 "Swelling"
+    - SNOMED CT 247441003 "Erythema"
+    - SNOMED CT 45007003 "Low blood pressure"
+    - SNOMED CT 404640003 "Dizziness"
+    - SNOMED CT 271594007 "Syncope"
+    - SNOMED CT 21522001 "Abdominal pain"
+    - SNOMED CT 25064002 "Headache"
+    - SNOMED CT 68235000 "Nasal congestion"
+    - SNOMED CT 64531003 "Nasal discharge"
+    - SNOMED CT 386661006 "Fever"
+
+    In addition, the value set's narrative and its ECL description show different displays for five concepts (23924001, 195967001, 271807003, 698247007 and 781682005). This should be brought to HL7 (Patient Care Work Group, IPS project) for feedback, with the request to extend the value set or to confirm that these codes are expected to be used under the preferred binding.
+
 #### Closed Issues
 - <a id="IPS_001"></a>IPS_001: For the trigger events – is this triggered only in anticipation of international travel or might this be a routine patient summary (2019/09/30)? Resolution - The IPS is for both planned and unplanned care (2019/11/12).
 

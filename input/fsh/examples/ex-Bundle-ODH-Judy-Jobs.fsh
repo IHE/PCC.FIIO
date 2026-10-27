@@ -6,7 +6,7 @@ This example Bundle represents the IPS Bundle structure that expresses occupatio
 Usage: #example
 * id = "ex-Bundle-IPS-ODH-Judy-Jobs"
 * meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Bundle"
-* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.1"
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPODH-EX20261021"
 * type = #document
@@ -108,7 +108,7 @@ This example Composition represents the IPS Composition structure that expresses
 Usage: #example
 * id = "ex-Composition-IPS-ODH-Judy-Jobs"
 * meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition"
-* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.1"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
@@ -121,51 +121,51 @@ Usage: #example
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medication Summary</h5><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>XARELTO TABLET, FILM COATED 20MG</td><td>Completed</td><td>Oral use</td><td>1 per day for 10 days</td><td>For Previous DVT (venous femoral thrombosis)</td><td>2018-01-01 - 2018-01-11</td></tr></tbody></table></div>"
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>XARELTO TABLET, FILM COATED 20MG</td><td>Completed</td><td>Oral use</td><td>1 per day for 10 days</td><td>For Previous DVT (venous femoral thrombosis)</td><td>2018-01-01 - 2018-01-11</td></tr></tbody></table></div>"
 * section[sectionMedications].entry[medicationStatementOrRequest][+] = Reference(http://example.org/MedicationStatement/ex-MedStatement-IPS-ODH-Judy-Jobs-Rivaroxaban) "[2018-01-01 to 2018-01-11] - Rivaroxaban 20 mg oral tablet"
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Allergies and Intolerances</h5><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>No known allergy</td><td>Active</td><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>No known allergy</td><td>Active</td><td/><td/><td/><td/><td/></tr></tbody></table></div>"
 * section[sectionAllergies].entry[+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-IPS-ODH-Judy-Jobs-NoKnown) "No known allergies"
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
-* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Problem List</h5><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Valve disease</td><td>Active</td><td>Mild</td><td>2013-03-05</td></tr><tr><td>Previous DVT (venous femoral thrombosis)</td><td>Active</td><td>Mild</td><td>2017-12-28</td></tr></tbody></table></div>"
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Valve disease</td><td>Active</td><td>Mild</td><td>2013-03-05</td></tr><tr><td>Previous DVT (venous femoral thrombosis)</td><td>Active</td><td>Mild</td><td>2017-12-28</td></tr></tbody></table></div>"
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-ODH-Judy-Jobs-HeartValve) "[2013-03-05] - Heart valve disorder"
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-ODH-Judy-Jobs-DVT) "[2017-12-28] - History of deep vein thrombosis"
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Immunizations</h5><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Administration of SARS-CoV-2 antigen vaccine</td><td>Completed</td><td>1</td><td/><td/><td/><td>2024-05-15</td></tr><tr><td>Administration of SARS-CoV-2 antigen vaccine</td><td>Completed</td><td>3</td><td/><td/><td/><td>2024-05-15</td></tr></tbody></table></div>"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Administration of SARS-CoV-2 antigen vaccine</td><td>Completed</td><td>1</td><td/><td/><td/><td>2024-05-15</td></tr><tr><td>Administration of SARS-CoV-2 antigen vaccine</td><td>Completed</td><td>3</td><td/><td/><td/><td>2024-05-15</td></tr></tbody></table></div>"
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-IPS-ODH-Judy-Jobs-COVID-1) "SARS-CoV-2 antigen vaccine (dose 1)"
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-IPS-ODH-Judy-Jobs-COVID-2) "SARS-CoV-2 antigen vaccine (dose 3)"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
-* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Procedures</h5><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Sleep study</td><td>Outcome: Inconclusive</td><td>2021-10-21</td></tr></tbody></table></div>"
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Sleep study</td><td>Outcome: Inconclusive</td><td>2021-10-21</td></tr></tbody></table></div>"
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-IPS-ODH-Judy-Jobs-Polysomnography) "[2021-10-21] - Polysomnography"
 
 * section[sectionAlerts].title = "Alerts"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.status = #generated
-* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Alerts</h5><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Patient has a hard time hearing, especially out of their left ear. Patient does not have a cochlear implant.</td><td>Active</td><td>High priority</td><td>2024-06-02</td></tr></tbody></table></div>"
+* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Patient has a hard time hearing, especially out of their left ear. Patient does not have a cochlear implant.</td><td>Active</td><td>High priority</td><td>2024-06-02</td></tr></tbody></table></div>"
 * section[sectionAlerts].entry[alertsFlag][+] = Reference(http://example.org/Flag/ex-Alert-IPS-ODH-Judy-Jobs-HardOfHearing) "Hard of hearing"
 
 * section[sectionPregnancyHx].title = "Pregnancy History"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
-* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Pregnancy</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Pregnant</td><td/><td>2026-06-10</td></tr></tbody></table></div>"
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Pregnant</td><td/><td>2026-06-10</td></tr></tbody></table></div>"
 * section[sectionPregnancyHx].entry[pregnancyStatus][+] = Reference(http://example.org/Observation/ex-PregStatus-IPS-ODH-Judy-Jobs) "Pregnant"
 
 * section[sectionVitalSigns].title = "Vital Signs"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
 * section[sectionVitalSigns].text.status = #generated
-* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Vital Signs</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body height</td><td>71</td><td>in</td><td/><td/><td/><td>2024-06-02</td></tr><tr><td>Body weight</td><td>230</td><td>lb</td><td/><td/><td/><td>2024-06-02</td></tr><tr><td>Body mass index (BMI) [Ratio]</td><td>32.1</td><td>kg/m2</td><td/><td/><td/><td>2024-06-02</td></tr><tr><td>Blood pressure panel with all children optional</td><td/><td/><td/><td>Systolic blood pressure: 130 mm[Hg]; Diastolic blood pressure: 80 mm[Hg]</td><td/><td>2024-06-02</td></tr><tr><td>Heart rate</td><td>80</td><td>/min</td><td/><td/><td/><td>2024-06-02</td></tr></tbody></table></div>"
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body height</td><td>71</td><td>in</td><td/><td/><td/><td>2024-06-02</td></tr><tr><td>Body weight</td><td>230</td><td>lb</td><td/><td/><td/><td>2024-06-02</td></tr><tr><td>Body mass index (BMI) [Ratio]</td><td>32.1</td><td>kg/m2</td><td/><td/><td/><td>2024-06-02</td></tr><tr><td>Blood pressure panel with all children optional</td><td/><td/><td/><td>Systolic blood pressure: 130 mm[Hg]; Diastolic blood pressure: 80 mm[Hg]</td><td/><td>2024-06-02</td></tr><tr><td>Heart rate</td><td>80</td><td>/min</td><td/><td/><td/><td>2024-06-02</td></tr></tbody></table></div>"
 * section[sectionVitalSigns].entry[vitalSign][+] = Reference(http://example.org/Observation/ex-VitalsPanel-IPS-ODH-Judy-Jobs)
 * section[sectionVitalSigns].entry[vitalSign][+] = Reference(http://example.org/Observation/ex-BodyHeight-IPS-ODH-Judy-Jobs)
 * section[sectionVitalSigns].entry[vitalSign][+] = Reference(http://example.org/Observation/ex-BodyWeight-IPS-ODH-Judy-Jobs)
@@ -176,13 +176,13 @@ Usage: #example
 * section[sectionPlanOfCare].title = "Plan of Care"
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #generated
-* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Plan of Care</h5><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Increase exercise frequency to 5X/week at 15 min. duration.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Diet and exercise to lose 10 lbs over the next 12 weeks.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Referral to Registered Dietitian Nutritionist for diabetes medical nutrition therapy and weight loss.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Increase sleep to average of 8 hours per night.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Referral to sleep study.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr></tbody></table></div>"
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Increase exercise frequency to 5X/week at 15 min. duration.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Diet and exercise to lose 10 lbs over the next 12 weeks.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Referral to Registered Dietitian Nutritionist for diabetes medical nutrition therapy and weight loss.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Increase sleep to average of 8 hours per night.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr><tr><td>Referral to sleep study.</td><td>In progress</td><td/><td>2024-06-02</td><td/></tr></tbody></table></div>"
 * section[sectionPlanOfCare].entry[carePlan][+] = Reference(http://example.org/CarePlan/ex-CarePlan-IPS-ODH-Judy-Jobs)
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Social History</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Days per week of moderate to vigorous physical activity</td><td>4</td><td>days per week</td><td/><td>2024-06-02</td></tr><tr><td>Exercise duration</td><td>15</td><td>minutes per day</td><td/><td>2024-06-02</td></tr><tr><td>Sleep duration</td><td>6</td><td>hours per day</td><td/><td>2024-06-02</td></tr><tr><td>History of employment status NIOSH</td><td>Employed</td><td/><td/><td>2009-03-16 -</td></tr><tr><td>History of Usual occupation</td><td>Patrol officer</td><td/><td>Usual industry: City police department; Duration: 11 years</td><td>2015-06-08 -</td></tr><tr><td>Combat zone AndOr hazardous duty work dates</td><td>2012-02-15 - 2012-05-30</td><td/><td/><td>2024-06-02</td></tr><tr><td>Date of Retirement</td><td>2015-06-07</td><td/><td>Retirement from the US Marines</td><td>2024-06-02</td></tr><tr><td>History of Occupation</td><td>Patrol officer</td><td/><td>Industry: City police department; Work classification: Paid work, local government, not armed forces; Supervisory level: Worker; Job duty: Patrol; Work schedule: rotating shift with nights; Days per week: 4 days per week; Hours per day: 8 hours per day</td><td>2018-04-02 -</td></tr><tr><td>History of Occupation</td><td>Sheriff patrol officer</td><td/><td>Industry: County sheriff office; Work classification: Paid work, local government, not armed forces; Supervisory level: Worker</td><td>2015-09-14 - 2018-04-01</td></tr><tr><td>History of Occupation</td><td>Police cadet</td><td/><td>Industry: County sheriff office; Work classification: Paid work, local government, not armed forces; Supervisory level: Worker</td><td>2015-06-08 - 2015-09-13</td></tr><tr><td>History of Occupation</td><td>Rifleman (E-4)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-4</td><td>2014-10-27 - 2015-06-07</td></tr><tr><td>History of Occupation</td><td>Rifleman (E-3)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-3</td><td>2012-09-18 - 2014-10-26</td></tr><tr><td>History of Occupation</td><td>Rifleman (E-2)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-2</td><td>2012-01-16 - 2012-08-17</td></tr><tr><td>History of Occupation</td><td>Basic Marine (E-1)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-1</td><td>2011-06-06 - 2012-01-15</td></tr><tr><td>History of Occupation</td><td>Fast food worker</td><td/><td>Industry: Fast food restaurant; Work classification: Paid non-governmental work, not self-employed</td><td>2009-03-16 - 2011-05-31</td></tr></tbody></table></div>"
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Days per week of moderate to vigorous physical activity</td><td>4</td><td>days per week</td><td/><td>2024-06-02</td></tr><tr><td>Exercise duration</td><td>15</td><td>minutes per day</td><td/><td>2024-06-02</td></tr><tr><td>Sleep duration</td><td>6</td><td>hours per day</td><td/><td>2024-06-02</td></tr><tr><td>History of employment status NIOSH</td><td>Employed</td><td/><td/><td>2009-03-16 -</td></tr><tr><td>History of Usual occupation</td><td>Patrol officer</td><td/><td>Usual industry: City police department; Duration: 11 years</td><td>2015-06-08 -</td></tr><tr><td>Combat zone AndOr hazardous duty work dates</td><td>2012-02-15 - 2012-05-30</td><td/><td/><td>2024-06-02</td></tr><tr><td>Date of Retirement</td><td>2015-06-07</td><td/><td>Retirement from the US Marines</td><td>2024-06-02</td></tr><tr><td>History of Occupation</td><td>Patrol officer</td><td/><td>Industry: City police department; Work classification: Paid work, local government, not armed forces; Supervisory level: Worker; Job duty: Patrol; Work schedule: rotating shift with nights; Days per week: 4 days per week; Hours per day: 8 hours per day</td><td>2018-04-02 -</td></tr><tr><td>History of Occupation</td><td>Sheriff patrol officer</td><td/><td>Industry: County sheriff office; Work classification: Paid work, local government, not armed forces; Supervisory level: Worker</td><td>2015-09-14 - 2018-04-01</td></tr><tr><td>History of Occupation</td><td>Police cadet</td><td/><td>Industry: County sheriff office; Work classification: Paid work, local government, not armed forces; Supervisory level: Worker</td><td>2015-06-08 - 2015-09-13</td></tr><tr><td>History of Occupation</td><td>Rifleman (E-4)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-4</td><td>2014-10-27 - 2015-06-07</td></tr><tr><td>History of Occupation</td><td>Rifleman (E-3)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-3</td><td>2012-09-18 - 2014-10-26</td></tr><tr><td>History of Occupation</td><td>Rifleman (E-2)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-2</td><td>2012-01-16 - 2012-08-17</td></tr><tr><td>History of Occupation</td><td>Basic Marine (E-1)</td><td/><td>Industry: US Marines; Work classification: Paid work, Armed Forces; Supervisory level: E-1</td><td>2011-06-06 - 2012-01-15</td></tr><tr><td>History of Occupation</td><td>Fast food worker</td><td/><td>Industry: Fast food restaurant; Work classification: Paid non-governmental work, not self-employed</td><td>2009-03-16 - 2011-05-31</td></tr></tbody></table></div>"
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-SH-IPS-ODH-Judy-Jobs-ActivityDays)
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-SH-IPS-ODH-Judy-Jobs-ActivityMinutes)
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-SH-IPS-ODH-Judy-Jobs-SleepDuration)
@@ -204,7 +204,7 @@ Instance: ex-Patient-IPS-ODH-Judy-Jobs
 InstanceOf: PatientUvIps
 Usage: #inline
 * id = "ex-Patient-IPS-ODH-Judy-Jobs"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-10-21T16:43:29-04:00"
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
 * extension[=].extension.url = "code"
@@ -283,7 +283,7 @@ Instance: ex-Org-IPS-ODH-Judy-Jobs-IHE-PCC
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-ODH-Judy-Jobs-IHE-PCC"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-10-21T16:43:29-04:00"
 * active = true 
 * identifier[+].use = #official 
@@ -307,7 +307,7 @@ Instance: ex-Practitioner-IPS-ODH-Judy-Jobs-01
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-ODH-Judy-Jobs-01"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-10-21T16:43:29-04:00"
 * active = true 
 * identifier[+].use = #official
@@ -384,7 +384,7 @@ Instance: ex-Practitioner-IPS-ODH-Judy-Jobs-02
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-ODH-Judy-Jobs-02"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.lastUpdated = "2026-10-21T16:43:29-04:00"
 * active = true 
 * identifier[+].use = #official
@@ -453,7 +453,7 @@ Instance: ex-Org-IPS-ODH-Judy-Jobs-CityOfAnytown
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-ODH-Judy-Jobs-CityOfAnytown"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#govt "Government"
 * name = "City of Anytown"
@@ -470,7 +470,7 @@ Instance: ex-Org-IPS-ODH-Judy-Jobs-BigCounty
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-ODH-Judy-Jobs-BigCounty"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#govt "Government"
 * name = "Big County"
@@ -487,7 +487,7 @@ Instance: ex-Org-IPS-ODH-Judy-Jobs-CampLejeune
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-ODH-Judy-Jobs-CampLejeune"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#govt "Government"
 * name = "Camp Lejeune"
@@ -504,7 +504,7 @@ Instance: ex-Org-IPS-ODH-Judy-Jobs-SmilinSues
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-ODH-Judy-Jobs-SmilinSues"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type = http://terminology.hl7.org/CodeSystem/organization-type#bus "Non-Healthcare Business or Corporation"
 * name = "Smilin' Sue's Station"
@@ -521,7 +521,7 @@ Instance: ex-Allergy-IPS-ODH-Judy-Jobs-NoKnown
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * id = "ex-Allergy-IPS-ODH-Judy-Jobs-NoKnown"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * code = $sct#716186003 "No known allergy"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
@@ -530,7 +530,7 @@ Instance: ex-Condition-IPS-ODH-Judy-Jobs-HeartValve
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-ODH-Judy-Jobs-HeartValve"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
@@ -545,7 +545,7 @@ Instance: ex-Condition-IPS-ODH-Judy-Jobs-DVT
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-ODH-Judy-Jobs-DVT"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed
 * category = http://terminology.hl7.org/CodeSystem/condition-category#problem-list-item
@@ -560,7 +560,7 @@ Instance: ex-MedStatement-IPS-ODH-Judy-Jobs-Rivaroxaban
 InstanceOf: MedicationStatementIPS
 Usage: #inline
 * id = "ex-MedStatement-IPS-ODH-Judy-Jobs-Rivaroxaban"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.1"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
 * medicationCodeableConcept.coding[+] = $sct#704474000 "Rivaroxaban 20 mg oral tablet"
@@ -580,39 +580,39 @@ Usage: #inline
 * dosage.timing.repeat.periodUnit = #d
 * dosage.route = $sct#26643006 "Oral use"
 * dosage.doseAndRate.type = http://terminology.hl7.org/CodeSystem/dose-rate-type#ordered "Ordered"
-* dosage.doseAndRate.doseQuantity = 1 '{tablet}' "tablet"
+* dosage.doseAndRate.doseQuantity = 1 '1' "tablet"
 
 Instance: ex-Immunization-IPS-ODH-Judy-Jobs-COVID-1
 InstanceOf: ImmunizationUvIps
 Usage: #inline
 * id = "ex-Immunization-IPS-ODH-Judy-Jobs-COVID-1"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips|2.0.1"
 * status = #completed
 * vaccineCode = $sct#1119305005 "COVID-19 antigen vaccine"
 * vaccineCode.text = "Administration of SARS-CoV-2 antigen vaccine"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
 * occurrenceDateTime = "2024-05-15"
-* protocolApplied.targetDisease = $sct#186747009 "Coronavirus infection"
+* protocolApplied.targetDisease = $sct#840539006 "COVID-19"
 * protocolApplied.doseNumberPositiveInt = 1
 
 Instance: ex-Immunization-IPS-ODH-Judy-Jobs-COVID-2
 InstanceOf: ImmunizationUvIps
 Usage: #inline
 * id = "ex-Immunization-IPS-ODH-Judy-Jobs-COVID-2"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips|2.0.1"
 * status = #completed
 * vaccineCode = $sct#1119305005 "COVID-19 antigen vaccine"
 * vaccineCode.text = "Administration of SARS-CoV-2 antigen vaccine"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
 * occurrenceDateTime = "2024-05-15"
-* protocolApplied.targetDisease = $sct#186747009 "Coronavirus infection"
+* protocolApplied.targetDisease = $sct#840539006 "COVID-19"
 * protocolApplied.doseNumberPositiveInt = 3
 
 Instance: ex-Procedure-IPS-ODH-Judy-Jobs-Polysomnography
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * id = "ex-Procedure-IPS-ODH-Judy-Jobs-Polysomnography"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.1"
 * status = #completed
 * code = $sct#60554003 "Polysomnography"
 * code.text = "Sleep study"
@@ -624,7 +624,7 @@ Instance: ex-Alert-IPS-ODH-Judy-Jobs-HardOfHearing
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * id = "ex-Alert-IPS-ODH-Judy-Jobs-HardOfHearing"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips|2.0.1"
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PH "High priority"
 * status = #active
@@ -638,7 +638,7 @@ Instance: ex-PregStatus-IPS-ODH-Judy-Jobs
 InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #inline
 * id = "ex-PregStatus-IPS-ODH-Judy-Jobs"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips|2.0.1"
 * status = #final
 * code = $loinc#82810-3 "Pregnancy status"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
@@ -651,7 +651,7 @@ Instance: ex-PregEDD-IPS-ODH-Judy-Jobs
 InstanceOf: ObservationPregnancyEddUvIps
 Usage: #inline
 * id = "ex-PregEDD-IPS-ODH-Judy-Jobs"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips|2.0.1"
 * status = #final
 * code = $loinc#11780-4 "Delivery date Estimated from ovulation date"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
@@ -667,6 +667,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85353-1 "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
+* performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-ODH-Judy-Jobs-02)
 * effectiveDateTime = "2024-06-02T09:44:00-06:00"
 * hasMember[+] = Reference(http://example.org/Observation/ex-BodyHeight-IPS-ODH-Judy-Jobs)
 * hasMember[+] = Reference(http://example.org/Observation/ex-BodyWeight-IPS-ODH-Judy-Jobs)
@@ -682,6 +683,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body height"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
+* performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-ODH-Judy-Jobs-02)
 * effectiveDateTime = "2024-06-02T09:44:00-06:00"
 * valueQuantity = 71 '[in_i]' "in"
 
@@ -693,6 +695,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code.coding[BodyWeightCode] = $loinc#29463-7 "Body weight"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
+* performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-ODH-Judy-Jobs-02)
 * effectiveDateTime = "2024-06-02T09:44:00-06:00"
 * valueQuantity = 230 '[lb_av]' "lb"
 
@@ -704,6 +707,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
+* performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-ODH-Judy-Jobs-02)
 * effectiveDateTime = "2024-06-02T09:44:00-06:00"
 * valueQuantity = 32.1 'kg/m2' "kg/m2"
 
@@ -715,6 +719,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
+* performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-ODH-Judy-Jobs-02)
 * effectiveDateTime = "2024-06-02T09:44:00-06:00"
 * component[SystolicBP].code = $loinc#8480-6 "Systolic blood pressure"
 * component[SystolicBP].valueQuantity = 130 'mm[Hg]' "mm[Hg]"
@@ -729,6 +734,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8867-4 "Heart rate"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-ODH-Judy-Jobs)
+* performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-ODH-Judy-Jobs-02)
 * effectiveDateTime = "2024-06-02T09:44:00-06:00"
 * valueQuantity = 80 '/min' "/min"
 

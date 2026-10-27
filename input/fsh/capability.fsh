@@ -17,7 +17,7 @@ The Content Creator SHALL support at least one of the options below, and SHALL c
 * format[+] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * document[+].mode = #producer
-* document[=].profile = Canonical(BundleUvIps)
+* document[=].profile = Canonical(BundleUvIps|2.0.1)
 * document[=].documentation = "HL7 FHIR IPS Option: SHALL produce documents conforming to the HL7 IPS Bundle, supporting all Must Support sections and entries."
 * document[+].mode = #producer
 * document[=].profile = Canonical(IHE_IPS_Complete_Option_Bundle)
@@ -45,7 +45,7 @@ The Content Consumer SHALL implement at least one of the FHIR View, Document Imp
 * format[+] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * document[+].mode = #consumer
-* document[=].profile = Canonical(BundleUvIps)
+* document[=].profile = Canonical(BundleUvIps|2.0.1)
 * document[=].documentation = """
 SHALL accept documents conforming to the HL7 IPS Bundle (and therefore the Complete and ODH Option Bundles, which derive from it).
 - FHIR View Option: SHALL render the document for viewing, including all elements with a SHOULD:display obligation.
@@ -57,4 +57,4 @@ SHALL accept documents conforming to the HL7 IPS Bundle (and therefore the Compl
 * document[=].documentation = "Complete Discrete Data Import Option: SHALL be able to discretely import all relevant content defined by the Complete Option Bundle."
 * document[+].mode = #consumer
 * document[=].profile = Canonical(IHE_IPS_ODH_Option_Bundle)
-* document[=].documentation = "When consuming ODH Option documents, SHALL handle the ODH entries in the Social History section and SHOULD display them, per the ODH Option Composition obligations."
+* document[=].documentation = "When consuming ODH Option documents, SHALL handle the ODH entries in the Social History section and SHOULD display them, per the ODH Option Composition obligations."

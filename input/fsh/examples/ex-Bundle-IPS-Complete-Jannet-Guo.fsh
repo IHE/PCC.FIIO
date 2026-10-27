@@ -6,7 +6,7 @@ This example Bundle represents the IPS Bundle structure conformant to the IPS Co
 Usage: #example
 * id = "ex-Bundle-IPS-Complete-Jannet-Guo"
 * meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Bundle"
-* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.1"
 * identifier.system = "urn:oid:1.3.6.1.4.1.19376.1.5.4"
 * identifier.value = "IHEPCCIPSCOMPLETE-EX20261022"
 * type = #document
@@ -207,7 +207,9 @@ This example Composition represents the IPS Composition structure conformant to 
 Usage: #example
 * id = "ex-Composition-IPS-Complete-Jannet-Guo"
 * meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition"
-* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.1"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Primary Problems:</strong> Jannet is a 33-year-old radiology technician who is 16 weeks 4 days pregnant with her second child (estimated delivery date 2027-04-04). She has gestational diabetes managed with an insulin patch pump, is Rh(D) negative, and is being treated for a chlamydial infection. She is a current every day smoker and is allergic to penicillin (anaphylaxis), NSAIDs, bee venom, latex and fish.</p><p><strong>Significant Clinical Event Requiring Patient Summary:</strong> Jannet will be visiting her family in Canada in December 2026 during her pregnancy. Dr Alicia Gould of Williams Bay Family Health Clinic is sharing her patient summary so that any clinician who sees her while she travels has her pregnancy, diabetes and allergy information.</p></div>"
 * status = #final
 * type = $loinc#60591-5 "Patient summary Document"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -228,7 +230,7 @@ Usage: #example
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medication Summary</h5><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Insulin aspart 100 unit/mL solution for injection</td><td>Active</td><td>Subcutaneous</td><td>Continuous subcutaneous insulin infusion via electronic insulin patch pump; basal and bolus doses per pump settings</td><td>For gestational diabetes</td><td>2026-09-21</td></tr><tr><td>Azithromycin 500 mg oral tablet</td><td>Completed</td><td>Oral</td><td>Take 1 g (2 x 500 mg tablets) by mouth as a single dose</td><td>For chlamydial infection</td><td>2026-09-18</td></tr><tr><td>Rho(D) immune globulin (RhoGAM)</td><td>Active (order)</td><td>Intramuscular</td><td>300 micrograms (1500 IU) once at 28 weeks of gestation</td><td>Due 2027-01-10; Rh(D) negative mother</td><td>2026-10-22</td></tr></tbody></table></div>"
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Insulin aspart 100 unit/mL solution for injection</td><td>Active</td><td>Subcutaneous</td><td>Continuous subcutaneous insulin infusion via electronic insulin patch pump; basal and bolus doses per pump settings</td><td>For gestational diabetes</td><td>2026-09-21</td></tr><tr><td>Azithromycin 500 mg oral tablet</td><td>Completed</td><td>Oral</td><td>Take 1 g (2 x 500 mg tablets) by mouth as a single dose</td><td>For chlamydial infection</td><td>2026-09-18</td></tr><tr><td>Rho(D) immune globulin (RhoGAM)</td><td>Active (order)</td><td>Intramuscular</td><td>300 micrograms (1500 IU) once at 28 weeks of gestation</td><td>Due 2027-01-10; Rh(D) negative mother</td><td>2026-10-22</td></tr></tbody></table></div>"
 * section[sectionMedications].entry[medicationStatementOrRequest][+] = Reference(http://example.org/MedicationRequest/ex-MedRequest-IPS-Complete-Jannet-Guo-RhoGAM) "RhoGAM 300 micrograms IM at 28 weeks"
 * section[sectionMedications].entry[medicationStatementOrRequest][+] = Reference(http://example.org/MedicationStatement/ex-MedStatement-IPS-Complete-Jannet-Guo-InsulinAspart) "Insulin aspart via insulin patch pump"
 * section[sectionMedications].entry[medicationStatementOrRequest][+] = Reference(http://example.org/MedicationStatement/ex-MedStatement-IPS-Complete-Jannet-Guo-Azithromycin) "Azithromycin 1 g single dose"
@@ -236,7 +238,7 @@ Usage: #example
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Allergies and Intolerances</h5><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Non-steroidal anti-inflammatory agents (NSAIDs)</td><td>Active</td><td>Medication</td><td>Urticaria</td><td>Moderate</td><td>Confirmed</td><td>2015</td></tr><tr><td>Penicillin</td><td>Active</td><td>Medication</td><td>Anaphylaxis</td><td>Severe</td><td>Confirmed</td><td>2001</td></tr><tr><td>Bee venom</td><td>Active</td><td>Environment</td><td>Localized swelling</td><td>Moderate</td><td>Confirmed</td><td>2008</td></tr><tr><td>Latex</td><td>Active</td><td>Environment</td><td>Contact dermatitis</td><td>Mild</td><td>Use latex-free equipment and supplies</td><td>2016</td></tr><tr><td>Fish</td><td>Active</td><td>Food</td><td>Urticaria</td><td>Moderate</td><td>Confirmed</td><td>2005</td></tr></tbody></table></div>"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Non-steroidal anti-inflammatory agents (NSAIDs)</td><td>Active</td><td>Medication</td><td>Urticaria</td><td>Moderate</td><td>Confirmed</td><td>2015</td></tr><tr><td>Penicillin</td><td>Active</td><td>Medication</td><td>Anaphylaxis</td><td>Severe</td><td>Confirmed</td><td>2001</td></tr><tr><td>Bee venom</td><td>Active</td><td>Environment</td><td>Localized swelling, weal</td><td>Moderate</td><td>Confirmed</td><td>2008</td></tr><tr><td>Latex</td><td>Active</td><td>Environment</td><td>Contact dermatitis, urticaria, itching of skin</td><td>Mild</td><td>Use latex-free equipment and supplies</td><td>2016</td></tr><tr><td>Fish</td><td>Active</td><td>Food</td><td>Urticaria</td><td>Moderate</td><td>Confirmed</td><td>2005</td></tr></tbody></table></div>"
 * section[sectionAllergies].entry[allergyOrIntolerance][+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-IPS-Complete-Jannet-Guo-NSAID) "Allergy to NSAIDs"
 * section[sectionAllergies].entry[allergyOrIntolerance][+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-IPS-Complete-Jannet-Guo-Penicillin) "Allergy to penicillin"
 * section[sectionAllergies].entry[allergyOrIntolerance][+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-IPS-Complete-Jannet-Guo-BeeVenom) "Allergy to bee venom"
@@ -246,21 +248,21 @@ Usage: #example
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
-* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Problem List</h5><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Gestational diabetes mellitus</td><td>Active</td><td>Moderate to severe; managed with insulin patch pump</td><td>2026-09-14</td></tr><tr><td>Chlamydial infection</td><td>Active</td><td>Mild; treated with azithromycin 2026-09-18</td><td>2026-09-18</td></tr></tbody></table></div>"
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Gestational diabetes mellitus</td><td>Active</td><td>Moderate; managed with insulin patch pump</td><td>2026-09-14</td></tr><tr><td>Chlamydial infection</td><td>Active</td><td>Mild; treated with azithromycin 2026-09-18</td><td>2026-09-18</td></tr></tbody></table></div>"
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Complete-Jannet-Guo-GDM) "Gestational diabetes mellitus"
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Complete-Jannet-Guo-Chlamydia) "Chlamydial infection"
 
 * section[sectionPastProblems].title = "History of Past Illness"
 * section[sectionPastProblems].code = $loinc#11348-0 "History of Past illness note"
 * section[sectionPastProblems].text.status = #generated
-* section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Past Illness</h5><table class=\"grid\"><thead><tr><th>Condition</th><th>Status</th><th>Comments</th><th>Onset Date</th><th>Resolved Date</th></tr></thead><tbody><tr><td>Sepsis</td><td>Resolved</td><td>Postpartum, after the 2023 birth</td><td>2023-04-26</td><td>2023-05-10</td></tr><tr><td>Fracture of tibia</td><td>Resolved</td><td>On-duty injury as an EMT; treated with open reduction and internal fixation</td><td>2014-03-12</td><td/></tr></tbody></table></div>"
+* section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Condition</th><th>Status</th><th>Comments</th><th>Onset Date</th><th>Resolved Date</th></tr></thead><tbody><tr><td>Sepsis</td><td>Resolved</td><td>Postpartum, after the 2023 birth</td><td>2023-04-26</td><td>2023-05-10</td></tr><tr><td>Fracture of tibia</td><td>Resolved</td><td>On-duty injury as an EMT; treated with open reduction and internal fixation</td><td>2014-03-12</td><td/></tr></tbody></table></div>"
 * section[sectionPastProblems].entry[pastProblem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Complete-Jannet-Guo-Sepsis) "Sepsis (resolved)"
 * section[sectionPastProblems].entry[pastProblem][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Complete-Jannet-Guo-TibiaFracture) "Fracture of tibia (resolved)"
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
-* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Procedures</h5><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Open reduction of fracture of tibia with internal fixation</td><td>Bone screws implanted</td><td>2014-03-13</td></tr><tr><td>External cephalic version</td><td>Breech position; successful; prior pregnancy</td><td>2023-03-30</td></tr><tr><td>Normal delivery procedure</td><td>Planned home birth; one live birth; prior pregnancy</td><td>2023-04-20</td></tr><tr><td>Postpartum education</td><td>Prior pregnancy</td><td>2023-04-21</td></tr><tr><td>Pregnancy smoking education</td><td>Current every day smoker</td><td>2026-08-16</td></tr></tbody></table></div>"
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Open reduction of fracture of tibia with internal fixation</td><td>Bone screws implanted</td><td>2014-03-13</td></tr><tr><td>External cephalic version</td><td>Breech position; successful; prior pregnancy</td><td>2023-03-30</td></tr><tr><td>Normal delivery procedure</td><td>Planned home birth; one live birth; prior pregnancy</td><td>2023-04-20</td></tr><tr><td>Postpartum education</td><td>Prior pregnancy</td><td>2023-04-21</td></tr><tr><td>Pregnancy smoking education</td><td>Current every day smoker</td><td>2026-08-16</td></tr></tbody></table></div>"
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-IPS-Complete-Jannet-Guo-ORIF) "Open reduction and internal fixation of tibia"
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-IPS-Complete-Jannet-Guo-ECV) "External cephalic version"
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-IPS-Complete-Jannet-Guo-HomeBirth) "Normal delivery at home"
@@ -270,21 +272,21 @@ Usage: #example
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Immunizations</h5><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Tdap</td><td>Completed</td><td/><td/><td/><td>Given during prior pregnancy; reported from written record</td><td>2023-02-16</td></tr><tr><td>Influenza, split virus, trivalent, PF</td><td>Completed</td><td/><td/><td/><td>Reported from written record</td><td>2025-10-15</td></tr></tbody></table></div>"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Tdap</td><td>Completed</td><td/><td/><td/><td>Given during prior pregnancy; reported from written record</td><td>2023-02-16</td></tr><tr><td>Influenza, split virus, trivalent, PF</td><td>Completed</td><td/><td/><td/><td>Reported from written record</td><td>2025-10-15</td></tr></tbody></table></div>"
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-IPS-Complete-Jannet-Guo-Tdap) "Tdap"
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-IPS-Complete-Jannet-Guo-Influenza) "Influenza"
 
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medical Devices</h5><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>Bone screw (tibia)</td><td>Active</td><td>Implanted during open reduction and internal fixation of tibial fracture</td><td>2014-03-13</td></tr><tr><td>Electronic insulin infusion patch pump</td><td>Active</td><td>For gestational diabetes</td><td>2026-09-21</td></tr></tbody></table></div>"
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>Bone screw (tibia)</td><td>Active</td><td>Implanted during open reduction and internal fixation of tibial fracture</td><td>2014-03-13</td></tr><tr><td>Electronic insulin infusion patch pump</td><td>Active</td><td>For gestational diabetes</td><td>2026-09-21</td></tr></tbody></table></div>"
 * section[sectionMedicalDevices].entry[deviceStatement][+] = Reference(http://example.org/DeviceUseStatement/ex-DeviceUse-IPS-Complete-Jannet-Guo-BoneScrew) "Bone screws, tibia"
 * section[sectionMedicalDevices].entry[deviceStatement][+] = Reference(http://example.org/DeviceUseStatement/ex-DeviceUse-IPS-Complete-Jannet-Guo-InsulinPump) "Insulin infusion patch pump"
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.status = #generated
-* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Diagnostic Results: Observations</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Glucose, 1 hour post 50 g glucose</td><td>162</td><td>mg/dL</td><td>High</td><td>&lt; 140 mg/dL</td><td>Glucose challenge screening</td><td>2026-09-14</td></tr><tr><td>ABO and Rh group</td><td>A Rh(D) negative</td><td/><td/><td/><td/><td>2026-08-16</td></tr><tr><td>US for pregnancy in first trimester</td><td>Single live intrauterine pregnancy, 7 weeks 0 days</td><td/><td/><td/><td>Crown-rump length 10 mm; gestational age by crown-rump length 7 weeks; fetal heart rate 125 beats/minute</td><td>2026-08-16</td></tr><tr><td>XR tibia and fibula 2 views</td><td>Tibial fracture fixated with bone screws in good position</td><td/><td/><td/><td>Post-operative</td><td>2014-03-14</td></tr></tbody></table><h5>Diagnostic Results: Diagnostic Reports</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Conclusion</th><th>Date</th></tr></thead><tbody><tr><td>Sickle cell screening (Hemoglobin S/Hemoglobin total)</td><td>0 % hemoglobin S; negative for sickle cell disease and sickle cell trait</td><td>2026-08-16</td></tr><tr><td>US for pregnancy in first trimester</td><td>Normal obstetric scan; estimated delivery date 2027-04-04</td><td>2026-08-16</td></tr><tr><td>Presepsin (soluble CD14 subtype)</td><td>180 pg/mL (reference &lt; 300 pg/mL); normal, consistent with resolution of sepsis</td><td>2023-05-09</td></tr><tr><td>Staphylococcus cultures</td><td>Blood culture: no growth after 5 days; MRSA culture: negative</td><td>2023-05-09</td></tr><tr><td>XR tibia and fibula 2 views</td><td>Bone screws in good position, near-anatomic alignment, no hardware complication</td><td>2014-03-14</td></tr></tbody></table></div>"
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Diagnostic Results: Observations</b></p><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Glucose, 1 hour post 50 g glucose</td><td>162</td><td>mg/dL</td><td>High</td><td>&lt; 140 mg/dL</td><td>Glucose challenge screening</td><td>2026-09-14</td></tr><tr><td>ABO and Rh group</td><td>A Rh(D) negative</td><td/><td/><td/><td/><td>2026-08-16</td></tr><tr><td>US for pregnancy in first trimester</td><td>Single live intrauterine pregnancy, 7 weeks 0 days</td><td/><td/><td/><td>Crown-rump length 10 mm; gestational age by crown-rump length 7 weeks; fetal heart rate 125 beats/minute</td><td>2026-08-16</td></tr><tr><td>XR tibia and fibula 2 views</td><td>Tibial fracture fixated with bone screws in good position</td><td/><td/><td/><td>Post-operative</td><td>2014-03-14</td></tr></tbody></table><p><b>Diagnostic Results: Diagnostic Reports</b></p><table class=\"grid\"><thead><tr><th>Code</th><th>Conclusion</th><th>Date</th></tr></thead><tbody><tr><td>Sickle cell screening (Hemoglobin S/Hemoglobin total)</td><td>0 % hemoglobin S; negative for sickle cell disease and sickle cell trait</td><td>2026-08-16</td></tr><tr><td>US for pregnancy in first trimester</td><td>Normal obstetric scan; estimated delivery date 2027-04-04</td><td>2026-08-16</td></tr><tr><td>Presepsin (soluble CD14 subtype)</td><td>180 pg/mL (reference &lt; 300 pg/mL); normal, consistent with resolution of sepsis</td><td>2023-05-09</td></tr><tr><td>Staphylococcus cultures</td><td>Blood culture: no growth after 5 days; MRSA culture: negative</td><td>2023-05-09</td></tr><tr><td>XR tibia and fibula 2 views</td><td>Bone screws in good position, near-anatomic alignment, no hardware complication</td><td>2014-03-14</td></tr></tbody></table></div>"
 * section[sectionResults].entry[results-observation-laboratory-pathology][+] = Reference(http://example.org/Observation/ex-Lab-IPS-Complete-Jannet-Guo-GlucoseChallenge) "Glucose challenge 162 mg/dL (High)"
 * section[sectionResults].entry[results-observation-laboratory-pathology][+] = Reference(http://example.org/Observation/ex-Lab-IPS-Complete-Jannet-Guo-BloodType) "Blood group A Rh(D) negative"
 * section[sectionResults].entry[results-diagnosticReport][+] = Reference(http://example.org/DiagnosticReport/ex-DR-IPS-Complete-Jannet-Guo-SickleCell) "Sickle cell screening"
@@ -298,14 +300,14 @@ Usage: #example
 * section[sectionVitalSigns].title = "Vital Signs"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
 * section[sectionVitalSigns].text.status = #generated
-* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Vital Signs</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body weight</td><td>162</td><td>lb</td><td/><td/><td/><td>2026-10-22</td></tr><tr><td>Abdominal tenderness</td><td>Present</td><td/><td>Abnormal</td><td/><td>Physical exam</td><td>2026-10-22</td></tr></tbody></table></div>"
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body weight</td><td>162</td><td>lb</td><td/><td/><td/><td>2026-10-22</td></tr><tr><td>Abdominal tenderness</td><td>Present</td><td/><td>Abnormal</td><td/><td>Physical exam</td><td>2026-10-22</td></tr></tbody></table></div>"
 * section[sectionVitalSigns].entry[+] = Reference(http://example.org/Observation/ex-Vital-IPS-Complete-Jannet-Guo-BodyWeight) "Body weight 162 lb"
 * section[sectionVitalSigns].entry[+] = Reference(http://example.org/Observation/ex-Exam-IPS-Complete-Jannet-Guo-AbdominalTenderness) "Abdominal tenderness"
 
 * section[sectionPregnancyHx].title = "Pregnancy History"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
-* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Pregnancy</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Pregnant</td><td>Confirmed at first prenatal visit (7 weeks 0 days)</td><td>2026-08-16</td></tr><tr><td>Delivery date estimated from last menstrual period</td><td>2027-04-04</td><td/><td>2026-08-16</td></tr><tr><td>Last menstrual period start date</td><td>2026-06-28</td><td/><td>2026-08-16</td></tr><tr><td>Gestational age</td><td>16 weeks 4 days</td><td>Calculated from last menstrual period</td><td>2026-10-22</td></tr><tr><td>Date first prenatal visit</td><td>2026-08-16</td><td/><td>2026-08-16</td></tr><tr><td>[#] Pregnancies</td><td>2</td><td>Including current pregnancy</td><td>2026-08-16</td></tr><tr><td>[#] Births.live</td><td>1</td><td>Home birth 2023-04-20</td><td>2026-08-16</td></tr><tr><td>Menstrual status</td><td>Pregnant</td><td>Cycles every 24 days prior to pregnancy</td><td>2026-08-16</td></tr><tr><td>Body weight measured, pre-pregnancy</td><td>148 lb</td><td/><td>2026-08-16</td></tr></tbody></table></div>"
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Pregnant</td><td>Confirmed at first prenatal visit (7 weeks 0 days)</td><td>2026-08-16</td></tr><tr><td>Delivery date estimated from last menstrual period</td><td>2027-04-04</td><td/><td>2026-08-16</td></tr><tr><td>Last menstrual period start date</td><td>2026-06-28</td><td/><td>2026-08-16</td></tr><tr><td>Gestational age</td><td>16 weeks 4 days</td><td>Calculated from last menstrual period</td><td>2026-10-22</td></tr><tr><td>Date first prenatal visit</td><td>2026-08-16</td><td/><td>2026-08-16</td></tr><tr><td>[#] Pregnancies</td><td>2</td><td>Including current pregnancy</td><td>2026-08-16</td></tr><tr><td>[#] Births.live</td><td>1</td><td>Home birth 2023-04-20</td><td>2026-08-16</td></tr><tr><td>Menstrual status</td><td>Pregnant</td><td>Cycles every 24 days prior to pregnancy</td><td>2026-08-16</td></tr><tr><td>Body weight measured, pre-pregnancy</td><td>148 lb</td><td/><td>2026-08-16</td></tr></tbody></table></div>"
 * section[sectionPregnancyHx].entry[+] = Reference(http://example.org/Observation/ex-Preg-IPS-Complete-Jannet-Guo-Status) "Pregnant"
 * section[sectionPregnancyHx].entry[+] = Reference(http://example.org/Observation/ex-Preg-IPS-Complete-Jannet-Guo-LiveBirths) "Live births: 1"
 * section[sectionPregnancyHx].entry[+] = Reference(http://example.org/Observation/ex-Preg-IPS-Complete-Jannet-Guo-LMP)
@@ -318,14 +320,14 @@ Usage: #example
 * section[sectionPlanOfCare].title = "Plan of Care"
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #generated
-* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Plan of Care</h5><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Fetal anatomy ultrasound (20 weeks)</td><td>Scheduled</td><td>Dr. Elena Marquez, MD; Geneva Lakes Regional Hospital</td><td>2026-11-15</td><td/></tr><tr><td>Rho(D) immune globulin (RhoGAM) 300 micrograms IM (28 weeks)</td><td>Ordered</td><td>Rh(D) negative mother; Dr. Elena Marquez, MD</td><td>2027-01-10</td><td/></tr><tr><td>Daily blood glucose monitoring with insulin patch pump management</td><td>In progress</td><td>Gestational diabetes; Dr. Elena Marquez, MD</td><td>2026-09-21</td><td/></tr><tr><td>Planned birth at Lakeside Birth Center</td><td>Not started</td><td>Midwife Samuel Okoro, CNM; husband Yijun Guo and doula Daria Deonne present</td><td>2027-03-14</td><td>2027-04-18</td></tr><tr><td>Newborn examination and care</td><td>Not started</td><td>Dr. Priya Raman, MD (pediatrician)</td><td>Within 24 hours after birth</td><td/></tr></tbody></table><h5>Immunization Plan</h5><table class=\"grid\"><thead><tr><th>Vaccine</th><th>Status</th><th>Earliest Date</th><th>Due Date</th><th>Latest Date</th></tr></thead><tbody><tr><td>Influenza (2026-2027 season)</td><td>Due</td><td/><td>2026-10-22</td><td/></tr><tr><td>COVID-19</td><td>Due</td><td/><td>2026-10-22</td><td/></tr><tr><td>Tdap (27 to 36 weeks)</td><td>Due</td><td>2027-01-03</td><td>2027-01-03</td><td>2027-03-07</td></tr></tbody></table><h5>Care Team</h5><table class=\"grid\"><thead><tr><th>Member</th><th>Role</th><th>Organization</th></tr></thead><tbody><tr><td>Dr. Alicia Gould</td><td>Primary care physician</td><td>Williams Bay Family Health Clinic</td></tr><tr><td>Dr. Elena Marquez, MD</td><td>Obstetrician</td><td>Geneva Lakes Regional Hospital</td></tr><tr><td>Samuel Okoro, CNM</td><td>Certified Nurse Midwife</td><td>Lakeside Birth Center</td></tr><tr><td>Daria Deonne</td><td>Doula / community health worker (non-clinical support)</td><td>Geneva Lakes Community Maternal Health and Family Support Services</td></tr><tr><td>Dr. Priya Raman, MD</td><td>Pediatrician (planned for the newborn)</td><td>Williams Bay Family Health Clinic</td></tr></tbody></table></div>"
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Fetal anatomy ultrasound (20 weeks)</td><td>Scheduled</td><td>Dr. Elena Marquez, MD; Geneva Lakes Regional Hospital</td><td>2026-11-15</td><td/></tr><tr><td>Rho(D) immune globulin (RhoGAM) 300 micrograms IM (28 weeks)</td><td>Ordered</td><td>Rh(D) negative mother; Dr. Elena Marquez, MD</td><td>2027-01-10</td><td/></tr><tr><td>Daily blood glucose monitoring with insulin patch pump management</td><td>In progress</td><td>Gestational diabetes; Dr. Elena Marquez, MD</td><td>2026-09-21</td><td/></tr><tr><td>Planned birth at Lakeside Birth Center</td><td>Not started</td><td>Midwife Samuel Okoro, CNM; husband Yijun Guo and doula Daria Deonne present</td><td>2027-03-14</td><td>2027-04-18</td></tr><tr><td>Newborn examination and care</td><td>Not started</td><td>Dr. Priya Raman, MD (pediatrician)</td><td>Within 24 hours after birth</td><td/></tr></tbody></table><p><b>Immunization Plan</b></p><table class=\"grid\"><thead><tr><th>Vaccine</th><th>Status</th><th>Earliest Date</th><th>Due Date</th><th>Latest Date</th></tr></thead><tbody><tr><td>Influenza (2026-2027 season)</td><td>Due</td><td/><td>2026-10-22</td><td/></tr><tr><td>COVID-19</td><td>Due</td><td/><td>2026-10-22</td><td/></tr><tr><td>Tdap (27 to 36 weeks)</td><td>Due</td><td>2027-01-03</td><td>2027-01-03</td><td>2027-03-07</td></tr></tbody></table><p><b>Care Team</b></p><table class=\"grid\"><thead><tr><th>Member</th><th>Role</th><th>Organization</th></tr></thead><tbody><tr><td>Dr. Alicia Gould</td><td>Primary care physician</td><td>Williams Bay Family Health Clinic</td></tr><tr><td>Dr. Elena Marquez, MD</td><td>Obstetrician</td><td>Geneva Lakes Regional Hospital</td></tr><tr><td>Samuel Okoro, CNM</td><td>Certified Nurse Midwife</td><td>Lakeside Birth Center</td></tr><tr><td>Daria Deonne</td><td>Doula / community health worker (non-clinical support)</td><td>Geneva Lakes Community Maternal Health and Family Support Services</td></tr><tr><td>Dr. Priya Raman, MD</td><td>Pediatrician (planned for the newborn)</td><td>Williams Bay Family Health Clinic</td></tr></tbody></table></div>"
 * section[sectionPlanOfCare].entry[carePlan][+] = Reference(http://example.org/CarePlan/ex-CarePlan-IPS-Complete-Jannet-Guo-BirthPlan) "Birth plan"
 * section[sectionPlanOfCare].entry[immunizationRecommendation][+] = Reference(http://example.org/ImmunizationRecommendation/ex-ImmRec-IPS-Complete-Jannet-Guo-Pregnancy) "Pregnancy immunization plan"
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Social History</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Tobacco smoking status</td><td>Current every day smoker</td><td/><td/><td>2026-08-16</td></tr><tr><td>Alcoholic drinks per day</td><td>2</td><td>/d</td><td>Prior to current pregnancy</td><td>2023-04-28</td></tr><tr><td>At increased risk of domestic violence</td><td>No</td><td/><td/><td>2026-08-16</td></tr><tr><td>Homeless or living in shelter in past 12 months</td><td>No</td><td/><td/><td>2026-08-16</td></tr><tr><td>History of employment status NIOSH</td><td>Employed</td><td/><td/><td>2011-09-06 -</td></tr><tr><td>History of Occupation</td><td>Medical Imaging and Therapeutic Equipment Technicians (Radiology technician)</td><td/><td>Industry: Hospital activities; Geneva Lakes Regional Hospital; current job</td><td>2015-07-06 -</td></tr><tr><td>History of Occupation</td><td>Ambulance Workers (EMT-Basic, Connecticut)</td><td/><td>Industry: Other human health activities; Nutmeg Valley Ambulance Service</td><td>2011-09-06 - 2015-06-30</td></tr></tbody></table></div>"
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Tobacco smoking status</td><td>Current every day smoker</td><td/><td/><td>2026-08-16</td></tr><tr><td>Alcoholic drinks per day</td><td>2</td><td>/d</td><td>Prior to current pregnancy</td><td>2023-04-28</td></tr><tr><td>At increased risk of domestic violence</td><td>No</td><td/><td/><td>2026-08-16</td></tr><tr><td>Homeless or living in shelter in past 12 months</td><td>No</td><td/><td/><td>2026-08-16</td></tr><tr><td>History of employment status NIOSH</td><td>Employed</td><td/><td/><td>2011-09-06 -</td></tr><tr><td>History of Occupation</td><td>Medical Imaging and Therapeutic Equipment Technicians (Radiology technician)</td><td/><td>Industry: Hospital activities; Geneva Lakes Regional Hospital; current job</td><td>2015-07-06 -</td></tr><tr><td>History of Occupation</td><td>Ambulance Workers (EMT-Basic, Connecticut)</td><td/><td>Industry: Other human health activities; Nutmeg Valley Ambulance Service</td><td>2011-09-06 - 2015-06-30</td></tr></tbody></table></div>"
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-SH-IPS-Complete-Jannet-Guo-Tobacco) "Current every day smoker"
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-SH-IPS-Complete-Jannet-Guo-Alcohol) "2 alcoholic drinks per day"
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-SH-IPS-Complete-Jannet-Guo-DomesticViolence)
@@ -337,20 +339,20 @@ Usage: #example
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.status = #generated
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Advance Directives</h5><table class=\"grid\"><thead><tr><th>Scope</th><th>Status</th><th>Action Controlled</th><th>Date</th></tr></thead><tbody><tr><td>Treatment</td><td>Active</td><td>Permit: transfusion of blood product</td><td>2026-08-16</td></tr></tbody></table></div>"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Scope</th><th>Status</th><th>Action Controlled</th><th>Date</th></tr></thead><tbody><tr><td>Treatment</td><td>Active</td><td>Permit: transfusion of blood product</td><td>2026-08-16</td></tr></tbody></table></div>"
 * section[sectionAdvanceDirectives].entry[advanceDirectivesConsent][+] = Reference(http://example.org/Consent/ex-Consent-IPS-Complete-Jannet-Guo-BloodTransfusion) "Consent to blood transfusion"
 
 * section[sectionAlerts].title = "Alerts"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.status = #generated
-* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Alerts</h5><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Allergy to latex - use latex-free equipment and supplies</td><td>Active</td><td>High</td><td>2019-05-20</td></tr><tr><td>At increased risk of radiation exposure - pregnant radiology technician</td><td>Active</td><td>Medium</td><td>2026-08-16</td></tr></tbody></table></div>"
+* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Allergy to latex - use latex-free equipment and supplies</td><td>Active</td><td>High</td><td>2019-05-20</td></tr><tr><td>At increased risk of radiation exposure - pregnant radiology technician</td><td>Active</td><td>Medium</td><td>2026-08-16</td></tr></tbody></table></div>"
 * section[sectionAlerts].entry[alertsFlag][+] = Reference(http://example.org/Flag/ex-Alert-IPS-Complete-Jannet-Guo-Latex) "Latex allergy"
 * section[sectionAlerts].entry[alertsFlag][+] = Reference(http://example.org/Flag/ex-Alert-IPS-Complete-Jannet-Guo-Radiation) "At increased risk of radiation exposure"
 
 * section[sectionFunctionalStatus].title = "Functional Status"
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
 * section[sectionFunctionalStatus].text.status = #generated
-* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Functional Status</h5><table class=\"grid\"><thead><tr><th>Finding</th><th>Type</th><th>Status</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Difficulty standing</td><td>Disability</td><td>Active</td><td>Mild; limited tolerance for prolonged standing related to prior tibial fracture with retained screws and current pregnancy</td><td>2026-10-22</td></tr><tr><td>Reduced mobility</td><td>Functional assessment (Assessment of mobility)</td><td>Completed</td><td>Walks independently</td><td>2026-10-22</td></tr></tbody></table></div>"
+* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Finding</th><th>Type</th><th>Status</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Difficulty standing</td><td>Disability</td><td>Active</td><td>Mild; limited tolerance for prolonged standing related to prior tibial fracture with retained screws and current pregnancy</td><td>2026-10-22</td></tr><tr><td>Reduced mobility</td><td>Functional assessment (Assessment of mobility)</td><td>Completed</td><td>Walks independently</td><td>2026-10-22</td></tr></tbody></table></div>"
 * section[sectionFunctionalStatus].entry[disability][+] = Reference(http://example.org/Condition/ex-Condition-IPS-Complete-Jannet-Guo-DifficultyStanding) "Difficulty standing"
 * section[sectionFunctionalStatus].entry[functionalAssessment][+] = Reference(http://example.org/ClinicalImpression/ex-FunctionalAssessment-IPS-Complete-Jannet-Guo) "Reduced mobility"
 
@@ -364,7 +366,7 @@ Instance: ex-Patient-IPS-Complete-Jannet-Guo
 InstanceOf: PatientUvIps
 Usage: #inline
 * id = "ex-Patient-IPS-Complete-Jannet-Guo"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips|2.0.1"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * extension[+].url = "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"
 * extension[=].extension.url = "value"
@@ -445,7 +447,7 @@ Instance: ex-Practitioner-IPS-Complete-Jannet-Guo-AliciaGould
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Complete-Jannet-Guo-AliciaGould"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * identifier.use = #official
 * identifier.type = $v2-0203#NPI "National provider identifier"
@@ -488,7 +490,7 @@ Instance: ex-Org-IPS-Complete-Jannet-Guo-Clinic
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Complete-Jannet-Guo-Clinic"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type[+] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * type[+] = $ISICRev4#8620 "Medical and dental practice activities"
@@ -507,7 +509,7 @@ Instance: ex-Org-IPS-Complete-Jannet-Guo-Hospital
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Complete-Jannet-Guo-Hospital"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type[+] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * type[+] = $ISICRev4#8610 "Hospital activities"
@@ -528,7 +530,7 @@ Instance: ex-Org-IPS-Complete-Jannet-Guo-BirthCenter
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Complete-Jannet-Guo-BirthCenter"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type[+] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * type[+] = $ISICRev4#8690 "Other human health activities"
@@ -549,7 +551,7 @@ Instance: ex-Org-IPS-Complete-Jannet-Guo-Ambulance
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Complete-Jannet-Guo-Ambulance"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type[+] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * type[+] = $ISICRev4#8690 "Other human health activities"
@@ -569,7 +571,7 @@ Instance: ex-MedStatement-IPS-Complete-Jannet-Guo-Azithromycin
 InstanceOf: MedicationStatementIPS
 Usage: #inline
 * id = "ex-MedStatement-IPS-Complete-Jannet-Guo-Azithromycin"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.1"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
 * medicationCodeableConcept = $sct#1145424008 "Azithromycin 500 mg oral tablet"
@@ -589,7 +591,7 @@ Instance: ex-Allergy-IPS-Complete-Jannet-Guo-NSAID
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * id = "ex-Allergy-IPS-Complete-Jannet-Guo-NSAID"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed
 * type = #allergy
@@ -606,7 +608,7 @@ Instance: ex-Allergy-IPS-Complete-Jannet-Guo-Penicillin
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * id = "ex-Allergy-IPS-Complete-Jannet-Guo-Penicillin"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed
 * type = #allergy
@@ -623,7 +625,7 @@ Instance: ex-Allergy-IPS-Complete-Jannet-Guo-BeeVenom
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * id = "ex-Allergy-IPS-Complete-Jannet-Guo-BeeVenom"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed
 * type = #allergy
@@ -631,7 +633,8 @@ Usage: #inline
 * code = $sct#424213003 "Allergy to bee venom"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * onsetDateTime = "2008"
-* reaction.manifestation = $sct#722192005 "Localized swelling"
+* reaction.manifestation[0] = $sct#722192005 "Localized swelling"
+* reaction.manifestation[+] = $sct#247472004 "Weal"
 * reaction.severity = #moderate
 * recordedDate = "2019-05-20"
 * recorder = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-AliciaGould)
@@ -640,15 +643,17 @@ Instance: ex-Allergy-IPS-Complete-Jannet-Guo-Latex
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * id = "ex-Allergy-IPS-Complete-Jannet-Guo-Latex"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed
 * type = #allergy
 * category = #environment
-* code = $sct#300916003 "Allergy to latex"
+* code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * onsetDateTime = "2016"
-* reaction.manifestation = $sct#40275004 "Contact dermatitis"
+* reaction.manifestation[0] = $sct#40275004 "Contact dermatitis"
+* reaction.manifestation[+] = $sct#126485001 "Urticaria"
+* reaction.manifestation[+] = $sct#418363000 "Itching of skin"
 * reaction.severity = #mild
 * recordedDate = "2019-05-20"
 * recorder = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-AliciaGould)
@@ -658,7 +663,7 @@ Instance: ex-Allergy-IPS-Complete-Jannet-Guo-Fish
 InstanceOf: AllergyIntoleranceUvIps
 Usage: #inline
 * id = "ex-Allergy-IPS-Complete-Jannet-Guo-Fish"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips|2.0.1"
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed
 * type = #allergy
@@ -676,11 +681,11 @@ Instance: ex-Condition-IPS-Complete-Jannet-Guo-GDM
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Complete-Jannet-Guo-GDM"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#371924009 "Moderate to severe"
+* severity = $sct#6736007 "Moderate"
 * code = $sct#11687002 "Gestational diabetes mellitus"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * onsetDateTime = "2026-09-14"
@@ -692,7 +697,7 @@ Instance: ex-Condition-IPS-Complete-Jannet-Guo-Chlamydia
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Complete-Jannet-Guo-Chlamydia"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
@@ -707,11 +712,11 @@ Instance: ex-Condition-IPS-Complete-Jannet-Guo-Sepsis
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Complete-Jannet-Guo-Sepsis"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#resolved
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
-* severity = $sct#371924009 "Moderate to severe"
+* severity = $sct#24484000 "Severe"
 * code = $sct#91302008 "Sepsis"
 * code.text = "Postpartum sepsis"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -725,7 +730,7 @@ Instance: ex-Condition-IPS-Complete-Jannet-Guo-TibiaFracture
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Complete-Jannet-Guo-TibiaFracture"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#resolved
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
@@ -740,7 +745,7 @@ Instance: ex-Procedure-IPS-Complete-Jannet-Guo-ORIF
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * id = "ex-Procedure-IPS-Complete-Jannet-Guo-ORIF"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.1"
 * status = #completed
 * code = $sct#50082000 "Open reduction of fracture of tibia with internal fixation"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -753,7 +758,7 @@ Instance: ex-Procedure-IPS-Complete-Jannet-Guo-ECV
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * id = "ex-Procedure-IPS-Complete-Jannet-Guo-ECV"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.1"
 * status = #completed
 * category = $sct#386637004 "Obstetric procedure"
 * code = $sct#240278000 "External cephalic version"
@@ -767,7 +772,7 @@ Instance: ex-Procedure-IPS-Complete-Jannet-Guo-HomeBirth
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * id = "ex-Procedure-IPS-Complete-Jannet-Guo-HomeBirth"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.1"
 * status = #completed
 * category = $sct#386637004 "Obstetric procedure"
 * code = $sct#177184002 "Normal delivery procedure"
@@ -781,7 +786,7 @@ Instance: ex-Procedure-IPS-Complete-Jannet-Guo-PostpartumEdu
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * id = "ex-Procedure-IPS-Complete-Jannet-Guo-PostpartumEdu"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.1"
 * status = #completed
 * category = $sct#311401005 "Patient education"
 * code = $sct#54070000 "Postpartum education"
@@ -792,7 +797,7 @@ Instance: ex-Procedure-IPS-Complete-Jannet-Guo-SmokingEdu
 InstanceOf: ProcedureUvIps
 Usage: #inline
 * id = "ex-Procedure-IPS-Complete-Jannet-Guo-SmokingEdu"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.1"
 * status = #completed
 * category = $sct#311401005 "Patient education"
 * code = $sct#171055003 "Pregnancy smoking education"
@@ -805,9 +810,11 @@ Instance: ex-Immunization-IPS-Complete-Jannet-Guo-Tdap
 InstanceOf: ImmunizationUvIps
 Usage: #inline
 * id = "ex-Immunization-IPS-Complete-Jannet-Guo-Tdap"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips|2.0.1"
 * status = #completed
-* vaccineCode = http://hl7.org/fhir/sid/cvx#115 "Tdap"
+* vaccineCode.coding[+] = $sct#871876003 "Acellular Bordetella pertussis and Clostridium tetani and Corynebacterium diphtheriae antigens only vaccine product"
+* vaccineCode.coding[+] = http://hl7.org/fhir/sid/cvx#115 "Tdap"
+* vaccineCode.text = "Tdap"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * occurrenceDateTime = "2023-02-16"
 * primarySource = false
@@ -818,9 +825,11 @@ Instance: ex-Immunization-IPS-Complete-Jannet-Guo-Influenza
 InstanceOf: ImmunizationUvIps
 Usage: #inline
 * id = "ex-Immunization-IPS-Complete-Jannet-Guo-Influenza"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips|2.0.1"
 * status = #completed
-* vaccineCode = http://hl7.org/fhir/sid/cvx#140 "Influenza, split virus, trivalent, PF"
+* vaccineCode.coding[+] = $sct#1181000221105 "Influenza virus antigen only vaccine product"
+* vaccineCode.coding[+] = http://hl7.org/fhir/sid/cvx#140 "Influenza, split virus, trivalent, PF"
+* vaccineCode.text = "Influenza, seasonal"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * occurrenceDateTime = "2025-10-15"
 * primarySource = false
@@ -830,7 +839,7 @@ Instance: ex-DeviceUse-IPS-Complete-Jannet-Guo-BoneScrew
 InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * id = "ex-DeviceUse-IPS-Complete-Jannet-Guo-BoneScrew"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.1"
 * status = #active
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * timingPeriod.start = "2014-03-13"
@@ -842,7 +851,7 @@ Instance: ex-Device-IPS-Complete-Jannet-Guo-BoneScrew
 InstanceOf: DeviceUvIps
 Usage: #inline
 * id = "ex-Device-IPS-Complete-Jannet-Guo-BoneScrew"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips|2.0.1"
 * status = #active
 * type = $sct#68183006 "Bone screw"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -851,7 +860,7 @@ Instance: ex-DeviceUse-IPS-Complete-Jannet-Guo-InsulinPump
 InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * id = "ex-DeviceUse-IPS-Complete-Jannet-Guo-InsulinPump"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.1"
 * status = #active
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * timingPeriod.start = "2026-09-21"
@@ -862,7 +871,7 @@ Instance: ex-Device-IPS-Complete-Jannet-Guo-InsulinPump
 InstanceOf: DeviceUvIps
 Usage: #inline
 * id = "ex-Device-IPS-Complete-Jannet-Guo-InsulinPump"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips|2.0.1"
 * status = #active
 * type = $sct#468217005 "Electronic insulin infusion patch pump"
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -871,7 +880,7 @@ Instance: ex-Lab-IPS-Complete-Jannet-Guo-BloodType
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * id = "ex-Lab-IPS-Complete-Jannet-Guo-BloodType"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory "Laboratory"
 * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
@@ -885,7 +894,7 @@ Instance: ex-Lab-IPS-Complete-Jannet-Guo-GlucoseChallenge
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * id = "ex-Lab-IPS-Complete-Jannet-Guo-GlucoseChallenge"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory "Laboratory"
 * code = $loinc#1504-0 "Glucose [Mass/volume] in Serum or Plasma --1 hour post 50 g glucose PO"
@@ -900,7 +909,7 @@ Instance: ex-DR-IPS-Complete-Jannet-Guo-SickleCell
 InstanceOf: DiagnosticReportUvIps
 Usage: #inline
 * id = "ex-DR-IPS-Complete-Jannet-Guo-SickleCell"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips|2.0.1"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#HM "Hematology"
 * code = $loinc#4625-0 "Hemoglobin S/Hemoglobin.total in Blood"
@@ -917,7 +926,7 @@ Instance: ex-Lab-IPS-Complete-Jannet-Guo-HbS
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * id = "ex-Lab-IPS-Complete-Jannet-Guo-HbS"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory "Laboratory"
 * code = $loinc#4625-0 "Hemoglobin S/Hemoglobin.total in Blood"
@@ -932,7 +941,7 @@ Instance: ex-DR-IPS-Complete-Jannet-Guo-Presepsin
 InstanceOf: DiagnosticReportUvIps
 Usage: #inline
 * id = "ex-DR-IPS-Complete-Jannet-Guo-Presepsin"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips|2.0.1"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#HM "Hematology"
 * code = $loinc#94554-3 "Soluble CD14 subtype [Mass/volume] in Serum, Plasma or Blood by Immunoassay"
@@ -949,7 +958,7 @@ Instance: ex-Lab-IPS-Complete-Jannet-Guo-Presepsin
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * id = "ex-Lab-IPS-Complete-Jannet-Guo-Presepsin"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory "Laboratory"
 * code = $loinc#94554-3 "Soluble CD14 subtype [Mass/volume] in Serum, Plasma or Blood by Immunoassay"
@@ -965,7 +974,7 @@ Instance: ex-DR-IPS-Complete-Jannet-Guo-StaphCulture
 InstanceOf: DiagnosticReportUvIps
 Usage: #inline
 * id = "ex-DR-IPS-Complete-Jannet-Guo-StaphCulture"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips|2.0.1"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#MB "Microbiology"
 * code = $loinc#600-7 "Bacteria identified in Blood by Culture"
@@ -983,7 +992,7 @@ Instance: ex-Lab-IPS-Complete-Jannet-Guo-BloodCulture
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * id = "ex-Lab-IPS-Complete-Jannet-Guo-BloodCulture"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory "Laboratory"
 * code = $loinc#600-7 "Bacteria identified in Blood by Culture"
@@ -997,7 +1006,7 @@ Instance: ex-Lab-IPS-Complete-Jannet-Guo-MRSACulture
 InstanceOf: ObservationResultsLaboratoryPathologyUvIps
 Usage: #inline
 * id = "ex-Lab-IPS-Complete-Jannet-Guo-MRSACulture"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips|2.0.1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory "Laboratory"
 * code = $loinc#13317-3 "Methicillin resistant Staphylococcus aureus [Presence] in Specimen by Organism specific culture"
@@ -1011,7 +1020,7 @@ Instance: ex-DR-IPS-Complete-Jannet-Guo-OBUltrasound
 InstanceOf: DiagnosticReportUvIps
 Usage: #inline
 * id = "ex-DR-IPS-Complete-Jannet-Guo-OBUltrasound"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips|2.0.1"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#RAD "Radiology"
 * code = $loinc#80869-1 "US for pregnancy in first trimester"
@@ -1028,7 +1037,7 @@ Instance: ex-ImagingStudy-IPS-Complete-Jannet-Guo-OBUltrasound
 InstanceOf: ImagingStudyUvIps
 Usage: #inline
 * id = "ex-ImagingStudy-IPS-Complete-Jannet-Guo-OBUltrasound"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips|2.0.1"
 * identifier.system = "urn:dicom:uid"
 * identifier.value = "urn:oid:2.25.302851469517468916027355738519046318820"
 * status = #available
@@ -1054,7 +1063,7 @@ Instance: ex-DR-IPS-Complete-Jannet-Guo-TibiaXR
 InstanceOf: DiagnosticReportUvIps
 Usage: #inline
 * id = "ex-DR-IPS-Complete-Jannet-Guo-TibiaXR"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips|2.0.1"
 * status = #final
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#RAD "Radiology"
 * code = $loinc#37895-0 "XR Tibia and Fibula 2 Views"
@@ -1070,7 +1079,7 @@ Instance: ex-ImagingStudy-IPS-Complete-Jannet-Guo-TibiaXR
 InstanceOf: ImagingStudyUvIps
 Usage: #inline
 * id = "ex-ImagingStudy-IPS-Complete-Jannet-Guo-TibiaXR"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips|2.0.1"
 * identifier.system = "urn:dicom:uid"
 * identifier.value = "urn:oid:2.25.118735226488951304765280519423967300214"
 * status = #available
@@ -1120,7 +1129,7 @@ Instance: ex-Preg-IPS-Complete-Jannet-Guo-Status
 InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #inline
 * id = "ex-Preg-IPS-Complete-Jannet-Guo-Status"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips|2.0.1"
 * status = #final
 * code = $loinc#82810-3 "Pregnancy status"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -1133,7 +1142,7 @@ Instance: ex-Preg-IPS-Complete-Jannet-Guo-EDD
 InstanceOf: ObservationPregnancyEddUvIps
 Usage: #inline
 * id = "ex-Preg-IPS-Complete-Jannet-Guo-EDD"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips|2.0.1"
 * status = #final
 * code = $loinc#11779-6 "Delivery date Estimated from last menstrual period"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -1195,7 +1204,7 @@ Instance: ex-Preg-IPS-Complete-Jannet-Guo-LiveBirths
 InstanceOf: ObservationPregnancyOutcomeUvIps
 Usage: #inline
 * id = "ex-Preg-IPS-Complete-Jannet-Guo-LiveBirths"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips|2.0.1"
 * status = #final
 * code = $loinc#11636-8 "[#] Births.live"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -1316,19 +1325,25 @@ Usage: #inline
 * patient = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * date = "2026-10-22"
 * authority = Reference(http://example.org/Organization/ex-Org-IPS-Complete-Jannet-Guo-Clinic)
-* recommendation[+].vaccineCode = http://hl7.org/fhir/sid/cvx#140 "Influenza, split virus, trivalent, PF"
+* recommendation[+].vaccineCode.coding[+] = $sct#1181000221105 "Influenza virus antigen only vaccine product"
+* recommendation[=].vaccineCode.coding[+] = http://hl7.org/fhir/sid/cvx#140 "Influenza, split virus, trivalent, PF"
+* recommendation[=].vaccineCode.text = "Influenza, seasonal"
 * recommendation[=].forecastStatus = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status#due "Due"
 * recommendation[=].dateCriterion[+].code = $loinc#30980-7 "Date vaccine due"
 * recommendation[=].dateCriterion[=].value = "2026-10-22"
 * recommendation[=].description = "Influenza vaccine for the 2026-2027 season, recommended during any trimester of pregnancy"
 * recommendation[=].supportingPatientInformation = Reference(http://example.org/Observation/ex-Preg-IPS-Complete-Jannet-Guo-Status)
-* recommendation[+].vaccineCode = http://hl7.org/fhir/sid/cvx#213 "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED"
+* recommendation[+].vaccineCode.coding[+] = $sct#1119305005 "COVID-19 antigen vaccine"
+* recommendation[=].vaccineCode.coding[+] = http://hl7.org/fhir/sid/cvx#213 "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED"
+* recommendation[=].vaccineCode.text = "COVID-19 vaccine"
 * recommendation[=].forecastStatus = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status#due "Due"
 * recommendation[=].dateCriterion[+].code = $loinc#30980-7 "Date vaccine due"
 * recommendation[=].dateCriterion[=].value = "2026-10-22"
 * recommendation[=].description = "COVID-19 vaccine, recommended during pregnancy"
 * recommendation[=].supportingPatientInformation = Reference(http://example.org/Observation/ex-Preg-IPS-Complete-Jannet-Guo-Status)
-* recommendation[+].vaccineCode = http://hl7.org/fhir/sid/cvx#115 "Tdap"
+* recommendation[+].vaccineCode.coding[+] = $sct#871876003 "Acellular Bordetella pertussis and Clostridium tetani and Corynebacterium diphtheriae antigens only vaccine product"
+* recommendation[=].vaccineCode.coding[+] = http://hl7.org/fhir/sid/cvx#115 "Tdap"
+* recommendation[=].vaccineCode.text = "Tdap"
 * recommendation[=].forecastStatus = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status#due "Due"
 * recommendation[=].dateCriterion[+].code = $loinc#30981-5 "Earliest date to give"
 * recommendation[=].dateCriterion[=].value = "2027-01-03"
@@ -1343,20 +1358,22 @@ Instance: ex-SH-IPS-Complete-Jannet-Guo-Tobacco
 InstanceOf: ObservationTobaccoUseUvIps
 Usage: #inline
 * id = "ex-SH-IPS-Complete-Jannet-Guo-Tobacco"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips|2.0.1"
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $loinc#72166-2 "Tobacco smoking status"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * effectiveDateTime = "2026-08-16"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-AliciaGould)
-* valueCodeableConcept = $loinc#LA18976-3 "Current every day smoker"
+* valueCodeableConcept.coding[+] = $sct#449868002 "Smokes tobacco daily"
+* valueCodeableConcept.coding[+] = $loinc#LA18976-3 "Current every day smoker"
+* valueCodeableConcept.text = "Current every day smoker"
 
 Instance: ex-SH-IPS-Complete-Jannet-Guo-Alcohol
 InstanceOf: ObservationAlcoholUseUvIps
 Usage: #inline
 * id = "ex-SH-IPS-Complete-Jannet-Guo-Alcohol"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips|2.0.1"
 * status = #final
 * category = $observation-category#social-history "Social History"
 * code = $loinc#74013-4 "Alcoholic drinks per day"
@@ -1474,12 +1491,12 @@ Instance: ex-Alert-IPS-Complete-Jannet-Guo-Latex
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * id = "ex-Alert-IPS-Complete-Jannet-Guo-Latex"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips|2.0.1"
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PH "High priority"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/flag-category#clinical "Clinical"
-* code = $sct#300916003 "Allergy to latex"
+* code = $sct#1003755004 "Allergy to Hevea brasiliensis latex protein"
 * code.text = "Latex allergy - use latex-free equipment and supplies"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
 * period.start = "2019-05-20"
@@ -1488,7 +1505,7 @@ Instance: ex-Alert-IPS-Complete-Jannet-Guo-Radiation
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * id = "ex-Alert-IPS-Complete-Jannet-Guo-Radiation"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips|2.0.1"
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PM "Medium priority"
 * status = #active
@@ -1516,7 +1533,7 @@ Instance: ex-Condition-IPS-Complete-Jannet-Guo-DifficultyStanding
 InstanceOf: ConditionUvIps
 Usage: #inline
 * id = "ex-Condition-IPS-Complete-Jannet-Guo-DifficultyStanding"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips|2.0.1"
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * category = $condition-category#problem-list-item
@@ -1533,7 +1550,7 @@ Instance: ex-MedStatement-IPS-Complete-Jannet-Guo-InsulinAspart
 InstanceOf: MedicationStatementIPS
 Usage: #inline
 * id = "ex-MedStatement-IPS-Complete-Jannet-Guo-InsulinAspart"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.1"
 * status = #active
 * category = http://terminology.hl7.org/CodeSystem/medication-statement-category#outpatient "Outpatient"
 * medicationReference = Reference(http://example.org/Medication/ex-Medication-IPS-Complete-Jannet-Guo-InsulinAspart) "Insulin aspart 100 unit/mL solution for injection"
@@ -1550,7 +1567,7 @@ Instance: ex-Org-IPS-Complete-Jannet-Guo-DoulaServices
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Complete-Jannet-Guo-DoulaServices"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type[+] = http://terminology.hl7.org/CodeSystem/organization-type#cg "Community Group"
 * type[+] = $ISICRev4#8890 "Other social work activities without accommodation"
@@ -1571,7 +1588,7 @@ Instance: ex-Practitioner-IPS-Complete-Jannet-Guo-OB
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Complete-Jannet-Guo-OB"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * identifier.use = #official
 * identifier.type = $v2-0203#NPI "National provider identifier"
@@ -1616,11 +1633,12 @@ Instance: ex-PractRole-IPS-Complete-Jannet-Guo-OB
 InstanceOf: PractitionerRoleUvIps
 Usage: #inline
 * id = "ex-PractRole-IPS-Complete-Jannet-Guo-OB"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips|2.0.1"
 * active = true
 * practitioner = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-OB)
 * organization = Reference(http://example.org/Organization/ex-Org-IPS-Complete-Jannet-Guo-Hospital)
 * code.coding[+] = $ISCO08#2212 "Specialist Medical Practitioners"
+* code.coding[+] = urn:oid:2.16.840.1.113883.2.9.6.2.7#2212 "Specialist Medical Practitioners"
 * code.coding[+] = $sct#11935004 "Obstetrician"
 * specialty = $sct#394585009 "Obstetrics and gynecology"
 * telecom.system = #phone
@@ -1632,7 +1650,7 @@ Instance: ex-Practitioner-IPS-Complete-Jannet-Guo-Midwife
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Complete-Jannet-Guo-Midwife"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * identifier.use = #official
 * identifier.type = $v2-0203#NPI "National provider identifier"
@@ -1681,11 +1699,12 @@ Instance: ex-PractRole-IPS-Complete-Jannet-Guo-Midwife
 InstanceOf: PractitionerRoleUvIps
 Usage: #inline
 * id = "ex-PractRole-IPS-Complete-Jannet-Guo-Midwife"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips|2.0.1"
 * active = true
 * practitioner = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-Midwife)
 * organization = Reference(http://example.org/Organization/ex-Org-IPS-Complete-Jannet-Guo-BirthCenter)
 * code.coding[+] = $ISCO08#2222 "Midwifery Professionals"
+* code.coding[+] = urn:oid:2.16.840.1.113883.2.9.6.2.7#2222 "Midwifery Professionals"
 * code.coding[+] = $sct#309453006 "Registered midwife"
 * telecom.system = #phone
 * telecom.use = #work
@@ -1695,7 +1714,7 @@ Instance: ex-Practitioner-IPS-Complete-Jannet-Guo-Doula
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Complete-Jannet-Guo-Doula"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * active = true
 * name.use = #official
@@ -1737,11 +1756,12 @@ Instance: ex-PractRole-IPS-Complete-Jannet-Guo-Doula
 InstanceOf: PractitionerRoleUvIps
 Usage: #inline
 * id = "ex-PractRole-IPS-Complete-Jannet-Guo-Doula"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips|2.0.1"
 * active = true
 * practitioner = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-Doula)
 * organization = Reference(http://example.org/Organization/ex-Org-IPS-Complete-Jannet-Guo-DoulaServices)
 * code.coding[+] = $ISCO08#3253 "Community Health Workers"
+* code.coding[+] = urn:oid:2.16.840.1.113883.2.9.6.2.7#3253 "Community Health Workers"
 * code.coding[+] = $sct#768825008 "Doula"
 * code.text = "Community birth doula / community health worker; non-clinical support role"
 * telecom.system = #phone
@@ -1753,7 +1773,7 @@ Instance: ex-Practitioner-IPS-Complete-Jannet-Guo-Pediatrician
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-IPS-Complete-Jannet-Guo-Pediatrician"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * identifier.use = #official
 * identifier.type = $v2-0203#NPI "National provider identifier"
@@ -1792,17 +1812,18 @@ Usage: #inline
 * qualification[=].code.text = "Board Certified, Pediatrics"
 * qualification[=].period.start = "2012-10-20"
 * communication[+] = urn:ietf:bcp:47#en "English"
-* communication[+] = urn:ietf:bcp:47#ta "Tamil"
+* communication[+] = urn:ietf:bcp:47#te "Telugu"
 
 Instance: ex-PractRole-IPS-Complete-Jannet-Guo-Pediatrician
 InstanceOf: PractitionerRoleUvIps
 Usage: #inline
 * id = "ex-PractRole-IPS-Complete-Jannet-Guo-Pediatrician"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips|2.0.1"
 * active = true
 * practitioner = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-Complete-Jannet-Guo-Pediatrician)
 * organization = Reference(http://example.org/Organization/ex-Org-IPS-Complete-Jannet-Guo-Clinic)
 * code.coding[+] = $ISCO08#2212 "Specialist Medical Practitioners"
+* code.coding[+] = urn:oid:2.16.840.1.113883.2.9.6.2.7#2212 "Specialist Medical Practitioners"
 * code.coding[+] = $sct#82296001 "Pediatrician"
 * specialty = $sct#394537008 "Pediatric specialty"
 * telecom.system = #phone
@@ -1833,7 +1854,7 @@ Instance: ex-Org-IPS-Complete-Jannet-Guo-CTHospital
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-IPS-Complete-Jannet-Guo-CTHospital"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * active = true
 * type[+] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
 * type[+] = $ISICRev4#8610 "Hospital activities"
@@ -1854,7 +1875,7 @@ Instance: ex-Medication-IPS-Complete-Jannet-Guo-InsulinAspart
 InstanceOf: MedicationIPS
 Usage: #inline
 * id = "ex-Medication-IPS-Complete-Jannet-Guo-InsulinAspart"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips|2.0.1"
 * code = $sct#781940009 "Insulin aspart 100 unit/mL solution for injection"
 * status = #active
 * form = $sct#385219001 "Solution for injection"
@@ -1867,7 +1888,7 @@ Instance: ex-MedRequest-IPS-Complete-Jannet-Guo-RhoGAM
 InstanceOf: MedicationRequestIPS
 Usage: #inline
 * id = "ex-MedRequest-IPS-Complete-Jannet-Guo-RhoGAM"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips|2.0.1"
 * status = #active
 * intent = #order
 * medicationCodeableConcept = $sct#786768001 "Human anti-D immunoglobulin only product"
@@ -1887,7 +1908,7 @@ Instance: ex-Rad-IPS-Complete-Jannet-Guo-OBUltrasound
 InstanceOf: ObservationResultsRadiologyUvIps
 Usage: #inline
 * id = "ex-Rad-IPS-Complete-Jannet-Guo-OBUltrasound"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips|2.0.1"
 * status = #final
 * category[radiology] = $observation-category#imaging "Imaging"
 * code = $loinc#80869-1 "US for pregnancy in first trimester"
@@ -1907,7 +1928,7 @@ Instance: ex-Rad-IPS-Complete-Jannet-Guo-TibiaXR
 InstanceOf: ObservationResultsRadiologyUvIps
 Usage: #inline
 * id = "ex-Rad-IPS-Complete-Jannet-Guo-TibiaXR"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips|2.0.1"
 * status = #final
 * category[radiology] = $observation-category#imaging "Imaging"
 * code = $loinc#37895-0 "XR Tibia and Fibula 2 Views"
@@ -1921,7 +1942,7 @@ Instance: ex-Specimen-IPS-Complete-Jannet-Guo-PrenatalBlood
 InstanceOf: SpecimenUvIps
 Usage: #inline
 * id = "ex-Specimen-IPS-Complete-Jannet-Guo-PrenatalBlood"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips|2.0.1"
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)
@@ -1932,7 +1953,7 @@ Instance: ex-Specimen-IPS-Complete-Jannet-Guo-SepsisBlood
 InstanceOf: SpecimenUvIps
 Usage: #inline
 * id = "ex-Specimen-IPS-Complete-Jannet-Guo-SepsisBlood"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips|2.0.1"
 * status = #available
 * type = $sct#119297000 "Blood specimen"
 * subject = Reference(http://example.org/Patient/ex-Patient-IPS-Complete-Jannet-Guo)

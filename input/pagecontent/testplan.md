@@ -49,9 +49,9 @@ Sample patient records may be provided if the testing system would rather import
 
 ### Introduction
 
-The overall test plan uses the profiles and examples shown on the [Artifacts Summary](artifacts.html). The [Profiles](artifacts.html#structures-resource-profiles) listed describe the constraints that are adhered to by Actors claiming conformance to this implementation guide. Thus, any applicable Resources that are known to have been published by an app or server MUST be conformant to these profiles as appropriate.
+The overall test plan uses the profiles and examples shown on the [Artifacts Summary](artifacts.html). The [Profiles](artifacts.html#complete-option-profiles) listed describe the constraints that are adhered to by Actors claiming conformance to this implementation guide. Thus, any applicable Resources that are known to have been published by an app or server MUST be conformant to these profiles as appropriate.
 
-The Examples listed in [Example Instances](artifacts.html#example-example-instances) are example instances. Some are conformant to the profiles. Others support the structure of the examples (e.g., Patient and Encounter) or are examples that systems should be able to handle in various ways. 
+The Examples listed in [Example Instances](artifacts.html#base-ips-examples) are example instances. Some are conformant to the profiles. Others support the structure of the examples (e.g., Patient and Encounter) or are examples that systems should be able to handle in various ways. 
 
 #### Content Creator Add Patient Records Test
 1. The system under test will be required to document which data elements from the must support and required concepts can be collected and maintained within the product. This information will be used to verify expectations for missing content that will be examined in the resulting IPS Document. The Monitor will verify that this documentation is provided.

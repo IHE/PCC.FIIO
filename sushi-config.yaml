@@ -75,6 +75,9 @@ parameters:
 #  path-pages:
 #    - input/pagecontent
 #    - fsh-generated/includes
+  # Pin canonical references that resolve to more than one loaded version (IPS 2.0.0-ballot and 2.0.1, US Core 5.0.1 and 6.1.0), for example the
+  # baseDefinition and inherited constraint sources of the IHE IPS profiles
+  pin-canonicals: pin-multiples
   show-inherited-invariants: 'false'
   usage-stats-opt-out: 'false'
   logging: progress
@@ -101,7 +104,7 @@ groups:
       - StructureDefinition/IHE.IPS.Complete.Option.Composition
   BaseIPSExamples:
     name: Base IPS Examples
-    description: |
+    description: |-
       Example IPS documents that align with the minimum requirements of the base HL7 FHIR International Patient Summary (IPS). All examples in the groups below are also intended to conform to the base IPS requirements and declare the HL7 IPS Bundle and Composition profiles. They are not repeated in this group to avoid duplicating artifacts.
     resources:
       - Bundle/ex-Bundle-IPS-Frank-MissingData
@@ -120,7 +123,7 @@ groups:
       - Composition/ex-Composition-IPS-Complete-Jannet-Guo
   SecondaryUseExamples:
     name: Secondary Use Examples
-    description: |
+    description: |-
       Example IPS documents for Use Case #6, Secondary Use of IPS for Standardized Data Exchange. They show one patient record at each stage of the de-identification process described in the [IHE ITI De-Identification Handbook](https://profiles.ihe.net/ITI/DeId/):
       - **Identifiable record:** the primary care IPS document extracted for the study cohort, with all identifiers and clinical content.
       - **Stage 1 (pseudonymized):** direct identifiers are removed according to the approved de-identification method. A pseudo-identifier and pseudo-name replace the patient identifier and name throughout the document, and all clinical content remains.
@@ -135,7 +138,7 @@ groups:
       - Bundle/6603561c-2888-4355-9df4-23675f6eb458
       - Composition/ex-Composition-secondaryUse-pandemicIPS-stage-2
   USNationalExtensionExamples:
-    name: USA National Extension Examples
+    name: US National Extension Examples
     description: Example IPS documents that conform to the United States Patient Care Summary (US-PCS) and the IHE IPS options.
     resources:
       - Bundle/ex-Bundle-USPCS-Complete-Aaron-Morales

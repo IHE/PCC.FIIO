@@ -16,7 +16,7 @@ Usage: #example
 * id = "ex-Bundle-PSCA-Complete-Sansa-Stark"
 * meta.profile[+] = "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/bundle-ca-ps"
 * meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Bundle"
-* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.1"
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
 * identifier.value = "e3cd7296-6930-458f-9232-639410724f74"
 * type = #document
@@ -149,7 +149,7 @@ Usage: #example
 * id = "ex-Composition-PSCA-Sansa-Stark"
 * meta.profile[+] = "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/composition-ca-ps"
 * meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition"
-* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.1"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Primary Problem:</strong> Sansa is a normally well-controlled type 2 diabetic with well-managed hypertension and asthma. She has a history of gout, now resolved.</p><p><strong>Significant Clinical Event Requiring Patient Summary:</strong> Sansa has been experiencing neuropathy she assumes is caused by her diabetes. She is working in Yellowknife, needs to see a GP there, and may need a referral. Dr. Allan Howard, her most responsible GP in Alberta, is sharing her clinical information with the receiving GP.</p></div>"
 * identifier.system = "urn:oid:2.16.724.4.8.10.200.10"
@@ -172,7 +172,7 @@ Usage: #example
 * section[sectionMedications].title = "Medication Summary"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medication Summary</h5><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>indomethacin 50 mg oral capsule</td><td>Completed</td><td>Oral use</td><td>1 bid</td><td/><td>2025-01-05 - 2026-06-30</td></tr><tr><td>perindopril erbumine 4 mg oral tablet</td><td>Completed</td><td>Oral use</td><td>1 qd</td><td/><td>2024-01-05 -</td></tr><tr><td>Advil</td><td>Unknown</td><td>Oral use</td><td>1 tablet (200 mg) by mouth every 6 hours as needed for pain</td><td/><td>2024-10-15</td></tr><tr><td>indomethacin 50 mg oral capsule</td><td>Completed</td><td>Oral use</td><td>tid prn for gout attacks</td><td>For Gout</td><td>2025-12-22</td></tr></tbody></table></div>"
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>indomethacin 50 mg oral capsule</td><td>Completed</td><td>Oral use</td><td>1 bid</td><td/><td>2025-01-05 - 2026-06-30</td></tr><tr><td>perindopril erbumine 4 mg oral tablet</td><td>Completed</td><td>Oral use</td><td>1 qd</td><td/><td>2024-01-05 -</td></tr><tr><td>Advil</td><td>Unknown</td><td>Oral use</td><td>1 tablet (200 mg) by mouth every 6 hours as needed for pain</td><td/><td>2024-10-15</td></tr><tr><td>indomethacin 50 mg oral capsule</td><td>Completed</td><td>Oral use</td><td>tid prn for gout attacks</td><td>For Gout</td><td>2025-12-22</td></tr></tbody></table></div>"
 * section[sectionMedications].entry[medicationStatement][+] = Reference(http://example.org/MedicationStatement/ex-MedStatement-PSCA-Sansa-Stark-Indomethacin)
 * section[sectionMedications].entry[medicationStatement][+] = Reference(http://example.org/MedicationStatement/ex-MedStatement-PSCA-Sansa-Stark-Perindopril)
 * section[sectionMedications].entry[medicationStatement][+] = Reference(http://example.org/MedicationStatement/ex-MedStatement-PSCA-Sansa-Stark-Ibuprofen)
@@ -181,7 +181,7 @@ Usage: #example
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Allergies and Intolerances</h5><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Metformin (substance)</td><td>Active</td><td>Medication</td><td>Sneezing</td><td>Mild</td><td/><td>1993-03-07</td></tr><tr><td>Penicillin</td><td>Active</td><td>Medication</td><td>Urticaria</td><td>Moderate</td><td/><td>1985</td></tr><tr><td>Grass</td><td>Active</td><td>Environment</td><td>Allergic rhinitis</td><td>Mild</td><td/><td>1976</td></tr></tbody></table></div>"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Metformin (substance)</td><td>Active</td><td>Medication</td><td>Sneezing</td><td>Mild</td><td/><td>1993-03-07</td></tr><tr><td>Penicillin</td><td>Active</td><td>Medication</td><td>Urticaria</td><td>Moderate</td><td/><td>1985</td></tr><tr><td>Grass</td><td>Active</td><td>Environment</td><td>Allergic rhinitis</td><td>Mild</td><td/><td>1976</td></tr></tbody></table></div>"
 * section[sectionAllergies].entry[allergyOrIntolerance][+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-PSCA-Sansa-Stark-Metformin)
 * section[sectionAllergies].entry[allergyOrIntolerance][+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-PSCA-Sansa-Stark-Penicillin)
 * section[sectionAllergies].entry[allergyOrIntolerance][+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-PSCA-Sansa-Stark-Grass)
@@ -189,7 +189,7 @@ Usage: #example
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
-* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Problem List</h5><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Diabetes mellitus type 2 (disorder)</td><td>Active</td><td>Moderate severity</td><td>2012-12-06</td></tr><tr><td>Essential hypertension</td><td>Active</td><td>Mild</td><td>2023-12-31</td></tr><tr><td>Asthma</td><td>Active</td><td>Mild</td><td>2019-05-13</td></tr></tbody></table></div>"
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Diabetes mellitus type 2 (disorder)</td><td>Active</td><td>Moderate severity</td><td>2012-12-06</td></tr><tr><td>Essential hypertension</td><td>Active</td><td>Mild</td><td>2023-12-31</td></tr><tr><td>Asthma</td><td>Active</td><td>Mild</td><td>2019-05-13</td></tr></tbody></table></div>"
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-PSCA-Sansa-Stark-DM2)
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-PSCA-Sansa-Stark-Hypertension)
 * section[sectionProblems].entry[problem][+] = Reference(http://example.org/Condition/ex-Condition-PSCA-Sansa-Stark-Asthma)
@@ -197,7 +197,7 @@ Usage: #example
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
-* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Procedures</h5><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Colonoscopy</td><td/><td>2022-02-04</td></tr><tr><td>Appendectomy</td><td>Went well</td><td>2022-02-08</td></tr><tr><td>Skin graft</td><td>No comments needed, went that well</td><td>2010-07-08</td></tr></tbody></table></div>"
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Colonoscopy</td><td/><td>2022-02-04</td></tr><tr><td>Appendectomy</td><td>Went well</td><td>2022-02-08</td></tr><tr><td>Fascial graft</td><td>No comments needed, went that well</td><td>2010-07-08</td></tr></tbody></table></div>"
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-PSCA-Sansa-Stark-Colonoscopy)
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-PSCA-Sansa-Stark-Appendectomy)
 * section[sectionProceduresHx].entry[procedure][+] = Reference(http://example.org/Procedure/ex-Procedure-PSCA-Sansa-Stark-SkinGraft)
@@ -205,7 +205,7 @@ Usage: #example
 * section[sectionImmunizations].title = "Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Immunizations</h5><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Tetanus + Diphtheria + Pertussis + Polio</td><td>Completed</td><td/><td/><td/><td/><td>1998-06-04</td></tr><tr><td>Pneu-P-23 Pneumovax 23 MC</td><td>Completed</td><td/><td/><td/><td/><td>2015-01-11</td></tr><tr><td>Inf influenza trivalent unspecified</td><td>Completed</td><td/><td/><td/><td/><td>2015-01-11</td></tr></tbody></table></div>"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Tetanus + Diphtheria + Pertussis + Polio</td><td>Completed</td><td/><td/><td/><td/><td>1998-06-04</td></tr><tr><td>Pneu-P-23 Pneumovax 23 MC</td><td>Completed</td><td/><td/><td/><td/><td>2015-01-11</td></tr><tr><td>Inf influenza trivalent unspecified</td><td>Completed</td><td/><td/><td/><td/><td>2015-01-11</td></tr></tbody></table></div>"
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-PSCA-Sansa-Stark-TdapIPV)
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-PSCA-Sansa-Stark-Pneumo)
 * section[sectionImmunizations].entry[immunization][+] = Reference(http://example.org/Immunization/ex-Immunization-PSCA-Sansa-Stark-Influenza)
@@ -213,13 +213,13 @@ Usage: #example
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of medical device use"
 * section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medical Devices</h5><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>Manual wheelchair</td><td>Active</td><td/><td>2010-08-06</td></tr></tbody></table></div>"
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>Manual wheelchair</td><td>Active</td><td/><td>2010-08-06</td></tr></tbody></table></div>"
 * section[sectionMedicalDevices].entry[deviceStatement][+] = Reference(http://example.org/DeviceUseStatement/ex-DeviceUse-PSCA-Sansa-Stark-Wheelchair)
 
 * section[sectionResults].title = "Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.status = #generated
-* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Diagnostic Results: Observations</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</td><td>8.1</td><td>%</td><td/><td/><td/><td>2024-02-01</td></tr><tr><td>Nitrite [Mass/volume] in Urine</td><td>0.1</td><td>mg/dL</td><td/><td/><td/><td>2012-12-02</td></tr><tr><td>CT Abdomen W contrast IV</td><td>5cm peptic ulcer present on the anterior of the duodenum.</td><td/><td/><td/><td/><td>2020-03-20</td></tr><tr><td>Upper abdomen with the administration of oral and intravenous contrast</td><td>Acute duodenal ulcer with hemorrhage</td><td/><td/><td/><td>CT Abdomen W contrast IV: Acute duodenal ulcer with hemorrhage</td><td>2020-03-20</td></tr></tbody></table><h5>Diagnostic Results: Diagnostic Reports</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Conclusion</th><th>Date</th></tr></thead><tbody><tr><td>Laboratory report</td><td/><td>2024-02-01</td></tr></tbody></table></div>"
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Diagnostic Results: Observations</b></p><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</td><td>8.1</td><td>%</td><td/><td/><td/><td>2024-02-01</td></tr><tr><td>Nitrite [Mass/volume] in Urine</td><td>0.1</td><td>mg/dL</td><td/><td/><td/><td>2012-12-02</td></tr><tr><td>CT Abdomen W contrast IV</td><td>5cm peptic ulcer present on the anterior of the duodenum.</td><td/><td/><td/><td/><td>2020-03-20</td></tr><tr><td>Upper abdomen with the administration of oral and intravenous contrast</td><td>Acute duodenal ulcer with hemorrhage</td><td/><td/><td/><td>CT Abdomen W contrast IV: Acute duodenal ulcer with hemorrhage</td><td>2020-03-20</td></tr></tbody></table><p><b>Diagnostic Results: Diagnostic Reports</b></p><table class=\"grid\"><thead><tr><th>Code</th><th>Conclusion</th><th>Date</th></tr></thead><tbody><tr><td>Laboratory report</td><td/><td>2024-02-01</td></tr></tbody></table></div>"
 * section[sectionResults].entry[results-diagnosticReport][+] = Reference(http://example.org/DiagnosticReport/ex-DR-PSCA-Sansa-Stark-LabReport)
 * section[sectionResults].entry[results-observation-laboratory-pathology][+] = Reference(http://example.org/Observation/ex-Lab-PSCA-Sansa-Stark-HbA1c)
 * section[sectionResults].entry[results-observation-laboratory-pathology][+] = Reference(http://example.org/Observation/ex-Lab-PSCA-Sansa-Stark-Nitrite)
@@ -229,7 +229,7 @@ Usage: #example
 * section[sectionVitalSigns].title = "Vital Signs"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
 * section[sectionVitalSigns].text.status = #generated
-* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Vital Signs</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body mass index (BMI) [Ratio]</td><td>29.34</td><td>kg/m2</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Body height</td><td>162</td><td>cm</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Body weight</td><td>77</td><td>kg</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Blood pressure systolic &amp; diastolic</td><td/><td/><td/><td>Systolic blood pressure: 120 mmHg; Diastolic blood pressure: 80 mmHg</td><td/><td>2024-01-05</td></tr><tr><td>Head Circumference</td><td>55.2</td><td>cm</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Heart rate</td><td>80</td><td>/minute</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Oxygen saturation in Arterial blood</td><td>95</td><td>%</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Respiratory rate</td><td>15</td><td>breaths/minute</td><td/><td/><td/><td>2024-01-05</td></tr></tbody></table></div>"
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body mass index (BMI) [Ratio]</td><td>29.34</td><td>kg/m2</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Body height</td><td>162</td><td>cm</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Body weight</td><td>77</td><td>kg</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Blood pressure systolic &amp; diastolic</td><td/><td/><td/><td>Systolic blood pressure: 120 mmHg; Diastolic blood pressure: 80 mmHg</td><td/><td>2024-01-05</td></tr><tr><td>Head Circumference</td><td>55.2</td><td>cm</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Heart rate</td><td>80</td><td>/minute</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Oxygen saturation in Arterial blood</td><td>95</td><td>%</td><td/><td/><td/><td>2024-01-05</td></tr><tr><td>Respiratory rate</td><td>15</td><td>breaths/minute</td><td/><td/><td/><td>2024-01-05</td></tr></tbody></table></div>"
 * section[sectionVitalSigns].entry[VitalsPanel][+] = Reference(http://example.org/Observation/ex-Vitals-PSCA-Sansa-Stark-Panel)
 * section[sectionVitalSigns].entry[BMI][+] = Reference(http://example.org/Observation/ex-Vitals-PSCA-Sansa-Stark-BMI)
 * section[sectionVitalSigns].entry[BodyHeight][+] = Reference(http://example.org/Observation/ex-Vitals-PSCA-Sansa-Stark-Height)
@@ -243,25 +243,25 @@ Usage: #example
 * section[sectionPastIllnessHx].title = "Past History of Illness"
 * section[sectionPastIllnessHx].code = $loinc#11348-0 "History of Past illness note"
 * section[sectionPastIllnessHx].text.status = #generated
-* section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Past Illness</h5><table class=\"grid\"><thead><tr><th>Condition</th><th>Status</th><th>Comments</th><th>Onset Date</th><th>Resolved Date</th></tr></thead><tbody><tr><td>Gout</td><td>Resolved</td><td>Moderate severity</td><td>2010-08-06</td><td>2026-06-30</td></tr></tbody></table></div>"
+* section[sectionPastIllnessHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Condition</th><th>Status</th><th>Comments</th><th>Onset Date</th><th>Resolved Date</th></tr></thead><tbody><tr><td>Gout</td><td>Resolved</td><td>Moderate severity</td><td>2010-08-06</td><td>2026-06-30</td></tr></tbody></table></div>"
 * section[sectionPastIllnessHx].entry[pastProblem][+] = Reference(http://example.org/Condition/ex-Condition-PSCA-Sansa-Stark-Gout)
 
 * section[sectionFunctionalStatus].title = "Functional Status"
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
 * section[sectionFunctionalStatus].text.status = #generated
-* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Functional Status</h5><table class=\"grid\"><thead><tr><th>Finding</th><th>Type</th><th>Status</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Disability evaluation, disability 6%</td><td>Disability</td><td>Active</td><td>Mild</td><td>2010-12-10</td></tr></tbody></table></div>"
+* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Finding</th><th>Type</th><th>Status</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Disability evaluation, disability 6%</td><td>Disability</td><td>Active</td><td>Mild</td><td>2010-12-10</td></tr></tbody></table></div>"
 * section[sectionFunctionalStatus].entry[disability][+] = Reference(http://example.org/Condition/ex-Condition-PSCA-Sansa-Stark-Disability)
 
 * section[sectionPlanOfCare].title = "Plan of Care"
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #generated
-* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Plan of Care</h5><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Referral to a general practitioner in Yellowknife for assessment of suspected diabetic neuropathy</td><td>Not started</td><td>Referral to general practitioner</td><td>2026-11-05</td><td/></tr><tr><td>Diabetic foot and neuropathy examination</td><td>Not started</td><td>Diabetic foot examination</td><td>2026-11-05</td><td/></tr><tr><td>Repeat hemoglobin A1c in 3 months (last result 8.1 % on 2024-02-01)</td><td>Scheduled</td><td>Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</td><td>2027-01-22</td><td/></tr><tr><td>Occupational therapy home accessibility assessment (ramp installation)</td><td>Not started</td><td>Referral to occupational therapist</td><td>2026-11-15</td><td/></tr></tbody></table></div>"
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Referral to a general practitioner in Yellowknife for assessment of suspected diabetic neuropathy</td><td>Not started</td><td>Referral to general practitioner</td><td>2026-11-05</td><td/></tr><tr><td>Diabetic foot and neuropathy examination</td><td>Not started</td><td>Diabetic foot examination</td><td>2026-11-05</td><td/></tr><tr><td>Repeat hemoglobin A1c in 3 months (last result 8.1 % on 2024-02-01)</td><td>Scheduled</td><td>Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</td><td>2027-01-22</td><td/></tr><tr><td>Occupational therapy home accessibility assessment (ramp installation)</td><td>Not started</td><td>Referral to occupational therapist</td><td>2026-11-15</td><td/></tr></tbody></table></div>"
 * section[sectionPlanOfCare].entry[carePlan][+] = Reference(http://example.org/CarePlan/ex-CarePlan-PSCA-Sansa-Stark)
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Social History</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Alcoholic drinks per day</td><td>2</td><td>wine glasses per day</td><td/><td>2024-01-05</td></tr><tr><td>Tobacco smoking status</td><td>Never smoker</td><td/><td/><td>2024-01-05</td></tr><tr><td>Lifestyle Risk Factor</td><td>Home has not been outfitted with accessibility devices</td><td/><td>Sansa has episodic struggles with mobility and her home has not been outfitted with a ramp</td><td/></tr><tr><td>Sexual orientation</td><td>Bisexual</td><td/><td/><td>2024-01-05</td></tr></tbody></table></div>"
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Alcoholic drinks per day</td><td>2</td><td>wine glasses per day</td><td/><td>2024-01-05</td></tr><tr><td>Tobacco smoking status</td><td>Never smoker</td><td/><td/><td>2024-01-05</td></tr><tr><td>Lifestyle Risk Factor</td><td>Home has not been outfitted with accessibility devices</td><td/><td>Sansa has episodic struggles with mobility and her home has not been outfitted with a ramp</td><td/></tr><tr><td>Sexual orientation</td><td>Bisexual</td><td/><td/><td>2024-01-05</td></tr></tbody></table></div>"
 * section[sectionSocialHistory].entry[alcoholUse] = Reference(http://example.org/Observation/ex-SH-PSCA-Sansa-Stark-Alcohol)
 * section[sectionSocialHistory].entry[smokingTobaccoUse] = Reference(http://example.org/Observation/ex-SH-PSCA-Sansa-Stark-Tobacco)
 * section[sectionSocialHistory].entry[generalSocialHistory][+] = Reference(http://example.org/Observation/ex-SH-PSCA-Sansa-Stark-LifestyleRisk)
@@ -270,13 +270,13 @@ Usage: #example
 * section[sectionPregnancyHx].title = "Pregnancy History"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
-* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Pregnancy</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Not pregnant</td><td/><td>2024-01-05</td></tr></tbody></table></div>"
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Not pregnant</td><td/><td>2024-01-05</td></tr></tbody></table></div>"
 * section[sectionPregnancyHx].entry[pregnancyStatus][+] = Reference(http://example.org/Observation/ex-Preg-PSCA-Sansa-Stark-Status)
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.status = #generated
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Advance Directives</h5><table class=\"grid\"><thead><tr><th>Document</th><th>Type</th><th>Status</th><th>Date</th><th>Author</th><th>Location</th></tr></thead><tbody><tr><td>Personal Directive and Goals of Care Designation</td><td>Alberta Personal Directive; Goals of Care Designation (GCD) order</td><td>Current</td><td>2023-03-14</td><td>Sansa Stark (maker); Dr. Allan Howard (GCD order, witness)</td><td>http://link.to.my.attachment (original kept in the patient&apos;s Green Sleeve)</td></tr></tbody></table><h5>Summary of Directive Content</h5><table class=\"grid\"><thead><tr><th>Topic</th><th>Directive</th></tr></thead><tbody><tr><td>Goals of Care Designation</td><td>R3 - Resuscitative care, excluding cardiopulmonary resuscitation (CPR) and intubation</td></tr><tr><td>Cardiopulmonary resuscitation</td><td>Do Not Resuscitate (DNR): no CPR or chest compressions in the event of cardiac or respiratory arrest</td></tr><tr><td>Airway management</td><td>No intubation or mechanical ventilation</td></tr><tr><td>Nutrition</td><td>Liquid food diet is acceptable</td></tr><tr><td>Other medical care</td><td>All other appropriate medical care, including hospital and intensive care unit admission, is accepted</td></tr><tr><td>Agent (substitute decision-maker)</td><td>Cleveland Kranston, named under the Alberta Personal Directives Act</td></tr></tbody></table></div>"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Document</th><th>Type</th><th>Status</th><th>Date</th><th>Author</th><th>Location</th></tr></thead><tbody><tr><td>Personal Directive and Goals of Care Designation</td><td>Alberta Personal Directive; Goals of Care Designation (GCD) order</td><td>Current</td><td>2023-03-14</td><td>Sansa Stark (maker); Dr. Allan Howard (GCD order, witness)</td><td>http://link.to.my.attachment (original kept in the patient&apos;s Green Sleeve)</td></tr></tbody></table><p><b>Summary of Directive Content</b></p><table class=\"grid\"><thead><tr><th>Topic</th><th>Directive</th></tr></thead><tbody><tr><td>Goals of Care Designation</td><td>R3 - Resuscitative care, excluding cardiopulmonary resuscitation (CPR) and intubation</td></tr><tr><td>Cardiopulmonary resuscitation</td><td>Do Not Resuscitate (DNR): no CPR or chest compressions in the event of cardiac or respiratory arrest</td></tr><tr><td>Airway management</td><td>No intubation or mechanical ventilation</td></tr><tr><td>Nutrition</td><td>Liquid food diet is acceptable</td></tr><tr><td>Other medical care</td><td>All other appropriate medical care, including hospital and intensive care unit admission, is accepted</td></tr><tr><td>Agent (substitute decision-maker)</td><td>Cleveland Kranston, named under the Alberta Personal Directives Act</td></tr></tbody></table></div>"
 * section[sectionAdvanceDirectives].entry[advanceDirectivesDocumentReference][+] = Reference(http://example.org/DocumentReference/ex-DocRef-PSCA-Sansa-Stark-AdvanceDirective)
 
 * section[sectionPatientStory].title = "Patient Story"
@@ -287,7 +287,7 @@ Usage: #example
 * section[sectionFamilyHistory].title = "Family History"
 * section[sectionFamilyHistory].code = $loinc#10157-6 "History of family member diseases note"
 * section[sectionFamilyHistory].text.status = #generated
-* section[sectionFamilyHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Family History</h5><table class=\"grid\"><thead><tr><th>Relationship</th><th>Condition</th><th>Onset</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Father</td><td>Heart attack</td><td/><td>Father died of a heart attack</td><td>2024-01-05</td></tr><tr><td>Grandmother</td><td>breast cancer</td><td>Age 68</td><td>Grandmother was diagnosed with breast cancer at age 68.</td><td/></tr></tbody></table></div>"
+* section[sectionFamilyHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Relationship</th><th>Condition</th><th>Onset</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Father</td><td>Heart attack</td><td/><td>Father died of a heart attack</td><td>2024-01-05</td></tr><tr><td>Grandmother</td><td>breast cancer</td><td>Age 68</td><td>Grandmother was diagnosed with breast cancer at age 68.</td><td/></tr></tbody></table></div>"
 * section[sectionFamilyHistory].entry[FamilyMemberHistory][+] = Reference(http://example.org/FamilyMemberHistory/ex-FMH-PSCA-Sansa-Stark-Father)
 * section[sectionFamilyHistory].entry[FamilyMemberHistory][+] = Reference(http://example.org/FamilyMemberHistory/ex-FMH-PSCA-Sansa-Stark-Grandmother)
 
@@ -295,7 +295,7 @@ Usage: #example
 * section[16].title = "Alerts"
 * section[16].code = $loinc#104605-1 "Alert"
 * section[16].text.status = #generated
-* section[16].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Alerts</h5><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Fall risk</td><td>Active</td><td>Medium priority</td><td>2026-10-22</td></tr></tbody></table></div>"
+* section[16].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Fall risk</td><td>Active</td><td>Medium priority</td><td>2026-10-22</td></tr></tbody></table></div>"
 * section[16].entry[+] = Reference(http://example.org/Flag/ex-Alert-PSCA-Sansa-Stark-FallRisk)
 
 
@@ -409,7 +409,7 @@ Instance: ex-Practitioner-PSCA-Sansa-Stark-AllanHoward
 InstanceOf: PractitionerUvIps
 Usage: #inline
 * id = "ex-Practitioner-PSCA-Sansa-Stark-AllanHoward"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips|2.0.1"
 * identifier[+].type = $v2-0203#PRN "Provider number"
 * identifier[=].system = "https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-practitioner-id-ahcip"
 * identifier[=].value = "987654321"
@@ -443,7 +443,7 @@ Instance: ex-PractRole-PSCA-Sansa-Stark-AllanHoward
 InstanceOf: PractitionerRoleUvIps
 Usage: #inline
 * id = "ex-PractRole-PSCA-Sansa-Stark-AllanHoward"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips|2.0.1"
 * practitioner = Reference(http://example.org/Practitioner/ex-Practitioner-PSCA-Sansa-Stark-AllanHoward)
 * organization = Reference(http://example.org/Organization/ex-Org-PSCA-Sansa-Stark-UAH)
 * specialty.text = "General Practice"
@@ -478,7 +478,7 @@ Instance: ex-Org-PSCA-Sansa-Stark-UAH
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-PSCA-Sansa-Stark-UAH"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * identifier.type = $v2-0203#FI "Facility ID"
 * identifier.system = "https://www.alberta.ca/fhir/NamingSystem/ca-ab-facility-id-billing"
 * identifier.value = "siteID1"
@@ -499,7 +499,7 @@ Instance: ex-Org-PSCA-Sansa-Stark-Custodian
 InstanceOf: OrganizationUvIps
 Usage: #inline
 * id = "ex-Org-PSCA-Sansa-Stark-Custodian"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips|2.0.1"
 * name = "Fictional Custodian Organization"
 * telecom[+].system = #phone
 * telecom[=].use = #work
@@ -613,7 +613,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $sct#373513008 "Indomethacin"
 * ingredient.isActive = true
 * ingredient.strength.numerator = 50 'mg' "mg"
-* ingredient.strength.denominator = 1 '{capsule}' "capsule"
+* ingredient.strength.denominator = 1 '1' "capsule"
 
 Instance: ex-Allergy-PSCA-Sansa-Stark-Metformin
 InstanceOf: AllergyIntolerancePSCA
@@ -766,8 +766,8 @@ Usage: #inline
 * id = "ex-Procedure-PSCA-Sansa-Stark-SkinGraft"
 * meta.profile = "http://fhir.infoway-inforoute.ca/io/psca/StructureDefinition/procedure-ca-ps"
 * status = #completed
-* code = $sct#420934007 "Graft of skin"
-* code.text = "Skin graft"
+* code = $sct#91157001 "Grafting of fascial graft"
+* code.text = "Fascial graft"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
 * performedDateTime = "2010-07-08"
 * followUp.text = "Follow-up 2010-08-06"
@@ -819,7 +819,7 @@ Instance: ex-DeviceUse-PSCA-Sansa-Stark-Wheelchair
 InstanceOf: DeviceUseStatementUvIps
 Usage: #inline
 * id = "ex-DeviceUse-PSCA-Sansa-Stark-Wheelchair"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.1"
 * status = #active
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
 * timingDateTime = "2010-08-06"
@@ -829,7 +829,7 @@ Instance: ex-Device-PSCA-Sansa-Stark-Wheelchair
 InstanceOf: DeviceUvIps
 Usage: #inline
 * id = "ex-Device-PSCA-Sansa-Stark-Wheelchair"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips|2.0.1"
 * type = $sct#228869008 "Manual wheelchair"
 * type.text = "Manual wheelchair"
 * patient = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
@@ -899,7 +899,7 @@ Usage: #inline
 * effectiveDateTime = "2020-03-20"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-PSCA-Sansa-Stark-Sorkinson)
 * valueString = "Acute duodenal ulcer with hemorrhage"
-* component[observationCode].code = $loinc#59776-5 "Procedure findings Narrative"
+* component[observationCode].code = http://dicom.nema.org/resources/ontology/DCM#121071 "Finding"
 * component[observationCode].valueCodeableConcept = $sct#12847006 "Acute duodenal ulcer with hemorrhage"
 * component[observationCode].valueCodeableConcept.text = "Acute duodenal ulcer with hemorrhage"
 
@@ -913,6 +913,7 @@ Usage: #inline
 * code = $loinc#85353-1 "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel"
 * code.text = "Vital signs Panel"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * hasMember[+] = Reference(http://example.org/Observation/ex-Vitals-PSCA-Sansa-Stark-RespRate) "Respiratory Rate"
 * hasMember[+] = Reference(http://example.org/Observation/ex-Vitals-PSCA-Sansa-Stark-HeartRate) "Heart Rate"
@@ -931,6 +932,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 29.34 'kg/m2' "kg/m2"
 
@@ -942,6 +944,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body height"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 162 'cm' "cm"
 
@@ -953,6 +956,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code.coding[BodyWeightCode] = $loinc#29463-7 "Body weight"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 77 'kg' "kg"
 
@@ -965,6 +969,7 @@ Usage: #inline
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * code.text = "Blood pressure systolic & diastolic"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * component[SystolicBP].code = $loinc#8480-6 "Systolic blood pressure"
 * component[SystolicBP].valueQuantity = 120 'mm[Hg]' "mmHg"
@@ -980,6 +985,7 @@ Usage: #inline
 * code = $loinc#9843-4 "Head Occipital-frontal circumference"
 * code.text = "Head Circumference"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 55.2 'cm' "cm"
 
@@ -991,6 +997,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8867-4 "Heart rate"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 80 '/min' "/minute"
 
@@ -1002,6 +1009,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code.coding[OxygenSatCode] = $loinc#2708-6 "Oxygen saturation in Arterial blood"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 95 '%' "%"
 
@@ -1013,6 +1021,7 @@ Usage: #inline
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#9279-1 "Respiratory rate"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueQuantity = 15 '/min' "breaths/minute"
 
@@ -1024,8 +1033,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#74013-4 "Alcoholic drinks per day"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
-* valueQuantity = 2 '{wine glasses}/d' "wine glasses per day"
+* valueQuantity = 2 '/d' "wine glasses per day"
 
 Instance: ex-SH-PSCA-Sansa-Stark-Tobacco
 InstanceOf: ObservationTobaccoUsePSCA
@@ -1035,8 +1045,11 @@ Usage: #inline
 * status = #final
 * code = $loinc#72166-2 "Tobacco smoking status"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
-* valueCodeableConcept = $loinc#LA18978-9 "Never smoker"
+* valueCodeableConcept.coding[+] = $sct#266919005 "Never smoked tobacco"
+* valueCodeableConcept.coding[+] = $loinc#LA18978-9 "Never smoker"
+* valueCodeableConcept.text = "Never smoker"
 
 Instance: ex-SH-PSCA-Sansa-Stark-LifestyleRisk
 InstanceOf: ObservationSocialHistoryPSCA
@@ -1047,6 +1060,8 @@ Usage: #inline
 * category[social-history] = $observation-category#social-history "Social History"
 * code.text = "Lifestyle Risk Factor"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* effectiveDateTime = "2024-01-05"
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * valueCodeableConcept.text = "Home has not been outfitted with accessibility devices"
 * note.text = "Sansa has episodic struggles with mobility and her home has not been outfitted with a ramp"
 
@@ -1055,10 +1070,11 @@ Instance: ex-Preg-PSCA-Sansa-Stark-Status
 InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #inline
 * id = "ex-Preg-PSCA-Sansa-Stark-Status"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips|2.0.1"
 * status = #final
 * code = $loinc#82810-3 "Pregnancy status"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueCodeableConcept = $sct#60001007 "Not pregnant"
 
@@ -1155,7 +1171,7 @@ Instance: ex-Alert-PSCA-Sansa-Stark-FallRisk
 InstanceOf: FlagAlertUvIps
 Usage: #inline
 * id = "ex-Alert-PSCA-Sansa-Stark-FallRisk"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips|2.0.1"
 * extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
 * extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PM "Medium priority"
 * status = #active
@@ -1176,6 +1192,7 @@ Usage: #inline
 * category[social-history] = $observation-category#social-history "Social History"
 * code = $loinc#76690-7 "Sexual orientation"
 * subject = Reference(http://example.org/Patient/ex-Patient-PSCA-Sansa-Stark)
+* performer = Reference(http://example.org/PractitionerRole/ex-PractRole-PSCA-Sansa-Stark-AllanHoward)
 * effectiveDateTime = "2024-01-05"
 * valueCodeableConcept = $sct#42035005 "Bisexual"
 
