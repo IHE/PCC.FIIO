@@ -1,13 +1,12 @@
 Instance: ex-Bundle-secondaryUse-pandemicIPS-example-patient
 InstanceOf: BundleUvIps
-Usage: #example
 Description: """
-The Origional FHIR Document provided by the health Data Holder. 
-The following bundle provides an example view of a record that could be in the research cohort for the pandemic patient. 
-There have been no alterations to this original record.
+The original FHIR document provided by the health data holder. The following bundle provides an example view of a record that could be in the research cohort for the pandemic patient. There have been no alterations to this original record.
 """
+Usage: #example
 * id = "80c516fd-9c84-4924-875b-bf0048979ae1"
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
+* meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Bundle"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"
 * identifier.system = "urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639"
 * identifier.value = "IHEEX-33159"
 * type = #document
@@ -73,8 +72,12 @@ There have been no alterations to this original record.
 
 Instance: ex-Composition-secondaryUse-pandemicIPS
 InstanceOf: CompositionUvIps
-Usage: #inline
-* meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
+Description: """
+The Composition from the original FHIR document for the pandemic IPS example patient, Patricia Jordana, provided by the health data holder before de-identification.
+"""
+Usage: #example
+* meta.profile[+] = "https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition"
+* meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"
 * id = "ex-Composition-secondaryUse-pandemicIPS"
 * status = #final
 * type = $loinc#60591-5
@@ -91,91 +94,91 @@ Usage: #inline
 * section[sectionMedications].title = "Medication List"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #generated
-* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Medication section</div>"
+* section[sectionMedications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medication Summary</h5><table class=\"grid\"><thead><tr><th>Medication</th><th>Status</th><th>Route</th><th>Sig</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Product containing oseltamivir (medicinal product)</td><td>Completed</td><td/><td/><td/><td>2024-06-16</td></tr></tbody></table></div>"
 * section[sectionMedications].entry[+] = Reference(http://example.org/MedicationStatement/ex-MedicationStatement-secondaryUse-pandemicIPS)
 
 * section[sectionAllergies].title = "Allergies and Intolerances"
 * section[sectionAllergies].code = $loinc#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text.status = #generated
-* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Allergies and intolerances section</div>"
+* section[sectionAllergies].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Allergies and Intolerances</h5><table class=\"grid\"><thead><tr><th>Allergen</th><th>Status</th><th>Category</th><th>Reaction</th><th>Severity</th><th>Comments</th><th>Onset</th></tr></thead><tbody><tr><td>Allergy to component of vaccine product containing Influenza virus antigen (finding)</td><td>Active</td><td>Medication</td><td>Rash</td><td>Moderate</td><td/><td>2020-10-01</td></tr></tbody></table></div>"
 * section[sectionAllergies].entry[+] = Reference(http://example.org/AllergyIntolerance/ex-Allergy-secondaryUse-pandemicIPS)
 
 * section[sectionProblems].title = "Problem List"
 * section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblems].text.status = #generated
-* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Problem list section</div>"
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Problem List</h5><table class=\"grid\"><thead><tr><th>Medical Problems</th><th>Status</th><th>Comments</th><th>Onset Date</th></tr></thead><tbody><tr><td>Influenza caused by pandemic influenza virus (disorder)</td><td>Active</td><td>Severe</td><td>2024-06-15</td></tr><tr><td>Severe asthma (disorder)</td><td>Active</td><td>Severe</td><td>2006-01-03</td></tr></tbody></table></div>"
 * section[sectionProblems].entry[+] = Reference(http://example.org/Condition/ex-Condition1-secondaryUse-pandemicIPS)
 * section[sectionProblems].entry[+] = Reference(http://example.org/Condition/ex-Condition2-secondaryUse-pandemicIPS)
 
 * section[sectionPastProblems].title = "Past Problems"
 * section[sectionPastProblems].code = $loinc#11348-0 "History of Past illness note"
 * section[sectionPastProblems].text.status = #generated
-* section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Past Problems Section</div>"
+* section[sectionPastProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Past Illness</h5><table class=\"grid\"><thead><tr><th>Condition</th><th>Status</th><th>Comments</th><th>Onset Date</th><th>Resolved Date</th></tr></thead><tbody><tr><td>Fracture of femur (disorder)</td><td>Resolved</td><td>Severe</td><td>2023-11-16</td><td/></tr></tbody></table></div>"
 * section[sectionPastProblems].entry[+] = Reference(http://example.org/Condition/ex-Condition3-secondaryUse-pandemicIPS)
 
 * section[sectionImmunizations].title = "History of Immunizations"
 * section[sectionImmunizations].code = $loinc#11369-6 "History of Immunization note"
 * section[sectionImmunizations].text.status = #generated
-* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Immunizations section</div>"
+* section[sectionImmunizations].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Immunizations</h5><table class=\"grid\"><thead><tr><th>Immunization</th><th>Status</th><th>Dose Number</th><th>Manufacturer</th><th>Lot Number</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>COVID-19 Vaccination</td><td>Completed</td><td>2</td><td/><td/><td/><td>2024-05-01</td></tr></tbody></table></div>"
 * section[sectionImmunizations].entry[+] = Reference(http://example.org/Immunization/ex-Immunization-secondaryUse-pandemicIPS)
 
 * section[sectionProceduresHx].title = "History of Procedures"
 * section[sectionProceduresHx].code = $loinc#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text.status = #generated
-* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">History of Procedures section</div>"
+* section[sectionProceduresHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>History of Procedures</h5><table class=\"grid\"><thead><tr><th>Procedure</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Artificial ventilation using ventilator</td><td>Artificial ventilation using ventilator performed</td><td>2024-06-25</td></tr></tbody></table></div>"
 * section[sectionProceduresHx].entry[+] = Reference(http://example.org/Procedure/ex-Procedure-secondaryUse-pandemicIPS)
 
 * section[sectionResults].title = "Diagnostic Results"
 * section[sectionResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[sectionResults].text.status = #generated
-* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
+* section[sectionResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Diagnostic Results: Observations</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Reference Range</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Influenza virus A Ag [Presence] in Nasopharynx</td><td>Positive</td><td/><td>Positive</td><td/><td>Positive for Influenza A</td><td>2024-06-15</td></tr></tbody></table></div>"
 * section[sectionResults].entry[+] = Reference(http://example.org/Observation/ex-Lab-secondaryUse-pandemicIPS)
 
 * section[sectionSocialHistory].title = "Social History"
 * section[sectionSocialHistory].code = $loinc#29762-2 "Social history note"
 * section[sectionSocialHistory].text.status = #generated
-* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Social History </div>"
+* section[sectionSocialHistory].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Social History</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>History of Occupation</td><td>Health Care Assistants</td><td/><td>Industry: Residential nursing care facilities</td><td>2016-03-10 - 2020-04-14</td></tr></tbody></table></div>"
 * section[sectionSocialHistory].entry[+] = Reference(http://example.org/Observation/ex-PastPresJob-secondaryUse-pandemicIPS)
 
 * section[sectionPregnancyHx].title = "Pregnancy History"
 * section[sectionPregnancyHx].code = $loinc#10162-6 "History of Pregnancies Narrative"
 * section[sectionPregnancyHx].text.status = #generated
-* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pregnancy section</div>"
+* section[sectionPregnancyHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Pregnancy</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Pregnancy status</td><td>Pregnant</td><td/><td>2024-06-02</td></tr></tbody></table></div>"
 * section[sectionPregnancyHx].entry[+] = Reference(http://example.org/Observation/ex-PregStat-secondaryUse-pandemicIPS)
 
 * section[sectionMedicalDevices].title = "Medical Devices"
 * section[sectionMedicalDevices].code = $loinc#46264-8 "History of Medical Device Use"
 * section[sectionMedicalDevices].text.status = #generated
-* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Results section</div>"
+* section[sectionMedicalDevices].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Medical Devices</h5><table class=\"grid\"><thead><tr><th>Device</th><th>Status</th><th>Comments</th><th>Date Recorded</th></tr></thead><tbody><tr><td>No known device use</td><td>Completed</td><td>Device data required</td><td>2014-02-01</td></tr></tbody></table></div>"
 * section[sectionMedicalDevices].entry[+] = Reference(http://example.org/DeviceUseStatement/ex-DeviceUse-secondaryUse-pandemicIPS)
 
 * section[sectionVitalSigns].title = "Vital Signs"
 * section[sectionVitalSigns].code = $loinc#8716-3 "Vital signs note"
 * section[sectionVitalSigns].text.status = #generated
-* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vital Signs Section</div>"
+* section[sectionVitalSigns].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Vital Signs</h5><table class=\"grid\"><thead><tr><th>Code</th><th>Result</th><th>Unit</th><th>Interpretation</th><th>Component(s)</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Body height</td><td>71</td><td>in</td><td/><td/><td/><td>2024-06-15</td></tr><tr><td>Body weight</td><td>230</td><td>lb</td><td/><td/><td/><td>2024-06-15</td></tr><tr><td>Body mass index (BMI) [Ratio]</td><td>32.1</td><td>kg/m2</td><td/><td/><td/><td>2024-06-15</td></tr><tr><td>Blood pressure panel with all children optional</td><td/><td/><td/><td>Systolic blood pressure: 130 mm[Hg]; Diastolic blood pressure: 80 mm[Hg]</td><td/><td>2024-06-15</td></tr><tr><td>Heart rate</td><td>80</td><td>/min</td><td/><td/><td/><td>2024-06-15</td></tr><tr><td>Oxygen saturation in Arterial blood</td><td>85</td><td>%</td><td/><td/><td/><td>2024-06-15</td></tr></tbody></table></div>"
 * section[sectionVitalSigns].entry[+] = Reference(http://example.org/Observation/ex-VitalSignsPanel-secondaryUse-pandemicIPS)
 
 * section[sectionPlanOfCare].title = "Plan of Care"
 * section[sectionPlanOfCare].code = $loinc#18776-5 "Plan of care note"
 * section[sectionPlanOfCare].text.status = #generated
-* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Plan of Care Section</div>"
+* section[sectionPlanOfCare].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Plan of Care</h5><table class=\"grid\"><thead><tr><th>Activity</th><th>Status</th><th>Comments</th><th>Planned Start</th><th>Planned End</th></tr></thead><tbody><tr><td>Plan of Care</td><td>Completed</td><td/><td>2024-06-16</td><td/></tr></tbody></table></div>"
 * section[sectionPlanOfCare].entry[+] = Reference(http://example.org/CarePlan/ex-CarePlan-secondaryUse-pandemicIPS)
 
 * section[sectionAdvanceDirectives].title = "Advance Directives"
 * section[sectionAdvanceDirectives].code = $loinc#42348-3 "Advance healthcare directives"
 * section[sectionAdvanceDirectives].text.status = #generated
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">No Advanced Directives</div>"
+* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Advance Directives</h5><table class=\"grid\"><thead><tr><th>Scope</th><th>Status</th><th>Action Controlled</th><th>Date</th></tr></thead><tbody><tr><td colspan=\"4\">No Advance Directives</td></tr></tbody></table></div>"
 
 * section[sectionAlerts].title = "Alerts"
 * section[sectionAlerts].code = $loinc#104605-1 "Alert"
 * section[sectionAlerts].text.status = #generated
-* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Alerts Section</div>"
+* section[sectionAlerts].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Alerts</h5><table class=\"grid\"><thead><tr><th>Alert</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead><tbody><tr><td>Severe asthma (disorder)</td><td>Active</td><td>High priority</td><td>2024-06-15</td></tr></tbody></table></div>"
 * section[sectionAlerts].entry[+] = Reference(http://example.org/Flag/ex-Alert-secondaryUse-pandemicIPS)
 
 * section[sectionFunctionalStatus].title = "Functional Status"
 * section[sectionFunctionalStatus].code = $loinc#47420-5 "Functional status assessment note"
 * section[sectionFunctionalStatus].text.status = #generated
-* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Functional Status Section</div>"
+* section[sectionFunctionalStatus].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h5>Functional Status</h5><table class=\"grid\"><thead><tr><th>Finding</th><th>Type</th><th>Status</th><th>Comments</th><th>Date</th></tr></thead><tbody><tr><td>Finding of walking aid use (finding)</td><td>General problem AND/OR complaint (finding)</td><td>Completed</td><td/><td>2024-06-16</td></tr></tbody></table></div>"
 * section[sectionFunctionalStatus].entry[+] = Reference(http://example.org/ClinicalImpression/ex-ClinicalImp-secondaryUse-pandemicIPS)
 
 Instance: ex-Organization-secondaryUse-pandemicIPS
@@ -242,7 +245,7 @@ Usage: #inline
 Instance: ex-Practitioner-IPS-SimoneHeps
 InstanceOf: PractitionerUvIps
 Description: """
-This example practitioner is made to be reference by other example resources realted to IPS.
+This example practitioner is referenced by other example resources related to IPS.
 """
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"
@@ -341,7 +344,7 @@ Usage: #inline
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
 * performedDateTime = "2024-06-25"
 * bodySite = $sct#39607008 "Lung structure"
-* note.text = "Artificial ventilation using ventilaton performed"
+* note.text = "Artificial ventilation using ventilator performed"
 
 Instance: ex-Allergy-secondaryUse-pandemicIPS
 InstanceOf: AllergyIntoleranceUvIps
@@ -370,9 +373,8 @@ Usage: #inline
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
 * effectiveDateTime = "2024-06-15"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-SimoneHeps)
-* valueQuantity.value = 13.2
-* valueQuantity.unit = "g/dL"
-* interpretation = $v3-ObservationInterpretation#H "High"
+* valueCodeableConcept = $sct#10828004 "Positive"
+* interpretation = $v3-ObservationInterpretation#POS "Positive"
 * note.text = "Positive for Influenza A"
 
 Instance: ex-Immunization-secondaryUse-pandemicIPS
@@ -381,8 +383,9 @@ Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
 * id = "ex-Immunization-secondaryUse-pandemicIPS"
 * status = #completed
-* vaccineCode = $sct#1181000221105 "Vaccine product containing only Influenza virus antigen (medicinal product)"
-* vaccineCode.text = "Invluenza Vaccination"
+* vaccineCode.coding[+] = $sct#1119349007 "SARS-CoV-2 mRNA vaccine"
+* vaccineCode.coding[+] = http://hl7.org/fhir/sid/cvx#208 "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose"
+* vaccineCode.text = "COVID-19 Vaccination"
 * patient = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
 * occurrenceDateTime = "2024-05-01"
 * site = $sct#762211005 "Structure of part of left upper limb"
@@ -395,7 +398,7 @@ Usage: #inline
 * protocolApplied.doseNumberPositiveInt = 2
 
 Instance: ex-PastPresJob-secondaryUse-pandemicIPS
-InstanceOf: PastOrPresentJob
+InstanceOf: $IHE-ODH-PastOrPresentJob
 Usage: #inline
 * meta.profile = "https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob"
 * id = "ex-PastPresJob-secondaryUse-pandemicIPS"
@@ -421,7 +424,7 @@ Usage: #inline
 * status = #final
 * code = $loinc#82810-3 "Pregnancy status"
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
-* effectiveDateTime = "2014-02-01"
+* effectiveDateTime = "2024-06-02"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-SimoneHeps)
 * valueCodeableConcept = $sct#77386006 "Pregnant"
 * hasMember = Reference(http://example.org/Observation/ex-EDD-secondaryUse-pandemicIPS)
@@ -476,12 +479,13 @@ Usage: #inline
 * meta.profile[+] = "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
 * meta.profile[+] = "http://hl7.org/fhir/StructureDefinition/Flag|4.0.1"
 * id = "ex-Alert-secondaryUse-pandemicIPS"
-//* extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
-//* extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PM "Medium priority"
+* extension[flag-priority].url = "http://hl7.org/fhir/StructureDefinition/flag-priority"
+* extension[flag-priority].valueCodeableConcept = http://hl7.org/fhir/flag-priority-code#PH "High priority"
 * status = http://hl7.org/fhir/flag-status#active
 * category = http://terminology.hl7.org/CodeSystem/flag-category#clinical
 * code = $sct#370221004 "Severe asthma (disorder)"
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
+* period.start = "2024-06-15"
 
 Instance: ex-ClinicalImp-secondaryUse-pandemicIPS
 InstanceOf: ClinicalImpression
@@ -520,7 +524,7 @@ Usage: #inline
 * id = "ex-VitalSigns-Height-secondaryUse-pandemicIPS"
 * status = http://hl7.org/fhir/observation-status#final
 * code = $loinc#8302-2 "Body height"
-* valueQuantity = 71 '[in_i]' "in_i"
+* valueQuantity = 71 '[in_i]' "in"
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
 * effectiveDateTime = "2024-06-15T09:44:00+06:00"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-SimoneHeps)
@@ -532,7 +536,7 @@ Usage: #inline
 * id = "ex-VitalSigns-Weight-secondaryUse-pandemicIPS"
 * status = http://hl7.org/fhir/observation-status#final
 * code = $loinc#29463-7 "Body weight"
-* valueQuantity = 230 '[lb_av]' "lbs"
+* valueQuantity = 230 '[lb_av]' "lb"
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
 * effectiveDateTime = "2024-06-15T09:44:00+06:00"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-SimoneHeps)
@@ -559,9 +563,9 @@ Usage: #inline
 * subject = Reference(http://example.org/Patient/ex-Patient-secondaryUse-pandemicIPS)
 * effectiveDateTime = "2024-06-15T09:44:00+06:00"
 * performer = Reference(http://example.org/Practitioner/ex-Practitioner-IPS-SimoneHeps)
-* component[+].valueQuantity = 80 'mm[Hg]' "mm[Hg]"
-* component[=].code = $loinc#8480-6 "Systolic blood pressure"
 * component[+].valueQuantity = 130 'mm[Hg]' "mm[Hg]"
+* component[=].code = $loinc#8480-6 "Systolic blood pressure"
+* component[+].valueQuantity = 80 'mm[Hg]' "mm[Hg]"
 * component[=].code = $loinc#8462-4 "Diastolic blood pressure"
 
 Instance: ex-VitalSigns-HeartRate-secondaryUse-pandemicIPS

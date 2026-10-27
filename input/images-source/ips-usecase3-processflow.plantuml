@@ -1,0 +1,24 @@
+@startuml
+skinparam svgDimensionStyle false
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign center
+hide footbox
+
+actor "Patient" as pt
+actor "Attending\nClinician" as cl
+box "Host Country" #EEF4FA
+participant "Treating Clinic EHR\n(Content Consumer)" as clinic
+end box
+box "Home Country" #EEF4FA
+participant "Home Provider EHR\n(Content Creator)" as home
+end box
+
+home -> home : Record pre-deployment\nexam and ODH work data\n(Usual Work or\nPast or Present Job)
+pt -> cl : Seeks care for chest\ntightness and wheezing
+cl -> clinic : Request patient summary
+clinic <-> home : Document Sharing [PCC-1]\nIPS Document (ODH Option)
+clinic -> cl : Display IPS including\noccupational data
+cl -> cl : Links new-onset asthma\nto work exposure
+cl -> clinic : Record diagnosis,\nmedications, and referral
+@enduml

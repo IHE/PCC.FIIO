@@ -1,6 +1,13 @@
 @startuml
 skinparam svgDimensionStyle false
-agent "[[#client Client]]" as Client
-agent "[[#server Server]]" as Server
-Client -down-> Server : "go [[domain-YY.html Domain-YY]]"
+skinparam shadowing false
+skinparam defaultFontName Arial
+left to right direction
+
+rectangle "Content\nCreator" as creator
+cloud "Share Content\n[PCC-1]" as share
+rectangle "Content\nConsumer" as consumer
+
+creator -- share
+share -- consumer
 @enduml

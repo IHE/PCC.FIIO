@@ -56,3 +56,15 @@ Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
 Alias: $vrdr-component-cs = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-component-cs
 Alias: $vrdr-location-type-cs = http://hl7.org/fhir/us/vrdr/CodeSystem/vrdr-location-type-cs
 Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
+
+// IHE PCC ODH and HL7 US ODH use identical profile names; always reference ODH profiles by canonical URL
+Alias: $IHE-ODH-PastOrPresentJob = https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-PastOrPresentJob
+Alias: $IHE-ODH-UsualWork = https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-UsualWork
+Alias: $IHE-ODH-EmploymentStatus = https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-EmploymentStatus
+Alias: $IHE-ODH-RetirementDate = https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-RetirementDate
+Alias: $IHE-ODH-CombatZonePeriod = https://profiles.ihe.net/PCC/ODH/StructureDefinition/odh-CombatZonePeriod
+Alias: $US-ODH-PastOrPresentJob = http://hl7.org/fhir/us/odh/StructureDefinition/odh-PastOrPresentJob
+Alias: $US-ODH-UsualWork = http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork
+Alias: $US-ODH-EmploymentStatus = http://hl7.org/fhir/us/odh/StructureDefinition/odh-EmploymentStatus
+Alias: $US-ODH-RetirementDate = http://hl7.org/fhir/us/odh/StructureDefinition/odh-RetirementDate
+Alias: $US-ODH-CombatZonePeriod = http://hl7.org/fhir/us/odh/StructureDefinition/odh-CombatZonePeriod

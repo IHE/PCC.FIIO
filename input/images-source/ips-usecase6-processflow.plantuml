@@ -1,30 +1,27 @@
 @startuml
 skinparam svgDimensionStyle false
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign center
 hide footbox
 
-!pragma teoz true 
-box "Health Data Source" #LightSkyBlue
-participant "Primary Care Data Source\nContent Creator" as pcds
+box "Health Data Source" #EEF4FA
+participant "Primary Care Data Source\n(Content Creator)" as pcds
+end box
+box "De-Identification" #EEF4FA
+participant "Pseudonymization Service\n(Content Consumer,\nContent Creator)" as pns
+participant "Anonymization Service\n(Content Consumer,\nContent Creator)" as ans
+end box
+box "Secondary Use" #EEF4FA
+participant "Secondary Use Researcher\n(Content Consumer)" as sur
+end box
 
-box "De-Identification" #SteelBlue
-participant "Pseudonymization Service\nContent Consumer\nContent Creator" as pns
-
-note over pcds, pns: Primary Data Source\nProvides a Fully Identifed\nPatient Summary Document 
-pcds <-> pns: Document Sharing\n[PCC-1]
+note over pcds, pns : Primary data source provides\na fully identified\npatient summary document
+pcds <-> pns : Document Sharing [PCC-1]\nIPS Document
 pns -> pns : Stage 1\nDe-Identification
-
-participant "Anonymization Service\nContent Consumer\nContent Creator" as ans
-note over pns, ans: Provides a Pseudonymized Data\nSet Formatted as an IPS Document\n(Stage 1 De-Identification)
-pns <-> ans: Document Sharing\n[PCC-1]
+note over pns, ans : Provides a pseudonymized\ndata set formatted as an\nIPS document (Stage 1)
+pns <-> ans : Document Sharing [PCC-1]\nIPS Document
 ans -> ans : Stage 2\nDe-Identification
-end box
-end box 
-
-box "Secondary Use" #MediumPurple
-participant "Secondary Use Researcher\nContent Consumer" as sur 
-
-note over ans, sur: Provides a\nFully De-Identified Data Set Formatted\nas an IPS Document\n(Stage 2 De-Identification)
-ans <-> sur: Document Sharing\n[PCC-1]
-end box
-
+note over ans, sur : Provides a fully de-identified\ndata set formatted as an\nIPS document (Stage 2)
+ans <-> sur : Document Sharing [PCC-1]\nIPS Document
 @enduml

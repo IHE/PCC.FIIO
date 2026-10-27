@@ -1,34 +1,111 @@
 == Suppressed Messages ==
-# Warnings Generated from Obligation Slicing in Parent Profile. Cannot be resolved in this profile. Suppressed until future solution is found. 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0-ballot-tc1 (this may not be a problem, but you should check that it's not intended to match a slice)
+# A % at the end of a line matches any message that starts with that text, and a % at both ends matches any message that contains it (the IG Publisher treats a leading/trailing % as a wildcard).
 
+# Warnings Generated from Obligation Slicing in Parent Profile. Cannot be resolved in this profile. Suppressed until future solution is found.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation%
 
-# We are still using FHIR R4. This will not be relevant until this profile becomes a FHIR R5 profile, then it sould be an issue that the HL7 FHIR IPS IG would need to suppress 
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
+# We are still using FHIR R4. This will not be relevant until this profile becomes a FHIR R5 profile, then it should be an issue that the HL7 FHIR IPS IG would need to suppress
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet%
 
 # This is a dummy OID system made only for examples, we expect there is no proper definition for it, unless we progress with a official example oid registry
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.19376.1.5.4'
 No definition could be found for URL value 'urn:oid:2.16.528.1.1007.3.1'
 No definition could be found for URL value 'urn:oid:1.3.6.1.4.1.21367.2011.2.5.5639'
 
-# Additional Observations that do not match current slices are known to be a part of the examples
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+# Medication timing: the HL7 IPS MedicationStatement profile allows effective[x] to be a dateTime or a Period, and defines a Must Support slice only for
+# effectiveDateTime. Medications taken over a period of time are recorded with a Period, which is allowed and is expected not to match the effectiveDateTime slice.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips%
 
-# This version is the one with the extension referenced in this profile
-The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 released on 2025-08-03, but the most recent appropriate version is 5.2.0. This reference is getting old and the more recent version should be considered
+# This is an external code system and cannot be properly validated, confirmed the use of proper codes
+A definition for CodeSystem 'http://tools.ietf.org/html/bcp47' could not be found, so the code cannot be validated
 
-# This is only for an example purposes and does not need to be active for this purpose 
-The concept '66214007' has a status of inactive and its use should be reviewed
-The concept '414006007' has a status of inactive and its use should be reviewed
+# Versioning of the references will be completed after public comment
+The html source has duplicate anchor Ids: ex-Patient-IPS-Frank-MissingData,Patient_ex-Patient-IPS-Frank-MissingData,hcex-Patient-IPS-Frank-MissingData
 
-# This is an external code system and cannot be properly validated, confirmed the use of proper codes 
-A definition for CodeSystem 'http://tools.ietf.org/html/bcp47' could not be found, so the code cannot be validated 
+# Sansa Stark example: generated from the PS-CA 2.1.1 and PS-AB 1.1.1 example patients and intended to be valid against both the IPS Complete Option and PS-CA.
+# Canadian code systems (SNOMED CT Canadian Edition, Canadian Clinical Drug Data Set) are used for example purposes only, not for further profiling, and are not available to the validator.
+A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/hc-CCDD' could not be found, so the code cannot be validated
+A definition for CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/20611000087101' could not be found, so the code cannot be validated. Valid versions: %
+A definition for the code system 'http://snomed.info/sct|http://snomed.info/sct/20611000087101' could not be found, so this coding was not checked. The CodeableConcept is still valid: another coding is in the value set
+A definition for the code system 'http://terminology.hl7.org/CodeSystem/hc-CCDD' could not be found, so this coding was not checked. The CodeableConcept is still valid: another coding is in the value set
+A definition for the value Set 'http://snomed.info/sct?fhir_vs=refset/%
 
-# Versioning of the references will be completed after public comment 
-The html source has duplicate anchor Ids: Patient_fb45133f-447a-49e8-ba3d-71fbcc7fdcc1,fb45133f-447a-49e8-ba3d-71fbcc7fdcc1,hcfb45133f-447a-49e8-ba3d-71fbcc7fdcc1
-The html source has duplicate anchor Ids: 4aaab9e4-44e1-4a35-98ac-093fa22c87d4,Patient_4aaab9e4-44e1-4a35-98ac-093fa22c87d4,hc4aaab9e4-44e1-4a35-98ac-093fa22c87d4
-This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+# Known conflict, see Open Issue IPS_025 in issues.md: PS-CA prefers Canadian Vaccine Catalogue codes (SNOMED CT Canadian Edition); the IPS Vaccines value set is based on the
+# SNOMED CT International Edition. International SNOMED CT and WHO ATC codes are also provided but do not resolve the conflict, and the PS-CA vaccine value sets report the
+# international codes as not in the value set.
+The code system 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008' resulting from the version '' in the ValueSet include is different to the one in the value ('http://snomed.info/sct/20611000087101')
+None of the codings provided are in the value set 'Passive Administered Immunizing Agent Code' (https://fhir.infoway-inforoute.ca/ValueSet/passiveadministeredimmunizingagentcode%
+None of the codings provided are in the value set 'Passive Historical Immunizing Agent Code' (https://fhir.infoway-inforoute.ca/ValueSet/passivehistoricalimmunizingagentcode%
+None of the codings provided are in the value set 'Vaccine Administered Trade Name Code' (https://fhir.infoway-inforoute.ca/ValueSet/vaccineadministeredtradenamecode%
+None of the codings provided are in the value set 'Vaccine Historical Name Code' (https://fhir.infoway-inforoute.ca/ValueSet/vaccinehistoricalnamecode%
 
+# Open slicing: the example Bundles and Compositions declare the IHE option profile, the base HL7 IPS profile and, for the national extension examples, the national profile.
+# Each guide only slices the entries and sections it defines, so content defined by another guide (ODH observations, Complete Option sections and entries, Canadian
+# immunizations, Family History, Alerts, US-PCS Encounters, national extensions) is reported as information that it does not match a slice. The slicing is open, so this content is permitted.
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Bundle%
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.Complete.Option.Composition%
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips%
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips%
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pcs/StructureDefinition/Bundle-us-pcs%
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/pcs/StructureDefinition/Composition-us-pcs%
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Bundle%
+This element does not match any known slice defined in the profile https://profiles.ihe.net/PCC/IPS/StructureDefinition/IHE.IPS.ODH.Option.Composition%
+
+# Known conflict between IHE PCC ODH and HL7 US ODH (to be raised as an ODH open issue): the two guides define the Employer and isCurrentJob extensions under
+# different URLs, so job observations that conform to both carry both versions. The occupation and industry values also carry the international ILO ISCO-08 and
+# UN ISIC Rev.4 codings (IHE ODH) next to the US ONET-SOC, NAICS and CDC Census codings (US ODH). US ODH does not slice the IHE extensions or the international codings.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/odh/StructureDefinition/odh-PastOrPresentJob%
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork%
+
+# Known conflict, see Open Issue IPS_034 in issues.md: the US-PCS Bundle slices entries by resource type only, so every Observation (including social history and
+# ODH observations) falls into its observation-results slice and is also checked against US Core Observation Clinical Result, whose category slice does not include
+# social-history. The observations conform through the base Observation choice. Only US-PCS examples produce this message.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result%
+
+# Patient extensions: the HL7 IPS Patient profile slices only the gender identity and pronoun extensions, with open slicing. National and other extensions that
+# IPS permits but does not slice (US Core race, ethnicity, birth sex and gender identity; Canadian Baseline ethnicity; recorded sex or gender; patient citizenship)
+# are reported as information that they do not match a slice. They are allowed by the open slicing.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips%
+
+# Device use timing: the HL7 IPS DeviceUseStatement profile allows timing[x] to be either a Period or a dateTime, and defines a Must Support slice only for
+# timingDateTime. Devices that are still in use (implanted devices, an insulin pump, a respirator worn at work) are recorded with a Period that has a start date
+# and no end date, which is the appropriate type for an ongoing use period. These Periods are allowed and are expected not to match the timingDateTime slice.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips%
+
+# Procedure timing: the HL7 IPS Procedure profile allows performed[x] to be a dateTime, Period, string, Age or Range, and defines a Must Support slice only for
+# performedDateTime. Procedures that took place over a period of time (for example mechanical ventilation over
+# several days) are recorded with a Period that has a start and an end, which is the appropriate type for a procedure performed over a period. These Periods
+# are allowed and are expected not to match the performedDateTime slice.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips%
+
+# Overlapping profile choices (US-PCS): Bundle.entry:observation-results allows Observation, US Core Observation Clinical Result or US Core Laboratory Result
+# Observation, and Bundle.entry:diagnosticreport and the Results section DiagnosticReport slice allow US Core DiagnosticReport Lab or US Core DiagnosticReport Note.
+# These choices overlap: US Core Laboratory Result Observation is derived from US Core Observation Clinical Result, which is derived from Observation, and the
+# US Core DiagnosticReport Note profile has no requirement that a laboratory report does not also meet. A conformant laboratory result or report therefore also
+# conforms to the other choices, and other observations (vital signs, imaging, pulmonary function, social history) conform to both Observation and US Core
+# Observation Clinical Result. The laboratory resources are intended to conform to the US Core Laboratory profiles, and the other observations to the profile
+# declared in their meta.profile. A resource instance cannot restrict which of the allowed choices (slices) it is evaluated against, so the validator reports
+# every additional match, and when it evaluates a laboratory report against the DiagnosticReport Note choice it also reports that the report's category and code
+# do not match that profile's category slice and non-laboratory code value set. This is a limitation of how the validator evaluates profile choices in the IG
+# build, not an issue with the examples.
+Found multiple matching profiles among 2 choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab, http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note%
+Found multiple matching profiles among 2 choices: http://hl7.org/fhir/StructureDefinition/Observation, http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result%
+Found multiple matching profiles among 3 choices: http://hl7.org/fhir/StructureDefinition/Observation, http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result, http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab%
+%among choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|6.1.0, http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note%
+%among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result%
+%among choices: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|6.1.0, http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab%
+The entry resource matched more than one of the allowed profiles (http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab, http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note%
+The entry resource matched more than one of the allowed profiles (http://hl7.org/fhir/StructureDefinition/Observation, http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result%
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note%
+None of the codings provided are in the value set 'US Core Non Laboratory Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes%
+
+# Advance directive category: US Core 6.1.0 (the US Core version used by US-PCS 1.0) slices DocumentReference.category only for the US Core clinical-note category.
+# Advance directive documents are categorized with LOINC 42348-3 "Advance healthcare directives", which the base category binding (example strength, open slicing)
+# allows and which the US Core ADI DocumentReference profile (US Core 8.0.1 and later) requires. A living will is not a clinical note, so the clinical-note
+# category is intentionally not added, and the category is expected not to match the clinical-note slice.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference%
+
+# Document format code: the FHIR R4 DocumentReference Format Code Set (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1) includes only the superseded IHE format
+# code system URL http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem, which has no published CodeSystem definition. The examples use the current IHE FormatCode
+# code system (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode), so its codes cannot be shown to be members of the R4 value set (preferred binding).
+The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:ihe:iti:xds:2017:mimeTypeSufficient) was not found in the value set 'DocumentReference Format Code Set'%

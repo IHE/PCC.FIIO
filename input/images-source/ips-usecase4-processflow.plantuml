@@ -1,29 +1,33 @@
 @startuml
 skinparam svgDimensionStyle false
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign center
 hide footbox
 
-group Primary Data Holder
-participant "Available\nPatient Data" as apd 
-participant "Patient Portal\nContent Creator" as pptp
- 
+actor "Patient" as pt
+box "Primary Data Holder" #EEF4FA
+participant "Data Not\nAvailable to Portal" as nap
+participant "Available\nPatient Data" as apd
+participant "Patient Portal\n(Content Creator)" as portal
+end box
+participant "Healthcare Provider\n(Content Consumer)" as cc2
 
-apd -> pptp ++ : Conditions
-apd -> pptp : Allergies
-apd -> pptp : Medications
-apd -> pptp : Immunizations
-apd -> pptp : Care Plans
-apd -> pptp : Alerts
-apd -> pptp : Clinical Impressions
-apd -> pptp : Procedure Data
-apd -> pptp : Lab Data
-apd -> pptp : Device Data
-
-pptp -> pptp ++ : Adds Patient Story
-pptp --> pptp : Masks Sensative Information
-return saved 
-end 
-
-participant "Content Consumer" as cc2 
-pptp <-> cc2 : Document Sharing\n[PCC-1]
-
+pt -> portal : Request IPS
+apd -> portal : Conditions
+apd -> portal : Allergies
+apd -> portal : Medications
+apd -> portal : Immunizations
+apd -> portal : Care Plans
+apd -> portal : Alerts
+apd -> portal : Procedure Data
+apd -> portal : Device Data
+nap -->x portal : Lab Data
+portal -> pt : Draft IPS for review
+pt -> portal : Flag preeclampsia\nand birth plan
+pt -> portal : Add over-the-counter\nmedications
+pt -> portal : Add Patient Story\n(missing immunization,\npregnancy concerns)
+pt -> portal : Mask mental health\ncondition
+portal -> portal : Generate final IPS
+portal <-> cc2 : Document Sharing [PCC-1]\nIPS Document
 @enduml

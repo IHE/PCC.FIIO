@@ -1,34 +1,29 @@
 @startuml
-actor Provider as pr
+skinparam svgDimensionStyle false
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign center
+hide footbox
 
-participant POS as p
+actor "Provider" as pr
+participant "Point of Service\n(e.g., EMR)" as p
 participant "Consent\nManager" as c
-participant "ContentCreator" as contentCreator
-participant "ContentConsumer" as contentConsumer
-
 database "EHR-1" as e1
-database "EHR..n" as en
+database "EHR-n" as en
+participant "IPS Holder\n(Content Creator)" as creator
+participant "Receiving Provider\n(Content Consumer)" as consumer
 
-note over pr, en: Provider establishes access to patient's health data​
-note over pr, p: Provider leverages\nPOS (e.g. EMR)​
-
-p -> e1: query for patient's health data​
-
-e1 -> p: query response​
-loop query all other data sources (IF multiple content requests are needed)...
-
-p -> en: query for patient's health data​
-en -> p: query response​
-
-end loop
-note over pr, p: Provider curates\nhealth content\nusing POS​
-
-p -> p: create IPS document​
-note over p: Provider-\nmediated\nIPS document\non POS​
-
-p -> contentCreator: make IPS document available
-note over contentCreator: may be any system that stores or handles the IPS whenever it is requested 
-
-contentCreator -> contentConsumer: Share the IPS document
-note over contentConsumer: The IPS document is shared via Document Sharing [PCC-1] 
+pr -> c : Authenticate and\nestablish access authority
+pr -> p : Query for patient's\nhealth data
+p -> e1 : Query for patient's health data
+e1 --> p : Query response
+loop For each additional data source
+p -> en : Query for patient's health data
+en --> p : Query response
+end
+pr -> p : Curate relevant\nhealth content
+p -> p : Create provider-mediated\nIPS document
+p -> creator : Make IPS document available
+note over creator : Any system that stores\nor handles the IPS\nuntil it is requested
+creator <-> consumer : Document Sharing [PCC-1]\nIPS Document
 @enduml

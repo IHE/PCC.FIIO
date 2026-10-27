@@ -31,14 +31,41 @@ dependencies:
     id: hl7ips
     uri: http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
     version: 2.0.x
+    reason: |
+      Base HL7 IPS profiles that the IHE IPS profiles and options constrain.
   ihe.pcc.odh: 
     id: ihepccodh
     uri: https://profiles.ihe.net/PCC/ODH/ImplementationGuide/ihe.pcc.odh
     version: 1.0.x
-  hl7.fhir.uv.extensions.r4: 
+    reason: |
+      Occupational Data for Health content used by the ODH Option.
+  # Pan-Canadian Patient Summary: Canadian National Extension and PS-CA examples only (brings in hl7.fhir.ca.baseline)
+  ca.infoway.io.psca:
+    id: psca
+    uri: http://fhir.infoway-inforoute.ca/io/psca/ImplementationGuide/ca.infoway.io.psca
+    version: 2.1.1-DFT
+    reason: |
+      Used only for the Canadian National Extension (Volume 4) and the PS-CA examples. It is not required to implement the IHE IPS profiles or options.
+  # United States Patient Care Summary: USA National Extension and US-PCS examples only (brings in hl7.fhir.us.core)
+  hl7.fhir.us.pcs:
+    id: uspcs
+    uri: http://hl7.org/fhir/us/pcs/ImplementationGuide/hl7.fhir.us.pcs
+    version: 1.0.x
+    reason: |
+      Used only for the USA National Extension (Volume 4) and the US-PCS examples. It is not required to implement the IHE IPS profiles or options.
+  # HL7 US Occupational Data for Health: USA National Extension and US-PCS examples only (brings in hl7.fhir.us.core 5.0.1 and us.cdc.phinvads)
+  hl7.fhir.us.odh:
+    id: usodh
+    uri: http://hl7.org/fhir/us/odh/ImplementationGuide/hl7.fhir.us.odh
+    version: 1.3.0
+    reason: |
+      Used only for the USA National Extension (Volume 4) and the US-PCS examples. It is not required to implement the IHE IPS profiles or options.
+  hl7.fhir.uv.extensions.r4:
     id: FHIRExtensionPack
     uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
-    version: 5.3.0-ballot-tc1
+    version: 5.3.0
+    reason: |
+      FHIR extensions used by the IHE IPS profiles and examples.
 
 parameters:  
   path-resource:
@@ -58,6 +85,68 @@ parameters:
   apply-publisher: 'true'
   apply-version: 'true'
 
+groups:
+# Artifacts page groupings, in the order they appear on artifacts.html
+  ODHOptionProfiles:
+    name: ODH Option Profiles
+    description: Profiles for the IPS Occupational Data for Health (ODH) Implementation Option.
+    resources:
+      - StructureDefinition/IHE.IPS.ODH.Option.Bundle
+      - StructureDefinition/IHE.IPS.ODH.Option.Composition
+  CompleteOptionProfiles:
+    name: Complete Option Profiles
+    description: Profiles for the IPS Complete Implementation Option.
+    resources:
+      - StructureDefinition/IHE.IPS.Complete.Option.Bundle
+      - StructureDefinition/IHE.IPS.Complete.Option.Composition
+  BaseIPSExamples:
+    name: Base IPS Examples
+    description: |
+      Example IPS documents that align with the minimum requirements of the base HL7 FHIR International Patient Summary (IPS). All examples in the groups below are also intended to conform to the base IPS requirements and declare the HL7 IPS Bundle and Composition profiles. They are not repeated in this group to avoid duplicating artifacts.
+    resources:
+      - Bundle/ex-Bundle-IPS-Frank-MissingData
+      - Composition/ex-Composition-IPS-Frank-MissingData
+  ODHOptionExamples:
+    name: ODH Option Examples
+    description: Example IPS documents that conform to the ODH Option.
+    resources:
+      - Bundle/ex-Bundle-IPS-ODH-Judy-Jobs
+      - Composition/ex-Composition-IPS-ODH-Judy-Jobs
+  CompleteOptionExamples:
+    name: Complete Option Examples
+    description: Example IPS documents that conform to the Complete Option.
+    resources:
+      - Bundle/ex-Bundle-IPS-Complete-Jannet-Guo
+      - Composition/ex-Composition-IPS-Complete-Jannet-Guo
+  SecondaryUseExamples:
+    name: Secondary Use Examples
+    description: |
+      Example IPS documents for Use Case #6, Secondary Use of IPS for Standardized Data Exchange. They show one patient record at each stage of the de-identification process described in the [IHE ITI De-Identification Handbook](https://profiles.ihe.net/ITI/DeId/):
+      - **Identifiable record:** the primary care IPS document extracted for the study cohort, with all identifiers and clinical content.
+      - **Stage 1 (pseudonymized):** direct identifiers are removed according to the approved de-identification method. A pseudo-identifier and pseudo-name replace the patient identifier and name throughout the document, and all clinical content remains.
+      - **Stage 2 (de-identified):** indirect identifiers are removed, masked, or obfuscated according to the approved de-identification method, leaving enough clinical content to conduct the research study. This is the record delivered to the researcher in the standard IPS format.
+
+      The handbook includes a complete IPS de-identification example under [IPS EHDS2](https://profiles.ihe.net/ITI/DeId/ips-ehds-example.html).
+    resources:
+      - Bundle/80c516fd-9c84-4924-875b-bf0048979ae1
+      - Composition/ex-Composition-secondaryUse-pandemicIPS
+      - Bundle/430e32bc-be3e-4c42-a17b-461ea4f402d4
+      - Composition/ex-Composition-secondaryUse-pandemicIPS-stage-1
+      - Bundle/6603561c-2888-4355-9df4-23675f6eb458
+      - Composition/ex-Composition-secondaryUse-pandemicIPS-stage-2
+  USNationalExtensionExamples:
+    name: USA National Extension Examples
+    description: Example IPS documents that conform to the United States Patient Care Summary (US-PCS) and the IHE IPS options.
+    resources:
+      - Bundle/ex-Bundle-USPCS-Complete-Aaron-Morales
+      - Composition/ex-Composition-USPCS-Aaron-Morales
+  CanadianNationalExtensionExamples:
+    name: Canadian National Extension Examples
+    description: Example IPS documents that conform to the Pan-Canadian Patient Summary (PS-CA) and the IHE IPS options.
+    resources:
+      - Bundle/ex-Bundle-PSCA-Complete-Sansa-Stark
+      - Composition/ex-Composition-PSCA-Sansa-Stark
+
 #resources:
 # list every example here with a name, description and that exampleBoolean is true; These are used to populate the artifacts page, and are needed to eliminate build warnings 
 # You may delay filling out this section until you approach publication as it is merely a nice to have and eliminates build warnings -- If you do this then you will need above the autoload-resources true
@@ -74,6 +163,9 @@ pages:
   volume-3.md:
     title: 3:XX International Patient Summary FHIR
     generation: markdown
+  volume-4.md:
+    title: 4:XX National Extensions
+    generation: markdown
   testplan.md:
     title: "Test Plan"
     generation: markdown
@@ -88,7 +180,8 @@ pages:
     generation: markdown
 
 menu:
-  FIPS Home: index.html
+  IPS Home: index.html
+  Table of Contents: toc.html
   Volume 1:
     Introduction: volume-1.html
     Actors and Transactions: volume-1.html#actors-and-transactions
@@ -101,6 +194,9 @@ menu:
   Volume 3:
     IHE Namespaces, Concept Domains and Vocabularies: volume-3.html#concept-domains
     FHIR Content Modules: volume-3.html#fhir-contentModules
+  Volume 4:
+    US National Extension: volume-4.html#usa-nationalExtension
+    Canadian National Extension: volume-4.html#canadian-nationalExtension
   Artifacts: artifacts.html
   Other:
     Changes to Other IHE Specifications: other.html

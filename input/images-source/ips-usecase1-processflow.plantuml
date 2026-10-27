@@ -1,15 +1,24 @@
 @startuml
 skinparam svgDimensionStyle false
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign center
 hide footbox
 
-agent "On-Demand\nDocument\nSource" as ds
-agent "HIE\nContent Creator" as hie
-cloud "Document Sharing\n[PCC-1]" as cloud
-agent "Content Consumer" as cc2
+actor "Emergency\nProvider" as ep
+box "Emergency Services" #EEF4FA
+participant "Emergency System\n(Content Consumer)" as cons
+end box
+box "Health Information Exchange" #EEF4FA
+participant "HIE\n(Content Creator)" as hie
+database "On-Demand\nDocument Source" as ds
+end box
 
 ds -> hie : Register On-Demand\nDocument Entry [ITI-61]
-hie <-> cloud : IPS\nDocument
-cloud <-> cc2 : IPS\nDocument
-
-
+ep -> cons : Find patient in HIE
+cons -> hie : Request patient summary\n($summary)
+hie -> hie : Generate on-demand IPS
+hie <-> cons : Document Sharing [PCC-1]\nIPS Document
+cons -> ep : Display IPS
+note over ep : Treats patient using\nallergies, history,\nand medications
 @enduml

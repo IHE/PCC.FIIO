@@ -1,14 +1,16 @@
 @startuml
 skinparam svgDimensionStyle false
-hide footbox 
+skinparam shadowing false
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign center
+hide footbox
 
-group Primary Data Holder
-participant "Data Not\nAvailable to Portal" as nap 
-participant "Available\nPatient Data" as apd 
-participant "Provider Portal\nContent Creator" as ptp 
-
-
-
+box "Primary Data Holder" #EEF4FA
+participant "Data Not\nAvailable to Portal" as nap
+participant "Available\nPatient Data" as apd
+participant "Provider Portal\n(Content Creator)" as ptp
+end box
+participant "Treating Clinic\n(Content Consumer)" as cc2
 
 apd -> ptp : Conditions
 apd -> ptp : Allergies
@@ -17,15 +19,10 @@ apd -> ptp : Immunizations
 apd -> ptp : Care Plans
 apd -> ptp : Alerts
 apd -> ptp : Clinical Impressions
+nap -->x ptp : Procedure Data
+nap -->x ptp : Lab Data
+nap -->x ptp : Device Data
 
-nap -->x ptp: Procedure Data
-nap -->x ptp: Lab Data
-nap -->x ptp: Device Data
-end  
-
-participant "Content\nConsumer" as cc2 
-note over ptp, cc2: When the IPS is generated\nthe sections where the\nunavilable data would be\nare still generated with\nthe appropriate\nemptyReason codes 
-
-ptp <-> cc2 : Document Sharing\n[PCC-1]
-
+note over ptp, cc2 : Results, Procedures, and\nMedical Devices sections\nare generated with an\nemptyReason of unavailable
+ptp <-> cc2 : Document Sharing [PCC-1]\nIPS Document
 @enduml
